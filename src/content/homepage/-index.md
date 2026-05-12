@@ -57,8 +57,8 @@ features:
         the latest web standards.
     button:
       enable: false
-      label: ""
-      link: ""
+      label: Get Started Now
+      link: "#"
   - title: Feature number four
     image: ""
     content: This is the content for the feature number four
