@@ -59,12 +59,14 @@ features:
       enable: false
       label: ""
       link: ""
-  - title: ""
+  - title: Feature number four
     image: ""
-    content: ""
-    bulletpoints: []
+    content: This is the content for the feature number four
+    bulletpoints:
+      - Bullet point one
+      - bullet point two
     button:
-      label: ""
-      link: ""
+      label: "Button "
+      link: https://behtar-shim.com
 ---
 ​
