@@ -66,7 +66,8 @@ features:
       - Bullet point one
       - bullet point two
     button:
-      label: "Button "
+      enable: true
+      label: "Button"
       link: https://behtar-shim.com
 ---
 ​
