@@ -1,0 +1,259 @@
+---
+import Base from "@/layouts/Base.astro";
+---
+
+<Base
+  title="Start Here"
+  meta_title="Start Here | Becoming Elysian"
+  description="Begin with Becoming Elysian pathways for stress, recovery, metabolism, hormones, and sustainable habits."
+  image="/images/becoming-elysian-about-editorial.png"
+>
+  <section class="start-here-intro">
+    <div class="container start-here-breathe">
+      <p class="start-here-eyebrow">Start here</p>
+      <h1>Begin with what your body is asking for.</h1>
+      <p class="start-here-lede">
+        You do not need to change everything at once. Choose the area that
+        feels most relevant to your life right now, then build from there with
+        steadiness and care.
+      </p>
+    </div>
+  </section>
+
+  <section class="start-here-pathways">
+    <div class="container start-here-breathe">
+      <div class="start-here-list">
+        <article>
+          <h2>If you feel tired and overwhelmed</h2>
+          <p>
+            Start with stress, sleep, nervous system support, recovery, and the
+            daily rhythms that help your body feel safer and steadier.
+          </p>
+        </article>
+
+        <article>
+          <h2>If your body feels different after 35</h2>
+          <p>
+            Start with protein, strength training, metabolism, hormones,
+            perimenopause, and the foundations that support body composition and
+            energy.
+          </p>
+        </article>
+
+        <article>
+          <h2>If you want a routine you can actually sustain</h2>
+          <p>
+            Start with walking, mobility, simple meals, habit-building, and
+            realistic wellness practices that do not require perfection.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="start-here-guide" aria-labelledby="start-guide-title">
+    <div class="container start-here-breathe">
+      <div class="start-here-guide-panel">
+        <div>
+          <p class="start-here-eyebrow">Free guide</p>
+          <h2 id="start-guide-title">A calmer first week of sustainable wellness</h2>
+          <p>
+            Receive a simple guide with gentle prompts for nourishment,
+            movement, rest, and steadier daily rhythms. It is designed to help
+            you begin without pressure or overhauling your whole life.
+          </p>
+        </div>
+
+        <form class="start-here-guide-form" name="start-here-guide" novalidate>
+          <div>
+            <label class="form-label" for="start-here-guide-email">
+              Email address
+            </label>
+            <input
+              class="form-input"
+              id="start-here-guide-email"
+              name="email"
+              type="email"
+              placeholder="Email address"
+              autocomplete="email"
+              required
+            />
+            <p class="mt-2 min-h-5 text-sm text-text-light">
+              The guide will arrive with the weekly wellness letter.
+            </p>
+            <p class="mt-2 hidden text-sm text-[#9f3f32]" data-error>
+              Please enter a valid email address.
+            </p>
+          </div>
+          <button
+            class="btn btn-primary mt-5 w-full active:translate-y-[1px] sm:w-auto"
+            type="submit"
+            data-submit-label="Send Me the Free Guide"
+          >
+            Send Me the Free Guide
+          </button>
+          <p class="mt-4 hidden rounded-md border border-primary/40 bg-body/70 px-4 py-3 text-sm text-text-dark dark:text-darkmode-text-dark" data-success>
+            Thank you. Your free guide is on its way.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script is:inline>
+    const guideForms = document.querySelectorAll(".start-here-guide-form");
+
+    guideForms.forEach((form) => {
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const email = form.querySelector('[name="email"]');
+        const error = form.querySelector("[data-error]");
+        const success = form.querySelector("[data-success]");
+        const button = form.querySelector("button[type='submit']");
+        const value = email.value.trim();
+        const validEmail = value.includes("@") && value.includes(".");
+
+        error.classList.toggle("hidden", validEmail);
+        success.classList.add("hidden");
+
+        if (!validEmail) {
+          return;
+        }
+
+        button.disabled = true;
+        button.textContent = "Sending...";
+
+        await new Promise((resolve) => window.setTimeout(resolve, 500));
+
+        button.disabled = false;
+        button.textContent = button.dataset.submitLabel;
+        success.classList.remove("hidden");
+        form.reset();
+      });
+    });
+  </script>
+
+  <style>
+    .start-here-intro {
+      padding: clamp(4.25rem, 8vw, 7rem) 0 clamp(2rem, 4vw, 3rem);
+    }
+
+    .start-here-eyebrow {
+      margin: 0 0 1.15rem;
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      line-height: 1.2;
+      text-transform: uppercase;
+      color: #8e9475;
+    }
+
+    .start-here-intro h1 {
+      max-width: 13ch;
+      margin: 0;
+      font-size: clamp(2.5rem, 4.6vw, 4.6rem);
+      font-weight: 500;
+      letter-spacing: 0;
+      line-height: 0.96;
+      color: #2a251d;
+    }
+
+    .start-here-lede {
+      max-width: 43rem;
+      margin: clamp(1.6rem, 3vw, 2.35rem) 0 0;
+      font-size: clamp(1rem, 1.25vw, 1.12rem);
+      line-height: 1.62;
+      color: #4b3b25;
+    }
+
+    .start-here-pathways {
+      padding: clamp(1.25rem, 3vw, 2rem) 0 clamp(4rem, 8vw, 7rem);
+    }
+
+    .start-here-list {
+      display: grid;
+      gap: clamp(2.75rem, 6vw, 5.5rem);
+      max-width: 58rem;
+    }
+
+    .start-here-list article {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .start-here-list h2 {
+      max-width: 13ch;
+      margin: 0;
+      font-size: clamp(2.15rem, 3.7vw, 3.45rem);
+      font-weight: 500;
+      letter-spacing: 0;
+      line-height: 1;
+      color: #4b3b25;
+    }
+
+    .start-here-list p,
+    .start-here-guide p {
+      max-width: 43rem;
+      margin: 0;
+      font-size: clamp(1rem, 1.25vw, 1.1rem);
+      line-height: 1.66;
+      color: #6f5b3b;
+    }
+
+    .start-here-guide {
+      border-block: 1px solid rgba(220, 201, 167, 0.85);
+      padding: clamp(4rem, 8vw, 7rem) 0;
+      background:
+        radial-gradient(circle at 88% 12%, rgba(142, 148, 117, 0.24), transparent 24rem),
+        linear-gradient(135deg, rgba(237, 226, 204, 0.8), rgba(247, 243, 232, 0.96));
+    }
+
+    .start-here-guide-panel {
+      display: grid;
+      gap: clamp(2rem, 5vw, 4rem);
+      align-items: start;
+      max-width: 70rem;
+    }
+
+    .start-here-guide h2 {
+      max-width: 12ch;
+      margin: 0 0 1.4rem;
+      font-size: clamp(2.25rem, 3.8vw, 3.6rem);
+      font-weight: 500;
+      letter-spacing: 0;
+      line-height: 1;
+      color: #2a251d;
+    }
+
+    .start-here-guide-form {
+      width: 100%;
+      max-width: 30rem;
+      border-top: 1px solid rgba(138, 114, 76, 0.34);
+      padding-top: clamp(1.5rem, 3vw, 2rem);
+    }
+
+    .start-here-guide-form .form-input {
+      background-color: rgba(247, 243, 232, 0.74);
+    }
+
+    @media (min-width: 1024px) {
+      .start-here-guide-panel {
+        grid-template-columns: minmax(0, 1fr) minmax(24rem, 0.42fr);
+      }
+    }
+
+    .dark .start-here-intro h1,
+    .dark .start-here-list h2,
+    .dark .start-here-guide h2 {
+      color: #f7f3e8;
+    }
+
+    .dark .start-here-lede,
+    .dark .start-here-list p,
+    .dark .start-here-guide p {
+      color: #ede2cc;
+    }
+  </style>
+</Base>

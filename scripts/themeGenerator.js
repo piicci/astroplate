@@ -142,8 +142,18 @@ function generateThemeCSS() {
       fs.mkdirSync(outputDir, { recursive: true });
     }
 
-    // Write the file
-    fs.writeFileSync(outputPath, cssLines.join("\n") + "\n");
+    const nextCss = cssLines.join("\n") + "\n";
+    const currentCss = fs.existsSync(outputPath)
+      ? fs.readFileSync(outputPath, "utf8")
+      : null;
+
+    if (currentCss === nextCss) {
+      console.log("✅ Theme CSS already up to date at:", outputPath);
+      return;
+    }
+
+    // Write only when content changes so Vite HMR is not triggered by no-op writes.
+    fs.writeFileSync(outputPath, nextCss);
     console.log("✅ Theme CSS generated successfully at:", outputPath);
   } catch (error) {
     throw new Error(`Failed to generate theme CSS: ${error.message}`);
@@ -162,24 +172,28 @@ try {
 if (process.argv.includes("--watch")) {
   let debounceTimer;
 
-  const watcher = fs.watch(themePath, (eventType) => {
-    if (eventType === "change") {
-      // Debounce to avoid multiple triggers
-      clearTimeout(debounceTimer);
-      debounceTimer = setTimeout(() => {
-        try {
-          generateThemeCSS();
-        } catch (error) {
-          console.error("❌ Error regenerating theme CSS:", error.message);
-        }
-      }, 300);
+  fs.watchFile(themePath, { interval: 300 }, (current, previous) => {
+    if (
+      current.mtimeMs === previous.mtimeMs &&
+      current.size === previous.size
+    ) {
+      return;
     }
+
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(() => {
+      try {
+        generateThemeCSS();
+      } catch (error) {
+        console.error("❌ Error regenerating theme CSS:", error.message);
+      }
+    }, 300);
   });
 
   // Handle graceful shutdown
   process.on("SIGINT", () => {
     clearTimeout(debounceTimer);
-    watcher.close();
+    fs.unwatchFile(themePath);
     console.log("\n👋 Watcher stopped");
     process.exit(0);
   });

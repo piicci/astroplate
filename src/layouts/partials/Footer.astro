@@ -1,39 +1,83 @@
 ---
 import Logo from "@/components/Logo.astro";
-import Social from "@/components/Social.astro";
 import config from "@/config/config.json";
-import menu from "@/config/menu.json";
-import social from "@/config/social.json";
 import { markdownify } from "@/lib/utils/textConverter";
 
-const { footer }: { footer: { name: string; url: string }[] } = menu;
+const exploreLinks = [
+  { name: "Journal", url: "/journal" },
+  { name: "Start Here", url: "/start-here" },
+  { name: "About", url: "/about" },
+  { name: "Newsletter", url: "/newsletter" },
+  { name: "Contact", url: "/contact" },
+];
+
+const categoryLinks = [
+  { name: "Fitness & Strength", url: "/fitness-strength" },
+  { name: "Nutrition & Metabolic Health", url: "/nutrition-metabolic-health" },
+  { name: "Hormonal Health", url: "/hormonal-health" },
+  { name: "Nervous System & Stress", url: "/nervous-system-stress" },
+  { name: "Recovery & Longevity", url: "/recovery-longevity" },
+  { name: "Mental Wellbeing", url: "/mental-wellbeing" },
+  { name: "Lifestyle & Sustainable Habits", url: "/lifestyle-sustainable-habits" },
+];
+
+const legalLinks = [
+  { name: "Privacy Policy", url: "/privacy-policy" },
+  { name: "Terms", url: "/terms-and-conditions" },
+  { name: "Medical Disclaimer", url: "/medical-disclaimer" },
+  { name: "Cookie Policy", url: "/cookie-policy" },
+];
 ---
 
-<footer class="bg-light dark:bg-darkmode-light">
-  <div class="container">
-    <div class="row items-center py-10">
-      <div class="mb-8 text-center lg:col-3 lg:mb-0 lg:text-left">
+<footer
+  class="border-t border-border bg-light/80 dark:border-darkmode-border dark:bg-darkmode-light"
+>
+  <div class="container footer-breathe">
+    <div class="grid gap-10 py-16 md:grid-cols-2 lg:grid-cols-[1.35fr_0.8fr_1.1fr_1.05fr] xl:py-20">
+      <div>
         <Logo />
+        <p class="mt-6 max-w-sm text-sm leading-7 text-text/90 dark:text-darkmode-text/90">
+          Becoming Elysian is a modern wellness platform for women exploring strength, nutrition, hormones, stress, recovery, and sustainable wellbeing through a grounded, evidence-informed lens.
+        </p>
       </div>
-      <div class="mb-8 text-center lg:col-6 lg:mb-0">
-        <ul>
-          {
-            footer.map((menu) => (
-              <li class="m-3 inline-block">
-                <a href={menu.url}>{menu.name}</a>
-              </li>
-            ))
-          }
+      <div>
+        <h2 class="mb-5 font-primary text-sm font-semibold uppercase tracking-[0.18em] text-text-light dark:text-darkmode-text-light">
+          Explore
+        </h2>
+        <ul class="space-y-3 text-sm">
+          {exploreLinks.map((link) => <li><a href={link.url}>{link.name}</a></li>)}
         </ul>
       </div>
-      <div class="mb-8 text-center lg:col-3 lg:mb-0 lg:mt-0 lg:text-right">
-        <Social source={social.main} className="social-icons" />
+      <div>
+        <h2 class="mb-5 font-primary text-sm font-semibold uppercase tracking-[0.18em] text-text-light dark:text-darkmode-text-light">
+          Categories
+        </h2>
+        <ul class="space-y-3 text-sm">
+          {categoryLinks.map((link) => <li><a href={link.url}>{link.name}</a></li>)}
+        </ul>
       </div>
+      <div>
+        <h2 class="mb-5 font-primary text-sm font-semibold uppercase tracking-[0.18em] text-text-light dark:text-darkmode-text-light">
+          Join the weekly wellness letter
+        </h2>
+        <p class="mb-6 text-sm leading-7">
+          Thoughtful notes on women’s wellness, strength, nutrition, hormones, recovery, and sustainable habits.
+        </p>
+        <a class="btn btn-primary btn-sm" href="/newsletter">Subscribe</a>
+      </div>
+    </div>
+    <div class="border-t border-border py-8 text-sm leading-7 text-text-light dark:border-darkmode-border dark:text-darkmode-text-light">
+      <p class="max-w-4xl">
+        The content on Becoming Elysian is for educational purposes only and is not a substitute for medical advice, diagnosis, or treatment. Always speak with a qualified healthcare professional about personal health concerns.
+      </p>
+      <ul class="mt-6 flex flex-wrap gap-x-5 gap-y-2">
+        {legalLinks.map((link) => <li><a href={link.url}>{link.name}</a></li>)}
+      </ul>
     </div>
   </div>
   <div class="border-t border-border py-7 dark:border-darkmode-border">
     <div
-      class="container text-center text-text-light dark:text-darkmode-text-light"
+      class="container footer-breathe text-center text-text-light dark:text-darkmode-text-light"
     >
       <p set:html={markdownify(config.params.copyright)} />
     </div>

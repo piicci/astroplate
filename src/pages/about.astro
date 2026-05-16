@@ -1,17 +1,43 @@
 ---
-import ImageMod from "@/components/ImageMod.astro";
 import Base from "@/layouts/Base.astro";
 import { getListPage } from "@/lib/contentParser.astro";
-import { markdownify } from "@/lib/utils/textConverter";
-import { render } from "astro:content";
 
 const aboutIndex = await getListPage("about", "-index");
-const { Content } = await render(aboutIndex);
 const { title, description, meta_title, image } = aboutIndex.data;
 
 if (aboutIndex.data.draft) {
   return Astro.redirect("/404");
 }
+
+const topics = [
+  "fitness and mobility",
+  "nutrition and metabolic health",
+  "hormonal health",
+  "nervous system regulation",
+  "recovery and longevity",
+  "stress resilience",
+  "mental wellbeing",
+  "sustainable lifestyle practices",
+];
+
+const credentials = [
+  "Personal Training",
+  "Bodybuilding Specialist",
+  "Sports Nutrition",
+  "Elite Trainer",
+];
+
+const experience = [
+  "stress and burnout",
+  "body composition goals",
+  "sustainable fitness routines",
+  "mobility and recovery",
+  "nutrition habits",
+  "nervous system overwhelm",
+  "long-term wellness and lifestyle change",
+];
+
+const articleImage = "/images/becoming-elysian-about-editorial.png";
 ---
 
 <Base
@@ -20,28 +46,454 @@ if (aboutIndex.data.draft) {
   description={description}
   image={image}
 >
-  <section class="section-sm">
-    <div class="container">
-      <div class="row justify-center">
-        <div class="md:col-10 lg:col-8">
-          {
-            image && (
-              <ImageMod
-                class="mx-auto mb-6 rounded"
-                src={image}
-                width={1200}
-                height={600}
-                alt={title}
-                format="webp"
-              />
-            )
-          }
-          <h2 set:html={markdownify(title)} class="h3 mb-6" />
-          <div class="content">
-            <Content />
-          </div>
+  <div class="about-journal">
+    <section class="about-journal-body">
+      <div class="container">
+        <div class="about-journal-grid">
+          <aside class="about-aside" aria-label="About page summary">
+            <p>Modern wellness for women</p>
+            <span>Healthier, calmer, stronger, sustainable.</span>
+          </aside>
+
+          <article class="about-article">
+            <p class="about-kicker">Our philosophy</p>
+            <h1 class="about-reveal-title">
+              Wellness should support your life, not consume it.
+            </h1>
+
+            <div class="about-copy">
+              <p>
+                Becoming Elysian is a modern wellness platform created for women
+                seeking a healthier, calmer, stronger, and more sustainable
+                approach to wellbeing.
+              </p>
+              <p>
+                In a world of constant pressure, information overload, and
+                all-or-nothing wellness culture, many women are left feeling
+                exhausted, disconnected from their body, and overwhelmed by
+                conflicting advice around health, fitness, nutrition, hormones,
+                and self-care.
+              </p>
+              <p>
+                Becoming Elysian was created as a different kind of wellness
+                space. A space rooted in evidence-based practices, long-term
+                wellbeing, nervous system support, strength, nourishment,
+                recovery, and sustainable habits that support real life, not
+                perfection.
+              </p>
+            </div>
+
+            <figure class="about-figure">
+              <img src={articleImage} alt="" loading="lazy" />
+            </figure>
+
+            <blockquote class="about-reveal-quote">
+              We believe wellness should help women feel more supported,
+              energized, resilient, and connected to themselves. Not more
+              stressed. Not more overwhelmed. Not like they constantly need to
+              fix themselves.
+            </blockquote>
+
+            <div class="about-copy">
+              <p>
+                At Becoming Elysian, we explore wellness through a more grounded
+                and intelligent lens, with the goal of helping women build
+                healthier lives that feel both strong and balanced.
+              </p>
+            </div>
+
+            <div
+              class="about-topic-list"
+              aria-label="Topics Becoming Elysian covers"
+            >
+              {topics.map((topic) => <span>{topic}</span>)}
+            </div>
+
+            <hr />
+
+            <p class="about-kicker">Our background</p>
+            <div class="about-copy">
+              <p>
+                Behind Becoming Elysian is over 6 years of experience in fitness
+                coaching, women's wellness, nutrition education, mobility
+                training, and online health education.
+              </p>
+              <p>
+                Over the years, our work has supported thousands of women
+                through coaching programs, fitness education, wellness content,
+                and sustainable health practices designed to fit into real life.
+              </p>
+            </div>
+
+            <div class="about-detail-grid">
+              <div>
+                <h3>ISSA certifications</h3>
+                <ul>
+                  {credentials.map((item) => <li>{item}</li>)}
+                </ul>
+              </div>
+              <div>
+                <h3>Practical experience</h3>
+                <ul>
+                  {experience.map((item) => <li>{item}</li>)}
+                </ul>
+              </div>
+            </div>
+
+            <div class="about-copy">
+              <p>
+                What shaped Becoming Elysian most was witnessing how many women
+                were struggling not because they lacked discipline, but because
+                they were trying to follow wellness approaches that were
+                extreme, unrealistic, or impossible to sustain long term.
+              </p>
+              <p>
+                We believe health is not built through extremes, but through
+                consistency, nourishment, movement, recovery, resilience, and
+                supportive habits practiced over time.
+              </p>
+            </div>
+
+            <p class="about-closing">
+              Our mission is to help women build healthier, calmer, stronger
+              lives through wellness practices that feel sustainable,
+              intelligent, and deeply supportive of long-term wellbeing.
+            </p>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </Base>
+
+<script is:inline>
+  const loadAboutTextReveal = () => {
+    const revealTargets = document.querySelectorAll(
+      ".about-reveal-title, .about-reveal-quote",
+    );
+    if (!revealTargets.length) return;
+
+    const prepareTargets = () => {
+      revealTargets.forEach((target) => {
+        if (target.dataset.split === "true") return;
+        target.dataset.split = "true";
+        const words = target.textContent.trim().split(/\s+/);
+        target.textContent = "";
+        words.forEach((word) => {
+          const span = document.createElement("span");
+          span.textContent = `${word} `;
+          span.style.opacity = "0.16";
+          target.appendChild(span);
+        });
+      });
+    };
+
+    const run = () => {
+      if (!window.gsap || !window.ScrollTrigger) return;
+      window.gsap.registerPlugin(window.ScrollTrigger);
+      prepareTargets();
+
+      revealTargets.forEach((target) => {
+        if (target.dataset.revealReady === "true") return;
+        target.dataset.revealReady = "true";
+        window.gsap.to(target.querySelectorAll("span"), {
+          opacity: 1,
+          stagger: target.classList.contains("about-reveal-quote")
+            ? 0.045
+            : 0.08,
+          ease: "none",
+          scrollTrigger: {
+            trigger: target,
+            start: "top 86%",
+            end: "bottom 42%",
+            scrub: true,
+          },
+        });
+      });
+    };
+
+    if (window.gsap && window.ScrollTrigger) {
+      run();
+      return;
+    }
+
+    const gsapScript = document.createElement("script");
+    gsapScript.src =
+      "https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js";
+    gsapScript.onload = () => {
+      const triggerScript = document.createElement("script");
+      triggerScript.src =
+        "https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js";
+      triggerScript.onload = run;
+      document.head.appendChild(triggerScript);
+    };
+    document.head.appendChild(gsapScript);
+  };
+
+  document.addEventListener("astro:page-load", loadAboutTextReveal);
+  loadAboutTextReveal();
+</script>
+
+<style>
+  .about-journal {
+    background:
+      radial-gradient(
+        circle at 14% 0%,
+        rgba(100, 113, 83, 0.12),
+        transparent 30rem
+      ),
+      linear-gradient(
+        180deg,
+        rgba(247, 243, 232, 0.94),
+        rgba(237, 226, 204, 0.5) 48%,
+        rgba(247, 243, 232, 0.98)
+      );
+  }
+
+  .dark .about-journal {
+    background:
+      radial-gradient(
+        circle at 14% 0%,
+        rgba(220, 228, 198, 0.1),
+        transparent 30rem
+      ),
+      linear-gradient(180deg, rgba(75, 59, 37, 0.98), rgba(54, 43, 29, 1));
+  }
+
+  .about-journal-body {
+    padding: clamp(4.5rem, 8vw, 8rem) 0 clamp(6rem, 10vw, 10rem);
+  }
+
+  .about-journal-grid {
+    display: grid;
+    grid-template-columns: minmax(12rem, 0.3fr) minmax(0, 0.7fr);
+    gap: clamp(2rem, 6vw, 7rem);
+    align-items: start;
+  }
+
+  .about-aside {
+    position: sticky;
+    top: 7rem;
+    padding-top: 0.45rem;
+    border-top: 1px solid rgba(138, 114, 76, 0.32);
+  }
+
+  .about-aside p,
+  .about-kicker {
+    margin: 0;
+    font-family: var(--font-primary);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: #647153;
+  }
+
+  .dark .about-aside p,
+  .dark .about-kicker {
+    color: #dce4c6;
+  }
+
+  .about-aside span {
+    display: block;
+    max-width: 15rem;
+    margin-top: 0.9rem;
+    font-family: var(--font-primary);
+    font-size: 0.95rem;
+    line-height: 1.62;
+    color: #8a724c;
+  }
+
+  .dark .about-aside span {
+    color: #dcc9a7;
+  }
+
+  .about-article {
+    max-width: 58rem;
+  }
+
+  .about-reveal-title {
+    margin: 1rem 0 2.4rem;
+    font-family: var(--font-secondary);
+    font-size: clamp(2.35rem, 3.9vw, 4rem);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0;
+    color: #30261b;
+  }
+
+  .dark .about-reveal-title {
+    color: #f7f3e8;
+  }
+
+  .about-reveal-title span {
+    will-change: opacity;
+  }
+
+  .about-reveal-quote span {
+    will-change: opacity;
+  }
+
+  .about-copy {
+    display: grid;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .about-copy p,
+  .about-detail-grid li,
+  .about-closing {
+    margin: 0;
+    font-family: var(--font-primary);
+    font-size: 1.04rem;
+    line-height: 1.86;
+    color: #6f5b3b;
+  }
+
+  .dark .about-copy p,
+  .dark .about-detail-grid li,
+  .dark .about-closing {
+    color: #ede2cc;
+  }
+
+  .about-figure {
+    margin: clamp(2.5rem, 5vw, 4.5rem) 0;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    background: #4b3b25;
+  }
+
+  .about-figure img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    filter: grayscale(0.16) contrast(1.08) saturate(0.9);
+  }
+
+  .about-article blockquote {
+    margin: clamp(2.5rem, 5vw, 4rem) 0;
+    padding: clamp(1.6rem, 3vw, 2.5rem) 0;
+    border-block: 1px solid rgba(138, 114, 76, 0.28);
+    font-family: var(--font-secondary);
+    font-size: clamp(1.55rem, 2.45vw, 2.55rem);
+    font-weight: 500;
+    line-height: 1.16;
+    letter-spacing: 0;
+    color: #3d3022;
+  }
+
+  .dark .about-article blockquote {
+    color: #f7f3e8;
+  }
+
+  .about-topic-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 2rem;
+  }
+
+  .about-topic-list span {
+    border: 1px solid rgba(138, 114, 76, 0.28);
+    border-radius: 999px;
+    padding: 0.48rem 0.78rem;
+    font-family: var(--font-primary);
+    font-size: 0.9rem;
+    color: #5f4f36;
+    background: rgba(247, 243, 232, 0.42);
+  }
+
+  .dark .about-topic-list span {
+    color: #ede2cc;
+    background: rgba(247, 243, 232, 0.06);
+  }
+
+  .about-article hr {
+    margin: clamp(3rem, 6vw, 5rem) 0;
+    border: 0;
+    border-top: 1px solid rgba(138, 114, 76, 0.28);
+  }
+
+  .about-detail-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.45fr) minmax(0, 0.55fr);
+    gap: clamp(1.5rem, 4vw, 3rem);
+    margin: clamp(2rem, 4vw, 3.5rem) 0;
+    padding: clamp(1.4rem, 3vw, 2rem) 0;
+    border-block: 1px solid rgba(138, 114, 76, 0.24);
+  }
+
+  .about-detail-grid h3 {
+    margin: 0 0 1rem;
+    font-family: var(--font-primary);
+    font-size: clamp(1.15rem, 1.6vw, 1.45rem);
+    line-height: 1.15;
+    color: #3d3022;
+  }
+
+  .dark .about-detail-grid h3 {
+    color: #f7f3e8;
+  }
+
+  .about-detail-grid ul {
+    display: grid;
+    gap: 0.45rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .about-detail-grid li::before {
+    content: "";
+    display: inline-block;
+    width: 0.4rem;
+    height: 0.4rem;
+    margin-right: 0.7rem;
+    border-radius: 999px;
+    background: #647153;
+    vertical-align: middle;
+  }
+
+  .about-closing {
+    margin-top: clamp(2.5rem, 5vw, 4rem);
+    padding-top: clamp(1.5rem, 3vw, 2.4rem);
+    border-top: 1px solid rgba(138, 114, 76, 0.28);
+    font-size: clamp(1.2rem, 2vw, 1.65rem);
+    line-height: 1.55;
+    color: #3d3022;
+  }
+
+  .dark .about-closing {
+    color: #f7f3e8;
+  }
+
+  @media (max-width: 1024px) {
+    .about-journal-grid,
+    .about-detail-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .about-aside {
+      position: static;
+    }
+
+    .about-article {
+      max-width: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .about-journal-body {
+      padding: 4rem 0 5rem;
+    }
+
+    .about-reveal-title {
+      font-size: clamp(2.25rem, 10vw, 3rem);
+    }
+
+    .about-article blockquote {
+      font-size: clamp(1.45rem, 6vw, 2.05rem);
+    }
+  }
+</style>

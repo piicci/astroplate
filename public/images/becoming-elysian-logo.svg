@@ -1,0 +1,10 @@
+<svg width="476" height="84" viewBox="0 0 476 84" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="becoming-elysian-logo-title">
+  <title id="becoming-elysian-logo-title">Becoming Elysian</title>
+  <path d="M41.7 5.3C27.2 11.8 15.9 25.1 12.5 41.2C22.6 35.6 34.3 33.5 45.7 35.3C44.4 24.9 43.1 14.7 41.7 5.3Z" fill="#647153"/>
+  <path d="M44.6 7.8C48.7 20.1 51.8 32.2 53.7 44.3C61.3 39.2 67.1 31.9 70.8 22.3C61.7 13.6 52.9 9.1 44.6 7.8Z" fill="#8A724C"/>
+  <path d="M12.4 45.4C27.4 37.7 43.8 38.2 57.6 46.7C44.6 47.9 33.4 52.5 24.1 60.7C18.8 57.6 14.9 52.6 12.4 45.4Z" fill="#DCC9A7"/>
+  <path d="M41.3 8.8C36.8 31.6 37.3 54.6 43.1 77.8" stroke="#4B3B25" stroke-width="3.2" stroke-linecap="round"/>
+  <path d="M9.7 72.5C24.6 55.2 44.8 47.2 69.9 48.7" stroke="#4B3B25" stroke-width="3.2" stroke-linecap="round"/>
+  <text x="92" y="35" fill="#4B3B25" font-family="Cormorant Garamond, Georgia, serif" font-size="34" font-weight="700" letter-spacing="0">Becoming</text>
+  <text x="92" y="66" fill="#647153" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="600" letter-spacing="4">ELYSIAN</text>
+</svg>

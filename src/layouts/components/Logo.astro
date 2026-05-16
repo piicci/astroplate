@@ -21,6 +21,10 @@ const {
 } = config.site;
 
 const { theme_switcher }: { theme_switcher: boolean } = config.settings;
+const logoSource = src ? src : logo;
+const logoDarkSource = srcDarkmode ? srcDarkmode : logo_darkmode;
+const logoFormat = logoSource?.endsWith(".svg") ? "svg" : "webp";
+const logoDarkFormat = logoDarkSource?.endsWith(".svg") ? "svg" : "webp";
 ---
 
 <a href="/" class="navbar-brand inline-block">
@@ -28,7 +32,7 @@ const { theme_switcher }: { theme_switcher: boolean } = config.settings;
     src || srcDarkmode || logo || logo_darkmode ? (
       <>
         <ImageMod
-          src={src ? src : logo}
+          src={logoSource}
           class={`inline-block ${theme_switcher && "dark:hidden"}`}
           width={logo_width.replace("px", "") * 2}
           height={logo_height.replace("px", "") * 2}
@@ -37,11 +41,11 @@ const { theme_switcher }: { theme_switcher: boolean } = config.settings;
             height: logo_height.replace("px", "") + "px",
             width: logo_width.replace("px", "") + "px",
           }}
-          format="webp"
+          format={logoFormat}
         />
         {theme_switcher && (
           <ImageMod
-            src={srcDarkmode ? srcDarkmode : logo_darkmode}
+            src={logoDarkSource}
             class={"hidden dark:inline-block"}
             width={logo_width.replace("px", "") * 2}
             height={logo_height.replace("px", "") * 2}
@@ -50,7 +54,7 @@ const { theme_switcher }: { theme_switcher: boolean } = config.settings;
               height: logo_height.replace("px", "") + "px",
               width: logo_width.replace("px", "") + "px",
             }}
-            format="webp"
+            format={logoDarkFormat}
           />
         )}
       </>

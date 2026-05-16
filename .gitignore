@@ -25,3 +25,7 @@ pnpm-debug.log*
 
 # ide
 .idea/
+
+# local Codex tooling
+.agents/
+skills-lock.json

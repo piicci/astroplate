@@ -5,13 +5,16 @@ import { humanize } from "@/lib/utils/textConverter";
 const { title = "" }: { title?: string } = Astro.props;
 ---
 
-<section>
-  <div class="container text-center">
-    <div
-      class="rounded-2xl bg-gradient-to-b from-body to-light px-8 py-14 dark:from-darkmode-body dark:to-darkmode-light"
-    >
-      <h1 set:text={humanize(title)} />
-      <Breadcrumbs className="mt-6" />
+<section class="border-b border-border/70 bg-body/70 dark:border-darkmode-border dark:bg-darkmode-body/70">
+  <div class="container page-header-breathe">
+    <div class="max-w-4xl py-10 md:py-12">
+      <h1
+        set:text={humanize(title)}
+        class="mb-5 text-left text-[clamp(2.25rem,3.8vw,3.55rem)] leading-[1]"
+      />
+      <Breadcrumbs
+        className="font-primary text-xs font-semibold uppercase tracking-[0.18em]"
+      />
     </div>
   </div>
 </section>

@@ -1,104 +1,612 @@
 ---
 import ImageMod from "@/components/ImageMod.astro";
 import Base from "@/layouts/Base.astro";
-import { getListPage } from "@/lib/contentParser.astro";
-import { markdownify } from "@/lib/utils/textConverter";
-import CallToAction from "@/partials/CallToAction.astro";
-import Testimonial from "@/partials/Testimonial.astro";
-import { FaCheck } from "react-icons/fa";
 
-const homepage = await getListPage("homepage", "-index");
-const call_to_action = await getListPage("ctaSection", "call-to-action");
-const testimonial = await getListPage("testimonialSection", "testimonial");
+const categories = [
+  {
+    title: "Fitness & Strength",
+    copy: "Strength training, mobility, walking, body composition, and movement practices that support long-term health without pushing your body into burnout.",
+    link: "/fitness-strength",
+    label: "Explore Fitness & Strength",
+    image: "/images/category-card-backgrounds/fitness-strength.png",
+    imagePosition: "center",
+  },
+  {
+    title: "Nutrition & Metabolic Health",
+    copy: "Protein, blood sugar balance, anti-inflammatory meals, gut health, Mediterranean-inspired nutrition, and simple ways to eat for steady energy.",
+    link: "/nutrition-metabolic-health",
+    label: "Explore Nutrition",
+    image: "/images/category-card-backgrounds/nutrition-metabolic-health.png",
+    imagePosition: "center",
+  },
+  {
+    title: "Hormonal Health",
+    copy: "Perimenopause, cycle health, cortisol, thyroid, insulin resistance, sleep, and the daily habits that can support hormonal balance with more clarity.",
+    link: "/hormonal-health",
+    label: "Explore Hormonal Health",
+    image: "/images/category-card-backgrounds/hormonal-health.png",
+    imagePosition: "center",
+  },
+  {
+    title: "Nervous System & Stress",
+    copy: "Stress resilience, burnout, anxiety, emotional regulation, and nervous system support for women who feel tired, wired, or constantly overwhelmed.",
+    link: "/nervous-system-stress",
+    label: "Explore Stress Support",
+    image: "/images/category-card-backgrounds/nervous-system-stress.png",
+    imagePosition: "center",
+  },
+  {
+    title: "Recovery & Longevity",
+    copy: "Sleep, rest, mobility, active recovery, healthy aging, and sustainable energy practices that help your body repair and adapt over time.",
+    link: "/recovery-longevity",
+    label: "Explore Recovery",
+    image: "/images/category-card-backgrounds/recovery-longevity.png",
+    imagePosition: "center",
+  },
+  {
+    title: "Mental Wellbeing",
+    copy: "Emotional wellbeing, self-trust, motivation, overwhelm, and the mindset shifts that make healthy habits feel less rigid and more supportive.",
+    link: "/mental-wellbeing",
+    label: "Explore Mental Wellbeing",
+    image: "/images/category-card-backgrounds/mental-wellbeing.png",
+    imagePosition: "center",
+  },
+  {
+    title: "Lifestyle & Sustainable Habits",
+    copy: "Daily rhythms, realistic routines, digital stress, work-life balance, and small shifts that can make wellness feel more natural and less demanding.",
+    link: "/lifestyle-sustainable-habits",
+    label: "Explore Lifestyle",
+    image: "/images/category-card-backgrounds/lifestyle-sustainable-habits.png",
+    imagePosition: "center",
+  },
+];
 
-const { banner, features } = homepage.data;
+const featuredArticles = [
+  {
+    category: "Nutrition & Metabolic Health",
+    title:
+      "Nutrition for Women Over 35: How to Support Energy, Metabolism, Hormones, and Long-Term Health",
+    excerpt:
+      "A grounded guide to eating in a way that supports energy, strength, blood sugar, hormones, and long-term wellbeing after 35.",
+    link: "/journal/nutrition-for-women-over-35",
+    image: "/images/becoming-elysian-about-editorial.png",
+    alt: "Editorial wellness setting with neutral tones and sage accents",
+  },
+  {
+    category: "Nutrition & Metabolic Health",
+    title: "How Much Protein Do Women Over 35 Really Need?",
+    excerpt:
+      "Why protein becomes more important with age, how it supports muscle and metabolism, and how to build it into your meals without overcomplicating your diet.",
+    link: "/journal/protein-for-women-over-35",
+    image: "/images/og-image.png",
+    alt: "Calm neutral wellness editorial scene with soft natural light",
+  },
+  {
+    category: "Fitness & Strength",
+    title:
+      "Strength Training for Women Over 35: A Smarter Way to Build Muscle, Energy, and Confidence",
+    excerpt:
+      "A clear introduction to strength training for women who want to feel capable, support their metabolism, and age with more resilience.",
+    link: "/journal/strength-training-for-women-over-35",
+    image: "/images/becoming-elysian-about-editorial.png",
+    alt: "Woman enjoying a calm morning wellness routine in soft natural light",
+  },
+];
+
+const approach = [
+  {
+    title: "Evidence-informed",
+    copy: "We explore wellness through a grounded, science-aware lens without turning every meal, workout, or habit into a rigid protocol.",
+  },
+  {
+    title: "Sustainable",
+    copy: "The goal is not perfection. It is consistency, flexibility, and practices that can support your life through different seasons.",
+  },
+  {
+    title: "Body-aware",
+    copy: "We help women better understand energy, appetite, stress, recovery, hormones, and strength without shame or fear-based messaging.",
+  },
+  {
+    title: "Strength-centered",
+    copy: "Strength supports far more than appearance. It can help women feel more capable, resilient, independent, and connected to their bodies over time.",
+  },
+];
+
+const pathways = [
+  {
+    title: "If you feel tired and overwhelmed",
+    copy: "Start with stress, sleep, nervous system support, recovery, and the daily rhythms that help your body feel safer and steadier.",
+    link: "/start-here#stress-recovery",
+    label: "Start with Stress & Recovery",
+  },
+  {
+    title: "If your body feels different after 35",
+    copy: "Start with protein, strength training, metabolism, hormones, perimenopause, and the foundations that support body composition and energy.",
+    link: "/start-here#metabolism-hormones",
+    label: "Start with Metabolism & Hormones",
+  },
+  {
+    title: "If you want a routine you can actually sustain",
+    copy: "Start with walking, mobility, simple meals, habit-building, and realistic wellness practices that do not require perfection.",
+    link: "/start-here#sustainable-habits",
+    label: "Start with Sustainable Habits",
+  },
+];
+
+const topics = [
+  { name: "Protein for women over 35", url: "/journal/protein-for-women-over-35" },
+  { name: "Strength training after 35", url: "/journal/strength-training-for-women-over-35" },
+  { name: "Perimenopause nutrition", url: "/hormonal-health" },
+  { name: "Cortisol and stress", url: "/nervous-system-stress" },
+  { name: "Blood sugar balance", url: "/nutrition-metabolic-health" },
+  { name: "Walking for metabolic health", url: "/fitness-strength" },
+  { name: "Nervous system regulation", url: "/nervous-system-stress" },
+  { name: "Recovery and sleep", url: "/recovery-longevity" },
+  { name: "Body recomposition", url: "/fitness-strength" },
+  { name: "Hormonal health after 40", url: "/hormonal-health" },
+  { name: "Anti-inflammatory meals", url: "/nutrition-metabolic-health" },
+  { name: "Sustainable wellness habits", url: "/lifestyle-sustainable-habits" },
+];
+
+// Set these to true when the section content is ready to publish again.
+const showWellnessFoundationsSection = false;
+const showPopularWellnessTopicsSection = false;
 ---
 
-<Base>
-  <!-- Banner -->
-  <section class="section pt-14">
+<Base
+  title="Becoming Elysian | Wellness for Women Over 35"
+  meta_title="Becoming Elysian | Wellness for Women Over 35"
+  description="Becoming Elysian is a modern wellness platform for women exploring fitness, nutrition, hormonal health, stress, recovery, and sustainable wellbeing through a grounded, evidence-informed lens."
+  image="/images/og-image.png"
+>
+  <div class="be-home">
+  <section class="relative overflow-hidden pt-12 pb-20 md:pt-18 lg:pb-28">
+    <div class="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[34rem] bg-[radial-gradient(circle_at_78%_8%,rgba(142,148,117,0.24),transparent_28rem)]"></div>
     <div class="container">
-      <div class="row justify-center">
-        <div class="lg:col-7 md:col-9 mb-8 text-center">
-          <h1
-            set:html={markdownify(banner.title)}
-            class="mb-4 text-h3 lg:text-h1"
-          />
-          <p set:html={markdownify(banner.content)} class="mb-8" />
-          {
-            banner.button.enable && (
-              <a
-                class="btn btn-primary"
-                href={banner.button.link}
-                target={
-                  banner.button.link.startsWith("http") ? "_blank" : "_self"
-                }
-                rel="noopener"
-              >
-                {banner.button.label}
-              </a>
-            )
-          }
+      <div class="grid items-center gap-12 xl:grid-cols-[0.92fr_1.08fr] xl:gap-20">
+        <div class="max-w-[600px] animate-[elysian-rise_700ms_cubic-bezier(0.16,1,0.3,1)_both]">
+          <p class="mb-5 text-sm font-semibold uppercase tracking-[0.22em] text-primary dark:text-darkmode-primary">
+            Wellness for women, reimagined with calm and clarity
+          </p>
+          <h1 class="mb-7 max-w-[12.5ch] text-[clamp(2.55rem,4.6vw,4.6rem)] leading-[0.98] md:max-w-[11.8ch]">
+            Wellness that supports your life — not consumes it.
+          </h1>
+          <p class="mb-9 max-w-[620px] text-base leading-8 text-text-dark md:text-lg dark:text-darkmode-text-dark">
+            Becoming Elysian is a modern wellness platform for women who want to feel stronger, calmer, more energized, and more connected to their bodies through evidence-informed fitness, nutrition, hormonal health, recovery, and sustainable habits.
+          </p>
+          <div class="flex flex-col gap-3 sm:flex-row">
+            <a class="btn btn-primary text-center active:translate-y-[1px]" href="/journal">Read the Journal</a>
+            <a class="btn btn-outline-primary text-center active:translate-y-[1px]" href="/newsletter">Join the Newsletter</a>
+          </div>
         </div>
+        <div class="relative animate-[elysian-rise_900ms_cubic-bezier(0.16,1,0.3,1)_140ms_both]">
+          <div class="absolute -left-6 top-10 hidden h-28 w-28 rounded-full border border-border/80 lg:block"></div>
+          <div class="group overflow-hidden rounded-md border border-border bg-light/50 p-2 shadow-[0_28px_70px_-44px_rgba(75,59,37,0.42)] dark:border-darkmode-border dark:bg-darkmode-light/40">
+            <ImageMod
+              src="/images/becoming-elysian-about-editorial.png"
+              width={940}
+              height={700}
+              alt="Woman enjoying a calm morning wellness routine in soft natural light"
+              class="aspect-[4/3] w-full rounded-sm object-cover transition-transform duration-700 ease-out group-hover:scale-[1.025]"
+              format="webp"
+              fit="cover"
+              loading="eager"
+            />
+          </div>
+          <div class="ml-auto mt-5 max-w-[21rem] border-l border-border pl-5 text-sm leading-6 text-text-light dark:border-darkmode-border dark:text-darkmode-text-light">
+            Evidence-informed notes for strength, nourishment, recovery, hormones, and the life around them.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-sm bg-light/55 dark:bg-darkmode-light/45">
+    <div class="container">
+      <div class="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+        <h2 class="max-w-[10ch]">A gentler, more sustainable way to feel well</h2>
+        <div class="max-w-3xl space-y-6 text-base leading-8 md:text-[1.05rem]">
+          <p>
+            <span class="block">You have probably felt <i>that quiet exhaustion.</i></span>
+            <span class="block">The kind that comes from trying to do more, track more, restrict more, and push harder.</span>
+            <span class="block">So much of modern wellness does not create freedom. It simply adds another layer of pressure.</span>
+          </p>
+          <p>
+            <span class="block">Becoming Elysian offers a <b>different rhythm.</b></span>
+            <span class="block">Here, wellness is not about perfection or control.</span>
+            <span class="block">It is about building <b>quiet strength</b>, supporting your energy, understanding your body with wisdom, recovering deeply, and creating habits that actually fit the life you are already living.</span>
+          </p>
+          <p class="be-wellness-closing font-secondary text-text-dark dark:text-darkmode-text-dark">
+            <span class="block">This is not about making your world smaller around wellness.</span>
+            <span class="block">It is about letting wellness <b>gently support</b> the full, beautiful life you want to live.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {
+    showWellnessFoundationsSection && (
+      <section class="section">
+        <div class="container">
+          <div class="mb-14 max-w-4xl">
+            <h2 class="mb-6 max-w-[13ch]">Explore the foundations of sustainable wellness</h2>
+            <p class="text-base leading-8 md:text-[1.05rem]">
+              Becoming Elysian brings together the core areas that shape how women feel, move, recover, age, and live — with a grounded approach that respects both science and real life.
+            </p>
+          </div>
+          <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            {
+              categories.map((category, index) => (
+                <a
+                  href={category.link}
+                  class={`group relative flex min-h-[18rem] overflow-hidden rounded-md border border-border bg-body/75 shadow-[0_18px_50px_-42px_rgba(75,59,37,0.45)] transition duration-300 hover:-translate-y-1 hover:border-primary hover:bg-light/65 dark:border-darkmode-border dark:bg-darkmode-body/70 dark:hover:border-darkmode-primary ${index === 0 || index === 6 ? "xl:col-span-2" : ""}`}
+                  style={`animation: elysian-rise 650ms cubic-bezier(0.16,1,0.3,1) both; animation-delay: ${index * 70}ms;`}
+                >
+                  <ImageMod
+                    src={category.image}
+                    width={900}
+                    height={675}
+                    alt=""
+                    class="absolute inset-0 h-full w-full object-cover opacity-[0.34] saturate-[0.86] transition duration-700 ease-out group-hover:scale-[1.025] group-hover:opacity-[0.42] dark:opacity-[0.22] dark:group-hover:opacity-[0.3]"
+                    style={`object-position: ${category.imagePosition};`}
+                    format="webp"
+                    fit="cover"
+                  />
+                  <span aria-hidden="true" class="absolute inset-0 bg-[linear-gradient(115deg,rgba(248,245,236,0.97)_0%,rgba(248,245,236,0.9)_48%,rgba(248,245,236,0.74)_100%)] dark:bg-[linear-gradient(115deg,rgba(38,34,27,0.96)_0%,rgba(38,34,27,0.88)_52%,rgba(38,34,27,0.76)_100%)]"></span>
+                  <span aria-hidden="true" class="absolute inset-0 bg-[radial-gradient(circle_at_86%_12%,rgba(100,113,83,0.18),transparent_30rem)] opacity-80 mix-blend-multiply dark:opacity-40"></span>
+                  <span class="relative flex min-h-[18rem] w-full flex-col justify-between p-7">
+                    <span class="mb-8 inline-flex h-9 w-9 items-center justify-center rounded-full border border-border/90 bg-body/40 text-primary shadow-[inset_0_1px_0_rgba(255,255,255,0.42)] backdrop-blur-sm transition group-hover:border-primary dark:border-darkmode-border dark:bg-darkmode-body/35 dark:text-darkmode-primary">
+                      <svg viewBox="0 0 24 24" aria-hidden="true" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.6">
+                        <path d="M5 14.5C9.5 14.5 12 12 12 7.5C12 12 14.5 14.5 19 14.5C14.5 14.5 12 17 12 21.5C12 17 9.5 14.5 5 14.5Z" />
+                      </svg>
+                    </span>
+                    <span>
+                      <h3 class="mb-4 text-[2rem] leading-none">{category.title}</h3>
+                      <p class="mb-7 leading-7 text-text/95">{category.copy}</p>
+                      <span class="text-sm font-semibold text-text-dark underline decoration-border underline-offset-8 transition group-hover:text-primary dark:text-darkmode-text-dark dark:group-hover:text-darkmode-primary">
+                        {category.label}
+                      </span>
+                    </span>
+                  </span>
+                </a>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <section class="section-sm border-y border-border/80 bg-body/65 dark:border-darkmode-border dark:bg-darkmode-body/65">
+    <div class="container">
+      <div class="mb-12 flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
+        <div class="max-w-3xl">
+          <h2 class="mb-6">From the Journal</h2>
+          <p class="text-base leading-8 md:text-[1.05rem]">
+            Thoughtful, practical articles on the foundations of women’s wellness — from protein and strength training to hormones, stress, recovery, and sustainable routines.
+          </p>
+        </div>
+        <a class="btn btn-outline-primary w-fit active:translate-y-[1px]" href="/journal">Visit the Journal</a>
+      </div>
+      <div class="grid gap-6 lg:grid-cols-3">
         {
-          banner.image && (
-            <div class="col-12">
-              <ImageMod
-                src={banner.image}
-                height={380}
-                width={1200}
-                alt="banner"
-                format="webp"
-              />
-            </div>
-          )
+          featuredArticles.map((article) => (
+            <article class="group overflow-hidden rounded-md border border-border bg-light/50 p-3 transition duration-300 hover:-translate-y-1 hover:border-primary dark:border-darkmode-border dark:bg-darkmode-light/40">
+              <a href={article.link} class="block">
+                <div class="overflow-hidden rounded-sm">
+                  <ImageMod
+                    src={article.image}
+                    width={560}
+                    height={360}
+                    alt={article.alt}
+                    class="aspect-[5/3] w-full object-cover transition duration-700 ease-out group-hover:scale-[1.035]"
+                    format="webp"
+                    fit="cover"
+                  />
+                </div>
+                <div class="p-5">
+                  <p class="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-primary dark:text-darkmode-primary">{article.category}</p>
+                  <h3 class="mb-4 text-[2rem] leading-[1.02]">{article.title}</h3>
+                  <p class="mb-6 leading-7 text-text/90">{article.excerpt}</p>
+                  <span class="text-sm font-semibold text-text-dark underline decoration-border underline-offset-8 group-hover:text-primary dark:text-darkmode-text-dark dark:group-hover:text-darkmode-primary">
+                    Read the article
+                  </span>
+                </div>
+              </a>
+            </article>
+          ))
         }
       </div>
     </div>
   </section>
-  <!-- /Banner -->
 
-  <!-- Features -->
-  {
-    features.map((feature, index: number) => (
-      <section class={`section-sm ${index % 2 === 0 && "bg-gradient"}`}>
-        <div class="container">
-          <div class="row items-center justify-between">
-            <div
-              class={`mb:md-0 mb-6 md:col-5 ${index % 2 !== 0 && "md:order-2"}`}
+  <section class="section-sm bg-primary/12 dark:bg-darkmode-light/55">
+    <div class="container">
+      <div class="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+        <div class="max-w-2xl">
+          <h2 class="mb-6">A calmer way to stay connected to your wellbeing</h2>
+          <div class="space-y-5 text-base leading-8 md:text-[1.05rem]">
+            <p>
+              Join the Becoming Elysian newsletter for thoughtful, evidence-informed notes on nutrition, strength, hormones, stress, recovery, and sustainable wellness for women.
+            </p>
+            <p>
+              No extremes. No overwhelm. Just grounded guidance to help you feel more supported in your body and your daily life.
+            </p>
+          </div>
+        </div>
+        <form class="be-newsletter-form rounded-md border border-border bg-body/80 p-6 shadow-[0_22px_60px_-44px_rgba(75,59,37,0.45)] dark:border-darkmode-border dark:bg-darkmode-body/75" novalidate>
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div>
+              <label class="form-label" for="newsletter-first-name">First name</label>
+              <input class="form-input" id="newsletter-first-name" name="firstName" type="text" placeholder="First name" autocomplete="given-name" required />
+              <p class="mt-2 min-h-5 text-sm text-text-light" data-helper>So we can greet you warmly.</p>
+              <p class="mt-2 hidden text-sm text-[#9f3f32]" data-error-name>Please enter your first name.</p>
+            </div>
+            <div>
+              <label class="form-label" for="newsletter-email">Email address</label>
+              <input class="form-input" id="newsletter-email" name="email" type="email" placeholder="Email address" autocomplete="email" required />
+              <p class="mt-2 min-h-5 text-sm text-text-light" data-helper>No spam, no noise.</p>
+              <p class="mt-2 hidden text-sm text-[#9f3f32]" data-error-email>Please enter a valid email address.</p>
+            </div>
+          </div>
+          <button class="btn btn-primary mt-6 w-full active:translate-y-[1px] sm:w-auto" type="submit" data-submit-label="Join the Newsletter">
+            Join the Newsletter
+          </button>
+          <p class="mt-5 text-sm text-text-light">Weekly wellness notes. Thoughtful, practical, and easy to return to.</p>
+          <p class="mt-4 hidden rounded-md border border-primary/30 bg-primary/10 px-4 py-3 text-sm text-text-dark dark:text-darkmode-text-dark" data-success>
+            Thank you. Your weekly wellness letter is on its way.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-sm">
+    <div class="container">
+      <div class="mb-12 max-w-4xl">
+        <h2 class="mb-6">Our approach is simple, but not simplistic</h2>
+        <p class="text-base leading-8 md:text-[1.05rem]">
+          Wellness is personal, but it should not feel confusing, extreme, or impossible to maintain. At Becoming Elysian, we focus on the foundations that help women build a steadier relationship with their health.
+        </p>
+      </div>
+      <div class="grid gap-px overflow-hidden rounded-md border border-border bg-border dark:border-darkmode-border dark:bg-darkmode-border md:grid-cols-2 xl:grid-cols-4">
+        {
+          approach.map((pillar) => (
+            <div class="bg-body p-7 dark:bg-darkmode-body">
+              <h3 class="mb-4 text-[2rem] leading-none">{pillar.title}</h3>
+              <p class="leading-7">{pillar.copy}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section-sm bg-light/55 dark:bg-darkmode-light/45">
+    <div class="container">
+      <div class="mb-12 max-w-4xl">
+        <h2 class="mb-6">New here? Start with what your body is asking for.</h2>
+        <p class="text-base leading-8 md:text-[1.05rem]">
+          You do not need to change everything at once. Begin with the area that feels most relevant to your life right now.
+        </p>
+      </div>
+      <div class="grid gap-6 lg:grid-cols-3">
+        {
+          pathways.map((pathway, index) => (
+            <a
+              href={pathway.link}
+              class={`group flex min-h-[20rem] flex-col justify-between rounded-md border border-border bg-body/80 p-8 transition duration-300 hover:-translate-y-1 hover:border-primary hover:bg-body dark:border-darkmode-border dark:bg-darkmode-body/80 dark:hover:border-darkmode-primary ${index === 1 ? "lg:mt-10" : ""}`}
             >
-              <ImageMod
-                src={feature.image}
-                height={480}
-                width={520}
-                alt={feature.title}
-                format="webp"
-              />
-            </div>
-            <div class={`md:col-7 lg:col-6 ${index % 2 !== 0 && "md:order-1"}`}>
-              <h2 set:html={markdownify(feature.title)} class="mb-4" />
-              <p set:html={markdownify(feature.content)} class="mb-8 text-lg" />
-              <ul>
-                {feature.bulletpoints.map((bullet: string) => (
-                  <li class="relative mb-4 pl-6">
-                    <FaCheck className={"absolute left-0 top-1.5"} />
-                    <span set:html={markdownify(bullet)} />
-                  </li>
-                ))}
-              </ul>
-              {feature.button.enable && (
-                <a class="btn btn-primary mt-5" href={feature.button.link}>
-                  {feature.button.label}
+              <span class="text-sm font-semibold uppercase tracking-[0.18em] text-text-light dark:text-darkmode-text-light">Start here</span>
+              <span>
+                <h3 class="mb-5 text-[2.25rem] leading-none">{pathway.title}</h3>
+                <p class="mb-7 leading-7 text-text/90">{pathway.copy}</p>
+                <span class="text-sm font-semibold text-text-dark underline decoration-border underline-offset-8 group-hover:text-primary dark:text-darkmode-text-dark dark:group-hover:text-darkmode-primary">
+                  {pathway.label}
+                </span>
+              </span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] xl:gap-20">
+        <div class="group overflow-hidden rounded-md border border-border bg-light/50 p-2 shadow-[0_28px_70px_-44px_rgba(75,59,37,0.42)] dark:border-darkmode-border dark:bg-darkmode-light/40">
+          <ImageMod
+            src="/images/becoming-elysian-about-editorial.png"
+            width={820}
+            height={620}
+            alt="Editorial wellness setting with neutral tones and sage accents"
+            class="aspect-[4/3] w-full rounded-sm object-cover transition duration-700 ease-out group-hover:scale-[1.025]"
+            format="webp"
+            fit="cover"
+          />
+        </div>
+        <div class="max-w-2xl">
+          <h2 class="mb-6">Created for women who want wellness to feel supportive again</h2>
+          <div class="space-y-5 text-base leading-8 md:text-[1.05rem]">
+            <p>
+              Becoming Elysian was created for women who are tired of extremes — the restrictive plans, the pressure to optimize everything, the confusing advice, and the feeling that wellness has become another thing to keep up with.
+            </p>
+            <p>
+              Here, we focus on what actually supports long-term wellbeing: strength, nourishment, recovery, hormonal awareness, nervous system health, and sustainable daily practices.
+            </p>
+            <p>
+              This is a space for women who want to feel informed, capable, and more at home in their bodies — without building their entire life around wellness.
+            </p>
+          </div>
+          <a class="btn btn-outline-primary mt-8 active:translate-y-[1px]" href="/about">Learn More About Becoming Elysian</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {
+    showPopularWellnessTopicsSection && (
+      <section class="section-sm bg-body/70 dark:bg-darkmode-body/70">
+        <div class="container">
+          <div class="mb-10 max-w-3xl">
+            <h2 class="mb-6">Popular wellness topics</h2>
+            <p class="text-base leading-8 md:text-[1.05rem]">
+              Explore the subjects women often search for when they want more energy, better recovery, stronger bodies, and a calmer approach to health.
+            </p>
+          </div>
+          <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {
+              topics.map((topic) => (
+                <a
+                  href={topic.url}
+                  class="rounded-md border border-border bg-light/45 px-5 py-4 text-sm font-semibold text-text-dark transition hover:-translate-y-0.5 hover:border-primary hover:bg-light dark:border-darkmode-border dark:bg-darkmode-light/35 dark:text-darkmode-text-dark dark:hover:border-darkmode-primary"
+                >
+                  {topic.name}
                 </a>
-              )}
-            </div>
+              ))
+            }
           </div>
         </div>
       </section>
-    ))
+    )
   }
-  <!-- /Features -->
 
-  <Testimonial testimonial={testimonial} />
-  <CallToAction call_to_action={call_to_action} />
+  <section class="section-sm be-final-cta border-y border-primary/30 bg-primary/20">
+    <div class="container">
+      <div class="grid gap-8 py-2 lg:grid-cols-[1fr_auto] lg:items-end">
+        <div class="max-w-3xl">
+          <p class="mb-5 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+            The weekly wellness letter
+          </p>
+          <h2 class="mb-6 max-w-[12ch]">Begin with one small shift</h2>
+          <p class="max-w-[40rem]">
+            Receive the weekly Becoming Elysian letter — thoughtful, practical wellness notes for women who want to feel stronger, calmer, and more connected to their bodies.
+          </p>
+        </div>
+
+        <div class="flex flex-col items-start gap-4 lg:items-end">
+          <a class="btn btn-primary active:translate-y-[1px]" href="/newsletter">
+            Get the Weekly Wellness Letter
+          </a>
+          <p class="text-sm text-text-light dark:text-darkmode-text-light">
+            Evidence-informed wellness, written with calm and clarity.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+
+  <script is:inline>
+    const newsletterForms = document.querySelectorAll(".be-newsletter-form");
+
+    newsletterForms.forEach((form) => {
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const name = form.querySelector('[name="firstName"]');
+        const email = form.querySelector('[name="email"]');
+        const nameError = form.querySelector("[data-error-name]");
+        const emailError = form.querySelector("[data-error-email]");
+        const success = form.querySelector("[data-success]");
+        const button = form.querySelector("button[type='submit']");
+        const validEmail = email.value.trim().includes("@") && email.value.trim().includes(".");
+        const validName = name.value.trim().length > 0;
+
+        nameError.classList.toggle("hidden", validName);
+        emailError.classList.toggle("hidden", validEmail);
+        success.classList.add("hidden");
+
+        if (!validName || !validEmail) {
+          return;
+        }
+
+        button.disabled = true;
+        button.textContent = "Joining...";
+
+        await new Promise((resolve) => window.setTimeout(resolve, 500));
+
+        button.disabled = false;
+        button.textContent = button.dataset.submitLabel;
+        success.classList.remove("hidden");
+        form.reset();
+      });
+    });
+  </script>
+
+  <style is:inline>
+    .be-home {
+      --be-home-ink: #2a251d;
+      --be-home-muted: #2a251d;
+    }
+
+    .be-home h1,
+    .be-home h2,
+    .be-home h3 {
+      color: var(--be-home-ink);
+      font-weight: 500;
+      letter-spacing: -0.018em;
+    }
+
+    .be-home h1 {
+      line-height: 0.94;
+    }
+
+    .be-home h2 {
+      font-size: clamp(2.25rem, 3.8vw, 3.6rem);
+      line-height: 1;
+    }
+
+    .be-home h3 {
+      font-size: clamp(1.6rem, 2.5vw, 2.15rem);
+      line-height: 1.06;
+    }
+
+    .be-home p:not(.be-wellness-closing):not([class*="text-sm"]):not([class*="text-xs"]) {
+      color: var(--be-home-muted);
+      font-size: clamp(1rem, 1.25vw, 1.12rem);
+      line-height: 1.62;
+      letter-spacing: 0.01em;
+    }
+
+    .be-home .be-wellness-closing {
+      margin-top: 2.5rem;
+      border-top: 1px solid rgba(91, 126, 79, 0.28);
+      padding-top: 1.8rem;
+      color: var(--be-home-ink);
+      font-size: clamp(1.5rem, 3.6vw, 2.55rem);
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+
+    @media (max-width: 767px) {
+      .be-home h1 {
+        font-size: clamp(2.45rem, 10vw, 3.25rem);
+        max-width: 12.4ch;
+      }
+
+      .be-home h2 {
+        font-size: clamp(2.25rem, 9.5vw, 3.1rem);
+      }
+
+      .be-home .section,
+      .be-home .section-sm {
+        padding-top: 5.5rem;
+        padding-bottom: 5.5rem;
+      }
+    }
+
+    @keyframes elysian-rise {
+      from {
+        opacity: 0;
+        transform: translate3d(0, 18px, 0);
+      }
+      to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+  </style>
 </Base>

@@ -52,12 +52,12 @@ const { title, meta_title, description, image, noindex, canonical } =
     <meta
       name="theme-color"
       media="(prefers-color-scheme: light)"
-      content="#fff"
+      content="#F7F3E8"
     />
     <meta
       name="theme-color"
       media="(prefers-color-scheme: dark)"
-      content="#000"
+      content="#4B3B25"
     />
     <meta name="generator" content={Astro.generator} />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -96,6 +96,21 @@ const { title, meta_title, description, image, noindex, canonical } =
     />
 
     <ClientRouter />
+
+    <style is:inline>
+      html body .container {
+        width: min(100% - clamp(2.25rem, 7vw, 7rem), 1280px) !important;
+        max-width: 1280px !important;
+        margin-inline: auto !important;
+        padding-inline: 0 !important;
+      }
+
+      @media (max-width: 480px) {
+        html body .container {
+          width: min(100% - 64px, 1280px) !important;
+        }
+      }
+    </style>
 
     <!-- author from config.json -->
     <meta name="author" content={config.metadata.meta_author} />
@@ -164,7 +179,7 @@ const { title, meta_title, description, image, noindex, canonical } =
     <Announcement client:only="react" />
     <Header />
     <SearchModal client:only="react" />
-    <main class="grow" id="main-content">
+    <main class="grow overflow-x-hidden w-full max-w-full" id="main-content">
       <slot />
     </main>
     <Footer />

@@ -13,17 +13,21 @@ const { data } = Astro.props;
 const { title, image, date, author, categories } = data.data;
 ---
 
-<div class="bg-body dark:bg-darkmode-body">
+<div
+  class="h-full bg-body p-5 shadow-sm shadow-primary/10 dark:bg-darkmode-body sm:p-6"
+>
   {
     image && (
-      <ImageMod
-        class="mb-6 w-full rounded"
-        src={image}
-        alt={title}
-        width={445}
-        height={230}
-        format="webp"
-      />
+      <div class="group mb-6 overflow-hidden rounded-md border border-border bg-light/60 p-1 dark:border-darkmode-border dark:bg-darkmode-light/60">
+        <ImageMod
+          class="w-full rounded-sm transition-transform duration-700 ease-out group-hover:scale-105"
+          src={image}
+          alt={title}
+          width={445}
+          height={230}
+          format="webp"
+        />
+      </div>
     )
   }
   <h4 class="mb-3">

@@ -55,7 +55,7 @@ const swiperOptions: SwiperOptions = {
                     designation: string;
                   }) => (
                     <SwiperSlide>
-                      <div class="rounded-lg bg-light px-7 py-10 dark:bg-darkmode-light">
+                      <div class="rounded-md border border-border bg-light/80 px-7 py-10 shadow-sm shadow-primary/10 dark:border-darkmode-border dark:bg-darkmode-light">
                         <div class="text-text-dark dark:text-white">
                           <svg
                             width="33"
@@ -79,7 +79,7 @@ const swiperOptions: SwiperOptions = {
                             <ImageMod
                               height={50}
                               width={50}
-                              class="rounded-full"
+                              class="rounded-md"
                               src={item.avatar}
                               alt={item.name}
                               format="webp"
@@ -98,7 +98,7 @@ const swiperOptions: SwiperOptions = {
                         </div>
                       </div>
                     </SwiperSlide>
-                  )
+                  ),
                 )}
               </SwiperWrapper>
               <SwiperPagination class="testimonial-slider-pagination flex items-center justify-center" />

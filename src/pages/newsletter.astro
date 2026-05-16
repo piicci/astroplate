@@ -1,0 +1,111 @@
+---
+import Base from "@/layouts/Base.astro";
+---
+
+<Base
+  title="Newsletter"
+  meta_title="Newsletter | Becoming Elysian"
+  description="Join the weekly Becoming Elysian wellness letter for calm, practical guidance on nutrition, strength, hormones, stress, recovery, and sustainable habits."
+  image="/images/becoming-elysian-about-editorial.png"
+>
+  <section class="section-sm newsletter-page">
+    <div class="container">
+      <div class="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+        <div class="max-w-2xl">
+          <p class="mb-5 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+            The weekly wellness letter
+          </p>
+          <h1 class="mb-6">A calmer way to stay connected to your wellbeing</h1>
+          <div class="space-y-5">
+            <p>
+              Join the Becoming Elysian newsletter for thoughtful, evidence-informed notes on nutrition, strength, hormones, stress, recovery, and sustainable wellness for women.
+            </p>
+            <p>
+              No extremes. No overwhelm. Just grounded guidance to help you feel more supported in your body and your daily life.
+            </p>
+          </div>
+        </div>
+
+        <form class="newsletter-page-form rounded-md border border-border bg-light/45 p-6 shadow-[0_18px_60px_-48px_rgba(75,59,37,0.55)] dark:border-darkmode-border dark:bg-darkmode-light/35 md:p-8" novalidate>
+          <div class="grid gap-5">
+            <div>
+              <label class="form-label" for="newsletter-page-first-name">First name</label>
+              <input class="form-input" id="newsletter-page-first-name" name="firstName" type="text" placeholder="First name" autocomplete="given-name" required />
+              <p class="mt-2 min-h-5 text-sm text-text-light">So we can greet you warmly.</p>
+              <p class="mt-2 hidden text-sm text-[#9f3f32]" data-error-name>Please enter your first name.</p>
+            </div>
+            <div>
+              <label class="form-label" for="newsletter-page-email">Email address</label>
+              <input class="form-input" id="newsletter-page-email" name="email" type="email" placeholder="Email address" autocomplete="email" required />
+              <p class="mt-2 min-h-5 text-sm text-text-light">Weekly notes, no noise.</p>
+              <p class="mt-2 hidden text-sm text-[#9f3f32]" data-error-email>Please enter a valid email address.</p>
+            </div>
+          </div>
+          <button class="btn btn-primary mt-6 w-full active:translate-y-[1px] sm:w-auto" type="submit" data-submit-label="Join the Newsletter">
+            Join the Newsletter
+          </button>
+          <p class="mt-5 text-sm text-text-light">
+            Thoughtful, practical, and easy to return to.
+          </p>
+          <p class="mt-4 hidden rounded-md border border-primary/40 bg-body/70 px-4 py-3 text-sm text-text-dark dark:text-darkmode-text-dark" data-success>
+            Thank you. Your weekly wellness letter is on its way.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script is:inline>
+    const newsletterPageForms = document.querySelectorAll(".newsletter-page-form");
+
+    newsletterPageForms.forEach((form) => {
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const name = form.querySelector('[name="firstName"]');
+        const email = form.querySelector('[name="email"]');
+        const nameError = form.querySelector("[data-error-name]");
+        const emailError = form.querySelector("[data-error-email]");
+        const success = form.querySelector("[data-success]");
+        const button = form.querySelector("button[type='submit']");
+        const validEmail = email.value.trim().includes("@") && email.value.trim().includes(".");
+        const validName = name.value.trim().length > 0;
+
+        nameError.classList.toggle("hidden", validName);
+        emailError.classList.toggle("hidden", validEmail);
+        success.classList.add("hidden");
+
+        if (!validName || !validEmail) {
+          return;
+        }
+
+        button.disabled = true;
+        button.textContent = "Joining...";
+
+        await new Promise((resolve) => window.setTimeout(resolve, 500));
+
+        button.disabled = false;
+        button.textContent = button.dataset.submitLabel;
+        success.classList.remove("hidden");
+        form.reset();
+      });
+    });
+  </script>
+
+  <style is:inline>
+    .newsletter-page h1 {
+      color: #2a251d;
+      font-size: clamp(2.35rem, 4vw, 3.65rem);
+      font-weight: 500;
+      letter-spacing: -0.018em;
+      line-height: 1;
+    }
+
+    .newsletter-page p:not([class*="text-sm"]) {
+      color: #2a251d;
+      font-size: clamp(1rem, 1.25vw, 1.12rem);
+      letter-spacing: 0.01em;
+      line-height: 1.62;
+    }
+  </style>
+</Base>

@@ -3,7 +3,24 @@ html {
 }
 
 body {
-  @apply bg-body text-base dark:bg-darkmode-body font-primary font-normal leading-relaxed text-text dark:text-darkmode-text;
+  @apply bg-body text-base dark:bg-darkmode-body font-primary font-normal leading-relaxed text-text dark:text-darkmode-text antialiased;
+  background-image:
+    radial-gradient(
+      circle at top left,
+      rgba(220, 201, 167, 0.52),
+      transparent 34rem
+    ),
+    radial-gradient(
+      circle at 85% 12%,
+      rgba(185, 150, 104, 0.18),
+      transparent 30rem
+    ),
+    linear-gradient(
+      180deg,
+      rgba(247, 243, 232, 0.96),
+      rgba(237, 226, 204, 0.52)
+    );
+  min-height: 100vh;
 }
 
 h1,
@@ -12,17 +29,19 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-secondary font-bold leading-tight text-text-dark dark:text-darkmode-text-dark;
+  @apply font-secondary font-semibold leading-tight tracking-normal text-text-dark dark:text-darkmode-text-dark;
 }
 
 h1,
 .h1 {
-  @apply text-h1-sm md:text-h1;
+  font-size: clamp(2.45rem, 4.2vw, 4.5rem);
+  line-height: 0.96;
 }
 
 h2,
 .h2 {
-  @apply text-h2-sm md:text-h2;
+  font-size: clamp(2.15rem, 3.65vw, 3.85rem);
+  line-height: 1;
 }
 
 h3,
@@ -60,4 +79,12 @@ blockquote > p {
 
 button {
   @apply cursor-pointer;
+}
+
+a {
+  @apply transition-colors duration-300;
+}
+
+::selection {
+  @apply bg-primary text-white dark:bg-darkmode-primary dark:text-text-dark;
 }

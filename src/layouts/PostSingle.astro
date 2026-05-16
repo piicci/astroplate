@@ -56,10 +56,14 @@ const { title, description, author, categories, image, date, tags } = post.data;
               ))
             }
           </li>
-          <li class="mr-4 inline-block">
-            <FaRegClock className={"mr-2 -mt-1 inline-block"} />
-            {dateFormat(date)}
-          </li>
+          {
+            date && (
+              <li class="mr-4 inline-block">
+                <FaRegClock className={"mr-2 -mt-1 inline-block"} />
+                {dateFormat(date)}
+              </li>
+            )
+          }
         </ul>
         <div class="content mb-10">
           <Content />
