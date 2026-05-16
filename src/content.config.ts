@@ -74,32 +74,124 @@ const contactCollection = defineCollection({
 });
 
 // Homepage collection schema
+const homepageButton = z.object({
+  enable: z.boolean(),
+  label: z.string(),
+  link: z.string(),
+  variant: z.enum(["primary", "outline"]).default("primary"),
+});
+
 const homepageCollection = defineCollection({
   loader: glob({ pattern: "**/-*.{md,mdx}", base: "src/content/homepage" }),
   schema: z.object({
+    title: z.string(),
+    meta_title: z.string().optional(),
+    description: z.string(),
+    image: z.string().optional(),
     banner: z.object({
+      eyebrow: z.string(),
       title: z.string(),
       content: z.string(),
       image: z.string(),
-      button: z.object({
-        enable: z.boolean(),
-        label: z.string(),
-        link: z.string(),
-      }),
+      image_alt: z.string(),
+      image_note: z.string(),
+      buttons: z.array(homepageButton),
     }),
-    features: z.array(
-      z.object({
-        title: z.string(),
-        image: z.string(),
-        content: z.string(),
-        bulletpoints: z.array(z.string()),
-        button: z.object({
-          enable: z.boolean(),
-          label: z.string(),
+    intro: z.object({
+      title: z.string(),
+      content: z.string(),
+      closing: z.string(),
+    }),
+    featured_articles: z.object({
+      title: z.string(),
+      content: z.string(),
+      button: homepageButton,
+      articles: z.array(
+        z.object({
+          category: z.string(),
+          title: z.string(),
+          excerpt: z.string(),
           link: z.string(),
+          image: z.string(),
+          image_alt: z.string(),
         }),
-      }),
-    ),
+      ),
+    }),
+    newsletter: z.object({
+      title: z.string(),
+      content: z.string(),
+      submit_label: z.string(),
+      helper_text: z.string(),
+      success_message: z.string(),
+    }),
+    approach: z.object({
+      title: z.string(),
+      content: z.string(),
+      pillars: z.array(
+        z.object({
+          title: z.string(),
+          content: z.string(),
+        }),
+      ),
+    }),
+    pathways: z.object({
+      title: z.string(),
+      content: z.string(),
+      items: z.array(
+        z.object({
+          eyebrow: z.string(),
+          title: z.string(),
+          content: z.string(),
+          link: z.string(),
+          label: z.string(),
+        }),
+      ),
+    }),
+    about_panel: z.object({
+      title: z.string(),
+      content: z.string(),
+      image: z.string(),
+      image_alt: z.string(),
+      button: homepageButton,
+    }),
+    final_cta: z.object({
+      eyebrow: z.string(),
+      title: z.string(),
+      content: z.string(),
+      button: homepageButton,
+      note: z.string(),
+    }),
+    features: z
+      .array(
+        z.object({
+          title: z.string(),
+          image: z.string(),
+          content: z.string(),
+          bulletpoints: z.array(z.string()),
+          button: homepageButton,
+        }),
+      )
+      .optional(),
+    categories: z
+      .array(
+        z.object({
+          title: z.string(),
+          content: z.string(),
+          link: z.string(),
+          label: z.string(),
+          image: z.string(),
+          image_position: z.string().default("center"),
+        }),
+      )
+      .optional(),
+    topics: z
+      .array(
+        z.object({
+          name: z.string(),
+          url: z.string(),
+        }),
+      )
+      .optional(),
   }),
 });
 

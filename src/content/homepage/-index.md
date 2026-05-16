@@ -1,73 +1,168 @@
 ---
-# Banner
+title: Becoming Elysian | Wellness for Women Over 35
+meta_title: Becoming Elysian | Wellness for Women Over 35
+description: Becoming Elysian is a modern wellness platform for women exploring
+  fitness, nutrition, hormonal health, stress, recovery, and sustainable
+  wellbeing through a grounded, evidence-informed lens.
+image: /images/og-image.png
+
+# Hero banner
 banner:
-  title: The Ultimate Starter Template You Need To Start Your Astro Project
-  content: Astroplate is a free starter template built with Astro and TailwindCSS,
-    providing everything you need to jumpstart your Astro project and save
-    valuable time.
-  image: /images/banner.png
+  eyebrow: Wellness for women, reimagined with calm and clarity
+  title: Wellness that supports your life — not consumes it.
+  content: Becoming Elysian is a modern wellness platform for women who want to
+    feel stronger, calmer, more energized, and more connected to their bodies
+    through evidence-informed fitness, nutrition, hormonal health, recovery, and
+    sustainable habits.
+  image: /images/becoming-elysian-about-editorial.png
+  image_alt: Woman enjoying a calm morning wellness routine in soft natural light
+  image_note: Evidence-informed notes for strength, nourishment, recovery,
+    hormones, and the life around them.
+  buttons:
+    - enable: true
+      label: Read the Journal
+      link: /journal
+      variant: primary
+    - enable: true
+      label: Join the Newsletter
+      link: /newsletter
+      variant: outline
+
+# Intro section
+intro:
+  title: A gentler, more sustainable way to feel well
+  content: |-
+    You have probably felt <i>that quiet exhaustion.</i>
+    The kind that comes from trying to do more, track more, restrict more, and push harder.
+    So much of modern wellness does not create freedom. It simply adds another layer of pressure.
+
+    Becoming Elysian offers a <b>different rhythm.</b>
+    Here, wellness is not about perfection or control.
+    It is about building <b>quiet strength</b>, supporting your energy, understanding your body with wisdom, recovering deeply, and creating habits that actually fit the life you are already living.
+  closing: |-
+    This is not about making your world smaller around wellness.
+    It is about letting wellness <b>gently support</b> the full, beautiful life you want to live.
+
+# Journal section
+featured_articles:
+  title: From the Journal
+  content: Thoughtful, practical articles on the foundations of women’s wellness
+    — from protein and strength training to hormones, stress, recovery, and
+    sustainable routines.
   button:
     enable: true
-    label: Fork Deploy and Edit Online 🚀
-    link: https://app.sitepins.com/new/clone?name=Astroplate&repository=https://github.com/zeon-studio/astroplate?aff=astroplate
+    label: Visit the Journal
+    link: /journal
+    variant: outline
+  articles:
+    - category: Nutrition & Metabolic Health
+      title: "Nutrition for Women Over 35: How to Support Energy, Metabolism,
+        Hormones, and Long-Term Health"
+      excerpt: A grounded guide to eating in a way that supports energy,
+        strength, blood sugar, hormones, and long-term wellbeing after 35.
+      link: /journal/nutrition-for-women-over-35
+      image: /images/becoming-elysian-about-editorial.png
+      image_alt: Editorial wellness setting with neutral tones and sage accents
+    - category: Nutrition & Metabolic Health
+      title: How Much Protein Do Women Over 35 Really Need?
+      excerpt: Why protein becomes more important with age, how it supports
+        muscle and metabolism, and how to build it into your meals without
+        overcomplicating your diet.
+      link: /journal/protein-for-women-over-35
+      image: /images/og-image.png
+      image_alt: Calm neutral wellness editorial scene with soft natural light
+    - category: Fitness & Strength
+      title: "Strength Training for Women Over 35: A Smarter Way to Build
+        Muscle, Energy, and Confidence"
+      excerpt: A clear introduction to strength training for women who want to
+        feel capable, support their metabolism, and age with more resilience.
+      link: /journal/strength-training-for-women-over-35
+      image: /images/becoming-elysian-about-editorial.png
+      image_alt: Woman enjoying a calm morning wellness routine in soft natural light
 
-# Features
-features:
-  - title: What's Included in Astroplate
-    image: /images/service-1.png
-    content: Astroplate is a comprehensive starter template that includes everything
-      you need to get started with your Astro project. What's Included in
-      Astroplate
-    bulletpoints:
-      - 10+ Pre-build pages
-      - 95+ Google Pagespeed Score
-      - Build with Astro and TailwindCSS for easy and customizable styling
-      - Fully responsive on all devices
-      - SEO-optimized for better search engine rankings
-      - "**Open-source and free** for personal and commercial use"
-    button:
-      enable: false
-      label: Get Started Now
-      link: "#"
-  - title: Discover the Key Features Of Astro
-    image: /images/service-2.png
-    content: "Astro is an all-in-one web framework for building fast,
-      content-focused websites. It offers a range of exciting features for
-      developers and website creators. Some of the key features are:"
-    bulletpoints:
-      - "Zero JS, by default: No JavaScript runtime overhead to slow you down."
-      - "Customizable: Tailwind, MDX, and 100+ other integrations to choose
-        from."
-      - "UI-agnostic: Supports React, Preact, Svelte, Vue, Solid, Lit and more."
-    button:
-      enable: true
-      label: Get Started Now
-      link: https://github.com/zeon-studio/astroplate
-  - title: The Top Reasons to Choose Astro for Your Next Project
-    image: /images/service-3.png
-    content: With Astro, you can build modern and content-focused websites without
-      sacrificing performance or ease of use.
-    bulletpoints:
-      - Instantly load static sites for better user experience and SEO.
-      - Intuitive syntax and support for popular frameworks make learning and
-        using Astro a breeze.
-      - Use any front-end library or framework, or build custom components, for
-        any project size.
-      - Built on cutting-edge technology to keep your projects up-to-date with
-        the latest web standards.
-    button:
-      enable: false
-      label: Get Started Now
-      link: "#"
-  - title: Feature number four
-    image: ""
-    content: This is the content for the feature number four
-    bulletpoints:
-      - Bullet point one
-      - bullet point two
-    button:
-      enable: true
-      label: "Button"
-      link: https://behtar-shim.com
+# Newsletter section
+newsletter:
+  title: A calmer way to stay connected to your wellbeing
+  content: |-
+    Join the Becoming Elysian newsletter for thoughtful, evidence-informed notes on nutrition, strength, hormones, stress, recovery, and sustainable wellness for women.
+    No extremes. No overwhelm. Just grounded guidance to help you feel more supported in your body and your daily life.
+  submit_label: Join the Newsletter
+  helper_text: Weekly wellness notes. Thoughtful, practical, and easy to return to.
+  success_message: Thank you. Your weekly wellness letter is on its way.
+
+# Approach section
+approach:
+  title: Our approach is simple, but not simplistic
+  content: Wellness is personal, but it should not feel confusing, extreme, or
+    impossible to maintain. At Becoming Elysian, we focus on the foundations
+    that help women build a steadier relationship with their health.
+  pillars:
+    - title: Evidence-informed
+      content: We explore wellness through a grounded, science-aware lens without
+        turning every meal, workout, or habit into a rigid protocol.
+    - title: Sustainable
+      content: The goal is not perfection. It is consistency, flexibility, and
+        practices that can support your life through different seasons.
+    - title: Body-aware
+      content: We help women better understand energy, appetite, stress,
+        recovery, hormones, and strength without shame or fear-based messaging.
+    - title: Strength-centered
+      content: Strength supports far more than appearance. It can help women
+        feel more capable, resilient, independent, and connected to their bodies
+        over time.
+
+# Start-here pathway cards
+pathways:
+  title: New here? Start with what your body is asking for.
+  content: You do not need to change everything at once. Begin with the area that
+    feels most relevant to your life right now.
+  items:
+    - eyebrow: Start here
+      title: If you feel tired and overwhelmed
+      content: Start with stress, sleep, nervous system support, recovery, and
+        the daily rhythms that help your body feel safer and steadier.
+      link: /start-here#stress-recovery
+      label: Start with Stress & Recovery
+    - eyebrow: Start here
+      title: If your body feels different after 35
+      content: Start with protein, strength training, metabolism, hormones,
+        perimenopause, and the foundations that support body composition and
+        energy.
+      link: /start-here#metabolism-hormones
+      label: Start with Metabolism & Hormones
+    - eyebrow: Start here
+      title: If you want a routine you can actually sustain
+      content: Start with walking, mobility, simple meals, habit-building, and
+        realistic wellness practices that do not require perfection.
+      link: /start-here#sustainable-habits
+      label: Start with Sustainable Habits
+
+# About panel
+about_panel:
+  title: Created for women who want wellness to feel supportive again
+  content: |-
+    Becoming Elysian was created for women who are tired of extremes — the restrictive plans, the pressure to optimize everything, the confusing advice, and the feeling that wellness has become another thing to keep up with.
+    Here, we focus on what actually supports long-term wellbeing: strength, nourishment, recovery, hormonal awareness, nervous system health, and sustainable daily practices.
+    This is a space for women who want to feel informed, capable, and more at home in their bodies — without building their entire life around wellness.
+  image: /images/becoming-elysian-about-editorial.png
+  image_alt: Editorial wellness setting with neutral tones and sage accents
+  button:
+    enable: true
+    label: Learn More About Becoming Elysian
+    link: /about
+    variant: outline
+
+# Final call to action
+final_cta:
+  eyebrow: The weekly wellness letter
+  title: Begin with one small shift
+  content: Receive the weekly Becoming Elysian letter — thoughtful, practical
+    wellness notes for women who want to feel stronger, calmer, and more
+    connected to their bodies.
+  button:
+    enable: true
+    label: Get the Weekly Wellness Letter
+    link: /newsletter
+    variant: primary
+  note: Evidence-informed wellness, written with calm and clarity.
 ---
-​
