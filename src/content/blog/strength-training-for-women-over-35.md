@@ -1,5 +1,6 @@
 ---
-title: "Strength Training for Women Over 35: A Smarter Way to Build Muscle, Energy, and Confidence"
+title: "Strength Training for Women Over 35"
+subtitle: "A Smarter Way to Build Muscle, Energy, and Confidence"
 meta_title: "Strength Training for Women Over 35"
 description: "A clear introduction to strength training for women who want to feel capable, support their metabolism, and age with more resilience."
 date: 2026-05-03T08:00:00Z

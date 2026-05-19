@@ -10,16 +10,7 @@ const {
   blog_folder,
 }: { summary_length: number; blog_folder: string } = config.settings;
 const { data } = Astro.props;
-const { title, image, date, author, categories } = data.data;
-const splitArticleTitle = (value: string) => {
-  const [primary, ...subtitle] = value.split(":");
-
-  return {
-    primary: primary.trim(),
-    subtitle: subtitle.join(":").trim(),
-  };
-};
-const titleParts = splitArticleTitle(title);
+const { title, subtitle, image, date, author, categories } = data.data;
 ---
 
 <div
@@ -41,11 +32,11 @@ const titleParts = splitArticleTitle(title);
   }
   <h4 class="mb-3 leading-none">
     <a href={`/${blog_folder}/${data.id}`}>
-      <span>{titleParts.primary}</span>
+      <span>{title}</span>
       {
-        titleParts.subtitle && (
-          <span class="mt-2 block font-primary text-[0.98rem] font-medium leading-6 tracking-normal text-text-light">
-            {titleParts.subtitle}
+        subtitle && (
+          <span class="be-article-subtitle">
+            {subtitle}
           </span>
         )
       }

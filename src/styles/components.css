@@ -7,9 +7,17 @@
   @apply py-20 xl:py-28;
 }
 
+@media (max-width: 767px) {
+  .section,
+  .section-sm {
+    padding-top: 5.75rem;
+    padding-bottom: 5.75rem;
+  }
+}
+
 /* container */
 .container {
-  width: min(calc(100% - clamp(2.25rem, 7vw, 7rem)), 1280px) !important;
+  width: min(calc(100% - clamp(3rem, 7vw, 7rem)), 1280px) !important;
   max-width: 1280px !important;
   margin-inline: auto !important;
   padding-inline: 0 !important;
@@ -17,7 +25,42 @@
 
 @media (max-width: 480px) {
   .container {
-    width: min(calc(100% - 32px), 1280px) !important;
+    width: min(calc(100% - 48px), 1280px) !important;
+  }
+}
+
+.be-article-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-top: 0.85rem;
+  color: #3f4a14;
+  font-family: var(--font-primary);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.be-article-subtitle::before {
+  flex: 0 0 auto;
+  width: 2.85rem;
+  height: 1px;
+  background: #3f4a14;
+  content: "";
+  opacity: 0.72;
+}
+
+@media (max-width: 480px) {
+  .be-article-subtitle {
+    gap: 0.7rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+  }
+
+  .be-article-subtitle::before {
+    width: 2rem;
   }
 }
 

@@ -17,6 +17,7 @@ const blogCollection = defineCollection({
   loader: glob({ pattern: "**/*.{md,mdx}", base: "src/content/blog" }),
   schema: z.object({
     title: z.string(),
+    subtitle: z.string().optional(),
     meta_title: z.string().optional(),
     description: z.string().optional(),
     date: z.coerce.date().optional(),
@@ -110,6 +111,7 @@ const homepageCollection = defineCollection({
         z.object({
           category: z.string(),
           title: z.string(),
+          subtitle: z.string().optional(),
           excerpt: z.string(),
           link: z.string(),
           image: z.string(),

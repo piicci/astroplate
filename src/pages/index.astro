@@ -1,7 +1,7 @@
 ---
 import ImageMod from "@/components/ImageMod.astro";
 import Base from "@/layouts/Base.astro";
-import { getListPage } from "@/lib/contentParser.astro";
+import { getListPage, getSinglePage } from "@/lib/contentParser.astro";
 
 type HomepageButton = {
   enable: boolean;
@@ -12,6 +12,13 @@ type HomepageButton = {
 
 const homepage = await getListPage("homepage", "-index");
 const home = homepage.data;
+const posts = await getSinglePage("blog");
+const postsByLink = new Map(
+  posts.flatMap((post) => [
+    [`/journal/${post.id}`, post],
+    [`/blog/${post.id}`, post],
+  ]),
+);
 
 const toBlocks = (content: string) =>
   content
@@ -35,14 +42,6 @@ const buttonClass = (button: HomepageButton, extra = "") =>
     .filter(Boolean)
     .join(" ");
 
-const splitArticleTitle = (title: string) => {
-  const [primary, ...subtitle] = title.split(":");
-
-  return {
-    primary: primary.trim(),
-    subtitle: subtitle.join(":").trim(),
-  };
-};
 ---
 
 <Base
@@ -153,7 +152,8 @@ const splitArticleTitle = (title: string) => {
         <div class="grid gap-6 lg:grid-cols-[1.16fr_0.92fr_0.92fr] lg:items-start">
           {
             home.featured_articles.articles.map((article, index) => {
-              const title = splitArticleTitle(article.title);
+              const linkedPost = postsByLink.get(article.link);
+              const subtitle = linkedPost?.data.subtitle || article.subtitle;
 
               return (
                 <article class={`group overflow-hidden rounded-sm border border-border/70 bg-white/28 p-3 shadow-[0_22px_70px_-58px_rgba(23,19,13,0.28)] transition duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-1 hover:border-primary dark:border-darkmode-border dark:bg-darkmode-light/40 ${index === 0 ? "lg:mt-0" : index === 1 ? "lg:mt-14" : "lg:mt-7"}`}>
@@ -174,10 +174,10 @@ const splitArticleTitle = (title: string) => {
                         {article.category}
                       </p>
                       <h3 class="be-article-title mb-4">
-                        <span>{title.primary}</span>
+                        <span>{article.title}</span>
                         {
-                          title.subtitle && (
-                            <span class="be-article-subtitle">{title.subtitle}</span>
+                          subtitle && (
+                            <span class="be-article-subtitle">{subtitle}</span>
                           )
                         }
                       </h3>
@@ -506,17 +506,6 @@ const splitArticleTitle = (title: string) => {
       display: block;
     }
 
-    .be-article-subtitle {
-      display: block;
-      margin-top: 0.7rem;
-      color: #6f8790;
-      font-family: var(--font-primary);
-      font-size: 0.98rem;
-      font-weight: 500;
-      letter-spacing: 0.01em;
-      line-height: 1.48;
-    }
-
     .be-approach-editorial {
       position: relative;
       overflow: hidden;
@@ -694,6 +683,11 @@ const splitArticleTitle = (title: string) => {
         margin-inline: auto;
       }
 
+      .be-home > section:not(.be-hero) > .container > * {
+        width: min(100%, 44rem);
+        margin-inline: auto;
+      }
+
       .be-hero-copy,
       .be-hero-media {
         width: 100%;
@@ -720,6 +714,10 @@ const splitArticleTitle = (title: string) => {
       }
 
       .be-hero .container > .grid {
+        width: min(100%, 34rem);
+      }
+
+      .be-home > section:not(.be-hero) > .container > * {
         width: min(100%, 34rem);
       }
 
@@ -812,11 +810,15 @@ const splitArticleTitle = (title: string) => {
     }
 
     @media (min-width: 640px) and (max-width: 767px) {
-      .be-hero > .container {
+      .be-home > section > .container {
         width: min(calc(100% - 2rem), 1280px) !important;
       }
 
       .be-hero .container > .grid {
+        width: min(100%, 39rem);
+      }
+
+      .be-home > section:not(.be-hero) > .container > * {
         width: min(100%, 39rem);
       }
     }

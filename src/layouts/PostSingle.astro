@@ -16,7 +16,8 @@ const { post } = Astro.props;
 const posts = await getSinglePage(COLLECTION_FOLDER);
 const similarPosts = similarItems(post, posts);
 const { Content } = await render(post);
-const { title, description, author, categories, image, date, tags } = post.data;
+const { title, subtitle, description, author, categories, image, date, tags } =
+  post.data;
 ---
 
 <section class="section pt-7">
@@ -38,6 +39,13 @@ const { title, description, author, categories, image, date, tags } = post.data;
           )
         }
         <h1 set:html={markdownify(title)} class="h2 mb-4" />
+        {
+          subtitle && (
+            <p class="be-article-subtitle mb-7">
+              {subtitle}
+            </p>
+          )
+        }
         <ul class="mb-4">
           <li class="mr-4 inline-block">
             <a href={`/authors/${slugify(author)}`}>

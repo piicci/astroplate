@@ -1,5 +1,6 @@
 ---
-title: "Nutrition for Women Over 35: How to Support Energy, Metabolism, Hormones, and Long-Term Health"
+title: "Nutrition for Women Over 35"
+subtitle: "How to Support Energy, Metabolism, Hormones, and Long-Term Health"
 meta_title: "Nutrition for Women Over 35"
 description: "A grounded guide to eating in a way that supports energy, strength, blood sugar, hormones, and long-term wellbeing after 35."
 date: 2026-05-01T08:00:00Z

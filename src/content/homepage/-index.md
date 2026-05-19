@@ -54,8 +54,8 @@ featured_articles:
     variant: outline
   articles:
     - category: Nutrition & Metabolic Health
-      title: "Nutrition for Women Over 35: How to Support Energy, Metabolism,
-        Hormones, and Long-Term Health"
+      title: Nutrition for Women Over 35
+      subtitle: How to Support Energy, Metabolism, Hormones, and Long-Term Health
       excerpt: A grounded guide to eating in a way that supports energy,
         strength, blood sugar, hormones, and long-term wellbeing after 35.
       link: /journal/nutrition-for-women-over-35
@@ -70,8 +70,8 @@ featured_articles:
       image: /images/og-image.png
       image_alt: Calm neutral wellness editorial scene with soft natural light
     - category: Fitness & Strength
-      title: "Strength Training for Women Over 35: A Smarter Way to Build
-        Muscle, Energy, and Confidence"
+      title: Strength Training for Women Over 35
+      subtitle: A Smarter Way to Build Muscle, Energy, and Confidence
       excerpt: A clear introduction to strength training for women who want to
         feel capable, support their metabolism, and age with more resilience.
       link: /journal/strength-training-for-women-over-35
