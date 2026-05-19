@@ -8,7 +8,7 @@ const { tags, categories, allCategories } = Astro.props;
   <!-- categories -->
   <div class="mb-8">
     <h5 class="mb-6">Categories</h5>
-    <div class="rounded bg-light p-8 dark:bg-darkmode-light">
+    <div class="rounded-sm border border-border/70 bg-body/70 p-8 shadow-[0_18px_60px_-52px_rgba(23,19,13,0.32)] dark:border-darkmode-border dark:bg-darkmode-light">
       <ul class="space-y-4">
         {
           categories.map((category: any) => {
@@ -33,14 +33,14 @@ const { tags, categories, allCategories } = Astro.props;
   <!-- tags -->
   <div class="mb-8">
     <h5 class="mb-6">Tags</h5>
-    <div class="rounded bg-light p-6 dark:bg-darkmode-light">
+    <div class="rounded-sm border border-border/70 bg-body/70 p-6 shadow-[0_18px_60px_-52px_rgba(23,19,13,0.32)] dark:border-darkmode-border dark:bg-darkmode-light">
       <ul>
         {
           tags.map((tag: any) => {
             return (
               <li class="inline-block">
                 <a
-                  class="m-1 block rounded bg-white px-3 py-1 hover:bg-primary hover:text-white dark:bg-darkmode-body dark:hover:bg-darkmode-primary dark:hover:text-text-dark"
+                  class="m-1 block rounded-full border border-border/60 bg-body/80 px-3 py-1 text-sm hover:border-primary hover:bg-primary hover:text-white dark:border-darkmode-border dark:bg-darkmode-body dark:hover:bg-darkmode-primary dark:hover:text-text-dark"
                   href={`/tags/${tag}`}
                 >
                   {humanize(tag)}

@@ -11,16 +11,25 @@ const {
 }: { summary_length: number; blog_folder: string } = config.settings;
 const { data } = Astro.props;
 const { title, image, date, author, categories } = data.data;
+const splitArticleTitle = (value: string) => {
+  const [primary, ...subtitle] = value.split(":");
+
+  return {
+    primary: primary.trim(),
+    subtitle: subtitle.join(":").trim(),
+  };
+};
+const titleParts = splitArticleTitle(title);
 ---
 
 <div
-  class="h-full bg-body p-5 shadow-sm shadow-primary/10 dark:bg-darkmode-body sm:p-6"
+  class="h-full border border-border/70 bg-body/76 p-5 shadow-[0_22px_70px_-56px_rgba(23,19,13,0.34)] transition duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-1 hover:border-primary dark:border-darkmode-border dark:bg-darkmode-body sm:p-6"
 >
   {
     image && (
-      <div class="group mb-6 overflow-hidden rounded-md border border-border bg-light/60 p-1 dark:border-darkmode-border dark:bg-darkmode-light/60">
+      <div class="group mb-6 overflow-hidden rounded-sm border border-border/80 bg-light/45 p-1 dark:border-darkmode-border dark:bg-darkmode-light/60">
         <ImageMod
-          class="w-full rounded-sm transition-transform duration-700 ease-out group-hover:scale-105"
+          class="aspect-[5/3] w-full rounded-sm object-cover brightness-[1.06] contrast-[1.05] saturate-[1.03] transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-105"
           src={image}
           alt={title}
           width={445}
@@ -30,12 +39,19 @@ const { title, image, date, author, categories } = data.data;
       </div>
     )
   }
-  <h4 class="mb-3">
+  <h4 class="mb-3 leading-none">
     <a href={`/${blog_folder}/${data.id}`}>
-      {title}
+      <span>{titleParts.primary}</span>
+      {
+        titleParts.subtitle && (
+          <span class="mt-2 block font-primary text-[0.98rem] font-medium leading-6 tracking-normal text-text-light">
+            {titleParts.subtitle}
+          </span>
+        )
+      }
     </a>
   </h4>
-  <ul class="mb-4">
+  <ul class="mb-4 text-sm text-text-light">
     <li class="mr-4 inline-block">
       <a href={`/authors/${slugify(author)}`}>
         <FaRegUserCircle className={"mr-2 -mt-1 inline-block"} />
@@ -55,8 +71,8 @@ const { title, image, date, author, categories } = data.data;
     </li>
     {date && <li class="inline-block">{dateFormat(date)}</li>}
   </ul>
-  <p class="mb-6">{plainify(data.body?.slice(0, Number(summary_length)))}</p>
+  <p class="mb-6 leading-7">{plainify(data.body?.slice(0, Number(summary_length)))}</p>
   <a class="btn btn-outline-primary btn-sm" href={`/${blog_folder}/${data.id}`}>
-    read more
+    Read More
   </a>
 </div>

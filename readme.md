@@ -39,7 +39,6 @@
 - 📝 Write and update content in Markdown / MDX
 - 🤖 LLM-ready docs generation (`llms.txt`, `llms-full.txt`, and per-page `.md`)
 - 📎 Google Tag Manager
-- 💬 Disqus Comment
 - 🔳 Syntax Highlighting
 
 ### 📄 15+ Pre-designed Pages

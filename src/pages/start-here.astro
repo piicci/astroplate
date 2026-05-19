@@ -51,7 +51,7 @@ import Base from "@/layouts/Base.astro";
     </div>
   </section>
 
-  <section class="start-here-guide" aria-labelledby="start-guide-title">
+  <section class="start-here-guide" id="free-guide" aria-labelledby="start-guide-title">
     <div class="container start-here-breathe">
       <div class="start-here-guide-panel">
         <div>
@@ -64,7 +64,13 @@ import Base from "@/layouts/Base.astro";
           </p>
         </div>
 
-        <form class="start-here-guide-form" name="start-here-guide" novalidate>
+        <form class="start-here-guide-form" name="free-guide" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+          <input type="hidden" name="form-name" value="free-guide" />
+          <input type="hidden" name="source" value="start-here-free-guide" />
+          <input type="hidden" name="subject" value="New free guide signup" />
+          <p class="hidden" aria-hidden="true">
+            <label>Do not fill this out: <input name="bot-field" /></label>
+          </p>
           <div>
             <label class="form-label" for="start-here-guide-email">
               Email address
@@ -95,6 +101,9 @@ import Base from "@/layouts/Base.astro";
           <p class="mt-4 hidden rounded-md border border-primary/40 bg-body/70 px-4 py-3 text-sm text-text-dark dark:text-darkmode-text-dark" data-success>
             Thank you. Your free guide is on its way.
           </p>
+          <p class="mt-4 hidden rounded-md border border-[#9f3f32]/35 bg-[#9f3f32]/10 px-4 py-3 text-sm text-[#9f3f32]" data-error-submit>
+            Something went wrong. Please try again.
+          </p>
         </form>
       </div>
     </div>
@@ -102,20 +111,45 @@ import Base from "@/layouts/Base.astro";
 
   <script is:inline>
     const guideForms = document.querySelectorAll(".start-here-guide-form");
+    const submitNetlifyForm = async (form) => {
+      const isLocal = ["localhost", "127.0.0.1"].includes(window.location.hostname);
+
+      if (isLocal) {
+        await new Promise((resolve) => window.setTimeout(resolve, 350));
+        return;
+      }
+
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(new FormData(form)).toString(),
+      });
+
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
+    };
 
     guideForms.forEach((form) => {
       form.addEventListener("submit", async (event) => {
         event.preventDefault();
 
+        const botField = form.querySelector('[name="bot-field"]');
         const email = form.querySelector('[name="email"]');
         const error = form.querySelector("[data-error]");
         const success = form.querySelector("[data-success]");
+        const submitError = form.querySelector("[data-error-submit]");
         const button = form.querySelector("button[type='submit']");
         const value = email.value.trim();
         const validEmail = value.includes("@") && value.includes(".");
 
+        if (botField?.value) {
+          return;
+        }
+
         error.classList.toggle("hidden", validEmail);
         success.classList.add("hidden");
+        submitError.classList.add("hidden");
 
         if (!validEmail) {
           return;
@@ -124,12 +158,16 @@ import Base from "@/layouts/Base.astro";
         button.disabled = true;
         button.textContent = "Sending...";
 
-        await new Promise((resolve) => window.setTimeout(resolve, 500));
-
-        button.disabled = false;
-        button.textContent = button.dataset.submitLabel;
-        success.classList.remove("hidden");
-        form.reset();
+        try {
+          await submitNetlifyForm(form);
+          success.classList.remove("hidden");
+          form.reset();
+        } catch (error) {
+          submitError.classList.remove("hidden");
+        } finally {
+          button.disabled = false;
+          button.textContent = button.dataset.submitLabel;
+        }
       });
     });
   </script>

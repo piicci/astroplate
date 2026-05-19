@@ -52,12 +52,12 @@ const { title, meta_title, description, image, noindex, canonical } =
     <meta
       name="theme-color"
       media="(prefers-color-scheme: light)"
-      content="#F7F3E8"
+      content="#F8F1E6"
     />
     <meta
       name="theme-color"
       media="(prefers-color-scheme: dark)"
-      content="#4B3B25"
+      content="#201A10"
     />
     <meta name="generator" content={Astro.generator} />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -99,7 +99,7 @@ const { title, meta_title, description, image, noindex, canonical } =
 
     <style is:inline>
       html body .container {
-        width: min(100% - clamp(2.25rem, 7vw, 7rem), 1280px) !important;
+        width: min(calc(100% - clamp(2.25rem, 7vw, 7rem)), 1280px) !important;
         max-width: 1280px !important;
         margin-inline: auto !important;
         padding-inline: 0 !important;
@@ -107,7 +107,7 @@ const { title, meta_title, description, image, noindex, canonical } =
 
       @media (max-width: 480px) {
         html body .container {
-          width: min(100% - 64px, 1280px) !important;
+          width: min(calc(100% - 32px), 1280px) !important;
         }
       }
     </style>

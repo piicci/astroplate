@@ -1,15 +1,15 @@
 .btn {
-  @apply inline-block rounded-md border border-transparent px-6 py-3 font-semibold tracking-normal shadow-sm transition duration-300;
+  @apply inline-block rounded-sm border border-transparent px-6 py-3 font-semibold tracking-normal shadow-sm transition duration-500 ease-[cubic-bezier(0.32,0.72,0,1)];
 }
 
 .btn-sm {
-  @apply rounded-md px-4 py-2 text-sm;
+  @apply rounded-sm px-4 py-2 text-sm;
 }
 
 .btn-primary {
-  @apply border-primary bg-primary text-body shadow-primary/20 hover:-translate-y-0.5 hover:bg-dark hover:text-body dark:border-darkmode-primary dark:bg-darkmode-primary dark:text-text-dark dark:shadow-darkmode-primary/10 dark:hover:bg-body;
+  @apply border-[#2F3A18] bg-[#2F3A18] text-body shadow-[0_16px_34px_-26px_rgba(47,58,24,0.52)] hover:-translate-y-0.5 hover:border-primary hover:bg-primary hover:text-body disabled:pointer-events-none disabled:opacity-60 dark:border-darkmode-primary dark:bg-darkmode-primary dark:text-text-dark dark:shadow-darkmode-primary/10 dark:hover:border-body dark:hover:bg-body;
 }
 
 .btn-outline-primary {
-  @apply border-primary bg-transparent text-text-dark hover:-translate-y-0.5 hover:bg-primary hover:text-body dark:border-darkmode-primary dark:text-darkmode-text-dark dark:hover:bg-darkmode-primary dark:hover:text-text-dark;
+  @apply border-primary/70 bg-body/45 text-text-dark hover:-translate-y-0.5 hover:bg-[#2F3A18] hover:text-body dark:border-darkmode-primary dark:bg-transparent dark:text-darkmode-text-dark dark:hover:bg-darkmode-primary dark:hover:text-text-dark;
 }

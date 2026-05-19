@@ -1,15 +1,15 @@
 /* section style */
 .section {
-  @apply py-28 xl:py-40;
+  @apply py-24 xl:py-36;
 }
 
 .section-sm {
-  @apply py-20 xl:py-32;
+  @apply py-20 xl:py-28;
 }
 
 /* container */
 .container {
-  width: min(100% - clamp(2.25rem, 7vw, 7rem), 1280px) !important;
+  width: min(calc(100% - clamp(2.25rem, 7vw, 7rem)), 1280px) !important;
   max-width: 1280px !important;
   margin-inline: auto !important;
   padding-inline: 0 !important;
@@ -17,7 +17,7 @@
 
 @media (max-width: 480px) {
   .container {
-    width: min(100% - 64px, 1280px) !important;
+    width: min(calc(100% - 32px), 1280px) !important;
   }
 }
 
@@ -29,7 +29,7 @@
   @apply inline-block;
 }
 .social-icons li a {
-  @apply flex h-9 w-9 items-center justify-center rounded-md bg-primary text-center leading-9 text-white shadow-sm shadow-primary/20 dark:bg-darkmode-primary dark:text-text-dark;
+  @apply flex h-9 w-9 items-center justify-center rounded-sm bg-dark text-center leading-9 text-body shadow-sm shadow-dark/10 transition duration-300 hover:-translate-y-0.5 hover:bg-primary dark:bg-darkmode-primary dark:text-text-dark;
 }
 .social-icons li a svg {
   @apply h-5 w-5;
@@ -37,7 +37,7 @@
 
 /* notice */
 .notice {
-  @apply mb-6 rounded-md border border-border/80 bg-light/70 px-8 py-6 shadow-sm shadow-primary/10 dark:border-darkmode-border dark:bg-darkmode-light/70;
+  @apply mb-6 rounded-sm border border-border/80 bg-body/75 px-8 py-6 shadow-[0_18px_50px_-40px_rgba(23,19,13,0.35)] dark:border-darkmode-border dark:bg-darkmode-light/70;
 }
 
 .notice-head {
@@ -82,11 +82,11 @@
 
 /* tab */
 .tab {
-  @apply overflow-hidden rounded-md border border-border bg-body/70 shadow-sm shadow-primary/10 dark:border-darkmode-border dark:bg-darkmode-body/70;
+  @apply overflow-hidden rounded-sm border border-border bg-body/80 shadow-[0_18px_50px_-42px_rgba(23,19,13,0.32)] dark:border-darkmode-border dark:bg-darkmode-body/70;
 }
 
 .tab-nav {
-  @apply flex border-b border-border bg-light dark:border-darkmode-border dark:bg-darkmode-light !m-0 !list-none;
+  @apply flex border-b border-border bg-light/60 dark:border-darkmode-border dark:bg-darkmode-light !m-0 !list-none;
 }
 
 .tab-nav-item {
@@ -115,7 +115,7 @@
 
 /* accordion */
 .accordion {
-  @apply mb-6 overflow-hidden rounded-md border border-border bg-light/80 shadow-sm shadow-primary/10 dark:border-darkmode-border dark:bg-darkmode-light;
+  @apply mb-6 overflow-hidden rounded-sm border border-border bg-body/80 shadow-[0_18px_50px_-42px_rgba(23,19,13,0.28)] dark:border-darkmode-border dark:bg-darkmode-light;
 }
 
 .accordion-header {
@@ -148,11 +148,11 @@
 }
 
 .modal-content {
-  @apply relative top-1/2 z-50 mx-auto max-w-[90%] -translate-y-1/2 rounded-md bg-body p-8 shadow-xl shadow-primary/20 dark:bg-darkmode-body;
+  @apply relative top-1/2 z-50 mx-auto max-w-[90%] -translate-y-1/2 rounded-sm border border-border/70 bg-body p-8 shadow-xl shadow-dark/15 dark:border-darkmode-border dark:bg-darkmode-body;
 }
 
 .modal-close {
-  @apply absolute right-3 top-3 h-8 w-8 rounded-full bg-light text-center leading-8 text-text-dark dark:bg-darkmode-light dark:text-darkmode-text-dark;
+  @apply absolute right-3 top-3 h-8 w-8 rounded-full bg-light/80 text-center leading-8 text-text-dark dark:bg-darkmode-light dark:text-darkmode-text-dark;
 }
 
 /* content style */
@@ -165,14 +165,14 @@
   @apply prose-h3:text-h3-sm md:prose-h3:text-h3;
   @apply prose-p:text-base prose-p:text-text dark:prose-p:text-darkmode-text;
   @apply prose-a:text-text prose-a:[&.btn]:no-underline  dark:prose-a:text-darkmode-text;
-  @apply prose-img:max-w-full prose-img:rounded-md;
+  @apply prose-img:max-w-full prose-img:rounded-sm;
   @apply prose-strong:text-text-dark dark:prose-strong:text-darkmode-text;
   @apply prose-hr:border-border dark:prose-hr:border-darkmode-border;
-  @apply prose-pre:rounded-lg prose-pre:bg-light dark:prose-pre:bg-darkmode-light;
+  @apply prose-pre:rounded-sm prose-pre:bg-light dark:prose-pre:bg-darkmode-light;
   @apply prose-code:text-darkmode-text-dark;
   @apply prose-li:text-text dark:prose-li:text-darkmode-text;
-  @apply prose-blockquote:rounded-md prose-blockquote:border prose-blockquote:border-l-[10px] prose-blockquote:border-primary prose-blockquote:bg-light prose-blockquote:px-8 prose-blockquote:py-10 prose-blockquote:font-secondary prose-blockquote:text-2xl prose-blockquote:not-italic prose-blockquote:text-text-dark dark:prose-blockquote:border-darkmode-primary dark:prose-blockquote:bg-darkmode-light dark:prose-blockquote:text-darkmode-text-light;
-  @apply prose-table:relative prose-table:overflow-hidden prose-table:rounded-md prose-table:before:absolute prose-table:before:left-0 prose-table:before:top-0 prose-table:before:h-full prose-table:before:w-full prose-table:before:rounded-[inherit] prose-table:before:border prose-table:before:border-border prose-table:before:content-[""] dark:prose-table:before:border-darkmode-border;
+  @apply prose-blockquote:rounded-sm prose-blockquote:border prose-blockquote:border-l-[10px] prose-blockquote:border-primary prose-blockquote:bg-body/70 prose-blockquote:px-8 prose-blockquote:py-10 prose-blockquote:font-secondary prose-blockquote:text-2xl prose-blockquote:not-italic prose-blockquote:text-text-dark dark:prose-blockquote:border-darkmode-primary dark:prose-blockquote:bg-darkmode-light dark:prose-blockquote:text-darkmode-text-light;
+  @apply prose-table:relative prose-table:overflow-hidden prose-table:rounded-sm prose-table:before:absolute prose-table:before:left-0 prose-table:before:top-0 prose-table:before:h-full prose-table:before:w-full prose-table:before:rounded-[inherit] prose-table:before:border prose-table:before:border-border prose-table:before:content-[""] dark:prose-table:before:border-darkmode-border;
   @apply prose-thead:border-border prose-thead:bg-light dark:prose-thead:border-darkmode-border dark:prose-thead:bg-darkmode-light;
   @apply prose-th:relative prose-th:z-10 prose-th:px-4 prose-th:py-[18px] prose-th:text-text-dark dark:prose-th:text-darkmode-text;
   @apply prose-tr:border-border dark:prose-tr:border-darkmode-border;

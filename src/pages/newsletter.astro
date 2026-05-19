@@ -8,7 +8,7 @@ import Base from "@/layouts/Base.astro";
   description="Join the weekly Becoming Elysian wellness letter for calm, practical guidance on nutrition, strength, hormones, stress, recovery, and sustainable habits."
   image="/images/becoming-elysian-about-editorial.png"
 >
-  <section class="section-sm newsletter-page">
+  <section class="section-sm newsletter-page bg-[linear-gradient(112deg,transparent_0%,rgba(154,103,64,0.04)_14%,transparent_26%),radial-gradient(circle_at_78%_8%,rgba(232,215,189,0.22),transparent_28rem),linear-gradient(180deg,rgba(248,241,230,0.98),rgba(255,249,239,0.74))]">
     <div class="container">
       <div class="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
         <div class="max-w-2xl">
@@ -26,7 +26,13 @@ import Base from "@/layouts/Base.astro";
           </div>
         </div>
 
-        <form class="newsletter-page-form rounded-md border border-border bg-light/45 p-6 shadow-[0_18px_60px_-48px_rgba(75,59,37,0.55)] dark:border-darkmode-border dark:bg-darkmode-light/35 md:p-8" novalidate>
+        <form class="newsletter-page-form rounded-sm border border-border/70 bg-white/32 p-6 shadow-[0_26px_78px_-60px_rgba(23,19,13,0.3)] dark:border-darkmode-border dark:bg-darkmode-light/35 md:p-8" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+          <input type="hidden" name="form-name" value="newsletter" />
+          <input type="hidden" name="source" value="newsletter-page" />
+          <input type="hidden" name="subject" value="New newsletter signup" />
+          <p class="hidden" aria-hidden="true">
+            <label>Do not fill this out: <input name="bot-field" /></label>
+          </p>
           <div class="grid gap-5">
             <div>
               <label class="form-label" for="newsletter-page-first-name">First name</label>
@@ -41,14 +47,17 @@ import Base from "@/layouts/Base.astro";
               <p class="mt-2 hidden text-sm text-[#9f3f32]" data-error-email>Please enter a valid email address.</p>
             </div>
           </div>
-          <button class="btn btn-primary mt-6 w-full active:translate-y-[1px] sm:w-auto" type="submit" data-submit-label="Join the Newsletter">
-            Join the Newsletter
+          <button class="btn btn-primary mt-6 w-full active:translate-y-[1px] sm:w-auto" type="submit" data-submit-label="Join Our Circle">
+            Join Our Circle
           </button>
           <p class="mt-5 text-sm text-text-light">
             Thoughtful, practical, and easy to return to.
           </p>
-          <p class="mt-4 hidden rounded-md border border-primary/40 bg-body/70 px-4 py-3 text-sm text-text-dark dark:text-darkmode-text-dark" data-success>
+          <p class="mt-4 hidden rounded-sm border border-primary/40 bg-body/70 px-4 py-3 text-sm text-text-dark dark:text-darkmode-text-dark" data-success>
             Thank you. Your weekly wellness letter is on its way.
+          </p>
+          <p class="mt-4 hidden rounded-sm border border-[#9f3f32]/35 bg-[#9f3f32]/10 px-4 py-3 text-sm text-[#9f3f32]" data-error-submit>
+            Something went wrong. Please try again.
           </p>
         </form>
       </div>
@@ -57,23 +66,48 @@ import Base from "@/layouts/Base.astro";
 
   <script is:inline>
     const newsletterPageForms = document.querySelectorAll(".newsletter-page-form");
+    const submitNetlifyForm = async (form) => {
+      const isLocal = ["localhost", "127.0.0.1"].includes(window.location.hostname);
+
+      if (isLocal) {
+        await new Promise((resolve) => window.setTimeout(resolve, 350));
+        return;
+      }
+
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(new FormData(form)).toString(),
+      });
+
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
+    };
 
     newsletterPageForms.forEach((form) => {
       form.addEventListener("submit", async (event) => {
         event.preventDefault();
 
+        const botField = form.querySelector('[name="bot-field"]');
         const name = form.querySelector('[name="firstName"]');
         const email = form.querySelector('[name="email"]');
         const nameError = form.querySelector("[data-error-name]");
         const emailError = form.querySelector("[data-error-email]");
         const success = form.querySelector("[data-success]");
+        const submitError = form.querySelector("[data-error-submit]");
         const button = form.querySelector("button[type='submit']");
         const validEmail = email.value.trim().includes("@") && email.value.trim().includes(".");
         const validName = name.value.trim().length > 0;
 
+        if (botField?.value) {
+          return;
+        }
+
         nameError.classList.toggle("hidden", validName);
         emailError.classList.toggle("hidden", validEmail);
         success.classList.add("hidden");
+        submitError.classList.add("hidden");
 
         if (!validName || !validEmail) {
           return;
@@ -82,30 +116,40 @@ import Base from "@/layouts/Base.astro";
         button.disabled = true;
         button.textContent = "Joining...";
 
-        await new Promise((resolve) => window.setTimeout(resolve, 500));
-
-        button.disabled = false;
-        button.textContent = button.dataset.submitLabel;
-        success.classList.remove("hidden");
-        form.reset();
+        try {
+          await submitNetlifyForm(form);
+          success.classList.remove("hidden");
+          form.reset();
+        } catch (error) {
+          submitError.classList.remove("hidden");
+        } finally {
+          button.disabled = false;
+          button.textContent = button.dataset.submitLabel;
+        }
       });
     });
   </script>
 
   <style is:inline>
     .newsletter-page h1 {
-      color: #2a251d;
-      font-size: clamp(2.35rem, 4vw, 3.65rem);
+      color: #17130d;
+      font-size: 2.75rem;
       font-weight: 500;
-      letter-spacing: -0.018em;
+      letter-spacing: 0;
       line-height: 1;
     }
 
     .newsletter-page p:not([class*="text-sm"]) {
-      color: #2a251d;
-      font-size: clamp(1rem, 1.25vw, 1.12rem);
+      color: #201a10;
+      font-size: 1.04rem;
       letter-spacing: 0.01em;
       line-height: 1.62;
+    }
+
+    @media (min-width: 768px) {
+      .newsletter-page h1 {
+        font-size: 3.65rem;
+      }
     }
   </style>
 </Base>

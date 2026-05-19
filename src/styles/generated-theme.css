@@ -6,27 +6,27 @@
 
 @theme {
   /* === Colors === */
-  --color-primary: #8E9475;
-  --color-body: #F7F3E8;
-  --color-border: #DCC9A7;
-  --color-light: #EDE2CC;
-  --color-dark: #4B3B25;
-  --color-text: #6F5B3B;
-  --color-text-dark: #4B3B25;
-  --color-text-light: #8A724C;
+  --color-primary: #3F4A14;
+  --color-body: #F8F1E6;
+  --color-border: #D8C8B3;
+  --color-light: #FFF9EF;
+  --color-dark: #17130D;
+  --color-text: #17130D;
+  --color-text-dark: #17130D;
+  --color-text-light: #6F8790;
 
   /* === Darkmode Colors === */
-  --color-darkmode-primary: #D7DEC6;
-  --color-darkmode-body: #4B3B25;
-  --color-darkmode-border: #8A724C;
-  --color-darkmode-light: #6F5B3B;
-  --color-darkmode-dark: #F7F3E8;
-  --color-darkmode-text: #EDE2CC;
-  --color-darkmode-text-dark: #F7F3E8;
-  --color-darkmode-text-light: #DCC9A7;
+  --color-darkmode-primary: #C3C76A;
+  --color-darkmode-body: #201A10;
+  --color-darkmode-border: #8F9433;
+  --color-darkmode-light: #3F4A14;
+  --color-darkmode-dark: #FAF7EF;
+  --color-darkmode-text: #E8D7BD;
+  --color-darkmode-text-dark: #FAF7EF;
+  --color-darkmode-text-light: #BFC8B6;
 
   /* === Font Families === */
-  --font-primary: Inter, sans-serif;
+  --font-primary: Outfit, sans-serif;
   --font-secondary: Cormorant Garamond, serif;
 
   /* === Font Sizes === */

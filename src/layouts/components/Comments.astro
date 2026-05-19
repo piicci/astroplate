@@ -1,0 +1,303 @@
+---
+import config from "@/config/config.json";
+
+type GiscusConfig = {
+  repo?: string;
+  repo_id?: string;
+  category?: string;
+  category_id?: string;
+  mapping?: string;
+  strict?: string;
+  reactions_enabled?: string;
+  emit_metadata?: string;
+  input_position?: string;
+  lang?: string;
+  loading?: string;
+};
+
+type UtterancesConfig = {
+  repo?: string;
+  issue_term?: string;
+  label?: string;
+};
+
+type CommentsConfig = {
+  enable?: boolean;
+  provider?: "giscus" | "utterances";
+  title?: string;
+  description?: string;
+  giscus?: GiscusConfig;
+  utterances?: UtterancesConfig;
+};
+
+const comments = (config as { comments?: CommentsConfig }).comments;
+const enabled = comments?.enable === true;
+const provider = comments?.provider ?? "giscus";
+const title = comments?.title ?? "Join the conversation";
+const description =
+  comments?.description ??
+  "Share a thoughtful note, question, or lived observation.";
+
+const giscus = comments?.giscus ?? {};
+const giscusRepo = import.meta.env.PUBLIC_GISCUS_REPO ?? giscus.repo ?? "";
+const giscusRepoId =
+  import.meta.env.PUBLIC_GISCUS_REPO_ID ?? giscus.repo_id ?? "";
+const giscusCategory =
+  import.meta.env.PUBLIC_GISCUS_CATEGORY ?? giscus.category ?? "";
+const giscusCategoryId =
+  import.meta.env.PUBLIC_GISCUS_CATEGORY_ID ?? giscus.category_id ?? "";
+
+const utterances = comments?.utterances ?? {};
+const utterancesRepo =
+  import.meta.env.PUBLIC_UTTERANCES_REPO ?? utterances.repo ?? "";
+
+const giscusReady =
+  enabled &&
+  provider === "giscus" &&
+  Boolean(giscusRepo && giscusRepoId && giscusCategory && giscusCategoryId);
+const utterancesReady =
+  enabled && provider === "utterances" && Boolean(utterancesRepo);
+const showSetupState = enabled && import.meta.env.DEV;
+const shouldRender = giscusReady || utterancesReady || showSetupState;
+
+const giscusConfig = {
+  repo: giscusRepo,
+  repoId: giscusRepoId,
+  category: giscusCategory,
+  categoryId: giscusCategoryId,
+  mapping: giscus.mapping ?? "pathname",
+  strict: giscus.strict ?? "0",
+  reactionsEnabled: giscus.reactions_enabled ?? "1",
+  emitMetadata: giscus.emit_metadata ?? "0",
+  inputPosition: giscus.input_position ?? "top",
+  lang: giscus.lang ?? "en",
+  loading: giscus.loading ?? "lazy",
+};
+
+const utterancesConfig = {
+  repo: utterancesRepo,
+  issueTerm: utterances.issue_term ?? "pathname",
+  label: utterances.label ?? "comment",
+};
+---
+
+{
+  shouldRender && (
+    <section
+      class="be-comments mt-20 md:mt-28"
+      aria-labelledby="comments-title"
+      data-comment-system={provider}
+    >
+      <div class="rounded-[2rem] bg-primary/10 p-1.5 ring-1 ring-primary/15 dark:bg-darkmode-primary/10 dark:ring-darkmode-primary/15">
+        <div class="rounded-[calc(2rem-0.375rem)] bg-body/90 px-5 py-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.38)] dark:bg-darkmode-body/95 dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] sm:px-7 sm:py-8 md:px-10 md:py-10">
+          <div class="mb-8 grid gap-5 md:grid-cols-[minmax(0,0.95fr)_minmax(220px,0.45fr)] md:items-end">
+            <div>
+              <p class="mb-3 inline-flex rounded-full bg-light/75 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.2em] text-text-light ring-1 ring-primary/15 dark:bg-darkmode-light/60 dark:text-darkmode-text-light dark:ring-darkmode-primary/20">
+                Community Notes
+              </p>
+              <h2
+                id="comments-title"
+                class="font-secondary text-[2rem] leading-[0.98] text-text-dark dark:text-darkmode-text-dark md:text-[2.75rem]"
+              >
+                {title}
+              </h2>
+            </div>
+            <p class="max-w-[28rem] text-sm leading-7 text-text/85 dark:text-darkmode-text/85 md:justify-self-end md:text-right">
+              {description}
+            </p>
+          </div>
+
+          {giscusReady && (
+            <div
+              class="be-comments-embed"
+              data-giscus-comments
+              data-mounted="false"
+            />
+          )}
+
+          {utterancesReady && (
+            <div
+              class="be-comments-embed"
+              data-utterances-comments
+              data-mounted="false"
+            />
+          )}
+
+          {showSetupState && !giscusReady && provider === "giscus" && (
+            <div class="rounded-[1.45rem] bg-light/55 px-5 py-5 text-sm leading-7 text-text ring-1 ring-primary/15 dark:bg-darkmode-light/40 dark:text-darkmode-text dark:ring-darkmode-primary/20">
+              Giscus is wired in. Add <code>PUBLIC_GISCUS_REPO_ID</code> and{" "}
+              <code>PUBLIC_GISCUS_CATEGORY_ID</code> in Netlify, or paste them
+              into <code>src/config/config.json</code>, after enabling GitHub
+              Discussions for the repository.
+            </div>
+          )}
+
+          {showSetupState && !utterancesReady && provider === "utterances" && (
+            <div class="rounded-[1.45rem] bg-light/55 px-5 py-5 text-sm leading-7 text-text ring-1 ring-primary/15 dark:bg-darkmode-light/40 dark:text-darkmode-text dark:ring-darkmode-primary/20">
+              Utterances is wired in. Add a repository in{" "}
+              <code>src/config/config.json</code> and install the Utterances
+              GitHub app for that repository.
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+{
+  giscusReady && (
+    <script define:vars={{ giscusConfig }}>
+      const getGiscusTheme = () =>
+        document.documentElement.classList.contains("dark")
+          ? "dark_dimmed"
+          : "noborder_light";
+
+      const syncGiscusTheme = () => {
+        const iframe = document.querySelector("iframe.giscus-frame");
+        if (!iframe?.contentWindow) return;
+
+        iframe.contentWindow.postMessage(
+          {
+            giscus: {
+              setConfig: {
+                theme: getGiscusTheme(),
+              },
+            },
+          },
+          "https://giscus.app",
+        );
+      };
+
+      const mountGiscus = () => {
+        document.querySelectorAll("[data-giscus-comments]").forEach((node) => {
+          if (node.dataset.mounted === "true") return;
+          node.dataset.mounted = "true";
+
+          const script = document.createElement("script");
+          script.src = "https://giscus.app/client.js";
+          script.async = true;
+          script.crossOrigin = "anonymous";
+          script.setAttribute("data-repo", giscusConfig.repo);
+          script.setAttribute("data-repo-id", giscusConfig.repoId);
+          script.setAttribute("data-category", giscusConfig.category);
+          script.setAttribute("data-category-id", giscusConfig.categoryId);
+          script.setAttribute("data-mapping", giscusConfig.mapping);
+          script.setAttribute("data-strict", giscusConfig.strict);
+          script.setAttribute(
+            "data-reactions-enabled",
+            giscusConfig.reactionsEnabled,
+          );
+          script.setAttribute("data-emit-metadata", giscusConfig.emitMetadata);
+          script.setAttribute("data-input-position", giscusConfig.inputPosition);
+          script.setAttribute("data-theme", getGiscusTheme());
+          script.setAttribute("data-lang", giscusConfig.lang);
+          script.setAttribute("data-loading", giscusConfig.loading);
+          node.appendChild(script);
+        });
+      };
+
+      const startGiscus = () => {
+        mountGiscus();
+
+        if (!window.__beGiscusThemeObserver) {
+          window.__beGiscusThemeObserver = new MutationObserver(syncGiscusTheme);
+          window.__beGiscusThemeObserver.observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ["class"],
+          });
+        }
+      };
+
+      document.addEventListener("astro:page-load", startGiscus);
+      startGiscus();
+    </script>
+  )
+}
+
+{
+  utterancesReady && (
+    <script define:vars={{ utterancesConfig }}>
+      const getUtterancesTheme = () =>
+        document.documentElement.classList.contains("dark")
+          ? "github-dark"
+          : "github-light";
+
+      const mountUtterances = () => {
+        document
+          .querySelectorAll("[data-utterances-comments]")
+          .forEach((node) => {
+            if (node.dataset.mounted === "true") return;
+            node.dataset.mounted = "true";
+
+            const script = document.createElement("script");
+            script.src = "https://utteranc.es/client.js";
+            script.async = true;
+            script.crossOrigin = "anonymous";
+            script.setAttribute("repo", utterancesConfig.repo);
+            script.setAttribute("issue-term", utterancesConfig.issueTerm);
+            script.setAttribute("label", utterancesConfig.label);
+            script.setAttribute("theme", getUtterancesTheme());
+            node.appendChild(script);
+          });
+      };
+
+      document.addEventListener("astro:page-load", mountUtterances);
+      mountUtterances();
+    </script>
+  )
+}
+
+<style is:global>
+  .be-comments {
+    animation: be-comments-in 900ms cubic-bezier(0.32, 0.72, 0, 1) both;
+  }
+
+  .be-comments-embed {
+    min-height: 220px;
+    overflow: hidden;
+    border-radius: 1.45rem;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.26), transparent 44%),
+      rgba(237, 226, 204, 0.34);
+    box-shadow: inset 0 0 0 1px rgba(142, 148, 117, 0.18);
+  }
+
+  .dark .be-comments-embed {
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent 44%),
+      rgba(111, 91, 59, 0.28);
+    box-shadow: inset 0 0 0 1px rgba(215, 222, 198, 0.14);
+  }
+
+  .be-comments-embed .giscus,
+  .be-comments-embed .utterances {
+    max-width: none;
+    padding: clamp(1rem, 2vw, 1.35rem);
+  }
+
+  .be-comments-embed iframe {
+    color-scheme: light;
+  }
+
+  .dark .be-comments-embed iframe {
+    color-scheme: dark;
+  }
+
+  @keyframes be-comments-in {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 28px, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .be-comments {
+      animation: none;
+    }
+  }
+</style>

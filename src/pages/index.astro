@@ -34,6 +34,15 @@ const buttonClass = (button: HomepageButton, extra = "") =>
   ]
     .filter(Boolean)
     .join(" ");
+
+const splitArticleTitle = (title: string) => {
+  const [primary, ...subtitle] = title.split(":");
+
+  return {
+    primary: primary.trim(),
+    subtitle: subtitle.join(":").trim(),
+  };
+};
 ---
 
 <Base
@@ -43,17 +52,20 @@ const buttonClass = (button: HomepageButton, extra = "") =>
   image={home.image || "/images/og-image.png"}
 >
   <div class="be-home">
-    <section class="relative overflow-hidden pt-12 pb-20 md:pt-18 lg:pb-28">
-      <div class="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[34rem] bg-[radial-gradient(circle_at_78%_8%,rgba(142,148,117,0.24),transparent_28rem)]"></div>
+    <section class="be-hero relative overflow-hidden pt-14 pb-20 md:pt-20 lg:pb-28">
+      <div class="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[38rem] bg-[linear-gradient(112deg,transparent_0%,rgba(154,103,64,0.04)_13%,transparent_26%),radial-gradient(circle_at_78%_6%,rgba(232,215,189,0.24),transparent_30rem),radial-gradient(circle_at_12%_24%,rgba(255,249,239,0.9),transparent_24rem)]"></div>
       <div class="container">
         <div class="grid items-center gap-12 xl:grid-cols-[0.92fr_1.08fr] xl:gap-20">
-          <div class="max-w-[600px] animate-[elysian-rise_700ms_cubic-bezier(0.16,1,0.3,1)_both]">
-            <p class="mb-5 text-sm font-semibold uppercase tracking-[0.22em] text-primary dark:text-darkmode-primary">
-              {home.banner.eyebrow}
-            </p>
-            <h1 class="mb-7 max-w-[12.5ch] text-[clamp(2.55rem,4.6vw,4.6rem)] leading-[0.98] md:max-w-[11.8ch]">
+          <div class="be-hero-copy max-w-[600px] animate-[elysian-rise_700ms_cubic-bezier(0.16,1,0.3,1)_both]">
+            <h1 class="mb-6 max-w-[12.5ch] text-[3.05rem] leading-[0.96] md:max-w-[11.8ch] md:text-[4.25rem] xl:text-[4.7rem]">
               {home.banner.title}
             </h1>
+            <div class="mb-7 flex max-w-[32rem] items-center gap-4">
+              <span class="h-px w-14 shrink-0 bg-primary/70"></span>
+              <p class="m-0 text-sm font-semibold uppercase tracking-[0.22em] text-primary dark:text-darkmode-primary">
+                {home.banner.eyebrow}
+              </p>
+            </div>
             <p class="mb-9 max-w-[620px] text-base leading-8 text-text-dark md:text-lg dark:text-darkmode-text-dark">
               {home.banner.content}
             </p>
@@ -69,21 +81,22 @@ const buttonClass = (button: HomepageButton, extra = "") =>
               }
             </div>
           </div>
-          <div class="relative animate-[elysian-rise_900ms_cubic-bezier(0.16,1,0.3,1)_140ms_both]">
-            <div class="absolute -left-6 top-10 hidden h-28 w-28 rounded-full border border-border/80 lg:block"></div>
-            <div class="group overflow-hidden rounded-md border border-border bg-light/50 p-2 shadow-[0_28px_70px_-44px_rgba(75,59,37,0.42)] dark:border-darkmode-border dark:bg-darkmode-light/40">
+          <div class="be-hero-media relative animate-[elysian-rise_900ms_cubic-bezier(0.16,1,0.3,1)_140ms_both]">
+            <div class="absolute -left-6 top-10 hidden h-28 w-28 rounded-full border border-primary/35 lg:block"></div>
+            <div class="absolute -right-4 bottom-16 hidden h-20 w-20 bg-[#C3C76A]/45 lg:block"></div>
+            <div class="group overflow-hidden rounded-sm border border-border/70 bg-white/35 p-2 shadow-[0_30px_82px_-58px_rgba(23,19,13,0.32)] dark:border-darkmode-border dark:bg-darkmode-light/40">
               <ImageMod
                 src={home.banner.image}
                 width={940}
                 height={700}
                 alt={home.banner.image_alt}
-                class="aspect-[4/3] w-full rounded-sm object-cover transition-transform duration-700 ease-out group-hover:scale-[1.025]"
+                class="aspect-[4/3] w-full rounded-sm object-cover brightness-[1.06] contrast-[1.05] saturate-[1.03] transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-[1.025]"
                 format="webp"
                 fit="cover"
                 loading="eager"
               />
             </div>
-            <div class="ml-auto mt-5 max-w-[21rem] border-l border-border pl-5 text-sm leading-6 text-text-light dark:border-darkmode-border dark:text-darkmode-text-light">
+            <div class="ml-auto mt-5 max-w-[21rem] border-l border-primary/45 pl-5 text-sm leading-6 text-text-light dark:border-darkmode-border dark:text-darkmode-text-light">
               {home.banner.image_note}
             </div>
           </div>
@@ -91,9 +104,9 @@ const buttonClass = (button: HomepageButton, extra = "") =>
       </div>
     </section>
 
-    <section class="section-sm bg-light/55 dark:bg-darkmode-light/45">
+    <section class="section-sm bg-white/20 dark:bg-darkmode-light/45">
       <div class="container">
-        <div class="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+        <div class="grid gap-10 border-y border-border/60 py-14 lg:grid-cols-[0.78fr_1.22fr] lg:items-start xl:py-20">
           <h2 class="max-w-[10ch]">{home.intro.title}</h2>
           <div class="max-w-3xl space-y-6 text-base leading-8 md:text-[1.05rem]">
             {
@@ -117,7 +130,7 @@ const buttonClass = (button: HomepageButton, extra = "") =>
       </div>
     </section>
 
-    <section class="section-sm border-y border-border/80 bg-body/65 dark:border-darkmode-border dark:bg-darkmode-body/65">
+    <section class="section-sm border-y border-border/65 bg-[#F8F1E6]/78 dark:border-darkmode-border dark:bg-darkmode-body/65">
       <div class="container">
         <div class="mb-12 flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
           <div class="max-w-3xl">
@@ -137,41 +150,52 @@ const buttonClass = (button: HomepageButton, extra = "") =>
             )
           }
         </div>
-        <div class="grid gap-6 lg:grid-cols-3">
+        <div class="grid gap-6 lg:grid-cols-[1.16fr_0.92fr_0.92fr] lg:items-start">
           {
-            home.featured_articles.articles.map((article) => (
-              <article class="group overflow-hidden rounded-md border border-border bg-light/50 p-3 transition duration-300 hover:-translate-y-1 hover:border-primary dark:border-darkmode-border dark:bg-darkmode-light/40">
-                <a href={article.link} class="block">
-                  <div class="overflow-hidden rounded-sm">
-                    <ImageMod
-                      src={article.image}
-                      width={560}
-                      height={360}
-                      alt={article.image_alt}
-                      class="aspect-[5/3] w-full object-cover transition duration-700 ease-out group-hover:scale-[1.035]"
-                      format="webp"
-                      fit="cover"
-                    />
-                  </div>
-                  <div class="p-5">
-                    <p class="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-primary dark:text-darkmode-primary">
-                      {article.category}
-                    </p>
-                    <h3 class="mb-4 text-[2rem] leading-[1.02]">{article.title}</h3>
-                    <p class="mb-6 leading-7 text-text/90">{article.excerpt}</p>
-                    <span class="text-sm font-semibold text-text-dark underline decoration-border underline-offset-8 group-hover:text-primary dark:text-darkmode-text-dark dark:group-hover:text-darkmode-primary">
-                      Read the article
-                    </span>
-                  </div>
-                </a>
-              </article>
-            ))
+            home.featured_articles.articles.map((article, index) => {
+              const title = splitArticleTitle(article.title);
+
+              return (
+                <article class={`group overflow-hidden rounded-sm border border-border/70 bg-white/28 p-3 shadow-[0_22px_70px_-58px_rgba(23,19,13,0.28)] transition duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-1 hover:border-primary dark:border-darkmode-border dark:bg-darkmode-light/40 ${index === 0 ? "lg:mt-0" : index === 1 ? "lg:mt-14" : "lg:mt-7"}`}>
+                  <a href={article.link} class="block">
+                    <div class="overflow-hidden rounded-sm">
+                      <ImageMod
+                        src={article.image}
+                        width={560}
+                        height={360}
+                        alt={article.image_alt}
+                        class={`${index === 0 ? "aspect-[4/3]" : "aspect-[5/4]"} w-full object-cover brightness-[1.06] contrast-[1.05] saturate-[1.03] transition duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-[1.035]`}
+                        format="webp"
+                        fit="cover"
+                      />
+                    </div>
+                    <div class="p-5">
+                      <p class="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-primary dark:text-darkmode-primary">
+                        {article.category}
+                      </p>
+                      <h3 class="be-article-title mb-4">
+                        <span>{title.primary}</span>
+                        {
+                          title.subtitle && (
+                            <span class="be-article-subtitle">{title.subtitle}</span>
+                          )
+                        }
+                      </h3>
+                      <p class="mb-6 leading-7 text-text/90">{article.excerpt}</p>
+                      <span class="text-sm font-semibold text-text-dark underline decoration-border underline-offset-8 group-hover:text-primary dark:text-darkmode-text-dark dark:group-hover:text-darkmode-primary">
+                        Read the article
+                      </span>
+                    </div>
+                  </a>
+                </article>
+              );
+            })
           }
         </div>
       </div>
     </section>
 
-    <section class="section-sm bg-primary/12 dark:bg-darkmode-light/55">
+    <section class="section-sm bg-[linear-gradient(135deg,rgba(191,200,182,0.22),rgba(248,241,230,0.9)_46%,rgba(255,249,239,0.78))] dark:bg-darkmode-light/55">
       <div class="container">
         <div class="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <div class="max-w-2xl">
@@ -180,7 +204,13 @@ const buttonClass = (button: HomepageButton, extra = "") =>
               {toBlocks(home.newsletter.content).map((block) => <p>{block.join(" ")}</p>)}
             </div>
           </div>
-          <form class="be-newsletter-form rounded-md border border-border bg-body/80 p-6 shadow-[0_22px_60px_-44px_rgba(75,59,37,0.45)] dark:border-darkmode-border dark:bg-darkmode-body/75" novalidate>
+          <form class="be-newsletter-form rounded-sm border border-border/70 bg-white/32 p-6 shadow-[0_26px_78px_-60px_rgba(23,19,13,0.32)] dark:border-darkmode-border dark:bg-darkmode-body/75" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+            <input type="hidden" name="form-name" value="newsletter" />
+            <input type="hidden" name="source" value="home-newsletter" />
+            <input type="hidden" name="subject" value="New newsletter signup" />
+            <p class="hidden" aria-hidden="true">
+              <label>Do not fill this out: <input name="bot-field" /></label>
+            </p>
             <div class="grid gap-5 sm:grid-cols-2">
               <div>
                 <label class="form-label" for="newsletter-first-name">First name</label>
@@ -199,36 +229,54 @@ const buttonClass = (button: HomepageButton, extra = "") =>
               {home.newsletter.submit_label}
             </button>
             <p class="mt-5 text-sm text-text-light">{home.newsletter.helper_text}</p>
-            <p class="mt-4 hidden rounded-md border border-primary/30 bg-primary/10 px-4 py-3 text-sm text-text-dark dark:text-darkmode-text-dark" data-success>
+            <p class="mt-4 hidden rounded-sm border border-primary/30 bg-primary/10 px-4 py-3 text-sm text-text-dark dark:text-darkmode-text-dark" data-success>
               {home.newsletter.success_message}
+            </p>
+            <p class="mt-4 hidden rounded-sm border border-[#9f3f32]/35 bg-[#9f3f32]/10 px-4 py-3 text-sm text-[#9f3f32]" data-error-submit>
+              Something went wrong. Please try again.
             </p>
           </form>
         </div>
       </div>
     </section>
 
-    <section class="section-sm">
+    <section class="section be-approach-editorial" id="approach">
       <div class="container">
-        <div class="mb-12 max-w-4xl">
-          <h2 class="mb-6">{home.approach.title}</h2>
-          <p class="text-base leading-8 md:text-[1.05rem]">
-            {home.approach.content}
-          </p>
-        </div>
-        <div class="grid gap-px overflow-hidden rounded-md border border-border bg-border dark:border-darkmode-border dark:bg-darkmode-border md:grid-cols-2 xl:grid-cols-4">
-          {
-            home.approach.pillars.map((pillar) => (
-              <div class="bg-body p-7 dark:bg-darkmode-body">
-                <h3 class="mb-4 text-[2rem] leading-none">{pillar.title}</h3>
-                <p class="leading-7">{pillar.content}</p>
-              </div>
-            ))
-          }
+        <div class="be-approach-shell">
+          <div class="be-approach-top">
+            <div>
+              <p class="be-approach-kicker">The method</p>
+              <h2>{home.approach.title}</h2>
+            </div>
+            <p>
+              {home.approach.content}
+            </p>
+          </div>
+
+          <div class="be-approach-spread">
+            <aside class="be-approach-mast">
+              <span>04</span>
+              <p>Foundations for a steadier relationship with health.</p>
+            </aside>
+            <div class="be-approach-list">
+              {
+                home.approach.pillars.map((pillar, index) => (
+                  <article class="be-approach-item">
+                    <span>{String(index + 1).padStart(2, "0")}</span>
+                    <div>
+                      <h3>{pillar.title}</h3>
+                      <p>{pillar.content}</p>
+                    </div>
+                  </article>
+                ))
+              }
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section-sm bg-light/55 dark:bg-darkmode-light/45">
+    <section class="section-sm bg-[#F8F1E6]/82 dark:bg-darkmode-light/45">
       <div class="container">
         <div class="mb-12 max-w-4xl">
           <h2 class="mb-6">{home.pathways.title}</h2>
@@ -236,12 +284,12 @@ const buttonClass = (button: HomepageButton, extra = "") =>
             {home.pathways.content}
           </p>
         </div>
-        <div class="grid gap-6 lg:grid-cols-3">
+        <div class="grid gap-6 lg:grid-cols-[1.12fr_0.9fr_1fr]">
           {
             home.pathways.items.map((pathway, index) => (
               <a
                 href={pathway.link}
-                class={`group flex min-h-[20rem] flex-col justify-between rounded-md border border-border bg-body/80 p-8 transition duration-300 hover:-translate-y-1 hover:border-primary hover:bg-body dark:border-darkmode-border dark:bg-darkmode-body/80 dark:hover:border-darkmode-primary ${index === 1 ? "lg:mt-10" : ""}`}
+                class={`group flex min-h-[20rem] flex-col justify-between rounded-sm border border-border/70 bg-white/28 p-8 shadow-[0_22px_70px_-60px_rgba(23,19,13,0.3)] transition duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-1 hover:border-primary hover:bg-white/40 dark:border-darkmode-border dark:bg-darkmode-body/80 dark:hover:border-darkmode-primary ${index === 1 ? "lg:mt-10" : index === 2 ? "lg:mt-4" : ""}`}
               >
                 <span class="text-sm font-semibold uppercase tracking-[0.18em] text-text-light dark:text-darkmode-text-light">
                   {pathway.eyebrow}
@@ -263,13 +311,13 @@ const buttonClass = (button: HomepageButton, extra = "") =>
     <section class="section">
       <div class="container">
         <div class="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] xl:gap-20">
-          <div class="group overflow-hidden rounded-md border border-border bg-light/50 p-2 shadow-[0_28px_70px_-44px_rgba(75,59,37,0.42)] dark:border-darkmode-border dark:bg-darkmode-light/40">
+          <div class="group overflow-hidden rounded-sm border border-border/70 bg-white/32 p-2 shadow-[0_30px_82px_-58px_rgba(23,19,13,0.32)] dark:border-darkmode-border dark:bg-darkmode-light/40">
             <ImageMod
               src={home.about_panel.image}
               width={820}
               height={620}
               alt={home.about_panel.image_alt}
-              class="aspect-[4/3] w-full rounded-sm object-cover transition duration-700 ease-out group-hover:scale-[1.025]"
+              class="aspect-[4/3] w-full rounded-sm object-cover transition duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-[1.025]"
               format="webp"
               fit="cover"
             />
@@ -294,7 +342,7 @@ const buttonClass = (button: HomepageButton, extra = "") =>
       </div>
     </section>
 
-    <section class="section-sm be-final-cta border-y border-primary/30 bg-primary/20">
+    <section class="section-sm be-final-cta border-y border-primary/25 bg-[linear-gradient(90deg,rgba(195,199,106,0.18),rgba(248,241,230,0.94)_48%,rgba(255,249,239,0.84))]">
       <div class="container">
         <div class="grid gap-8 py-2 lg:grid-cols-[1fr_auto] lg:items-end">
           <div class="max-w-3xl">
@@ -329,23 +377,48 @@ const buttonClass = (button: HomepageButton, extra = "") =>
 
   <script is:inline>
     const newsletterForms = document.querySelectorAll(".be-newsletter-form");
+    const submitNetlifyForm = async (form) => {
+      const isLocal = ["localhost", "127.0.0.1"].includes(window.location.hostname);
+
+      if (isLocal) {
+        await new Promise((resolve) => window.setTimeout(resolve, 350));
+        return;
+      }
+
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(new FormData(form)).toString(),
+      });
+
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
+    };
 
     newsletterForms.forEach((form) => {
       form.addEventListener("submit", async (event) => {
         event.preventDefault();
 
+        const botField = form.querySelector('[name="bot-field"]');
         const name = form.querySelector('[name="firstName"]');
         const email = form.querySelector('[name="email"]');
         const nameError = form.querySelector("[data-error-name]");
         const emailError = form.querySelector("[data-error-email]");
         const success = form.querySelector("[data-success]");
+        const submitError = form.querySelector("[data-error-submit]");
         const button = form.querySelector("button[type='submit']");
         const validEmail = email.value.trim().includes("@") && email.value.trim().includes(".");
         const validName = name.value.trim().length > 0;
 
+        if (botField?.value) {
+          return;
+        }
+
         nameError.classList.toggle("hidden", validName);
         emailError.classList.toggle("hidden", validEmail);
         success.classList.add("hidden");
+        submitError.classList.add("hidden");
 
         if (!validName || !validEmail) {
           return;
@@ -354,20 +427,24 @@ const buttonClass = (button: HomepageButton, extra = "") =>
         button.disabled = true;
         button.textContent = "Joining...";
 
-        await new Promise((resolve) => window.setTimeout(resolve, 500));
-
-        button.disabled = false;
-        button.textContent = button.dataset.submitLabel;
-        success.classList.remove("hidden");
-        form.reset();
+        try {
+          await submitNetlifyForm(form);
+          success.classList.remove("hidden");
+          form.reset();
+        } catch (error) {
+          submitError.classList.remove("hidden");
+        } finally {
+          button.disabled = false;
+          button.textContent = button.dataset.submitLabel;
+        }
       });
     });
   </script>
 
   <style is:inline>
     .be-home {
-      --be-home-ink: #2a251d;
-      --be-home-muted: #2a251d;
+      --be-home-ink: #17130d;
+      --be-home-muted: #17130d;
     }
 
     .be-home h1,
@@ -375,7 +452,7 @@ const buttonClass = (button: HomepageButton, extra = "") =>
     .be-home h3 {
       color: var(--be-home-ink);
       font-weight: 500;
-      letter-spacing: -0.018em;
+      letter-spacing: 0;
     }
 
     .be-home h1 {
@@ -383,46 +460,364 @@ const buttonClass = (button: HomepageButton, extra = "") =>
     }
 
     .be-home h2 {
-      font-size: clamp(2.25rem, 3.8vw, 3.6rem);
+      font-size: 2.55rem;
       line-height: 1;
     }
 
     .be-home h3 {
-      font-size: clamp(1.6rem, 2.5vw, 2.15rem);
+      font-size: 1.72rem;
       line-height: 1.06;
     }
 
     .be-home p:not(.be-wellness-closing):not([class*="text-sm"]):not([class*="text-xs"]) {
       color: var(--be-home-muted);
-      font-size: clamp(1rem, 1.25vw, 1.12rem);
+      font-size: 1.04rem;
       line-height: 1.62;
       letter-spacing: 0.01em;
     }
 
     .be-home .be-wellness-closing {
       margin-top: 2.5rem;
-      border-top: 1px solid rgba(91, 126, 79, 0.28);
+      border-top: 1px solid rgba(143, 148, 51, 0.35);
       padding-top: 1.8rem;
       color: var(--be-home-ink);
-      font-size: clamp(1.5rem, 3.6vw, 2.55rem);
+      font-size: 1.62rem;
       line-height: 1.18;
       letter-spacing: 0;
     }
 
+    .be-hero::after {
+      position: absolute;
+      right: max(1rem, 5vw);
+      bottom: 2.25rem;
+      width: min(14rem, 24vw);
+      height: 1px;
+      background: #8f9433;
+      content: "";
+      opacity: 0.68;
+    }
+
+    .be-article-title {
+      font-size: 2rem;
+      line-height: 1.02;
+    }
+
+    .be-article-title > span:first-child {
+      display: block;
+    }
+
+    .be-article-subtitle {
+      display: block;
+      margin-top: 0.7rem;
+      color: #6f8790;
+      font-family: var(--font-primary);
+      font-size: 0.98rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      line-height: 1.48;
+    }
+
+    .be-approach-editorial {
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(
+          108deg,
+          transparent 0%,
+          rgba(63, 74, 20, 0.045) 16%,
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 88% 10%,
+          rgba(195, 199, 106, 0.13),
+          transparent 28rem
+        );
+    }
+
+    .be-approach-shell {
+      border-top: 1px solid rgba(63, 74, 20, 0.35);
+      border-bottom: 1px solid rgba(221, 212, 196, 0.78);
+      padding-block: clamp(3.75rem, 7vw, 6.5rem);
+    }
+
+    .be-approach-top {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(18rem, 0.78fr);
+      gap: clamp(2rem, 8vw, 8rem);
+      align-items: end;
+    }
+
+    .be-approach-kicker {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 0 0 1.3rem;
+      color: #3f4a14;
+      font-family: var(--font-primary);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      line-height: 1.25;
+      text-transform: uppercase;
+    }
+
+    .be-approach-kicker::before {
+      display: block;
+      width: 3.25rem;
+      height: 1px;
+      background: #3f4a14;
+      content: "";
+      opacity: 0.78;
+    }
+
+    .be-approach-top h2 {
+      max-width: 11ch;
+      margin: 0;
+      font-size: clamp(3rem, 6.5vw, 6.7rem);
+      line-height: 0.88;
+    }
+
+    .be-approach-top > p {
+      margin: 0;
+      max-width: 38rem;
+      border-left: 1px solid rgba(63, 74, 20, 0.32);
+      padding-left: clamp(1.25rem, 2vw, 2rem);
+      color: #17130d;
+      font-size: clamp(1rem, 1.35vw, 1.16rem);
+      line-height: 1.76;
+    }
+
+    .be-approach-spread {
+      display: grid;
+      grid-template-columns: minmax(13rem, 0.46fr) minmax(0, 1fr);
+      gap: clamp(2rem, 7vw, 7.5rem);
+      margin-top: clamp(3rem, 6vw, 5.4rem);
+      align-items: start;
+    }
+
+    .be-approach-mast {
+      position: sticky;
+      top: 7rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid rgba(63, 74, 20, 0.32);
+    }
+
+    .be-approach-mast span {
+      display: block;
+      color: rgba(63, 74, 20, 0.84);
+      font-family: var(--font-secondary);
+      font-size: clamp(5rem, 10vw, 9rem);
+      font-weight: 500;
+      letter-spacing: 0;
+      line-height: 0.78;
+    }
+
+    .be-approach-mast p {
+      max-width: 15rem;
+      margin: 1.15rem 0 0;
+      color: #6f8790;
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+
+    .be-approach-list {
+      border-top: 1px solid rgba(221, 212, 196, 0.86);
+    }
+
+    .be-approach-item {
+      display: grid;
+      grid-template-columns: 4.5rem minmax(0, 1fr);
+      gap: clamp(1.25rem, 3vw, 3rem);
+      padding: clamp(1.7rem, 3vw, 2.65rem) 0;
+      border-bottom: 1px solid rgba(221, 212, 196, 0.86);
+    }
+
+    .be-approach-item:nth-child(even) {
+      padding-left: clamp(0rem, 5vw, 4rem);
+    }
+
+    .be-approach-item > span {
+      color: #3f4a14;
+      font-family: var(--font-primary);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      line-height: 1.2;
+      padding-top: 0.55rem;
+    }
+
+    .be-approach-item h3 {
+      margin: 0 0 0.9rem;
+      font-size: clamp(2rem, 3.8vw, 3.45rem);
+      line-height: 0.98;
+    }
+
+    .be-approach-item p {
+      max-width: 42rem;
+      margin: 0;
+      color: #17130d;
+      font-size: clamp(1rem, 1.25vw, 1.1rem);
+      line-height: 1.68;
+    }
+
+    @media (min-width: 768px) {
+      .be-home h2 {
+        font-size: 3.15rem;
+      }
+
+      .be-home h3 {
+        font-size: 2rem;
+      }
+
+      .be-home .be-wellness-closing {
+        font-size: 2.2rem;
+      }
+    }
+
+    @media (min-width: 1280px) {
+      .be-home h2 {
+        font-size: 3.65rem;
+      }
+
+      .be-home h3 {
+        font-size: 2.15rem;
+      }
+
+      .be-home .be-wellness-closing {
+        font-size: 2.55rem;
+      }
+    }
+
+    @media (max-width: 1279px) {
+      .be-hero .container > .grid {
+        width: min(100%, 44rem);
+        margin-inline: auto;
+      }
+
+      .be-hero-copy,
+      .be-hero-media {
+        width: 100%;
+        max-width: none;
+        justify-self: stretch;
+      }
+
+      .be-hero-media > div:last-child {
+        max-width: min(100%, 38rem);
+      }
+    }
+
     @media (max-width: 767px) {
+      .be-home {
+        overflow-x: clip;
+      }
+
+      .be-home p,
+      .be-home h1,
+      .be-home h2,
+      .be-home h3 {
+        max-width: 100%;
+        overflow-wrap: break-word;
+      }
+
+      .be-hero .container > .grid {
+        width: min(100%, 34rem);
+      }
+
+      .be-hero-copy,
+      .be-hero-media {
+        width: 100%;
+      }
+
+      .be-hero-media > div:last-child {
+        margin-left: 0;
+        max-width: min(100%, 28rem);
+      }
+
       .be-home h1 {
-        font-size: clamp(2.45rem, 10vw, 3.25rem);
-        max-width: 12.4ch;
+        font-size: clamp(3.1rem, 14.4vw, 5.2rem);
+        max-width: 10.2ch;
+      }
+
+      .be-hero-copy > div:first-of-type {
+        max-width: 29rem;
       }
 
       .be-home h2 {
-        font-size: clamp(2.25rem, 9.5vw, 3.1rem);
+        font-size: 2.42rem;
       }
 
       .be-home .section,
       .be-home .section-sm {
         padding-top: 5.5rem;
         padding-bottom: 5.5rem;
+      }
+
+      .be-approach-shell {
+        padding-block: 4.5rem;
+      }
+
+      .be-approach-top,
+      .be-approach-spread,
+      .be-approach-item {
+        grid-template-columns: 1fr;
+      }
+
+      .be-approach-top {
+        gap: 1.6rem;
+      }
+
+      .be-approach-top h2 {
+        font-size: clamp(3rem, 15vw, 4.35rem);
+      }
+
+      .be-approach-top > p {
+        border-left: 0;
+        border-top: 1px solid rgba(63, 74, 20, 0.28);
+        padding-top: 1.25rem;
+        padding-left: 0;
+      }
+
+      .be-approach-spread {
+        gap: 2.2rem;
+        margin-top: 3rem;
+      }
+
+      .be-approach-mast {
+        position: static;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 1.1rem;
+        align-items: end;
+      }
+
+      .be-approach-mast span {
+        font-size: 4.75rem;
+      }
+
+      .be-approach-mast p {
+        margin: 0;
+      }
+
+      .be-approach-item {
+        gap: 0.85rem;
+      }
+
+      .be-approach-item:nth-child(even) {
+        padding-left: 0;
+      }
+
+      .be-approach-item > span {
+        padding-top: 0;
+      }
+    }
+
+    @media (min-width: 640px) and (max-width: 767px) {
+      .be-hero > .container {
+        width: min(calc(100% - 2rem), 1280px) !important;
+      }
+
+      .be-hero .container > .grid {
+        width: min(100%, 39rem);
       }
     }
 

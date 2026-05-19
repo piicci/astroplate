@@ -2,8 +2,17 @@
 import config from "@/config/config.json";
 import ImageMod from "./ImageMod.astro";
 
-const { src, srcDarkmode }: { src?: string; srcDarkmode?: string } =
-  Astro.props;
+const {
+  src,
+  srcDarkmode,
+  width,
+  height,
+}: {
+  src?: string;
+  srcDarkmode?: string;
+  width?: string | number;
+  height?: string | number;
+} = Astro.props;
 const {
   logo,
   logo_darkmode,
@@ -25,37 +34,72 @@ const logoSource = src ? src : logo;
 const logoDarkSource = srcDarkmode ? srcDarkmode : logo_darkmode;
 const logoFormat = logoSource?.endsWith(".svg") ? "svg" : "webp";
 const logoDarkFormat = logoDarkSource?.endsWith(".svg") ? "svg" : "webp";
+const isSvgLogo = logoSource?.endsWith(".svg");
+const isSvgDarkLogo = logoDarkSource?.endsWith(".svg");
+const displayWidth = String(width ?? logo_width).replace("px", "");
+const displayHeight = String(height ?? logo_height).replace("px", "");
+const logoStyle = `height:${displayHeight}px;width:${displayWidth}px`;
+const lightLogoClass = ["inline-block", theme_switcher && "dark:hidden"]
+  .filter(Boolean)
+  .join(" ");
+const darkLogoClass = "hidden dark:inline-block";
 ---
 
 <a href="/" class="navbar-brand inline-block">
   {
     src || srcDarkmode || logo || logo_darkmode ? (
       <>
-        <ImageMod
-          src={logoSource}
-          class={`inline-block ${theme_switcher && "dark:hidden"}`}
-          width={logo_width.replace("px", "") * 2}
-          height={logo_height.replace("px", "") * 2}
-          alt={title}
-          style={{
-            height: logo_height.replace("px", "") + "px",
-            width: logo_width.replace("px", "") + "px",
-          }}
-          format={logoFormat}
-        />
-        {theme_switcher && (
+        {isSvgLogo ? (
+          <img
+            src={logoSource}
+            class={lightLogoClass}
+            width={Number(displayWidth) * 2}
+            height={Number(displayHeight) * 2}
+            alt={title}
+            style={logoStyle}
+            loading="eager"
+            decoding="async"
+          />
+        ) : (
           <ImageMod
-            src={logoDarkSource}
-            class={"hidden dark:inline-block"}
-            width={logo_width.replace("px", "") * 2}
-            height={logo_height.replace("px", "") * 2}
+            src={logoSource}
+            class={lightLogoClass}
+            width={Number(displayWidth) * 2}
+            height={Number(displayHeight) * 2}
             alt={title}
             style={{
-              height: logo_height.replace("px", "") + "px",
-              width: logo_width.replace("px", "") + "px",
+              height: displayHeight + "px",
+              width: displayWidth + "px",
             }}
-            format={logoDarkFormat}
+            format={logoFormat}
           />
+        )}
+        {theme_switcher && (
+          isSvgDarkLogo ? (
+            <img
+              src={logoDarkSource}
+              class={darkLogoClass}
+              width={Number(displayWidth) * 2}
+              height={Number(displayHeight) * 2}
+              alt={title}
+              style={logoStyle}
+              loading="eager"
+              decoding="async"
+            />
+          ) : (
+            <ImageMod
+              src={logoDarkSource}
+              class={darkLogoClass}
+              width={Number(displayWidth) * 2}
+              height={Number(displayHeight) * 2}
+              alt={title}
+              style={{
+                height: displayHeight + "px",
+                width: displayWidth + "px",
+              }}
+              format={logoDarkFormat}
+            />
+          )
         )}
       </>
     ) : logo_text ? (

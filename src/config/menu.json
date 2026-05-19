@@ -1,6 +1,10 @@
 {
   "main": [
     {
+      "name": "Home",
+      "url": "/"
+    },
+    {
       "name": "Journal",
       "url": "/journal"
     },
@@ -11,6 +15,11 @@
     {
       "name": "About",
       "url": "/about"
+    },
+    {
+      "name": "Free Guide",
+      "url": "/start-here#free-guide",
+      "isButton": true
     }
   ],
   "footer": [

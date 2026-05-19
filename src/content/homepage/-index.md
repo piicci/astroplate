@@ -1,5 +1,5 @@
 ---
-title: Becoming Elysian | Wellness for Women Over 35
+title: Becoming Elysian | Wellness for Women
 meta_title: Becoming Elysian | Wellness for Women Over 35
 description: Becoming Elysian is a modern wellness platform for women exploring
   fitness, nutrition, hormonal health, stress, recovery, and sustainable
@@ -9,22 +9,22 @@ image: /images/og-image.png
 # Hero banner
 banner:
   eyebrow: Wellness for women, reimagined with calm and clarity
-  title: Wellness that supports your life — not consumes it.
+  title: Wellness that supports your life — never consumes it.
   content: Becoming Elysian is a modern wellness platform for women who want to
     feel stronger, calmer, more energized, and more connected to their bodies
     through evidence-informed fitness, nutrition, hormonal health, recovery, and
     sustainable habits.
-  image: /images/becoming-elysian-about-editorial.png
+  image: /images/becoming-elysian-about-editorial-hero.jpg
   image_alt: Woman enjoying a calm morning wellness routine in soft natural light
   image_note: Evidence-informed notes for strength, nourishment, recovery,
     hormones, and the life around them.
   buttons:
     - enable: true
-      label: Read the Journal
+      label: Explore the Journal
       link: /journal
       variant: primary
     - enable: true
-      label: Join the Newsletter
+      label: Join Our Circle
       link: /newsletter
       variant: outline
 
@@ -46,9 +46,7 @@ intro:
 # Journal section
 featured_articles:
   title: From the Journal
-  content: Thoughtful, practical articles on the foundations of women’s wellness
-    — from protein and strength training to hormones, stress, recovery, and
-    sustainable routines.
+  content: You’ll discover thoughtful, practical articles on the foundations of women’s wellness, from protein and strength training to hormones, stress, recovery, and sustainable routines that support the woman you are becoming.
   button:
     enable: true
     label: Visit the Journal
@@ -86,7 +84,7 @@ newsletter:
   content: |-
     Join the Becoming Elysian newsletter for thoughtful, evidence-informed notes on nutrition, strength, hormones, stress, recovery, and sustainable wellness for women.
     No extremes. No overwhelm. Just grounded guidance to help you feel more supported in your body and your daily life.
-  submit_label: Join the Newsletter
+  submit_label: Join Our Circle
   helper_text: Weekly wellness notes. Thoughtful, practical, and easy to return to.
   success_message: Thank you. Your weekly wellness letter is on its way.
 
@@ -98,18 +96,13 @@ approach:
     that help women build a steadier relationship with their health.
   pillars:
     - title: Evidence-informed
-      content: We explore wellness through a grounded, science-aware lens without
-        turning every meal, workout, or habit into a rigid protocol.
+      content: We explore wellness through a grounded, science-aware lens, yet we never turn your meals, movement, or daily habits into rigid protocols. Here, knowledge serves your intuition.
     - title: Sustainable
-      content: The goal is not perfection. It is consistency, flexibility, and
-        practices that can support your life through different seasons.
+      content: Perfection is never the goal. What matters is gentle consistency, flexibility, and practices that can support you beautifully through every season of life.
     - title: Body-aware
-      content: We help women better understand energy, appetite, stress,
-        recovery, hormones, and strength without shame or fear-based messaging.
+      content: We help you understand your energy, appetite, stress, recovery, hormones, and strength with clarity and compassion, free from shame or fear-based messaging. This is awareness that empowers you to listen to your body with trust.
     - title: Strength-centered
-      content: Strength supports far more than appearance. It can help women
-        feel more capable, resilient, independent, and connected to their bodies
-        over time.
+      content: Strength supports so much more than appearance. It helps you feel more capable, resilient, independent, and deeply connected to your body over time, a quiet power that grows with you.
 
 # Start-here pathway cards
 pathways:
@@ -141,9 +134,11 @@ pathways:
 about_panel:
   title: Created for women who want wellness to feel supportive again
   content: |-
-    Becoming Elysian was created for women who are tired of extremes — the restrictive plans, the pressure to optimize everything, the confusing advice, and the feeling that wellness has become another thing to keep up with.
-    Here, we focus on what actually supports long-term wellbeing: strength, nourishment, recovery, hormonal awareness, nervous system health, and sustainable daily practices.
-    This is a space for women who want to feel informed, capable, and more at home in their bodies — without building their entire life around wellness.
+    Becoming Elysian was created for you. For the woman who is tired of extremes. The restrictive plans. The pressure to optimize everything. The confusing advice. And that quiet sense that wellness has become just another thing to keep up with.
+
+    Here, we focus on what actually supports your long-term wellbeing: quiet strength, generous nourishment, recovery that restores you, hormonal awareness that honors your rhythms, nervous system care that brings calm, and sustainable daily practices that fit beautifully into the life you already lead.
+
+    This is your space to feel informed, capable, and more at home in your body. Without needing to build your entire life around wellness.
   image: /images/becoming-elysian-about-editorial.png
   image_alt: Editorial wellness setting with neutral tones and sage accents
   button:
@@ -156,12 +151,10 @@ about_panel:
 final_cta:
   eyebrow: The weekly wellness letter
   title: Begin with one small shift
-  content: Receive the weekly Becoming Elysian letter — thoughtful, practical
-    wellness notes for women who want to feel stronger, calmer, and more
-    connected to their bodies.
+  content: Receive thoughtful, evidence-informed notes on fitness, nutrition, hormonal health, recovery, and sustainable rituals. Written for women who want to feel stronger, calmer, and more deeply connected to their bodies.
   button:
     enable: true
-    label: Get the Weekly Wellness Letter
+    label: Join Our Circle
     link: /newsletter
     variant: primary
   note: Evidence-informed wellness, written with calm and clarity.

@@ -4,9 +4,9 @@
 
 /* form style */
 @utility form-input {
-  @apply w-full rounded border-transparent bg-light px-6 py-4 text-text-dark placeholder:text-text-light focus:border-primary dark:focus:border-darkmode-primary focus:ring-transparent dark:border-darkmode-border dark:bg-darkmode-light dark:text-darkmode-text-light;
+  @apply w-full rounded-sm border border-border/70 bg-body/80 px-6 py-4 text-text-dark placeholder:text-text-light shadow-[inset_0_1px_0_rgba(244,232,214,0.8)] focus:border-primary focus:ring-1 focus:ring-primary/20 dark:border-darkmode-border dark:bg-darkmode-light dark:text-darkmode-text-light dark:focus:border-darkmode-primary dark:focus:ring-darkmode-primary/20;
 }
 
 @utility form-label {
-  @apply mb-4 block font-secondary text-xl font-normal text-text-dark dark:text-darkmode-text-light;
+  @apply mb-3 block font-primary text-xs font-semibold uppercase tracking-[0.16em] text-text-dark dark:text-darkmode-text-light;
 }

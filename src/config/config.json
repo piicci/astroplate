@@ -5,10 +5,10 @@
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
-    "logo": "/images/becoming-elysian-logo.svg",
-    "logo_darkmode": "/images/becoming-elysian-logo-dark.svg",
-    "logo_width": "170",
-    "logo_height": "30",
+    "logo": "/images/be-logo-monogram.svg",
+    "logo_darkmode": "/images/be-logo-monogram.svg",
+    "logo_width": "36",
+    "logo_height": "46",
     "logo_text": "Becoming Elysian"
   },
 
@@ -35,7 +35,7 @@
 
   "navigation_button": {
     "enable": true,
-    "label": "Join the Newsletter",
+    "label": "Join Our Circle",
     "link": "/newsletter"
   },
 
@@ -44,10 +44,29 @@
     "gtm_id": "GTM-XXXXXX"
   },
 
-  "disqus": {
+  "comments": {
     "enable": true,
-    "shortname": "themefisher-template",
-    "settings": {}
+    "provider": "giscus",
+    "title": "Join the conversation",
+    "description": "Share a thoughtful note, question, or lived observation.",
+    "giscus": {
+      "repo": "piicci/becoming-elysian",
+      "repo_id": "",
+      "category": "General",
+      "category_id": "",
+      "mapping": "pathname",
+      "strict": "0",
+      "reactions_enabled": "1",
+      "emit_metadata": "0",
+      "input_position": "top",
+      "lang": "en",
+      "loading": "lazy"
+    },
+    "utterances": {
+      "repo": "piicci/becoming-elysian",
+      "issue_term": "pathname",
+      "label": "comment"
+    }
   },
 
   "metadata": {
