@@ -1,4 +1,5 @@
 ---
+import ImageMod from "@/components/ImageMod.astro";
 import Base from "@/layouts/Base.astro";
 import { getListPage } from "@/lib/contentParser.astro";
 
@@ -37,6 +38,25 @@ const experience = [
   "long-term wellness and lifestyle change",
 ];
 
+const principles = [
+  {
+    title: "Evidence over noise",
+    content:
+      "Clear, practical guidance shaped by training, nutrition education, and women’s real lived experience.",
+  },
+  {
+    title: "Regulation before intensity",
+    content:
+      "Strength, nourishment, recovery, and nervous system support are treated as one connected ecosystem.",
+  },
+  {
+    title: "Sustainable by design",
+    content:
+      "The work is built for repeatable habits, flexible seasons, and lives that do not pause for perfect routines.",
+  },
+];
+
+const heroImage = "/images/becoming-elysian-about-cover-q1oar.jpg";
 const articleImage = "/images/becoming-elysian-about-editorial.png";
 ---
 
@@ -46,9 +66,58 @@ const articleImage = "/images/becoming-elysian-about-editorial.png";
   description={description}
   image={image}
 >
-  <div class="about-journal">
-    <section class="about-journal-body">
+  <div class="about-magazine">
+    <section class="about-cover" aria-labelledby="about-cover-title">
       <div class="container">
+        <div class="about-cover-grid">
+          <div class="about-cover-copy">
+            <p class="about-kicker">About Becoming Elysian</p>
+            <h1 class="about-reveal-title" id="about-cover-title">
+              Health, without the harsh edges.
+            </h1>
+            <p class="about-deck">
+              Becoming Elysian is a modern wellness platform for women who want
+              to feel healthier, calmer, stronger, and more at home in their
+              body without turning wellbeing into another performance.
+            </p>
+          </div>
+
+          <figure class="about-cover-figure">
+            <ImageMod
+              src={heroImage}
+              width={1168}
+              height={880}
+              alt="A woman moving through soft curtains in a sunlit wellness courtyard"
+              class="about-cover-image"
+              format="webp"
+              fit="cover"
+              loading="eager"
+            />
+            <figcaption>
+              <span>Issue note</span>
+              A grounded guide to strength, nourishment, recovery, and steadier self-trust.
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="about-cover-meta" aria-label="About page themes">
+          <span>Women’s wellbeing</span>
+          <span>Evidence-led practice</span>
+          <span>Long-term change</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-editorial-body">
+      <div class="container">
+        <div class="about-intro-strip">
+          <span>Not another wellness checklist</span>
+          <p>
+            The work here starts with a quieter question: what actually helps a
+            woman feel supported enough to keep going?
+          </p>
+        </div>
+
         <div class="about-journal-grid">
           <aside class="about-aside" aria-label="About page summary">
             <p>Modern wellness for women</p>
@@ -57,10 +126,6 @@ const articleImage = "/images/becoming-elysian-about-editorial.png";
 
           <article class="about-article">
             <p class="about-kicker">Our philosophy</p>
-            <h1 class="about-reveal-title">
-              Wellness should support your life, not consume it.
-            </h1>
-
             <div class="about-copy">
               <p>
                 Becoming Elysian is a modern wellness platform created for women
@@ -83,8 +148,34 @@ const articleImage = "/images/becoming-elysian-about-editorial.png";
               </p>
             </div>
 
+            <div
+              class="about-principles"
+              aria-label="Becoming Elysian principles"
+            >
+              {
+                principles.map((principle, index) => (
+                  <section>
+                    <span>{String(index + 1).padStart(2, "0")}</span>
+                    <div>
+                      <h2>{principle.title}</h2>
+                      <p>{principle.content}</p>
+                    </div>
+                  </section>
+                ))
+              }
+            </div>
+
             <figure class="about-figure">
-              <img src={articleImage} alt="" loading="lazy" />
+              <ImageMod
+                src={articleImage}
+                width={1672}
+                height={941}
+                alt="Becoming Elysian editorial wellness still life"
+                class="about-figure-image"
+                format="webp"
+                fit="cover"
+                loading="lazy"
+              />
             </figure>
 
             <blockquote class="about-reveal-quote">
@@ -102,11 +193,24 @@ const articleImage = "/images/becoming-elysian-about-editorial.png";
               </p>
             </div>
 
-            <div
-              class="about-topic-list"
-              aria-label="Topics Becoming Elysian covers"
-            >
-              {topics.map((topic) => <span>{topic}</span>)}
+            <div class="about-topic-spread">
+              <div>
+                <p class="about-kicker">What we cover</p>
+                <h2>A fuller map of women’s health.</h2>
+              </div>
+              <div
+                class="about-topic-list"
+                aria-label="Topics Becoming Elysian covers"
+              >
+                {
+                  topics.map((topic, index) => (
+                    <span>
+                      <small>{String(index + 1).padStart(2, "0")}</small>
+                      {topic}
+                    </span>
+                  ))
+                }
+              </div>
             </div>
 
             <hr />
@@ -151,6 +255,14 @@ const articleImage = "/images/becoming-elysian-about-editorial.png";
                 We believe health is not built through extremes, but through
                 consistency, nourishment, movement, recovery, resilience, and
                 supportive habits practiced over time.
+              </p>
+            </div>
+
+            <div class="about-final-note">
+              <span>Editorial promise</span>
+              <p>
+                Becoming Elysian is built to feel useful in an ordinary week,
+                not only inspiring for the few minutes after reading.
               </p>
             </div>
 
@@ -235,33 +347,46 @@ const articleImage = "/images/becoming-elysian-about-editorial.png";
 </script>
 
 <style>
-  .about-journal {
+  .about-magazine {
+    --about-ink: #17130d;
+    --about-soft-ink: #3c3324;
+    --about-muted: #6f8790;
+    --about-accent: #3f4a14;
+    --about-line: rgba(63, 74, 20, 0.28);
+    --about-paper: #f8f1e6;
     background:
       radial-gradient(
-        circle at 14% 0%,
-        rgba(195, 199, 106, 0.16),
-        transparent 30rem
+        circle at 12% 4%,
+        rgba(255, 249, 239, 0.94),
+        transparent 31rem
       ),
       radial-gradient(
-        circle at 86% 18%,
-        rgba(255, 253, 247, 0.9),
-        transparent 28rem
+        circle at 88% 9%,
+        rgba(195, 199, 106, 0.16),
+        transparent 32rem
       ),
       linear-gradient(
         108deg,
         transparent 0%,
-        rgba(23, 19, 13, 0.04) 14%,
-        transparent 25%
+        rgba(154, 103, 64, 0.055) 16%,
+        transparent 29%
       ),
       linear-gradient(
         180deg,
-        rgba(250, 247, 239, 0.98),
-        rgba(255, 253, 247, 0.66) 48%,
-        rgba(250, 247, 239, 0.98)
+        rgba(248, 241, 230, 0.98),
+        rgba(255, 249, 239, 0.75) 54%,
+        rgba(248, 241, 230, 0.98)
       );
+    color: var(--about-ink);
+    overflow-x: clip;
   }
 
-  .dark .about-journal {
+  .dark .about-magazine {
+    --about-ink: #f7f3e8;
+    --about-soft-ink: #ede2cc;
+    --about-muted: #dcc9a7;
+    --about-accent: #dce4c6;
+    --about-line: rgba(220, 228, 198, 0.22);
     background:
       radial-gradient(
         circle at 14% 0%,
@@ -271,13 +396,182 @@ const articleImage = "/images/becoming-elysian-about-editorial.png";
       linear-gradient(180deg, rgba(75, 59, 37, 0.98), rgba(54, 43, 29, 1));
   }
 
-  .about-journal-body {
-    padding: clamp(4.5rem, 8vw, 8rem) 0 clamp(6rem, 10vw, 10rem);
+  .about-cover {
+    position: relative;
+    padding: clamp(3.75rem, 7vw, 7.8rem) 0 clamp(2rem, 4vw, 3.5rem);
+  }
+
+  .about-cover::after {
+    position: absolute;
+    right: max(1.5rem, 5vw);
+    bottom: 1rem;
+    width: min(16rem, 28vw);
+    height: 1px;
+    background: var(--about-accent);
+    content: "";
+    opacity: 0.65;
+  }
+
+  .about-cover-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.88fr) minmax(20rem, 1.12fr);
+    gap: clamp(2.4rem, 6vw, 6.5rem);
+    align-items: end;
+  }
+
+  .about-cover-copy {
+    padding-bottom: clamp(0rem, 4vw, 4.8rem);
+  }
+
+  .about-kicker {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+    color: var(--about-accent);
+    font-family: var(--font-primary);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.19em;
+    line-height: 1.25;
+    text-transform: uppercase;
+  }
+
+  .about-kicker::before {
+    flex: 0 0 auto;
+    width: 3rem;
+    height: 1px;
+    background: currentColor;
+    content: "";
+    opacity: 0.72;
+  }
+
+  .about-reveal-title {
+    max-width: 9.7ch;
+    margin: 1.15rem 0 2rem;
+    color: var(--about-ink);
+    font-family: var(--font-secondary);
+    font-size: clamp(3.25rem, 7.4vw, 7.9rem);
+    font-weight: 500;
+    line-height: 0.88;
+    letter-spacing: 0;
+  }
+
+  .about-deck {
+    max-width: 35rem;
+    margin: 0;
+    color: var(--about-soft-ink);
+    font-family: var(--font-primary);
+    font-size: clamp(1.08rem, 1.35vw, 1.24rem);
+    line-height: 1.68;
+  }
+
+  .about-cover-figure {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    margin: 0;
+    padding: 0.55rem;
+    border: 1px solid rgba(221, 212, 196, 0.88);
+    background: rgba(255, 253, 247, 0.34);
+    box-shadow: 0 32px 92px -64px rgba(23, 19, 13, 0.38);
+    animation: about-rise 850ms cubic-bezier(0.16, 1, 0.3, 1) 120ms both;
+  }
+
+  .dark .about-cover-figure {
+    border-color: rgba(237, 226, 204, 0.22);
+    background: rgba(247, 243, 232, 0.06);
+  }
+
+  .about-cover-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: contrast(1.05) saturate(1.02) brightness(1.03);
+  }
+
+  .about-cover-figure figcaption {
+    position: absolute;
+    right: clamp(1rem, 3vw, 2rem);
+    bottom: clamp(1rem, 3vw, 2rem);
+    width: min(17rem, calc(100% - 2rem));
+    border-left: 1px solid rgba(255, 249, 239, 0.72);
+    padding-left: 1rem;
+    color: #fff9ef;
+    font-family: var(--font-primary);
+    font-size: 0.86rem;
+    line-height: 1.55;
+    text-shadow: 0 1px 18px rgba(23, 19, 13, 0.38);
+  }
+
+  .about-cover-figure figcaption span {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .about-cover-meta {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1px;
+    margin-top: clamp(2.5rem, 5vw, 4.25rem);
+    border-block: 1px solid var(--about-line);
+  }
+
+  .about-cover-meta span {
+    min-height: 4.5rem;
+    padding: 1.25rem clamp(1rem, 2vw, 1.5rem);
+    color: var(--about-accent);
+    font-family: var(--font-primary);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    line-height: 1.35;
+    text-transform: uppercase;
+  }
+
+  .about-cover-meta span + span {
+    border-left: 1px solid var(--about-line);
+  }
+
+  .about-editorial-body {
+    padding: clamp(3.75rem, 7vw, 7.5rem) 0 clamp(6rem, 10vw, 10rem);
+  }
+
+  .about-intro-strip {
+    display: grid;
+    grid-template-columns: minmax(10rem, 0.34fr) minmax(0, 0.66fr);
+    gap: clamp(1.5rem, 6vw, 6rem);
+    margin-bottom: clamp(4rem, 7vw, 7rem);
+    padding: clamp(1.4rem, 2.5vw, 2.2rem) 0;
+    border-block: 1px solid var(--about-line);
+  }
+
+  .about-intro-strip span {
+    color: var(--about-accent);
+    font-family: var(--font-primary);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  .about-intro-strip p {
+    max-width: 48rem;
+    margin: 0;
+    color: var(--about-ink);
+    font-family: var(--font-secondary);
+    font-size: clamp(1.7rem, 3vw, 3rem);
+    line-height: 1.02;
   }
 
   .about-journal-grid {
     display: grid;
-    grid-template-columns: minmax(12rem, 0.3fr) minmax(0, 0.7fr);
+    grid-template-columns: minmax(12rem, 0.28fr) minmax(0, 0.72fr);
     gap: clamp(2rem, 6vw, 7rem);
     align-items: start;
   }
@@ -285,56 +579,101 @@ const articleImage = "/images/becoming-elysian-about-editorial.png";
   .about-aside {
     position: sticky;
     top: 7rem;
-    padding-top: 0.45rem;
-    border-top: 1px solid rgba(143, 148, 51, 0.38);
+    padding-top: 0.9rem;
+    border-top: 1px solid var(--about-line);
   }
 
-  .about-aside p,
-  .about-kicker {
+  .about-aside p {
     margin: 0;
+    color: var(--about-accent);
     font-family: var(--font-primary);
     font-size: 0.75rem;
     font-weight: 800;
-    letter-spacing: 0;
+    letter-spacing: 0.16em;
+    line-height: 1.35;
     text-transform: uppercase;
-    color: #3f4a14;
-  }
-
-  .dark .about-aside p,
-  .dark .about-kicker {
-    color: #dce4c6;
   }
 
   .about-aside span {
     display: block;
     max-width: 15rem;
     margin-top: 0.9rem;
+    color: var(--about-muted);
     font-family: var(--font-primary);
     font-size: 0.95rem;
     line-height: 1.62;
-    color: #6f8790;
-  }
-
-  .dark .about-aside span {
-    color: #dcc9a7;
   }
 
   .about-article {
-    max-width: 58rem;
+    max-width: 62rem;
   }
 
-  .about-reveal-title {
-    margin: 1rem 0 2.4rem;
+  .about-copy {
+    display: grid;
+    gap: 1.2rem;
+    margin-top: 1.7rem;
+  }
+
+  .about-copy p,
+  .about-detail-grid li,
+  .about-closing {
+    margin: 0;
+    color: var(--about-soft-ink);
+    font-family: var(--font-primary);
+    font-size: 1.04rem;
+    line-height: 1.86;
+  }
+
+  .about-principles {
+    margin: clamp(2.5rem, 5vw, 4.5rem) 0;
+    border-top: 1px solid var(--about-line);
+  }
+
+  .about-principles section {
+    display: grid;
+    grid-template-columns: 5rem minmax(0, 1fr);
+    gap: clamp(1.2rem, 4vw, 3.6rem);
+    padding: clamp(1.7rem, 3vw, 2.35rem) 0;
+    border-bottom: 1px solid rgba(221, 212, 196, 0.82);
+  }
+
+  .dark .about-principles section {
+    border-bottom-color: rgba(237, 226, 204, 0.16);
+  }
+
+  .about-principles section:nth-child(even) {
+    padding-left: clamp(0rem, 5vw, 3.5rem);
+  }
+
+  .about-principles span {
+    padding-top: 0.48rem;
+    color: var(--about-accent);
+    font-family: var(--font-primary);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  .about-principles h2 {
+    max-width: 12ch;
+    margin: 0 0 0.8rem;
+    color: var(--about-ink);
     font-family: var(--font-secondary);
-    font-size: clamp(2.35rem, 3.9vw, 4rem);
+    font-size: clamp(2.1rem, 4.1vw, 4rem);
     font-weight: 500;
-    line-height: 1;
+    line-height: 0.98;
     letter-spacing: 0;
-    color: #17130d;
   }
 
-  .dark .about-reveal-title {
-    color: #f7f3e8;
+  .about-principles p {
+    max-width: 38rem;
+    margin: 0;
+    color: var(--about-soft-ink);
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    line-height: 1.72;
   }
 
   .about-reveal-title span {
@@ -345,41 +684,18 @@ const articleImage = "/images/becoming-elysian-about-editorial.png";
     will-change: opacity;
   }
 
-  .about-copy {
-    display: grid;
-    gap: 1.25rem;
-    margin-top: 1.5rem;
-  }
-
-  .about-copy p,
-  .about-detail-grid li,
-  .about-closing {
-    margin: 0;
-    font-family: var(--font-primary);
-    font-size: 1.04rem;
-    line-height: 1.86;
-    color: #201a10;
-  }
-
-  .dark .about-copy p,
-  .dark .about-detail-grid li,
-  .dark .about-closing {
-    color: #ede2cc;
-  }
-
   .about-figure {
     margin: clamp(2.5rem, 5vw, 4.5rem) 0;
     overflow: hidden;
-    border-radius: 0.5rem;
     border: 1px solid rgba(221, 212, 196, 0.9);
-    background: #17130d;
+    background: var(--about-ink);
     box-shadow: 0 28px 82px -62px rgba(23, 19, 13, 0.34);
   }
 
-  .about-figure img {
+  .about-figure-image {
     display: block;
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 8.8;
     object-fit: cover;
     filter: contrast(1.06) saturate(1.02);
   }
@@ -387,45 +703,72 @@ const articleImage = "/images/becoming-elysian-about-editorial.png";
   .about-article blockquote {
     margin: clamp(2.5rem, 5vw, 4rem) 0;
     padding: clamp(1.6rem, 3vw, 2.5rem) 0;
-    border-block: 1px solid rgba(143, 148, 51, 0.35);
+    border-block: 1px solid var(--about-line);
+    color: var(--about-ink);
     font-family: var(--font-secondary);
     font-size: clamp(1.55rem, 2.45vw, 2.55rem);
     font-weight: 500;
     line-height: 1.16;
     letter-spacing: 0;
-    color: #17130d;
   }
 
-  .dark .about-article blockquote {
-    color: #f7f3e8;
+  .about-topic-spread {
+    display: grid;
+    grid-template-columns: minmax(11rem, 0.34fr) minmax(0, 0.66fr);
+    gap: clamp(1.5rem, 5vw, 5rem);
+    margin-top: clamp(2.5rem, 5vw, 4.5rem);
+    padding: clamp(2rem, 4vw, 3rem) 0;
+    border-block: 1px solid var(--about-line);
+  }
+
+  .about-topic-spread h2 {
+    max-width: 9ch;
+    margin: 1rem 0 0;
+    color: var(--about-ink);
+    font-family: var(--font-secondary);
+    font-size: clamp(2rem, 3.5vw, 3.35rem);
+    font-weight: 500;
+    line-height: 0.98;
   }
 
   .about-topic-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.6rem;
-    margin-top: 2rem;
+    display: grid;
+    gap: 0;
+    border-top: 1px solid rgba(221, 212, 196, 0.88);
+  }
+
+  .dark .about-topic-list {
+    border-top-color: rgba(237, 226, 204, 0.16);
   }
 
   .about-topic-list span {
-    border: 1px solid rgba(221, 212, 196, 0.9);
-    border-radius: 999px;
-    padding: 0.48rem 0.78rem;
+    display: grid;
+    grid-template-columns: 3.5rem minmax(0, 1fr);
+    gap: 1.25rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(221, 212, 196, 0.88);
+    color: var(--about-soft-ink);
     font-family: var(--font-primary);
-    font-size: 0.9rem;
-    color: #201a10;
-    background: rgba(255, 253, 247, 0.58);
+    font-size: 1rem;
+    line-height: 1.4;
+    text-transform: capitalize;
   }
 
   .dark .about-topic-list span {
-    color: #ede2cc;
-    background: rgba(247, 243, 232, 0.06);
+    border-bottom-color: rgba(237, 226, 204, 0.16);
+  }
+
+  .about-topic-list small {
+    color: var(--about-accent);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
   }
 
   .about-article hr {
     margin: clamp(3rem, 6vw, 5rem) 0;
     border: 0;
-    border-top: 1px solid rgba(143, 148, 51, 0.32);
+    border-top: 1px solid var(--about-line);
   }
 
   .about-detail-grid {
@@ -434,19 +777,15 @@ const articleImage = "/images/becoming-elysian-about-editorial.png";
     gap: clamp(1.5rem, 4vw, 3rem);
     margin: clamp(2rem, 4vw, 3.5rem) 0;
     padding: clamp(1.4rem, 3vw, 2rem) 0;
-    border-block: 1px solid rgba(143, 148, 51, 0.28);
+    border-block: 1px solid var(--about-line);
   }
 
   .about-detail-grid h3 {
     margin: 0 0 1rem;
+    color: var(--about-ink);
     font-family: var(--font-primary);
     font-size: clamp(1.15rem, 1.6vw, 1.45rem);
     line-height: 1.15;
-    color: #17130d;
-  }
-
-  .dark .about-detail-grid h3 {
-    color: #f7f3e8;
   }
 
   .about-detail-grid ul {
@@ -464,25 +803,62 @@ const articleImage = "/images/becoming-elysian-about-editorial.png";
     height: 0.4rem;
     margin-right: 0.7rem;
     border-radius: 999px;
-    background: #8f9433;
+    background: var(--about-accent);
     vertical-align: middle;
+  }
+
+  .about-final-note {
+    display: grid;
+    grid-template-columns: minmax(8rem, 0.25fr) minmax(0, 0.75fr);
+    gap: clamp(1.25rem, 4vw, 3rem);
+    margin-top: clamp(2.5rem, 5vw, 4rem);
+    padding: clamp(1.35rem, 3vw, 2.2rem) 0;
+    border-block: 1px solid var(--about-line);
+  }
+
+  .about-final-note span {
+    color: var(--about-accent);
+    font-family: var(--font-primary);
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .about-final-note p {
+    max-width: 40rem;
+    margin: 0;
+    color: var(--about-ink);
+    font-family: var(--font-secondary);
+    font-size: clamp(1.4rem, 2.25vw, 2.25rem);
+    line-height: 1.08;
   }
 
   .about-closing {
     margin-top: clamp(2.5rem, 5vw, 4rem);
     padding-top: clamp(1.5rem, 3vw, 2.4rem);
-    border-top: 1px solid rgba(143, 148, 51, 0.32);
+    border-top: 1px solid var(--about-line);
+    color: var(--about-ink);
     font-size: clamp(1.2rem, 2vw, 1.65rem);
     line-height: 1.55;
-    color: #17130d;
   }
 
-  .dark .about-closing {
-    color: #f7f3e8;
+  @keyframes about-rise {
+    from {
+      transform: translateY(18px);
+    }
+
+    to {
+      transform: translateY(0);
+    }
   }
 
   @media (max-width: 1024px) {
+    .about-cover-grid,
+    .about-intro-strip,
     .about-journal-grid,
+    .about-topic-spread,
+    .about-final-note,
     .about-detail-grid {
       grid-template-columns: 1fr;
     }
@@ -494,19 +870,79 @@ const articleImage = "/images/becoming-elysian-about-editorial.png";
     .about-article {
       max-width: none;
     }
+
+    .about-cover-copy {
+      padding-bottom: 0;
+    }
+
+    .about-cover-figure {
+      max-width: 44rem;
+    }
   }
 
   @media (max-width: 768px) {
-    .about-journal-body {
-      padding: 4rem 0 5rem;
+    .about-cover {
+      padding-top: 3.75rem;
+    }
+
+    .about-cover-grid,
+    .about-cover-meta {
+      width: calc(100% - 24px);
+      margin-inline: auto;
+    }
+
+    .about-editorial-body {
+      padding: 4.5rem 0 5.5rem;
     }
 
     .about-reveal-title {
-      font-size: clamp(2.25rem, 10vw, 3rem);
+      font-size: clamp(3.2rem, 16vw, 5rem);
+    }
+
+    .about-cover-meta {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+      margin-top: 1.35rem;
+      border-block: 1px solid var(--about-line);
+    }
+
+    .about-cover-meta span,
+    .about-cover-meta span + span {
+      min-height: 0;
+      border: 0;
+      border-bottom: 1px solid var(--about-line);
+      padding: 0.8rem 0;
+      background: transparent;
+      font-size: 0.66rem;
+      letter-spacing: 0.14em;
+      line-height: 1.2;
+    }
+
+    .about-cover-meta span:last-child {
+      border-bottom: 0;
+    }
+
+    .about-principles section {
+      grid-template-columns: 1fr;
+    }
+
+    .about-principles section:nth-child(even) {
+      padding-left: 0;
+    }
+
+    .about-topic-list span {
+      grid-template-columns: 2.75rem minmax(0, 1fr);
     }
 
     .about-article blockquote {
       font-size: clamp(1.45rem, 6vw, 2.05rem);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .about-cover-figure {
+      animation: none;
     }
   }
 </style>
