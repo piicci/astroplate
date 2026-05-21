@@ -5,7 +5,7 @@ const bgImageMod = async (
   format?: "auto" | "avif" | "jpeg" | "png" | "svg" | "webp",
 ) => {
   src = `/public${src}`;
-  const images = import.meta.glob("/public/images/**/*.{jpeg,jpg,png,gif}");
+  const images = import.meta.glob("/public/images/**/*.{jpeg,jpg,png,gif,webp}");
 
   // Check if the source path is valid
   if (!src || !images[src]) {
