@@ -26,6 +26,34 @@ const blogCollection = defineCollection({
     // Use factory functions for mutable array defaults (Zod 4 best practice)
     categories: z.array(z.string()).default(() => ["others"]),
     tags: z.array(z.string()).default(() => ["others"]),
+    tldr_enable: z.boolean().optional().default(false),
+    tldr_title: z.string().optional().default(""),
+    tldr_key_points: z.array(z.string()).optional().default(() => []),
+    tldr_takeaway: z.string().optional().default(""),
+    faq_enable: z.boolean().optional().default(false),
+    faq_title: z.string().optional().default(""),
+    faq_subtitle: z.string().optional().default(""),
+    faq_items: z
+      .array(
+        z.object({
+          question: z.string().optional().default(""),
+          answer: z.string().optional().default(""),
+        }),
+      )
+      .optional()
+      .default(() => []),
+    post_cta_enable: z.boolean().optional().default(true),
+    post_cta_eyebrow: z.string().optional().default("Stay Connected"),
+    post_cta_title: z
+      .string()
+      .optional()
+      .default("A few thoughtful notes, sent gently"),
+    post_cta_body: z
+      .string()
+      .optional()
+      .default(
+        "Join the Becoming Elysian email list for nourishing notes on strength, energy, wellbeing, and softer ways to care for yourself, delivered with intention, never overwhelm.",
+      ),
     draft: z.boolean().optional(),
   }),
 });

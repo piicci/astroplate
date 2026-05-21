@@ -299,6 +299,41 @@ content:
           - name: tags
             type: string
             list: true
+          - name: faq_enable
+            label: FAQ enabled
+            type: boolean
+          - name: faq_title
+            label: FAQ section title
+            type: string
+          - name: faq_subtitle
+            label: FAQ section subtitle
+            type: text
+          - name: faq_items
+            label: FAQ questions
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{question}"
+            fields:
+              - name: question
+                type: string
+                required: true
+              - name: answer
+                type: text
+                required: true
+          - name: post_cta_enable
+            label: Journal CTA enabled
+            type: boolean
+          - name: post_cta_eyebrow
+            label: CTA small section title
+            type: string
+          - name: post_cta_title
+            label: CTA section title
+            type: string
+          - name: post_cta_body
+            label: CTA text body
+            type: text
           - name: draft
             type: boolean
           - name: body

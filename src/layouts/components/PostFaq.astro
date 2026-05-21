@@ -1,0 +1,62 @@
+---
+import { markdownify } from "@/lib/utils/textConverter";
+
+type FaqItem = {
+  question?: string;
+  answer?: string;
+};
+
+type Props = {
+  title?: string;
+  subtitle?: string;
+  items?: FaqItem[];
+};
+
+const { title = "", subtitle = "", items = [] } = Astro.props;
+const cleanTitle = title.trim();
+const cleanSubtitle = subtitle.trim();
+const cleanItems = items
+  .map((item) => ({
+    question: String(item?.question ?? "").trim(),
+    answer: String(item?.answer ?? "").trim(),
+  }))
+  .filter((item) => item.question && item.answer);
+const hasContent = cleanItems.length > 0;
+---
+
+{
+  hasContent && (
+    <section
+      class="be-post-faq"
+      aria-label={cleanTitle ? undefined : "Article FAQ"}
+      aria-labelledby={cleanTitle ? "post-faq-title" : undefined}
+    >
+      <div class="be-post-faq-heading">
+        {cleanTitle && (
+          <h2 id="post-faq-title" set:html={markdownify(cleanTitle)} />
+        )}
+
+        {cleanSubtitle && (
+          <p class="be-post-faq-kicker" set:html={markdownify(cleanSubtitle)} />
+        )}
+      </div>
+
+      <div class="be-post-faq-list">
+        {cleanItems.map((item, index) => (
+          <details class="be-post-faq-item" name="post-faq" open={index === 0}>
+            <summary>
+              <span set:html={markdownify(item.question)} />
+              <span class="be-post-faq-toggle" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path class="be-post-faq-line-horizontal" d="M6 12h12" />
+                  <path class="be-post-faq-line-vertical" d="M12 6v12" />
+                </svg>
+              </span>
+            </summary>
+            <div class="be-post-faq-answer" set:html={markdownify(item.answer, true)} />
+          </details>
+        ))}
+      </div>
+    </section>
+  )
+}

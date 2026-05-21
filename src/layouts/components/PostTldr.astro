@@ -1,0 +1,52 @@
+---
+import { markdownify } from "@/lib/utils/textConverter";
+
+type Props = {
+  title?: string;
+  points?: string[];
+  takeaway?: string;
+};
+
+const { title = "", points = [], takeaway = "" } = Astro.props;
+const cleanTitle = title.trim();
+const cleanPoints = points.map((point) => String(point).trim()).filter(Boolean);
+const cleanTakeaway = takeaway.trim();
+const hasContent = cleanTitle || cleanPoints.length || cleanTakeaway;
+---
+
+{
+  hasContent && (
+    <aside class="be-tldr-shell" aria-labelledby="post-tldr-title">
+      <div class="be-tldr-core">
+        <div class="be-tldr-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" focusable="false">
+            <path d="M25.5 36.5C18.3 31.7 15 25.9 15 19.1c0-5.6 3.2-10.7 9.7-15.2 5.8 4.1 8.7 8.9 8.7 14.3 0 4.7-2.1 8.8-6.4 12.2" />
+            <path d="M15.5 32.5c8.9-7.1 16.4-12.1 22.5-15" />
+            <path d="M16 31.8c-4.2-.8-7.5-2.9-10-6.4 2.9-2 5.7-2.7 8.5-2.1" />
+          </svg>
+        </div>
+
+        <div class="be-tldr-copy">
+          {cleanTitle && (
+            <h2 id="post-tldr-title" set:html={markdownify(cleanTitle)} />
+          )}
+
+          {cleanPoints.length > 0 && (
+            <ul>
+              {cleanPoints.map((point) => (
+                <li>
+                  <span class="be-tldr-check" aria-hidden="true" />
+                  <span set:html={markdownify(point)} />
+                </li>
+              ))}
+            </ul>
+          )}
+
+          {cleanTakeaway && (
+            <p class="be-tldr-takeaway" set:html={markdownify(cleanTakeaway)} />
+          )}
+        </div>
+      </div>
+    </aside>
+  )
+}

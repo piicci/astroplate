@@ -9,6 +9,9 @@ import { humanize, markdownify, slugify } from "@/lib/utils/textConverter";
 import { render } from "astro:content";
 import { FaRegClock, FaRegFolder, FaRegUserCircle } from "react-icons/fa";
 import ImageMod from "./components/ImageMod.astro";
+import PostCta from "./components/PostCta.astro";
+import PostFaq from "./components/PostFaq.astro";
+import PostTldr from "./components/PostTldr.astro";
 
 const COLLECTION_FOLDER = "blog";
 const { post } = Astro.props;
@@ -16,8 +19,31 @@ const { post } = Astro.props;
 const posts = await getSinglePage(COLLECTION_FOLDER);
 const similarPosts = similarItems(post, posts);
 const { Content } = await render(post);
-const { title, subtitle, description, author, categories, image, date, tags } =
-  post.data;
+const {
+  title,
+  subtitle,
+  description,
+  author,
+  categories,
+  image,
+  date,
+  tags,
+  tldr_enable,
+  tldr_title,
+  tldr_key_points,
+  tldr_takeaway,
+  faq_enable,
+  faq_title,
+  faq_subtitle,
+  faq_items,
+  post_cta_enable,
+  post_cta_eyebrow,
+  post_cta_title,
+  post_cta_body,
+} = post.data;
+const showTldr = Boolean(tldr_enable);
+const showFaq = Boolean(faq_enable);
+const showPostCta = Boolean(post_cta_enable);
 ---
 
 <section class="section pt-7">
@@ -73,9 +99,38 @@ const { title, subtitle, description, author, categories, image, date, tags } =
             )
           }
         </ul>
+        {
+          showTldr && (
+            <PostTldr
+              title={tldr_title}
+              points={tldr_key_points}
+              takeaway={tldr_takeaway}
+            />
+          )
+        }
         <div class="content mb-10">
           <Content />
         </div>
+        {
+          showFaq && (
+            <PostFaq
+              title={faq_title}
+              subtitle={faq_subtitle}
+              items={faq_items}
+            />
+          )
+        }
+        {
+          showPostCta && (
+            <PostCta
+              enable={post_cta_enable}
+              eyebrow={post_cta_eyebrow}
+              title={post_cta_title}
+              body={post_cta_body}
+              source={post.id}
+            />
+          )
+        }
         <div class="row items-start justify-between">
           <div class="mb-10 flex items-center lg:col-5 lg:mb-0">
             <h5 class="mr-3">Tags :</h5>

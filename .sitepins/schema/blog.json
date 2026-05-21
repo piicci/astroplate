@@ -62,6 +62,90 @@
       "defaultValue": ""
     },
     {
+      "name": "tldr_enable",
+      "label": "Show TLDR Section",
+      "type": "boolean",
+      "value": false,
+      "defaultValue": false
+    },
+    {
+      "name": "tldr_title",
+      "label": "TLDR Title",
+      "type": "string",
+      "value": "",
+      "defaultValue": "Why This Matters for You"
+    },
+    {
+      "name": "tldr_key_points",
+      "label": "TLDR Key Points",
+      "type": "Array",
+      "value": [],
+      "defaultValue": ""
+    },
+    {
+      "name": "tldr_takeaway",
+      "label": "TLDR Final Takeaway",
+      "type": "string",
+      "value": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "faq_enable",
+      "label": "Show FAQ Section",
+      "type": "boolean",
+      "value": false,
+      "defaultValue": false
+    },
+    {
+      "name": "faq_title",
+      "label": "FAQ Section Title",
+      "type": "string",
+      "value": "",
+      "defaultValue": "Frequently Asked Questions"
+    },
+    {
+      "name": "faq_subtitle",
+      "label": "FAQ Section Subtitle",
+      "type": "string",
+      "value": "",
+      "defaultValue": ""
+    },
+    {
+      "name": "faq_items",
+      "label": "FAQ Questions",
+      "type": "Array",
+      "value": [],
+      "defaultValue": []
+    },
+    {
+      "name": "post_cta_enable",
+      "label": "Show Journal CTA Section",
+      "type": "boolean",
+      "value": true,
+      "defaultValue": true
+    },
+    {
+      "name": "post_cta_eyebrow",
+      "label": "CTA Small Section Title",
+      "type": "string",
+      "value": "",
+      "defaultValue": "Stay Connected"
+    },
+    {
+      "name": "post_cta_title",
+      "label": "CTA Section Title",
+      "type": "string",
+      "value": "",
+      "defaultValue": "A few thoughtful notes, sent gently"
+    },
+    {
+      "name": "post_cta_body",
+      "label": "CTA Text Body",
+      "type": "string",
+      "value": "",
+      "defaultValue": "Join the Becoming Elysian email list for nourishing notes on strength, energy, wellbeing, and softer ways to care for yourself, delivered with intention, never overwhelm."
+    },
+    {
       "name": "draft",
       "label": "Draft",
       "type": "boolean",
