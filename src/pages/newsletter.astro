@@ -151,5 +151,12 @@ import Base from "@/layouts/Base.astro";
         font-size: 3.65rem;
       }
     }
+
+    @media (max-width: 767px) {
+      .newsletter-page p:not([class*="text-sm"]) {
+        font-size: var(--be-mobile-copy-size);
+        line-height: var(--be-mobile-copy-line-height);
+      }
+    }
   </style>
 </Base>

@@ -1,0 +1,490 @@
+media:
+  input: public/images
+  output: /images
+
+content:
+  - name: content
+    label: Content
+    type: group
+    items:
+      - name: homepage
+        label: Homepage
+        type: file
+        path: src/content/homepage/-index.md
+        format: yaml-frontmatter
+        fields:
+          - name: title
+            type: string
+            required: true
+          - name: meta_title
+            label: Meta title
+            type: string
+          - name: description
+            type: text
+            required: true
+          - name: image
+            type: image
+          - name: banner
+            type: object
+            fields:
+              - name: eyebrow
+                type: string
+              - name: title
+                type: string
+                required: true
+              - name: content
+                type: text
+              - name: image
+                type: image
+              - name: image_alt
+                label: Image alt text
+                type: string
+              - name: image_note
+                label: Image note
+                type: text
+              - name: buttons
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{label}"
+                fields:
+                  - name: enable
+                    type: boolean
+                  - name: label
+                    type: string
+                  - name: link
+                    type: string
+                  - name: variant
+                    type: select
+                    options:
+                      values: [primary, outline]
+          - name: intro
+            type: object
+            fields:
+              - name: title
+                type: string
+              - name: content
+                type: text
+              - name: closing
+                type: text
+          - name: featured_articles
+            label: Featured articles
+            type: object
+            fields:
+              - name: title
+                type: string
+              - name: content
+                type: text
+              - name: button
+                type: object
+                fields:
+                  - name: enable
+                    type: boolean
+                  - name: label
+                    type: string
+                  - name: link
+                    type: string
+                  - name: variant
+                    type: select
+                    options:
+                      values: [primary, outline]
+              - name: articles
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{title}"
+                fields:
+                  - name: category
+                    type: string
+                  - name: title
+                    type: string
+                    required: true
+                  - name: subtitle
+                    type: string
+                  - name: excerpt
+                    type: text
+                  - name: link
+                    type: string
+                  - name: image
+                    type: image
+                  - name: image_alt
+                    label: Image alt text
+                    type: string
+          - name: newsletter
+            type: object
+            fields:
+              - name: title
+                type: string
+              - name: content
+                type: text
+              - name: submit_label
+                label: Submit label
+                type: string
+              - name: helper_text
+                label: Helper text
+                type: text
+              - name: success_message
+                label: Success message
+                type: text
+          - name: approach
+            type: object
+            fields:
+              - name: title
+                type: string
+              - name: content
+                type: text
+              - name: pillars
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{title}"
+                fields:
+                  - name: title
+                    type: string
+                  - name: content
+                    type: text
+          - name: pathways
+            type: object
+            fields:
+              - name: title
+                type: string
+              - name: content
+                type: text
+              - name: items
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{title}"
+                fields:
+                  - name: eyebrow
+                    type: string
+                  - name: title
+                    type: string
+                  - name: content
+                    type: text
+                  - name: link
+                    type: string
+                  - name: label
+                    type: string
+          - name: about_panel
+            label: About panel
+            type: object
+            fields:
+              - name: title
+                type: string
+              - name: content
+                type: text
+              - name: image
+                type: image
+              - name: image_alt
+                label: Image alt text
+                type: string
+              - name: button
+                type: object
+                fields:
+                  - name: enable
+                    type: boolean
+                  - name: label
+                    type: string
+                  - name: link
+                    type: string
+                  - name: variant
+                    type: select
+                    options:
+                      values: [primary, outline]
+          - name: final_cta
+            label: Final CTA
+            type: object
+            fields:
+              - name: eyebrow
+                type: string
+              - name: title
+                type: string
+              - name: content
+                type: text
+              - name: button
+                type: object
+                fields:
+                  - name: enable
+                    type: boolean
+                  - name: label
+                    type: string
+                  - name: link
+                    type: string
+                  - name: variant
+                    type: select
+                    options:
+                      values: [primary, outline]
+              - name: note
+                type: text
+
+      - name: about
+        label: About
+        type: file
+        path: src/content/about/-index.md
+        format: yaml-frontmatter
+        fields:
+          - name: title
+            type: string
+            required: true
+          - name: meta_title
+            label: Meta title
+            type: string
+          - name: description
+            type: text
+            required: true
+          - name: image
+            type: image
+          - name: draft
+            type: boolean
+          - name: body
+            type: rich-text
+
+      - name: contact
+        label: Contact
+        type: file
+        path: src/content/contact/-index.md
+        format: yaml-frontmatter
+        fields:
+          - name: title
+            type: string
+            required: true
+          - name: meta_title
+            label: Meta title
+            type: string
+          - name: description
+            type: text
+          - name: image
+            type: image
+          - name: draft
+            type: boolean
+          - name: body
+            type: rich-text
+
+      - name: blog
+        label: Journal
+        type: collection
+        path: src/content/blog
+        format: yaml-frontmatter
+        filename: "{primary}.md"
+        exclude:
+          - "-index.md"
+        fields:
+          - name: title
+            type: string
+            required: true
+          - name: subtitle
+            type: string
+          - name: meta_title
+            label: Meta title
+            type: string
+          - name: description
+            type: text
+          - name: date
+            type: date
+            options:
+              time: true
+              format: "yyyy-MM-dd'T'HH:mm:ss'Z'"
+          - name: image
+            type: image
+          - name: categories
+            type: string
+            list: true
+          - name: author
+            type: string
+          - name: tags
+            type: string
+            list: true
+          - name: draft
+            type: boolean
+          - name: body
+            type: rich-text
+        view:
+          primary: title
+          sort: date
+          order: desc
+
+      - name: journal_index
+        label: Journal index
+        type: file
+        path: src/content/blog/-index.md
+        format: yaml-frontmatter
+        fields:
+          - name: title
+            type: string
+            required: true
+          - name: meta_title
+            label: Meta title
+            type: string
+          - name: description
+            type: text
+          - name: image
+            type: image
+          - name: draft
+            type: boolean
+          - name: body
+            type: rich-text
+
+      - name: pages
+        label: Pages
+        type: collection
+        path: src/content/pages
+        format: yaml-frontmatter
+        filename: "{primary}.md"
+        fields:
+          - name: title
+            type: string
+            required: true
+          - name: meta_title
+            label: Meta title
+            type: string
+          - name: description
+            type: text
+            required: true
+          - name: date
+            type: date
+            options:
+              time: true
+              format: "yyyy-MM-dd'T'HH:mm:ss'Z'"
+          - name: image
+            type: image
+          - name: draft
+            type: boolean
+          - name: body
+            type: rich-text
+        view:
+          primary: title
+
+      - name: authors
+        label: Authors
+        type: collection
+        path: src/content/authors
+        format: yaml-frontmatter
+        filename: "{primary}.md"
+        exclude:
+          - "-index.md"
+        fields:
+          - name: title
+            type: string
+            required: true
+          - name: email
+            type: string
+          - name: meta_title
+            label: Meta title
+            type: string
+          - name: description
+            type: text
+            required: true
+          - name: date
+            type: date
+            options:
+              time: true
+              format: "yyyy-MM-dd'T'HH:mm:ss'Z'"
+          - name: image
+            type: image
+          - name: draft
+            type: boolean
+          - name: social
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{name}"
+            fields:
+              - name: name
+                type: string
+              - name: icon
+                type: string
+              - name: link
+                type: string
+          - name: body
+            type: rich-text
+        view:
+          primary: title
+
+      - name: authors_index
+        label: Authors index
+        type: file
+        path: src/content/authors/-index.md
+        format: yaml-frontmatter
+        fields:
+          - name: title
+            type: string
+            required: true
+          - name: meta_title
+            label: Meta title
+            type: string
+          - name: description
+            type: text
+          - name: image
+            type: image
+          - name: draft
+            type: boolean
+          - name: body
+            type: rich-text
+
+      - name: sections
+        label: Sections
+        type: group
+        items:
+          - name: call_to_action
+            label: Call to action
+            type: file
+            path: src/content/sections/call-to-action.md
+            format: yaml-frontmatter
+            fields:
+              - name: enable
+                type: boolean
+              - name: title
+                type: string
+                required: true
+              - name: image
+                type: image
+              - name: description
+                type: text
+              - name: button
+                type: object
+                fields:
+                  - name: enable
+                    type: boolean
+                  - name: label
+                    type: string
+                  - name: link
+                    type: string
+              - name: body
+                type: rich-text
+
+          - name: testimonial
+            label: Testimonial
+            type: file
+            path: src/content/sections/testimonial.md
+            format: yaml-frontmatter
+            fields:
+              - name: enable
+                type: boolean
+              - name: title
+                type: string
+                required: true
+              - name: description
+                type: text
+              - name: testimonials
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{name}"
+                fields:
+                  - name: name
+                    type: string
+                  - name: designation
+                    type: string
+                  - name: avatar
+                    type: image
+                  - name: content
+                    type: text
+              - name: body
+                type: rich-text

@@ -35,6 +35,7 @@ const authorsCollection = defineCollection({
   loader: glob({ pattern: "**/*.{md,mdx}", base: "src/content/authors" }),
   schema: z.object({
     ...commonFields,
+    email: z.email().optional(),
     social: z
       .array(
         z

@@ -1,0 +1,2991 @@
+author: 'Tati, Voigt'
+brandUpdateTime: '2026-05-20T14:30:35.094Z'
+campaignType: classic
+fields: {}
+fieldsHistory: []
+firstLoadSocialIcons: false
+fonts:
+  - 'https://fonts.googleapis.com/css2?family=Courier new'
+id: cdf1dbea-ce10-4ff6-b5ff-958c9489b494
+name: 24-05-14-brevo-theme-product-highlights-1
+subject: 'Becoming Elysian Newsletter'
+ui:
+  showDeleteOption: false
+  showMoreOption: false
+user-hash: ea11e73776db9c954286a37d253c36bb
+version: 3.0.1
+body:
+  id: 3aeaf766-ed2d-43a2-86a2-61d59a3a8f5a
+  type: body
+  layout:
+    320px:
+      width: 100%
+    default:
+      background-color: '#f2eadb'
+      direction: ltr
+      padding-bottom: 32px
+      removePadding: true
+      wrapper-width: 600px
+  content:
+    -
+      content-type: wrapper
+      customBlockId: null
+      id: 7f70530d-e439-438e-be1c-8d8ff96977e2
+      isCustomBlock: null
+      moduleName: null
+      sidebarSection: null
+      stylable: false
+      thumbnail: null
+      title: Wrapper
+      type: rows
+      layout:
+        320px:
+          width: 100%
+        default:
+          align: center
+          valign: top
+      content:
+        -
+          align: top
+          customBlockId: null
+          dist: '12'
+          gutter: 0px
+          id: 9d386e79-a7a1-470b-bd1c-24ae41de07e0
+          isCustomBlock: null
+          moduleName: viewInBrowser
+          sidebarSection: null
+          stylable: false
+          thumbnail: /assets/img/editor/grid_12.svg
+          title: section
+          type: grid-row
+          layout:
+            320px:
+              display: rows
+              width: 100%
+            default:
+              align: center
+              background-color: transparent
+              display: none
+              full-width: true
+              padding-bottom: 5px
+              padding-top: 5px
+              valign: top
+              width: 100%
+          content:
+            -
+              customBlockId: null
+              id: 87d7ef2b-29a1-4d59-a585-af568e0f2230
+              imagelabel: 'Select a content type'
+              isCustomBlock: null
+              isEmpty: false
+              label: 'Drop content here'
+              moduleName: null
+              sidebarSection: null
+              stylable: false
+              thumbnail: null
+              title: 'column 1'
+              type: grid-column
+              layout:
+                320px: []
+                default:
+                  padding-left: 0px
+                  padding-right: 0px
+                  valign: top
+              content:
+                -
+                  customBlockId: null
+                  id: 5cb1cf51-0df2-4196-a1d2-0cad164c2ec9
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: null
+                  title: Webversion
+                  type: text
+                  layout:
+                    320px:
+                      padding-left: 10px
+                      padding-right: 10px
+                      width: 100%
+                    default:
+                      align: center
+                      line-height: 16px
+                      padding-left: 30px
+                      padding-right: 30px
+                      text-align: center
+                      width: 100%
+                  content: '<p><a href="{{ mirror }}">View in browser</a></p>'
+        -
+          align: top
+          customBlockId: 6620e2e28c6a1926c254db45
+          dist: '12'
+          gutter: 0px
+          id: 67bf1cdc-57ef-43c5-b929-4166afc4a96a
+          isCustomBlock: true
+          moduleName: header
+          sidebarSection: null
+          stylable: false
+          thumbnail: 'https://img.mailinblue.com/2670624/images/modules/module_thumb_df096b50004d582ddc957d6fcc6634a3_1713431270.png'
+          title: Header
+          type: grid-row
+          layout:
+            320px:
+              display: columns
+              padding-left: 15px
+              padding-right: 15px
+              width: 100%
+            default:
+              align: center
+              color: '#414141'
+              font-size: 16px
+              padding-bottom: 0px
+              padding-left: 16px
+              padding-right: 16px
+              padding-top: 32px
+              valign: middle
+              width: 100%
+          content:
+            -
+              customBlockId: null
+              id: 48980bbf-fb78-475f-b561-f1c678cadfb5
+              imagelabel: 'Select a content type'
+              isCustomBlock: null
+              isEmpty: false
+              label: 'Drop content here'
+              moduleName: null
+              sidebarSection: null
+              stylable: false
+              thumbnail: null
+              title: 'column 1'
+              type: grid-column
+              layout:
+                320px:
+                  width: 50%
+                default:
+                  item-width: 40px
+                  padding-left: 0px
+                  padding-right: 0px
+                  valign: middle
+              content:
+                -
+                  customBlockId: null
+                  id: 29767cb6-3963-4c5d-90fd-882cd8e9b375
+                  isCustomBlock: null
+                  label: Replace
+                  moduleName: brand-logo
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_image.svg
+                  title: Image
+                  type: image
+                  layout:
+                    320px:
+                      max-width: 320px
+                      width: 95px
+                    default:
+                      align: left
+                      background-position: center
+                      background-repeat: no-repeat
+                      background-size: auto
+                      border-radius: 0px
+                      canvas-height: 51px
+                      dynamic: false
+                      embed: false
+                      img-border-radius: 0px
+                      imgSize: '32612'
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 0px
+                      removePadding: false
+                      valign: top
+                      width: 40px
+                  content:
+                    src: 'https://img.mailinblue.com/11267958/images/content_library/original/6a0dbd4e17d8dcd74a54f7e3.png'
+        -
+          align: top
+          dist: '12'
+          gutter: 30px
+          id: f7798e7b-a00b-4287-ba49-c0d66d50265f
+          moduleName: columns-article
+          sectionName: 'Text and Image 1'
+          stylable: false
+          thumbnail: /assets/img/editor/element-style-1.svg
+          title: 'Style 1'
+          type: grid-row
+          layout:
+            320px:
+              display: rows
+              padding-left: 15px
+              padding-right: 15px
+              width: 100%
+            default:
+              align: center
+              margin-bottom: 0px
+              margin-top: 0px
+              padding-bottom: 20px
+              padding-top: 20px
+              removeMargin: false
+              valign: top
+              width: 100%
+          content:
+            -
+              id: c7e9317b-4d4c-439b-98f2-e55a20e223e2
+              imagelabel: 'Select a content type'
+              isEmpty: false
+              label: 'Drop content here'
+              stylable: false
+              title: grid-column
+              type: grid-column
+              layout:
+                320px: []
+                default:
+                  margin-bottom: 0px
+                  margin-top: 0px
+                  padding-left: 0px
+                  padding-right: 0px
+                  padding-top: 0px
+                  removePadding: true
+                  valign: top
+              content:
+                -
+                  id: 9deaafd2-85bd-4f7a-9ff7-2b2bacec8104
+                  label: Replace
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_image.svg
+                  title: Image
+                  type: image
+                  layout:
+                    320px:
+                      max-width: 320px
+                      width: 100%
+                    default:
+                      align: center
+                      background-position: center
+                      background-repeat: no-repeat
+                      background-size: auto
+                      border-radius: 8px
+                      canvas-height: 383px
+                      dynamic: false
+                      embed: false
+                      imgSize: '736624'
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 0px
+                      removePadding: false
+                      valign: top
+                      width: 100%
+                  content:
+                    src: 'https://img.mailinblue.com/11267958/images/content_library/original/6a0dbd52a04a12cd2cb4c885.jpg'
+                -
+                  id: aed2664c-d7fe-4b23-bc2d-af1c831fba41
+                  moduleName: text-title
+                  stylable: false
+                  thumbnail: /assets/img/editor/element-title.svg
+                  title: Title
+                  type: text
+                  layout:
+                    320px:
+                      width: 100%
+                    default:
+                      align: left
+                      line-height: '1'
+                      margin-bottom: 15px
+                      margin-top: 15px
+                      padding-top: 0px
+                      removeMargin: true
+                      text-align: left
+                      text-valign: top
+                      valign: top
+                      width: 100%
+                  content: '<h2 class="default-heading2"><span style="font-size: 48px; font-family: Georgia, serif;">A calmer way back into your boy.</span></h2>'
+                -
+                  id: c5e308c9-b3f2-4670-96c3-9b2cfa037669
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_text.svg
+                  title: Text
+                  type: text
+                  layout:
+                    320px:
+                      width: 100%
+                    default:
+                      align: left
+                      margin-bottom: 15px
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 0px
+                      removeMargin: true
+                      removePadding: false
+                      text-align: center
+                      text-valign: top
+                      valign: top
+                      width: 100%
+                  content: '<p style="text-align: left;"><span style="font-style: normal; font-weight: 400; text-decoration: none;" id="isPasted">This week is about making wellness feel less like a project and more like a rhythm your life can actually hold.</span></p>'
+                -
+                  id: 1ec5440e-4629-4d08-a82e-664c0bf4aa1f
+                  stylable: false
+                  text: '<p>Call to action</p>'
+                  thumbnail: /assets/img/editor/element_button.svg
+                  title: Button
+                  type: text-button
+                  layout:
+                    320px:
+                      width: 100%
+                    default:
+                      align: center
+                      border-color: '#666666'
+                      border-radius: 8px
+                      border-width: '-1px'
+                      item-height: 44px
+                      margin-bottom: 0px
+                      margin-top: 0px
+                      padding-bottom: 12px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 12px
+                      removeMargin: false
+                      removePadding: true
+                      text-align: center
+                      text-valign: top
+                      valign: top
+                      width: 160px
+                  content:
+                    text: '<p>Call to action</p>'
+        -
+          align: top
+          customBlockId: null
+          dist: 6-6
+          gutter: 0px
+          id: 3ab7d8c3-6981-4505-9761-e538b03e21ae
+          isCustomBlock: null
+          moduleName: grid-row12
+          sidebarSection: null
+          stylable: false
+          thumbnail: /assets/img/editor/grid_12.svg
+          title: Img-Txt
+          type: grid-row
+          layout:
+            320px:
+              display: rows
+              padding-bottom: 0px
+              padding-left: 15px
+              padding-right: 15px
+              padding-top: 40px
+              width: 100%
+            default:
+              align: center
+              padding-bottom: 0px
+              padding-left: 32px
+              padding-right: 32px
+              padding-top: 40px
+              valign: middle
+              width: 100%
+          content:
+            -
+              customBlockId: null
+              id: 48de7767-3ce5-4dab-9642-34225a78f932
+              imagelabel: 'Select a content type'
+              isCustomBlock: null
+              isEmpty: false
+              label: 'Drop content here'
+              moduleName: null
+              sidebarSection: null
+              stylable: false
+              thumbnail: null
+              title: 'column 1'
+              type: grid-column
+              layout:
+                320px:
+                  padding-left: 0px
+                  padding-right: 0px
+                  padding-top: 0px
+                default:
+                  padding-left: 0px
+                  padding-right: 4px
+                  removePadding: true
+                  valign: middle
+              content:
+                -
+                  customBlockId: null
+                  id: 81e9cbde-3bfa-497f-9c12-83461711dad2
+                  isCustomBlock: null
+                  label: Replace
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_image.svg
+                  title: Image
+                  type: image
+                  layout:
+                    320px:
+                      max-width: 320px
+                      width: 100%
+                    default:
+                      align: left
+                      background-position: center
+                      background-repeat: no-repeat
+                      background-size: auto
+                      border-radius: 4px
+                      canvas-height: 300px
+                      dynamic: false
+                      embed: false
+                      img-border-radius: 4px
+                      imgSize: 588477
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 0px
+                      removePadding: false
+                      valign: top
+                      width: 100%
+                  content:
+                    src: 'https://img.mailinblue.com/2670624/images/content_library/original/666aefe6f9fa87886e6e3ceb.png'
+            -
+              customBlockId: null
+              id: ca3b11f4-b89f-470a-893f-ea7df07765ba
+              imagelabel: 'Select a content type'
+              isCustomBlock: null
+              isEmpty: false
+              label: 'Drop content here'
+              moduleName: null
+              sidebarSection: null
+              stylable: false
+              thumbnail: null
+              title: 'column 1'
+              type: grid-column
+              layout:
+                320px:
+                  padding-left: 0px
+                  padding-right: 0px
+                  padding-top: 16px
+                default:
+                  padding-left: 4px
+                  padding-right: 0px
+                  removePadding: true
+                  valign: middle
+              content:
+                -
+                  customBlockId: null
+                  id: 7238e17a-fc33-4a1c-adad-cc46840cc8ab
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_text.svg
+                  title: Texte
+                  type: text
+                  layout:
+                    320px:
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 0px
+                      text-align: center
+                      width: 100%
+                    default:
+                      align: left
+                      line-height: '1.1'
+                      margin-bottom: 0px
+                      margin-top: 0px
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 0px
+                      removeMargin: false
+                      removePadding: false
+                      text-align: center
+                      text-valign: top
+                      valign: top
+                      width: 100%
+                  content: '<h2 class="default-heading2">Discover our trendiest plants of the year&nbsp;</h2>'
+                -
+                  customBlockId: null
+                  id: 3680d71a-2c2d-4ff6-8698-41bf99a16cff
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_text.svg
+                  title: Texte
+                  type: text
+                  layout:
+                    320px:
+                      padding-top: 8px
+                      text-align: center
+                      width: 100%
+                    default:
+                      align: left
+                      line-height: '1.2'
+                      margin-bottom: 0px
+                      margin-top: 0px
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 5px
+                      removeMargin: false
+                      removePadding: true
+                      text-align: center
+                      text-valign: top
+                      valign: top
+                      width: 100%
+                  content: '<p>Ready to turn your space into a lush paradise?</p>'
+        -
+          align: top
+          customBlockId: null
+          dist: '12'
+          gutter: 0px
+          id: c87e838b-1a71-43a8-806c-32cf892e9e22
+          isCustomBlock: null
+          moduleName: grid-row12
+          sidebarSection: null
+          stylable: false
+          thumbnail: /assets/img/editor/grid_12.svg
+          title: divider
+          type: grid-row
+          layout:
+            320px:
+              display: rows
+              padding-left: 0px
+              padding-right: 0px
+              width: 100%
+            default:
+              align: center
+              padding-bottom: 0px
+              padding-top: 40px
+              valign: top
+              width: 100%
+          content:
+            -
+              customBlockId: null
+              id: 8ea65963-8561-4ee5-bf6e-e7d9104c3357
+              imagelabel: 'Select a content type'
+              isCustomBlock: null
+              isEmpty: false
+              label: 'Drop content here'
+              moduleName: null
+              sidebarSection: null
+              stylable: false
+              thumbnail: null
+              title: 'column 1'
+              type: grid-column
+              layout:
+                320px: []
+                default:
+                  padding-left: 0px
+                  padding-right: 0px
+                  valign: top
+              content:
+                -
+                  customBlockId: null
+                  id: 5f7b8924-a506-4ec5-b755-ccac740642e8
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_divider.svg
+                  title: Divider
+                  type: divider
+                  layout:
+                    320px:
+                      width: 100%
+                    default:
+                      align: center
+                      border-color: '#1b3816'
+                      border-style: solid
+                      border-width: 2px
+                      display: auto
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 0px
+                      removePadding: false
+                      width: 100%
+        -
+          align: top
+          customBlockId: null
+          dist: 6-6
+          gutter: 0px
+          id: e3178c0a-533a-4225-846e-e448dbf9a029
+          isCustomBlock: null
+          moduleName: grid-row12
+          sidebarSection: null
+          stylable: false
+          thumbnail: /assets/img/editor/grid_12.svg
+          title: 2cols-1
+          type: grid-row
+          layout:
+            320px:
+              display: rows
+              padding-left: 15px
+              padding-right: 15px
+              padding-top: 40px
+              width: 100%
+            default:
+              align: center
+              padding-bottom: 0px
+              padding-left: 32px
+              padding-right: 32px
+              padding-top: 40px
+              valign: top
+              width: 100%
+          content:
+            -
+              customBlockId: null
+              id: 90b9df7c-a99c-481d-95d9-84aa2199927e
+              imagelabel: 'Select a content type'
+              isCustomBlock: null
+              isEmpty: false
+              label: 'Drop content here'
+              moduleName: null
+              sidebarSection: null
+              stylable: false
+              thumbnail: null
+              title: 'column 1'
+              type: grid-column
+              layout:
+                320px:
+                  padding-left: 0px
+                  padding-right: 0px
+                  padding-top: 0px
+                default:
+                  padding-left: 0px
+                  padding-right: 8px
+                  removePadding: true
+                  valign: top
+              content:
+                -
+                  customBlockId: null
+                  id: 3ec60495-0806-4b23-8ff2-e227bd2c843e
+                  isCustomBlock: null
+                  label: Replace
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_image.svg
+                  title: Image
+                  type: image
+                  layout:
+                    320px:
+                      max-width: 320px
+                      width: 100%
+                    default:
+                      align: center
+                      background-position: center
+                      background-repeat: no-repeat
+                      background-size: auto
+                      border-radius: 8px
+                      canvas-height: 201px
+                      dynamic: false
+                      embed: false
+                      img-border-radius: 8px
+                      imgSize: 291002
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 0px
+                      removePadding: false
+                      valign: top
+                      width: 100%
+                  content:
+                    src: 'https://img.mailinblue.com/2670624/images/content_library/original/666af00ff9fa87886e6e3cfb.png'
+                -
+                  customBlockId: null
+                  id: 823f40f3-a0a1-4c78-a512-74cb42a750a5
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_text.svg
+                  title: Texte
+                  type: text
+                  layout:
+                    320px:
+                      padding-top: 4px
+                      width: 100%
+                    default:
+                      align: left
+                      line-height: '1.3'
+                      margin-bottom: 0px
+                      margin-top: 0px
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 4px
+                      removeMargin: false
+                      removePadding: true
+                      text-align: left
+                      text-valign: top
+                      valign: top
+                      width: 100%
+                  content: '<h4 class="default-heading4">New!</h4>'
+                -
+                  customBlockId: null
+                  id: e298d93f-bd34-4444-94e9-8b30fbb236cf
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_text.svg
+                  title: Texte
+                  type: text
+                  layout:
+                    320px:
+                      padding-top: 4px
+                      width: 100%
+                    default:
+                      align: left
+                      line-height: '1.1'
+                      margin-bottom: 0px
+                      margin-top: 0px
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 4px
+                      removeMargin: false
+                      removePadding: true
+                      text-align: left
+                      text-valign: top
+                      valign: top
+                      width: 100%
+                  content: '<h2 class="default-heading2">Dieffenbachia Seguine</h2>'
+                -
+                  customBlockId: null
+                  id: c8af3d53-007d-4069-a878-e4b21888e7a1
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_text.svg
+                  title: Texte
+                  type: text
+                  layout:
+                    320px:
+                      padding-top: 1px
+                      width: 100%
+                    default:
+                      align: left
+                      line-height: '1.3'
+                      margin-bottom: 0px
+                      margin-top: 0px
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 1px
+                      removeMargin: false
+                      removePadding: true
+                      text-align: left
+                      text-valign: top
+                      valign: top
+                      width: 100%
+                  content: '<h3 class="default-heading3">€39.99</h3>'
+                -
+                  customBlockId: null
+                  id: 3907eb0b-7f36-4e96-a074-cda43530e2d0
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_text.svg
+                  title: Texte
+                  type: text
+                  layout:
+                    320px:
+                      padding-top: 11px
+                      width: 100%
+                    default:
+                      align: left
+                      line-height: '1.2'
+                      margin-bottom: 0px
+                      margin-top: 0px
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 11px
+                      removeMargin: false
+                      removePadding: true
+                      text-align: left
+                      text-valign: top
+                      valign: top
+                      width: 100%
+                  content: '<p>an exotic plant with artistic foliage. Natural beauty and easy maintenance all in one pot.</p>'
+                -
+                  customBlockId: null
+                  id: 50d45dea-2833-4cf3-b744-5fb4be9f14a0
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_text.svg
+                  title: Texte
+                  type: text
+                  layout:
+                    320px:
+                      padding-top: 15px
+                      width: 100%
+                    default:
+                      align: left
+                      line-height: '1.3'
+                      margin-bottom: 0px
+                      margin-top: 0px
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 15px
+                      removeMargin: false
+                      removePadding: true
+                      text-align: left
+                      text-valign: top
+                      valign: top
+                      width: 100%
+                  content: '<div class="brevo_class_16_green_i_un"><a href="https://" target="_blank"><u>Learn More ›</u></a></div>'
+            -
+              customBlockId: null
+              id: 0f6b330d-aad0-4bfd-b522-409422bcb534
+              imagelabel: 'Select a content type'
+              isCustomBlock: null
+              isEmpty: false
+              label: 'Drop content here'
+              moduleName: null
+              sidebarSection: null
+              stylable: false
+              thumbnail: null
+              title: 'column 1'
+              type: grid-column
+              layout:
+                320px:
+                  padding-left: 0px
+                  padding-right: 0px
+                  padding-top: 40px
+                default:
+                  padding-left: 8px
+                  padding-right: 0px
+                  removePadding: true
+                  valign: top
+              content:
+                -
+                  customBlockId: null
+                  id: 3119e3e7-48d1-4924-881c-80d862554907
+                  isCustomBlock: null
+                  label: Replace
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_image.svg
+                  title: Image
+                  type: image
+                  layout:
+                    320px:
+                      max-width: 320px
+                      width: 100%
+                    default:
+                      align: center
+                      border-radius: 8px
+                      canvas-height: 201px
+                      dynamic: false
+                      embed: false
+                      img-border-radius: 8px
+                      imgSize: 255217
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 0px
+                      removePadding: false
+                      valign: top
+                      width: 100%
+                  content:
+                    src: 'https://img.mailinblue.com/2670624/images/content_library/original/666af026d1cfdb09e39e51ba.png'
+                -
+                  customBlockId: null
+                  id: 38fc964f-2ef6-4df9-b7fe-be90b57710ee
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_text.svg
+                  title: Texte
+                  type: text
+                  layout:
+                    320px:
+                      padding-top: 4px
+                      width: 100%
+                    default:
+                      align: left
+                      line-height: '1.3'
+                      margin-bottom: 0px
+                      margin-top: 0px
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 4px
+                      removeMargin: false
+                      removePadding: true
+                      text-align: left
+                      text-valign: top
+                      valign: top
+                      width: 100%
+                  content: '<h4 class="default-heading4">New!</h4>'
+                -
+                  customBlockId: null
+                  id: 115397fc-aabb-4fb0-ae8d-d152b5775bbb
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_text.svg
+                  title: Texte
+                  type: text
+                  layout:
+                    320px:
+                      padding-top: 4px
+                      width: 100%
+                    default:
+                      align: left
+                      line-height: '1.1'
+                      margin-bottom: 0px
+                      margin-top: 0px
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 4px
+                      removeMargin: false
+                      removePadding: true
+                      text-align: left
+                      text-valign: top
+                      valign: top
+                      width: 100%
+                  content: '<h2 class="default-heading2">Small hypoestes phyllostachya</h2>'
+                -
+                  customBlockId: null
+                  id: da32056a-ee8d-401b-959a-b707d825daf4
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_text.svg
+                  title: Texte
+                  type: text
+                  layout:
+                    320px:
+                      padding-top: 1px
+                      width: 100%
+                    default:
+                      align: left
+                      line-height: '1.3'
+                      margin-bottom: 0px
+                      margin-top: 0px
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 1px
+                      removeMargin: false
+                      removePadding: true
+                      text-align: left
+                      text-valign: top
+                      valign: top
+                      width: 100%
+                  content: '<h3 class="default-heading3">€29.99</h3>'
+                -
+                  customBlockId: null
+                  id: 098a044f-5436-4ed8-bcb7-b658100961d8
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_text.svg
+                  title: Texte
+                  type: text
+                  layout:
+                    320px:
+                      padding-top: 11px
+                      width: 100%
+                    default:
+                      align: left
+                      line-height: '1.2'
+                      margin-bottom: 0px
+                      margin-top: 0px
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 11px
+                      removeMargin: false
+                      removePadding: true
+                      text-align: left
+                      text-valign: top
+                      valign: top
+                      width: 100%
+                  content: '<p>Graceful and low-maintenance, it’s a popular choice for indoor spaces.</p>'
+                -
+                  customBlockId: null
+                  id: 64d633ca-2ba5-45ea-acf4-a294433b1599
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_text.svg
+                  title: Texte
+                  type: text
+                  layout:
+                    320px:
+                      padding-top: 15px
+                      width: 100%
+                    default:
+                      align: left
+                      line-height: '1.3'
+                      margin-bottom: 0px
+                      margin-top: 0px
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 15px
+                      removeMargin: false
+                      removePadding: true
+                      text-align: left
+                      text-valign: top
+                      valign: top
+                      width: 100%
+                  content: '<div class="brevo_class_16_green_i_un"><a href="https://" target="_blank"><u>Learn More ›</u></a></div>'
+        -
+          align: top
+          customBlockId: null
+          dist: 6-6
+          gutter: 0px
+          id: 997727c0-3589-4e73-bf22-7dd968379ffa
+          isCustomBlock: null
+          moduleName: grid-row12
+          sidebarSection: null
+          stylable: false
+          thumbnail: /assets/img/editor/grid_12.svg
+          title: 2cols-2
+          type: grid-row
+          layout:
+            320px:
+              display: rows
+              padding-left: 15px
+              padding-right: 15px
+              padding-top: 40px
+              width: 100%
+            default:
+              align: center
+              padding-bottom: 0px
+              padding-left: 32px
+              padding-right: 32px
+              padding-top: 40px
+              valign: top
+              width: 100%
+          content:
+            -
+              customBlockId: null
+              id: 7e705694-1680-4139-9e78-51c56143cf31
+              imagelabel: 'Select a content type'
+              isCustomBlock: null
+              isEmpty: false
+              label: 'Drop content here'
+              moduleName: null
+              sidebarSection: null
+              stylable: false
+              thumbnail: null
+              title: 'column 1'
+              type: grid-column
+              layout:
+                320px:
+                  padding-left: 0px
+                  padding-right: 0px
+                  padding-top: 0px
+                default:
+                  padding-left: 0px
+                  padding-right: 8px
+                  removePadding: true
+                  valign: top
+              content:
+                -
+                  customBlockId: null
+                  id: 9e2e77b4-f941-42e0-b6c3-a552dafba763
+                  isCustomBlock: null
+                  label: Replace
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_image.svg
+                  title: Image
+                  type: image
+                  layout:
+                    320px:
+                      max-width: 320px
+                      width: 100%
+                    default:
+                      align: center
+                      background-position: center
+                      background-repeat: no-repeat
+                      background-size: auto
+                      border-radius: 8px
+                      canvas-height: 201px
+                      dynamic: false
+                      embed: false
+                      img-border-radius: 8px
+                      imgSize: 303962
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 0px
+                      removePadding: false
+                      valign: top
+                      width: 100%
+                  content:
+                    src: 'https://img.mailinblue.com/2670624/images/content_library/original/666af03b3700abdf77219b17.png'
+                -
+                  customBlockId: null
+                  id: 066253da-e119-427e-b384-5f16147e6fe7
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_text.svg
+                  title: Texte
+                  type: text
+                  layout:
+                    320px:
+                      padding-top: 4px
+                      width: 100%
+                    default:
+                      align: left
+                      line-height: '1.1'
+                      margin-bottom: 0px
+                      margin-top: 0px
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 6px
+                      removeMargin: false
+                      removePadding: true
+                      text-align: left
+                      text-valign: top
+                      valign: top
+                      width: 100%
+                  content: '<h2 class="default-heading2">Large hypoestes phyllostachya</h2>'
+                -
+                  align: top
+                  customBlockId: null
+                  dist: 3-9
+                  gutter: 0px
+                  id: 059986ae-f47f-4345-8ba7-9d9cc24c2f6b
+                  isCustomBlock: null
+                  moduleName: grid-row12
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/grid_12.svg
+                  title: section
+                  type: grid-row
+                  layout:
+                    320px:
+                      display: columns
+                      padding-right: 30px
+                      width: 100%
+                    default:
+                      align: center
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 3px
+                      removePadding: true
+                      valign: middle
+                      width: 100%
+                  content:
+                    -
+                      customBlockId: null
+                      id: 57290241-099c-420d-a7a7-a138e7743634
+                      imagelabel: 'Select a content type'
+                      isCustomBlock: null
+                      isEmpty: false
+                      label: 'Drop content here'
+                      moduleName: null
+                      sidebarSection: null
+                      stylable: false
+                      thumbnail: null
+                      title: grid-column
+                      type: grid-column
+                      layout:
+                        320px:
+                          width: 50%
+                        default:
+                          padding-left: 0px
+                          padding-right: 0px
+                          valign: middle
+                      content:
+                        -
+                          customBlockId: null
+                          id: 3000ef72-21c1-4c92-b376-6ed61bca7ad1
+                          isCustomBlock: null
+                          moduleName: null
+                          sidebarSection: null
+                          stylable: false
+                          thumbnail: /assets/img/editor/element_text.svg
+                          title: Texte
+                          type: text
+                          layout:
+                            320px:
+                              padding-top: 3px
+                              width: 100%
+                            default:
+                              align: left
+                              line-height: '1.3'
+                              margin-bottom: 0px
+                              margin-top: 0px
+                              padding-bottom: 0px
+                              padding-left: 0px
+                              padding-right: 0px
+                              padding-top: 3px
+                              removeMargin: false
+                              removePadding: true
+                              text-align: left
+                              text-valign: top
+                              valign: top
+                              width: 100%
+                          content: '<div class="brevo_class_12_grey_i_lt">€49.99</div>'
+                    -
+                      customBlockId: null
+                      id: a61378ce-c117-410e-a506-d593188a129b
+                      imagelabel: 'Select a content type'
+                      isCustomBlock: null
+                      isEmpty: false
+                      label: 'Drop content here'
+                      moduleName: null
+                      sidebarSection: null
+                      stylable: false
+                      thumbnail: null
+                      title: 'column 1'
+                      type: grid-column
+                      layout:
+                        320px:
+                          width: 50%
+                        default:
+                          padding-left: 0px
+                          padding-right: 0px
+                          valign: middle
+                      content:
+                        -
+                          customBlockId: null
+                          id: f5cccb52-ece8-4670-9914-1cd333e2a8b4
+                          isCustomBlock: null
+                          moduleName: null
+                          sidebarSection: null
+                          stylable: false
+                          thumbnail: /assets/img/editor/element_text.svg
+                          title: Texte
+                          type: text
+                          layout:
+                            320px:
+                              padding-top: 1px
+                              width: 100%
+                            default:
+                              align: left
+                              line-height: '1.1'
+                              margin-bottom: 0px
+                              margin-top: 0px
+                              padding-bottom: 0px
+                              padding-left: 0px
+                              padding-right: 0px
+                              padding-top: 1px
+                              removeMargin: false
+                              removePadding: true
+                              text-align: left
+                              text-valign: top
+                              valign: top
+                              width: 100%
+                          content: '<h3 class="default-heading3">€39.99</h3>'
+                -
+                  customBlockId: null
+                  id: 30ae42be-2cdf-4f43-aeae-2d97aa491dfc
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_text.svg
+                  title: Texte
+                  type: text
+                  layout:
+                    320px:
+                      padding-top: 11px
+                      width: 100%
+                    default:
+                      align: left
+                      line-height: '1.2'
+                      margin-bottom: 0px
+                      margin-top: 0px
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 11px
+                      removeMargin: false
+                      removePadding: true
+                      text-align: left
+                      text-valign: top
+                      valign: top
+                      width: 100%
+                  content: '<p>A stunning tropical plant perfect for indoor greenery.</p>'
+                -
+                  customBlockId: null
+                  id: 6f0d7351-a98e-42ef-bc36-4a4f3cc3c0c6
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_text.svg
+                  title: Texte
+                  type: text
+                  layout:
+                    320px:
+                      padding-top: 15px
+                      width: 100%
+                    default:
+                      align: left
+                      line-height: '1.3'
+                      margin-bottom: 0px
+                      margin-top: 0px
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 15px
+                      removeMargin: false
+                      removePadding: true
+                      text-align: left
+                      text-valign: top
+                      valign: top
+                      width: 100%
+                  content: '<div class="brevo_class_16_green_i_un"><a href="https://" target="_blank"><u>Learn More ›</u></a></div>'
+            -
+              customBlockId: null
+              id: 206b2426-85d5-4122-9a3e-3911f8ea3575
+              imagelabel: 'Select a content type'
+              isCustomBlock: null
+              isEmpty: false
+              label: 'Drop content here'
+              moduleName: null
+              sidebarSection: null
+              stylable: false
+              thumbnail: null
+              title: 'column 1'
+              type: grid-column
+              layout:
+                320px:
+                  padding-left: 0px
+                  padding-right: 0px
+                  padding-top: 40px
+                default:
+                  padding-left: 8px
+                  padding-right: 0px
+                  removePadding: true
+                  valign: top
+              content:
+                -
+                  customBlockId: null
+                  id: 114073ae-3e51-413d-a69e-1549925056d5
+                  isCustomBlock: null
+                  label: Replace
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_image.svg
+                  title: Image
+                  type: image
+                  layout:
+                    320px:
+                      max-width: 320px
+                      width: 100%
+                    default:
+                      align: center
+                      border-radius: 8px
+                      canvas-height: 201px
+                      dynamic: false
+                      embed: false
+                      img-border-radius: 8px
+                      imgSize: 281598
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 0px
+                      removePadding: false
+                      valign: top
+                      width: 100%
+                  content:
+                    src: 'https://img.mailinblue.com/2670624/images/content_library/original/666af0463f9e0bf90fd72dea.png'
+                -
+                  customBlockId: null
+                  id: 0f289c41-4659-44cd-8ba1-8a9bf585296c
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_text.svg
+                  title: Texte
+                  type: text
+                  layout:
+                    320px:
+                      padding-top: 4px
+                      width: 100%
+                    default:
+                      align: left
+                      line-height: '1.1'
+                      margin-bottom: 0px
+                      margin-top: 0px
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 6px
+                      removeMargin: false
+                      removePadding: true
+                      text-align: left
+                      text-valign: top
+                      valign: top
+                      width: 100%
+                  content: '<h2 class="default-heading2">Philodendron birkin</h2>'
+                -
+                  align: top
+                  customBlockId: null
+                  dist: 3-9
+                  gutter: 0px
+                  id: 26d9eaa8-f1cb-4cbb-84fa-2efe3092fcb2
+                  isCustomBlock: null
+                  moduleName: grid-row12
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/grid_12.svg
+                  title: section
+                  type: grid-row
+                  layout:
+                    320px:
+                      display: columns
+                      padding-right: 30px
+                      width: 100%
+                    default:
+                      align: center
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 3px
+                      removePadding: true
+                      valign: middle
+                      width: 100%
+                  content:
+                    -
+                      customBlockId: null
+                      id: befe964f-fcca-4d58-9699-290b6a33104f
+                      imagelabel: 'Select a content type'
+                      isCustomBlock: null
+                      isEmpty: false
+                      label: 'Drop content here'
+                      moduleName: null
+                      sidebarSection: null
+                      stylable: false
+                      thumbnail: null
+                      title: grid-column
+                      type: grid-column
+                      layout:
+                        320px:
+                          width: 50%
+                        default:
+                          padding-left: 0px
+                          padding-right: 0px
+                          valign: middle
+                      content:
+                        -
+                          customBlockId: null
+                          id: c40e34d7-bbb8-4d46-847b-db53667c47e4
+                          isCustomBlock: null
+                          moduleName: null
+                          sidebarSection: null
+                          stylable: false
+                          thumbnail: /assets/img/editor/element_text.svg
+                          title: Texte
+                          type: text
+                          layout:
+                            320px:
+                              padding-top: 3px
+                              width: 100%
+                            default:
+                              align: left
+                              line-height: '1.3'
+                              margin-bottom: 0px
+                              margin-top: 0px
+                              padding-bottom: 0px
+                              padding-left: 0px
+                              padding-right: 0px
+                              padding-top: 3px
+                              removeMargin: false
+                              removePadding: true
+                              text-align: left
+                              text-valign: top
+                              valign: top
+                              width: 100%
+                          content: '<div class="brevo_class_12_grey_i_lt">€79.99</div>'
+                    -
+                      customBlockId: null
+                      id: 963ee1e3-9e6c-4129-83e2-ca02ee48170c
+                      imagelabel: 'Select a content type'
+                      isCustomBlock: null
+                      isEmpty: false
+                      label: 'Drop content here'
+                      moduleName: null
+                      sidebarSection: null
+                      stylable: false
+                      thumbnail: null
+                      title: 'column 1'
+                      type: grid-column
+                      layout:
+                        320px:
+                          width: 50%
+                        default:
+                          padding-left: 0px
+                          padding-right: 0px
+                          valign: middle
+                      content:
+                        -
+                          customBlockId: null
+                          id: 5908d0ee-fae7-426e-a06b-a4d408d92fd1
+                          isCustomBlock: null
+                          moduleName: null
+                          sidebarSection: null
+                          stylable: false
+                          thumbnail: /assets/img/editor/element_text.svg
+                          title: Texte
+                          type: text
+                          layout:
+                            320px:
+                              padding-top: 1px
+                              width: 100%
+                            default:
+                              align: left
+                              line-height: '1.1'
+                              margin-bottom: 0px
+                              margin-top: 0px
+                              padding-bottom: 0px
+                              padding-left: 0px
+                              padding-right: 0px
+                              padding-top: 1px
+                              removeMargin: false
+                              removePadding: true
+                              text-align: left
+                              text-valign: top
+                              valign: top
+                              width: 100%
+                          content: '<h3 class="default-heading3">€69.99</h3>'
+                -
+                  customBlockId: null
+                  id: fd12cd13-750a-4da2-ac8b-0441fb1f598e
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_text.svg
+                  title: Texte
+                  type: text
+                  layout:
+                    320px:
+                      padding-top: 11px
+                      width: 100%
+                    default:
+                      align: left
+                      line-height: '1.2'
+                      margin-bottom: 0px
+                      margin-top: 0px
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 11px
+                      removeMargin: false
+                      removePadding: true
+                      text-align: left
+                      text-valign: top
+                      valign: top
+                      width: 100%
+                  content: '<p>A compact and elegant variety, that feature unique silver veins.</p>'
+                -
+                  customBlockId: null
+                  id: dc845e36-bf53-4f6c-8323-80ef9e02fef8
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_text.svg
+                  title: Texte
+                  type: text
+                  layout:
+                    320px:
+                      padding-top: 15px
+                      width: 100%
+                    default:
+                      align: left
+                      line-height: '1.3'
+                      margin-bottom: 0px
+                      margin-top: 0px
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 15px
+                      removeMargin: false
+                      removePadding: true
+                      text-align: left
+                      text-valign: top
+                      valign: top
+                      width: 100%
+                  content: '<div class="brevo_class_16_green_i_un"><a href="https://" target="_blank"><u>Learn More ›</u></a></div>'
+        -
+          align: top
+          customBlockId: null
+          dist: 6-6
+          gutter: 0px
+          id: 02f79ec9-2bc5-49b9-9eda-65274bee5486
+          isCustomBlock: null
+          moduleName: grid-row12
+          sidebarSection: null
+          stylable: false
+          thumbnail: /assets/img/editor/grid_12.svg
+          title: 2cols-3
+          type: grid-row
+          layout:
+            320px:
+              display: rows
+              padding-left: 15px
+              padding-right: 15px
+              padding-top: 40px
+              width: 100%
+            default:
+              align: center
+              padding-bottom: 0px
+              padding-left: 32px
+              padding-right: 32px
+              padding-top: 40px
+              valign: top
+              width: 100%
+          content:
+            -
+              customBlockId: null
+              id: 604218ea-5784-45fe-b9c8-2727a6f9a749
+              imagelabel: 'Select a content type'
+              isCustomBlock: null
+              isEmpty: false
+              label: 'Drop content here'
+              moduleName: null
+              sidebarSection: null
+              stylable: false
+              thumbnail: null
+              title: 'column 1'
+              type: grid-column
+              layout:
+                320px:
+                  padding-left: 0px
+                  padding-right: 0px
+                  padding-top: 0px
+                default:
+                  padding-left: 0px
+                  padding-right: 8px
+                  removePadding: true
+                  valign: top
+              content:
+                -
+                  customBlockId: null
+                  id: 9e52457f-a769-4cf7-a11d-6bfb8acd6f0a
+                  isCustomBlock: null
+                  label: Replace
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_image.svg
+                  title: Image
+                  type: image
+                  layout:
+                    320px:
+                      max-width: 320px
+                      width: 100%
+                    default:
+                      align: center
+                      background-position: center
+                      background-repeat: no-repeat
+                      background-size: auto
+                      border-radius: 8px
+                      canvas-height: 201px
+                      dynamic: false
+                      embed: false
+                      img-border-radius: 8px
+                      imgSize: 215773
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 0px
+                      removePadding: false
+                      valign: top
+                      width: 100%
+                  content:
+                    src: 'https://img.mailinblue.com/2670624/images/content_library/original/666af0513700abdf77219b23.png'
+                -
+                  customBlockId: null
+                  id: 8630b442-243b-4d5a-b95c-e95c3738fed2
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_text.svg
+                  title: Texte
+                  type: text
+                  layout:
+                    320px:
+                      padding-top: 4px
+                      width: 100%
+                    default:
+                      align: left
+                      line-height: '1.1'
+                      margin-bottom: 0px
+                      margin-top: 0px
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 6px
+                      removeMargin: false
+                      removePadding: true
+                      text-align: left
+                      text-valign: top
+                      valign: top
+                      width: 100%
+                  content: '<h2 class="default-heading2">Epipremnum aureum</h2>'
+                -
+                  align: top
+                  customBlockId: null
+                  dist: 3-9
+                  gutter: 0px
+                  id: 325c93ba-2b49-4f32-8a06-8055ceaf02c0
+                  isCustomBlock: null
+                  moduleName: grid-row12
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/grid_12.svg
+                  title: section
+                  type: grid-row
+                  layout:
+                    320px:
+                      display: columns
+                      padding-right: 30px
+                      width: 100%
+                    default:
+                      align: center
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 3px
+                      removePadding: true
+                      valign: middle
+                      width: 100%
+                  content:
+                    -
+                      customBlockId: null
+                      id: 04b0c226-1a27-4a8f-bac8-031e6226be33
+                      imagelabel: 'Select a content type'
+                      isCustomBlock: null
+                      isEmpty: false
+                      label: 'Drop content here'
+                      moduleName: null
+                      sidebarSection: null
+                      stylable: false
+                      thumbnail: null
+                      title: grid-column
+                      type: grid-column
+                      layout:
+                        320px:
+                          width: 50%
+                        default:
+                          padding-left: 0px
+                          padding-right: 0px
+                          valign: middle
+                      content:
+                        -
+                          customBlockId: null
+                          id: 733a24c6-c01c-4752-8b07-ed1f6e4fac14
+                          isCustomBlock: null
+                          moduleName: null
+                          sidebarSection: null
+                          stylable: false
+                          thumbnail: /assets/img/editor/element_text.svg
+                          title: Texte
+                          type: text
+                          layout:
+                            320px:
+                              padding-top: 3px
+                              width: 100%
+                            default:
+                              align: left
+                              line-height: '1.3'
+                              margin-bottom: 0px
+                              margin-top: 0px
+                              padding-bottom: 0px
+                              padding-left: 0px
+                              padding-right: 0px
+                              padding-top: 3px
+                              removeMargin: false
+                              removePadding: true
+                              text-align: left
+                              text-valign: top
+                              valign: top
+                              width: 100%
+                          content: '<div class="brevo_class_12_grey_i_lt">€29.99</div>'
+                    -
+                      customBlockId: null
+                      id: 16bfccb9-1241-4d19-9e45-770035bbdf05
+                      imagelabel: 'Select a content type'
+                      isCustomBlock: null
+                      isEmpty: false
+                      label: 'Drop content here'
+                      moduleName: null
+                      sidebarSection: null
+                      stylable: false
+                      thumbnail: null
+                      title: 'column 1'
+                      type: grid-column
+                      layout:
+                        320px:
+                          width: 50%
+                        default:
+                          padding-left: 0px
+                          padding-right: 0px
+                          valign: middle
+                      content:
+                        -
+                          customBlockId: null
+                          id: dfd0816a-b31f-4848-9705-325bd1949983
+                          isCustomBlock: null
+                          moduleName: null
+                          sidebarSection: null
+                          stylable: false
+                          thumbnail: /assets/img/editor/element_text.svg
+                          title: Texte
+                          type: text
+                          layout:
+                            320px:
+                              padding-top: 1px
+                              width: 100%
+                            default:
+                              align: left
+                              line-height: '1.1'
+                              margin-bottom: 0px
+                              margin-top: 0px
+                              padding-bottom: 0px
+                              padding-left: 0px
+                              padding-right: 0px
+                              padding-top: 1px
+                              removeMargin: false
+                              removePadding: true
+                              text-align: left
+                              text-valign: top
+                              valign: top
+                              width: 100%
+                          content: '<h3 class="default-heading3">€19.99</h3>'
+                -
+                  customBlockId: null
+                  id: dde79629-dc54-43e5-b03b-8db9cc3957a8
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_text.svg
+                  title: Texte
+                  type: text
+                  layout:
+                    320px:
+                      padding-top: 11px
+                      width: 100%
+                    default:
+                      align: left
+                      line-height: '1.2'
+                      margin-bottom: 0px
+                      margin-top: 0px
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 11px
+                      removeMargin: false
+                      removePadding: true
+                      text-align: left
+                      text-valign: top
+                      valign: top
+                      width: 100%
+                  content: '<p>This compact tropical plant will add a touch of elegance to any indoor space.</p>'
+                -
+                  customBlockId: null
+                  id: 9cf160cb-1957-49e1-aec3-c3977ba336cc
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_text.svg
+                  title: Texte
+                  type: text
+                  layout:
+                    320px:
+                      padding-top: 15px
+                      width: 100%
+                    default:
+                      align: left
+                      line-height: '1.3'
+                      margin-bottom: 0px
+                      margin-top: 0px
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 15px
+                      removeMargin: false
+                      removePadding: true
+                      text-align: left
+                      text-valign: top
+                      valign: top
+                      width: 100%
+                  content: '<div class="brevo_class_16_green_i_un"><a href="https://" target="_blank"><u>Learn More ›</u></a></div>'
+            -
+              customBlockId: null
+              id: 975f79b2-6331-47ed-be0c-8e2450ff5acc
+              imagelabel: 'Select a content type'
+              isCustomBlock: null
+              isEmpty: false
+              label: 'Drop content here'
+              moduleName: null
+              sidebarSection: null
+              stylable: false
+              thumbnail: null
+              title: 'column 1'
+              type: grid-column
+              layout:
+                320px:
+                  padding-left: 0px
+                  padding-right: 0px
+                  padding-top: 40px
+                default:
+                  padding-left: 8px
+                  padding-right: 0px
+                  removePadding: true
+                  valign: top
+              content:
+                -
+                  customBlockId: null
+                  id: 55b2a795-8a17-4b68-81c0-c15d9c103d77
+                  isCustomBlock: null
+                  label: Replace
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_image.svg
+                  title: Image
+                  type: image
+                  layout:
+                    320px:
+                      max-width: 320px
+                      width: 100%
+                    default:
+                      align: center
+                      border-radius: 8px
+                      canvas-height: 201px
+                      dynamic: false
+                      embed: false
+                      img-border-radius: 8px
+                      imgSize: 295213
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 0px
+                      removePadding: false
+                      valign: top
+                      width: 100%
+                  content:
+                    src: 'https://img.mailinblue.com/2670624/images/content_library/original/666af068f9fa87886e6e3d1f.png'
+                -
+                  customBlockId: null
+                  id: dbd8d70b-b00d-4869-801f-64b3e48c0902
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_text.svg
+                  title: Texte
+                  type: text
+                  layout:
+                    320px:
+                      padding-top: 4px
+                      width: 100%
+                    default:
+                      align: left
+                      line-height: '1.1'
+                      margin-bottom: 0px
+                      margin-top: 0px
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 6px
+                      removeMargin: false
+                      removePadding: true
+                      text-align: left
+                      text-valign: top
+                      valign: top
+                      width: 100%
+                  content: '<h2 class="default-heading2">Aglaonema</h2>'
+                -
+                  align: top
+                  customBlockId: null
+                  dist: 3-9
+                  gutter: 0px
+                  id: 1e3b6bc4-c34c-4caf-b516-f43df222e349
+                  isCustomBlock: null
+                  moduleName: grid-row12
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/grid_12.svg
+                  title: section
+                  type: grid-row
+                  layout:
+                    320px:
+                      display: columns
+                      padding-right: 30px
+                      width: 100%
+                    default:
+                      align: center
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 3px
+                      removePadding: true
+                      valign: middle
+                      width: 100%
+                  content:
+                    -
+                      customBlockId: null
+                      id: 547a97b1-e5be-451a-9be4-37c9db4f1d05
+                      imagelabel: 'Select a content type'
+                      isCustomBlock: null
+                      isEmpty: false
+                      label: 'Drop content here'
+                      moduleName: null
+                      sidebarSection: null
+                      stylable: false
+                      thumbnail: null
+                      title: grid-column
+                      type: grid-column
+                      layout:
+                        320px:
+                          width: 50%
+                        default:
+                          padding-left: 0px
+                          padding-right: 0px
+                          valign: middle
+                      content:
+                        -
+                          customBlockId: null
+                          id: 4015ab0f-7cf0-451f-8e56-8c317d8fa632
+                          isCustomBlock: null
+                          moduleName: null
+                          sidebarSection: null
+                          stylable: false
+                          thumbnail: /assets/img/editor/element_text.svg
+                          title: Texte
+                          type: text
+                          layout:
+                            320px:
+                              padding-top: 3px
+                              width: 100%
+                            default:
+                              align: left
+                              line-height: '1.3'
+                              margin-bottom: 0px
+                              margin-top: 0px
+                              padding-bottom: 0px
+                              padding-left: 0px
+                              padding-right: 0px
+                              padding-top: 3px
+                              removeMargin: false
+                              removePadding: true
+                              text-align: left
+                              text-valign: top
+                              valign: top
+                              width: 100%
+                          content: '<div class="brevo_class_12_grey_i_lt">€19.99</div>'
+                    -
+                      customBlockId: null
+                      id: a32b17fb-400c-48ce-8167-697d6a0e7a11
+                      imagelabel: 'Select a content type'
+                      isCustomBlock: null
+                      isEmpty: false
+                      label: 'Drop content here'
+                      moduleName: null
+                      sidebarSection: null
+                      stylable: false
+                      thumbnail: null
+                      title: 'column 1'
+                      type: grid-column
+                      layout:
+                        320px:
+                          width: 50%
+                        default:
+                          padding-left: 0px
+                          padding-right: 0px
+                          valign: middle
+                      content:
+                        -
+                          customBlockId: null
+                          id: 8af006a3-8293-462e-8483-4832babc93d1
+                          isCustomBlock: null
+                          moduleName: null
+                          sidebarSection: null
+                          stylable: false
+                          thumbnail: /assets/img/editor/element_text.svg
+                          title: Texte
+                          type: text
+                          layout:
+                            320px:
+                              padding-top: 1px
+                              width: 100%
+                            default:
+                              align: left
+                              line-height: '1.1'
+                              margin-bottom: 0px
+                              margin-top: 0px
+                              padding-bottom: 0px
+                              padding-left: 0px
+                              padding-right: 0px
+                              padding-top: 1px
+                              removeMargin: false
+                              removePadding: true
+                              text-align: left
+                              text-valign: top
+                              valign: top
+                              width: 100%
+                          content: '<h3 class="default-heading3">€9.99</h3>'
+                -
+                  customBlockId: null
+                  id: 6f82b839-f202-45b6-be9a-65c8bbc18802
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_text.svg
+                  title: Texte
+                  type: text
+                  layout:
+                    320px:
+                      padding-top: 11px
+                      width: 100%
+                    default:
+                      align: left
+                      line-height: '1.2'
+                      margin-bottom: 0px
+                      margin-top: 0px
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 11px
+                      removeMargin: false
+                      removePadding: true
+                      text-align: left
+                      text-valign: top
+                      valign: top
+                      width: 100%
+                  content: '<p>A versatile and easy-to-care-for trailing plant, it features beautiful leaves.</p>'
+                -
+                  customBlockId: null
+                  id: ed172c34-6e0e-4816-b24f-4f837fe7328b
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_text.svg
+                  title: Texte
+                  type: text
+                  layout:
+                    320px:
+                      padding-top: 15px
+                      width: 100%
+                    default:
+                      align: left
+                      line-height: '1.3'
+                      margin-bottom: 0px
+                      margin-top: 0px
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 15px
+                      removeMargin: false
+                      removePadding: true
+                      text-align: left
+                      text-valign: top
+                      valign: top
+                      width: 100%
+                  content: '<div class="brevo_class_16_green_i_un"><a href="https://" target="_blank"><u>Learn More ›</u></a></div>'
+        -
+          align: top
+          customBlockId: null
+          dist: '12'
+          gutter: 0px
+          id: 27b25573-94b1-476f-a10b-dbfc4871f27e
+          isCustomBlock: null
+          moduleName: grid-row12
+          sidebarSection: null
+          stylable: false
+          thumbnail: /assets/img/editor/grid_12.svg
+          title: bg-image
+          type: grid-row
+          layout:
+            320px:
+              display: rows
+              padding-left: 15px
+              padding-right: 15px
+              width: 100%
+            default:
+              align: center
+              background-color: '#376e2e'
+              background-image: 'https://img.mailinblue.com/2670624/images/content_library/original/6644ae7936eac8810f4bf984.png'
+              background-position: center
+              background-repeat: no-repeat
+              background-size: cover
+              imgSize: 4232
+              margin-top: 40px
+              padding-bottom: 32px
+              padding-left: 32px
+              padding-right: 32px
+              padding-top: 32px
+              removeMargin: true
+              valign: top
+              width: 100%
+          content:
+            -
+              customBlockId: null
+              id: 4f0fcc49-077d-49bf-8ca4-e4e999a76ee9
+              imagelabel: 'Select a content type'
+              isCustomBlock: null
+              isEmpty: false
+              label: 'Drop content here'
+              moduleName: null
+              sidebarSection: null
+              stylable: false
+              thumbnail: null
+              title: 'column 1'
+              type: grid-column
+              layout:
+                320px: []
+                default:
+                  padding-left: 0px
+                  padding-right: 0px
+                  valign: top
+              content:
+                -
+                  customBlockId: null
+                  id: eecb8878-bfe7-466e-a933-b1c2ed6a2108
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_text.svg
+                  title: Text
+                  type: text
+                  layout:
+                    320px:
+                      width: 100%
+                    default:
+                      align: left
+                      line-height: '1'
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 0px
+                      removePadding: false
+                      text-align: center
+                      text-valign: top
+                      valign: top
+                      width: 100%
+                  content: '<h1 class="default-heading1">Our experts unearth the most beautiful plants, all cultivated with love by our producers</h1>'
+                -
+                  customBlockId: null
+                  id: 5bb698ac-fe0f-4769-809b-9808455ee529
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  text: '<p>Discover &gt;</p>'
+                  thumbnail: /assets/img/editor/element_button.svg
+                  title: Button
+                  type: text-button
+                  layout:
+                    320px:
+                      width: 209px
+                    default:
+                      align: center
+                      item-height: 40px
+                      margin-bottom: 0px
+                      margin-top: 12px
+                      padding-bottom: 10px
+                      padding-top: 10px
+                      text-align: center
+                      text-valign: top
+                      valign: top
+                  content:
+                    text: '<p>Discover &gt;</p>'
+        -
+          align: top
+          customBlockId: null
+          dist: '12'
+          gutter: 0px
+          id: 47ac95ae-3e69-45e2-b0de-4d4034bd285b
+          isCustomBlock: null
+          moduleName: grid-row12
+          sidebarSection: null
+          stylable: false
+          thumbnail: /assets/img/editor/grid_12.svg
+          title: divider
+          type: grid-row
+          layout:
+            320px:
+              display: rows
+              padding-left: 0px
+              padding-right: 0px
+              width: 100%
+            default:
+              align: center
+              padding-bottom: 0px
+              padding-top: 40px
+              valign: top
+              width: 100%
+          content:
+            -
+              customBlockId: null
+              id: 14112314-61ab-46b1-a763-cfbf218eabce
+              imagelabel: 'Select a content type'
+              isCustomBlock: null
+              isEmpty: false
+              label: 'Drop content here'
+              moduleName: null
+              sidebarSection: null
+              stylable: false
+              thumbnail: null
+              title: 'column 1'
+              type: grid-column
+              layout:
+                320px: []
+                default:
+                  padding-left: 0px
+                  padding-right: 0px
+                  valign: top
+              content:
+                -
+                  customBlockId: null
+                  id: 3cfd4f1c-060e-45f6-81cd-27d6b8e96fa4
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_divider.svg
+                  title: Divider
+                  type: divider
+                  layout:
+                    320px:
+                      width: 100%
+                    default:
+                      align: center
+                      border-color: '#1b3816'
+                      border-style: solid
+                      border-width: 2px
+                      display: auto
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 0px
+                      removePadding: false
+                      width: 100%
+        -
+          align: top
+          customBlockId: 6620e2e28c6a1926c254db45
+          dist: 8-4
+          gutter: 0px
+          id: 436e83c5-3746-45ae-8742-0ada3a3de38a
+          isCustomBlock: true
+          moduleName: null
+          sidebarSection: null
+          stylable: false
+          thumbnail: 'https://img.mailinblue.com/2670624/images/modules/module_thumb_df096b50004d582ddc957d6fcc6634a3_1713431270.png'
+          title: Contact
+          type: grid-row
+          layout:
+            320px:
+              display: rows
+              padding-left: 8px
+              padding-right: 8px
+              width: 100%
+            default:
+              align: center
+              color: '#414141'
+              font-size: 16px
+              padding-bottom: 0px
+              padding-left: 32px
+              padding-right: 32px
+              padding-top: 32px
+              valign: middle
+              width: 100%
+          content:
+            -
+              customBlockId: null
+              id: 9991e99a-75a0-493e-8ce3-66f3b924ca57
+              imagelabel: 'Select a content type'
+              isCustomBlock: null
+              isEmpty: false
+              label: 'Drop content here'
+              moduleName: null
+              sidebarSection: null
+              stylable: false
+              thumbnail: null
+              title: 'column 1'
+              type: grid-column
+              layout:
+                320px:
+                  width: 100%
+                default:
+                  item-width: 40px
+                  padding-left: 0px
+                  padding-right: 0px
+                  valign: middle
+              content:
+                -
+                  align: top
+                  customBlockId: null
+                  dist: 2-10
+                  gutter: 0px
+                  id: 60b3274c-a499-43a1-b74c-e37682d24c63
+                  isCustomBlock: null
+                  moduleName: grid-row12
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/grid_12.svg
+                  title: profile
+                  type: grid-row
+                  layout:
+                    320px:
+                      display: rows
+                      width: 100%
+                    default:
+                      align: center
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 0px
+                      removePadding: false
+                      valign: top
+                      width: 100%
+                  content:
+                    -
+                      customBlockId: null
+                      id: b63dd047-c66e-4600-8434-49cca6f93f08
+                      imagelabel: 'Select a content type'
+                      isCustomBlock: null
+                      isEmpty: false
+                      label: 'Drop content here'
+                      moduleName: null
+                      sidebarSection: null
+                      stylable: false
+                      thumbnail: null
+                      title: 'column 1'
+                      type: grid-column
+                      layout:
+                        320px: []
+                        default:
+                          padding-left: 0px
+                          padding-right: 0px
+                          valign: top
+                      content:
+                        -
+                          customBlockId: null
+                          id: fb934927-ad8d-45ea-aa3e-eaf1feaeae39
+                          isCustomBlock: null
+                          label: Replace
+                          moduleName: null
+                          sidebarSection: null
+                          stylable: false
+                          thumbnail: /assets/img/editor/element_image.svg
+                          title: Image
+                          type: image
+                          layout:
+                            320px:
+                              align: center
+                              max-width: 320px
+                              width: 56px
+                            default:
+                              align: left
+                              background-position: center
+                              background-repeat: no-repeat
+                              background-size: auto
+                              canvas-height: 56px
+                              dynamic: false
+                              embed: false
+                              image-maxWidth: 70px
+                              img-border-radius: 0px
+                              imgSize: 26597
+                              padding-bottom: 0px
+                              padding-left: 0px
+                              padding-right: 0px
+                              padding-top: 0px
+                              removePadding: false
+                              resizeEnable: false
+                              valign: top
+                              width: 56px
+                          content:
+                            src: 'https://img.mailinblue.com/2670624/images/content_library/original/666af0b63f9e0bf90fd72e21.png'
+                    -
+                      customBlockId: null
+                      id: 8f2fd4d3-598c-4b23-ae32-4aa92f6b9d89
+                      imagelabel: 'Select a content type'
+                      isCustomBlock: null
+                      isEmpty: false
+                      label: 'Drop content here'
+                      moduleName: null
+                      sidebarSection: null
+                      stylable: false
+                      thumbnail: null
+                      title: grid-column
+                      type: grid-column
+                      layout:
+                        320px:
+                          padding-top: 5px
+                        default:
+                          padding-left: 8px
+                          padding-right: 0px
+                          padding-top: 10px
+                          removePadding: true
+                          valign: top
+                      content:
+                        -
+                          customBlockId: null
+                          id: 5a2de7f6-a488-464a-bff0-03df4ec6ac49
+                          isCustomBlock: null
+                          moduleName: null
+                          sidebarSection: null
+                          stylable: false
+                          thumbnail: /assets/img/editor/element_text.svg
+                          title: Text
+                          type: text
+                          layout:
+                            320px:
+                              text-align: center
+                              width: 100%
+                            default:
+                              align: left
+                              text-align: left
+                              text-valign: top
+                              valign: top
+                              width: 100%
+                          content: '<div class="brevo_class_16_green">Sarah Beesly</div>'
+                        -
+                          customBlockId: null
+                          id: 5ad3daae-b7d3-4f61-b7ba-44ebbaeb7066
+                          isCustomBlock: null
+                          moduleName: null
+                          sidebarSection: null
+                          stylable: false
+                          thumbnail: /assets/img/editor/element_text.svg
+                          title: Text
+                          type: text
+                          layout:
+                            320px:
+                              text-align: center
+                              width: 100%
+                            default:
+                              align: left
+                              padding-bottom: 0px
+                              padding-top: 0px
+                              text-align: left
+                              text-valign: top
+                              valign: top
+                              width: 100%
+                          content: '<div class="brevo_class_12_green">florist</div>'
+                -
+                  customBlockId: null
+                  id: 7012fa88-f1c5-4093-9a62-8831894414da
+                  isCustomBlock: null
+                  label: Replace
+                  moduleName: brand-logo
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_image.svg
+                  title: Image
+                  type: image
+                  layout:
+                    320px:
+                      align: center
+                      max-width: 320px
+                      padding-top: 16px
+                      width: 95px
+                    default:
+                      align: left
+                      background-position: center
+                      background-repeat: no-repeat
+                      background-size: auto
+                      canvas-height: 51px
+                      dynamic: false
+                      embed: false
+                      img-border-radius: 0px
+                      imgSize: '32612'
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 38px
+                      removePadding: true
+                      valign: top
+                      width: 40px
+                  content:
+                    src: 'https://img.mailinblue.com/11267958/images/content_library/original/6a0dbd4e17d8dcd74a54f7e3.png'
+            -
+              customBlockId: null
+              id: 55d841b0-7647-4194-b118-f55be39938e3
+              imagelabel: 'Select a content type'
+              isCustomBlock: null
+              isEmpty: false
+              label: 'Drop content here'
+              moduleName: null
+              sidebarSection: null
+              stylable: false
+              thumbnail: null
+              title: grid-column
+              type: grid-column
+              layout:
+                320px:
+                  padding-left: 0px
+                  width: 100%
+                default:
+                  padding-left: 0px
+                  padding-right: 0px
+                  removePadding: true
+                  valign: middle
+              content:
+                -
+                  customBlockId: null
+                  id: 8ccf4e7d-f690-4303-b6df-326ac72302c7
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_text.svg
+                  title: Text
+                  type: text
+                  layout:
+                    320px:
+                      padding-top: 16px
+                      text-align: center
+                      width: 100%
+                    default:
+                      align: left
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 0px
+                      removePadding: false
+                      text-align: left
+                      text-valign: top
+                      valign: top
+                      width: 100%
+                  content: '<div class="brevo_class_12_green">laurent.hongisto@gmail.com<br><a href="https://" target="_blank">+33 (0)1 23 45 67 89</a></div>'
+                -
+                  customBlockId: null
+                  id: 3039c00c-2f13-4b78-8685-d07d4b54b0bf
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_text.svg
+                  title: Text
+                  type: text
+                  layout:
+                    320px:
+                      padding-top: 16px
+                      text-align: center
+                      width: 100%
+                    default:
+                      align: left
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 8px
+                      removePadding: true
+                      text-align: left
+                      text-valign: top
+                      valign: top
+                      width: 100%
+                  content: '<div class="brevo_class_12_green">Calle Miguel Marrero Rodriguez 6&nbsp;<br>35120,Mogan</div>'
+                -
+                  customBlockId: null
+                  id: bf4ce903-0032-436b-a2e3-308e30c38eb9
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_social.svg
+                  title: Social
+                  type: social-media-group
+                  layout:
+                    320px:
+                      align: center
+                      icon-size: 16px
+                      icon-spacing: 5px
+                      padding-top: 16px
+                      width: 100%
+                    default:
+                      align: left
+                      icon-filter: colored
+                      icon-form: rounded
+                      icon-size: 32px
+                      icon-spacing: 5px
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 20px
+                      removePadding: true
+                      width: 100%
+                  content:
+                    -
+                      customBlockId: null
+                      id: 2d27e9fb-d11d-465f-b448-c81a0d3d39b5
+                      isCustomBlock: null
+                      moduleName: null
+                      read-only: true
+                      role: facebook
+                      sidebarSection: null
+                      stylable: true
+                      thumbnail: null
+                      title: facebook
+                      type: social-media
+                      layout:
+                        320px:
+                          icon-spacing: 5px
+                        default:
+                          padding-bottom: 5px
+                          padding-top: 5px
+                          title: facebook
+                      content:
+                        alt: null
+                        href: ""
+                        src: 'https://creative-assets.mailinblue.com/editor/social-icons/rounded_colored/facebook_32px.png'
+                    -
+                      customBlockId: null
+                      id: aa2a583f-5ab5-4f12-9fbb-3a6d47a6d5ae
+                      isCustomBlock: null
+                      moduleName: null
+                      read-only: true
+                      role: instagram
+                      sidebarSection: null
+                      stylable: true
+                      thumbnail: null
+                      title: instagram
+                      type: social-media
+                      layout:
+                        320px:
+                          icon-spacing: 5px
+                        default:
+                          padding-bottom: 5px
+                          padding-top: 5px
+                          title: instagram
+                      content:
+                        alt: null
+                        href: ""
+                        src: 'https://creative-assets.mailinblue.com/editor/social-icons/rounded_colored/instagram_32px.png'
+                    -
+                      customBlockId: null
+                      id: dae78031-bfc8-42bc-9667-bf797c0b2fcf
+                      isCustomBlock: null
+                      moduleName: null
+                      read-only: true
+                      role: linkedin
+                      sidebarSection: null
+                      stylable: true
+                      thumbnail: null
+                      title: linkedin
+                      type: social-media
+                      layout:
+                        320px:
+                          icon-spacing: 5px
+                        default:
+                          padding-bottom: 5px
+                          padding-top: 5px
+                          title: linkedin
+                      content:
+                        alt: null
+                        href: ""
+                        src: 'https://creative-assets.mailinblue.com/editor/social-icons/rounded_colored/linkedin_32px.png'
+                    -
+                      customBlockId: null
+                      id: a3ac6c8d-743e-4d0c-9b42-a95d9e071278
+                      isCustomBlock: null
+                      moduleName: null
+                      read-only: true
+                      role: youtube
+                      sidebarSection: null
+                      stylable: true
+                      thumbnail: null
+                      title: youtube
+                      type: social-media
+                      layout:
+                        320px:
+                          icon-spacing: 5px
+                        default:
+                          padding-bottom: 5px
+                          padding-top: 5px
+                          title: youtube
+                      content:
+                        alt: null
+                        href: ""
+                        src: 'https://creative-assets.mailinblue.com/editor/social-icons/rounded_colored/youtube_32px.png'
+        -
+          align: top
+          customBlockId: null
+          dist: '12'
+          gutter: 0px
+          id: 9eb7b25a-4d83-4f2e-879f-4f880736b488
+          isCustomBlock: null
+          moduleName: grid-row12
+          sidebarSection: null
+          stylable: false
+          thumbnail: /assets/img/editor/grid_12.svg
+          title: unsub
+          type: grid-row
+          layout:
+            320px:
+              display: rows
+              padding-left: 15px
+              padding-right: 15px
+              padding-top: 20px
+              width: 100%
+            default:
+              align: center
+              padding-bottom: 20px
+              padding-top: 40px
+              valign: top
+              width: 100%
+          content:
+            -
+              customBlockId: null
+              id: 55835ed6-1f0d-4fbe-a206-6c09d066c9a9
+              imagelabel: 'Select a content type'
+              isCustomBlock: null
+              isEmpty: false
+              label: 'Drop content here'
+              moduleName: null
+              sidebarSection: null
+              stylable: false
+              thumbnail: null
+              title: 'column 1'
+              type: grid-column
+              layout:
+                320px: []
+                default:
+                  padding-left: 0px
+                  padding-right: 0px
+                  valign: top
+              content:
+                -
+                  customBlockId: null
+                  id: 224373d6-9802-41fe-a7a1-0c04b5dee81b
+                  isCustomBlock: null
+                  moduleName: null
+                  sidebarSection: null
+                  stylable: false
+                  thumbnail: /assets/img/editor/element_text.svg
+                  title: Text
+                  type: text
+                  layout:
+                    320px:
+                      width: 100%
+                    default:
+                      align: left
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 0px
+                      removePadding: false
+                      text-align: center
+                      text-valign: top
+                      valign: top
+                      width: 100%
+                  content: '<div class="brevo_class_12_green"><a href="{{ unsubscribe }}" target="_blank">Unsubscribe</a></div>'
+media:
+  320px:
+    max-width: 600
+    min-width: 0
+styles:
+  brevo_class_12_green:
+    properties:
+      font-size: 12px
+    title: '12'
+  brevo_class_12_grey_i_lt:
+    properties:
+      color: '#777777'
+      font-family: 'courier new,courier,monospace'
+      font-size: 12px
+      font-style: italic
+      text-decoration: line-through
+    title: '12 grey italic line-though courier new'
+  brevo_class_16_green:
+    properties:
+      font-family: 'courier new,courier,monospace'
+      font-size: 16px
+      font-weight: 700
+    title: '16 bold courier new'
+  brevo_class_16_green_i_un:
+    properties:
+      font-family: 'courier new,courier,monospace'
+      font-size: 16px
+      font-style: italic
+      font-weight: 700
+    title: '16 green italic bold courier new'
+  default:
+    properties:
+      color: '#1b3816'
+      font-family: 'Trebuchet MS'
+      font-size: 15px
+      line-height: '1.5'
+    title: Paragraph
+  default-button:
+    properties:
+      background-color: '#f2eadb'
+      border-color: '#f2eadb'
+      border-radius: 30px
+      border-width: 1px
+      color: '#000'
+      font-family: 'Trebuchet MS'
+      font-size: 16px
+      font-style: italic
+      font-weight: bold
+      remove-vml-button: optional
+      width: 209px
+    title: Button
+  default-heading1:
+    properties:
+      color: '#fff8ea'
+      font-family: Georgia
+      font-size: 24px
+      font-weight: 700
+    title: 'Heading 1'
+  default-heading2:
+    properties:
+      color: '#1b3816'
+      font-family: Georgia
+      font-size: 24px
+      font-weight: 700
+    title: 'Heading 2'
+  default-heading3:
+    properties:
+      color: '#1b3816'
+      font-family: Georgia
+      font-size: 16px
+      font-style: italic
+      font-weight: 700
+    title: 'Heading 3'
+  default-heading4:
+    properties:
+      color: '#376e2e'
+      font-family: Georgia
+      font-size: 12px
+      font-style: italic
+      font-weight: 700
+    title: 'Heading 4'
+  default-link:
+    properties:
+      color: '#f2eadb'
+      text-decoration: none
+    title: Link

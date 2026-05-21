@@ -10,3 +10,11 @@
 @utility form-label {
   @apply mb-3 block font-primary text-xs font-semibold uppercase tracking-[0.16em] text-text-dark dark:text-darkmode-text-light;
 }
+
+@media (max-width: 767px) {
+  .form-label {
+    font-size: var(--be-mobile-label-size);
+    letter-spacing: var(--be-mobile-label-tracking);
+    line-height: var(--be-mobile-label-line-height);
+  }
+}

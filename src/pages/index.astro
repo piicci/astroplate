@@ -705,6 +705,20 @@ const buttonClass = (button: HomepageButton, extra = "") =>
         overflow-x: clip;
       }
 
+      .be-home p:not(.be-wellness-closing):not([class*="text-sm"]):not([class*="text-xs"]) {
+        font-size: var(--be-mobile-copy-size);
+        line-height: var(--be-mobile-copy-line-height);
+      }
+
+      .be-home p[class*="uppercase"],
+      .be-home span[class*="uppercase"],
+      .be-approach-kicker,
+      .be-approach-item > span {
+        font-size: var(--be-mobile-label-size);
+        letter-spacing: var(--be-mobile-label-tracking);
+        line-height: var(--be-mobile-label-line-height);
+      }
+
       .be-home p,
       .be-home h1,
       .be-home h2,
@@ -728,7 +742,11 @@ const buttonClass = (button: HomepageButton, extra = "") =>
 
       .be-hero-media > div:last-child {
         margin-left: 0;
-        max-width: min(100%, 28rem);
+        max-width: min(100%, 31rem);
+        padding-left: 1rem;
+        color: #5f7a83;
+        font-size: var(--be-mobile-supporting-size);
+        line-height: var(--be-mobile-supporting-line-height);
       }
 
       .be-home h1 {
@@ -794,6 +812,9 @@ const buttonClass = (button: HomepageButton, extra = "") =>
 
       .be-approach-mast p {
         margin: 0;
+        max-width: 21rem;
+        font-size: var(--be-mobile-supporting-size);
+        line-height: var(--be-mobile-supporting-line-height);
       }
 
       .be-approach-item {

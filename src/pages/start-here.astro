@@ -293,5 +293,14 @@ import Base from "@/layouts/Base.astro";
     .dark .start-here-guide p {
       color: #ede2cc;
     }
+
+    @media (max-width: 767px) {
+      .start-here-lede,
+      .start-here-list p,
+      .start-here-guide p {
+        font-size: var(--be-mobile-copy-size);
+        line-height: var(--be-mobile-copy-line-height);
+      }
+    }
   </style>
 </Base>

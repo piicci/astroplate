@@ -55,8 +55,9 @@
 @media (max-width: 480px) {
   .be-article-subtitle {
     gap: 0.7rem;
-    font-size: 0.68rem;
-    letter-spacing: 0.14em;
+    font-size: var(--be-mobile-label-size);
+    letter-spacing: var(--be-mobile-label-tracking);
+    line-height: var(--be-mobile-label-line-height);
   }
 
   .be-article-subtitle::before {
@@ -220,4 +221,12 @@
   @apply prose-th:relative prose-th:z-10 prose-th:px-4 prose-th:py-[18px] prose-th:text-text-dark dark:prose-th:text-darkmode-text;
   @apply prose-tr:border-border dark:prose-tr:border-darkmode-border;
   @apply prose-td:relative prose-td:z-10 prose-td:px-3 prose-td:py-[18px] dark:prose-td:text-darkmode-text;
+}
+
+@media (max-width: 767px) {
+  .content p,
+  .content li {
+    font-size: var(--be-mobile-copy-size);
+    line-height: 1.72;
+  }
 }

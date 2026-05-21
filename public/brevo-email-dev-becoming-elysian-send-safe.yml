@@ -1,0 +1,648 @@
+author: 'Namvar, Mahtab'
+brandUpdateTime: '2026-05-20T14:30:35.094Z'
+campaignType: classic
+fields: {}
+fieldsHistory: []
+firstLoadSocialIcons: false
+fonts: []
+id: cdf1dbea-ce10-4ff6-b5ff-958c9489b494
+name: becoming-elysian-weekly-newsletter-template
+subject: 'Becoming Elysian Newsletter'
+ui:
+  showDeleteOption: false
+  showMoreOption: false
+user-hash: ea11e73776db9c954286a37d253c36bb
+version: 3.0.1
+body:
+  id: 3aeaf766-ed2d-43a2-86a2-61d59a3a8f5a
+  type: body
+  layout:
+    320px:
+      width: 100%
+    default:
+      background-color: '#f2eadb'
+      direction: ltr
+      padding-bottom: 42px
+      padding-top: 28px
+      removePadding: false
+      wrapper-width: 640px
+  content:
+    -
+      content-type: wrapper
+      customBlockId: null
+      id: 7f70530d-e439-438e-be1c-8d8ff96977e2
+      isCustomBlock: null
+      moduleName: null
+      sidebarSection: null
+      stylable: false
+      thumbnail: null
+      title: Wrapper
+      type: rows
+      layout:
+        320px:
+          width: 100%
+        default:
+          align: center
+          valign: top
+      content:
+        -
+          align: top
+          customBlockId: null
+          dist: '12'
+          gutter: 0px
+          id: 54e08fb3-0c79-4d5f-8d65-4c2653be3900
+          isCustomBlock: null
+          moduleName: header
+          sidebarSection: null
+          stylable: false
+          thumbnail: /assets/img/editor/grid_12.svg
+          title: Header
+          type: grid-row
+          layout:
+            320px:
+              display: rows
+              padding-left: 18px
+              padding-right: 18px
+              width: 100%
+            default:
+              align: center
+              background-color: transparent
+              padding-bottom: 18px
+              padding-left: 0px
+              padding-right: 0px
+              padding-top: 0px
+              valign: middle
+              width: 100%
+          content:
+            -
+              id: 6a15935a-85cf-4c07-9f02-5a6ee0e1d6a1
+              type: grid-column
+              title: Header column
+              layout:
+                320px: []
+                default:
+                  padding-left: 0px
+                  padding-right: 0px
+                  valign: middle
+              content:
+                -
+                  id: f791a5c0-66c3-4d96-840d-916c4cfa07dc
+                  type: text
+                  title: Brand and browser link
+                  stylable: false
+                  layout:
+                    320px:
+                      width: 100%
+                    default:
+                      align: left
+                      line-height: 18px
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 0px
+                      removePadding: false
+                      text-align: left
+                      width: 100%
+                  content: |
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
+                      <tr>
+                        <td align="left" valign="middle" style="font-family:Trebuchet MS,Verdana,sans-serif; font-size:11px; line-height:16px; letter-spacing:2.4px; text-transform:uppercase; color:#6f7530;">
+                          <img src="https://img.mailinblue.com/11267958/images/content_library/original/6a0dbd4e17d8dcd74a54f7e3.png" width="32" height="41" alt="Becoming Elysian" style="display:inline-block; width:32px; height:41px; border:0; vertical-align:middle;">
+                          <span style="display:inline-block; padding-left:10px; vertical-align:middle;">Becoming Elysian</span>
+                        </td>
+                        <td align="right" valign="middle" style="font-family:Trebuchet MS,Verdana,sans-serif; font-size:12px; line-height:18px; color:#7f704f;">
+                          <a href="{{ mirror }}" target="_blank" style="color:#7f704f; text-decoration:underline;">View in browser</a>
+                        </td>
+                      </tr>
+                    </table>
+        -
+          align: top
+          customBlockId: null
+          dist: '12'
+          gutter: 0px
+          id: 3a5e91bb-6146-452b-9b5e-d3e7e9479508
+          isCustomBlock: null
+          moduleName: hero
+          sidebarSection: null
+          stylable: false
+          thumbnail: /assets/img/editor/grid_12.svg
+          title: Hero
+          type: grid-row
+          layout:
+            320px:
+              display: rows
+              padding-left: 12px
+              padding-right: 12px
+              width: 100%
+            default:
+              align: center
+              background-color: transparent
+              padding-bottom: 0px
+              padding-left: 0px
+              padding-right: 0px
+              padding-top: 0px
+              valign: top
+              width: 100%
+          content:
+            -
+              id: 08ab96fb-3228-420a-99df-ddf81a63ca3a
+              type: grid-column
+              title: Hero column
+              layout:
+                320px: []
+                default:
+                  padding-left: 0px
+                  padding-right: 0px
+                  valign: top
+              content:
+                -
+                  id: 40888c8e-c69d-43e6-8534-77719728d41b
+                  type: text
+                  title: Hero framed content
+                  stylable: false
+                  layout:
+                    320px:
+                      width: 100%
+                    default:
+                      align: left
+                      line-height: 25px
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 0px
+                      removePadding: true
+                      text-align: left
+                      width: 100%
+                  content: |
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:separate; border-spacing:0; background-color:#fff9ef; border:7px solid #efe4d1; border-radius:32px; overflow:hidden;">
+                      <tr>
+                        <td style="padding:42px 42px 34px; font-family:Trebuchet MS,Verdana,sans-serif; font-size:15px; line-height:25px; color:#514128; background-color:#fff9ef;">
+                          <p style="display:inline-block; margin:0; border:1px solid #d5cdb7; border-radius:999px; background-color:#f8f1e6; padding:8px 11px; font-family:Trebuchet MS,Verdana,sans-serif; font-size:10px; line-height:10px; letter-spacing:2px; text-transform:uppercase; color:#3f4a14;">Weekly wellness letter</p>
+                          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:separate; border-spacing:0; margin-top:24px; background-color:#f3ead9; border-radius:18px; overflow:hidden;">
+                            <tr>
+                              <td style="padding:0; background-color:#f3ead9; border-radius:18px;">
+                                <img src="https://img.mailinblue.com/11267958/images/content_library/original/6a0dbd52a04a12cd2cb4c885.jpg" width="542" alt="A calm Becoming Elysian editorial wellness scene" style="display:block; width:100%; max-width:542px; height:auto; border:0; border-radius:18px;">
+                              </td>
+                            </tr>
+                          </table>
+                          <h1 style="margin:22px 0 0; max-width:460px; font-family:Georgia,Times New Roman,serif; font-size:58px; line-height:0.91; font-weight:400; color:#17130d;">A calmer way back into your body.</h1>
+                          <p style="margin:24px 0 0; font-family:Georgia,Times New Roman,serif; font-size:20px; line-height:30px; color:#4d3e27;">Hi {{ contact.FIRSTNAME }},</p>
+                          <p style="margin:12px 0 0; max-width:520px; font-family:Trebuchet MS,Verdana,sans-serif; font-size:15px; line-height:25px; color:#4d3e27;">This week is about making wellness feel less like a project and more like a rhythm your life can actually hold.</p>
+                        </td>
+                      </tr>
+                    </table>
+        -
+          align: top
+          customBlockId: null
+          dist: '12'
+          gutter: 0px
+          id: 59a2e6b5-30ab-4b2a-8c3f-cf8a7c105aba
+          isCustomBlock: null
+          moduleName: weekly-focus
+          sidebarSection: null
+          stylable: false
+          thumbnail: /assets/img/editor/grid_12.svg
+          title: Weekly focus
+          type: grid-row
+          layout:
+            320px:
+              display: rows
+              padding-left: 12px
+              padding-right: 12px
+              padding-top: 22px
+              width: 100%
+            default:
+              align: center
+              background-color: transparent
+              padding-bottom: 0px
+              padding-left: 0px
+              padding-right: 0px
+              padding-top: 22px
+              valign: top
+              width: 100%
+          content:
+            -
+              id: dfdbef09-14a2-47b3-b7af-36dedcf234d8
+              type: grid-column
+              title: Weekly focus column
+              layout:
+                320px: []
+                default:
+                  padding-left: 0px
+                  padding-right: 0px
+                  valign: top
+              content:
+                -
+                  id: b68b3b4e-b55c-47a2-b91a-0ba518a9a61f
+                  type: text
+                  title: Weekly focus framed content
+                  stylable: false
+                  layout:
+                    320px:
+                      width: 100%
+                    default:
+                      align: left
+                      line-height: 25px
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 0px
+                      removePadding: true
+                      text-align: left
+                      width: 100%
+                  content: |
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:separate; border-spacing:0; border:7px solid #efe4d1; border-radius:30px; overflow:hidden; background-color:#fff9ef;">
+                      <tr>
+                        <td width="58%" valign="top" style="width:58%; padding:34px 28px 34px 35px; background-color:#fff9ef; font-family:Trebuchet MS,Verdana,sans-serif; font-size:15px; line-height:25px; color:#514128;">
+                          <p style="margin:0 0 12px; font-family:Trebuchet MS,Verdana,sans-serif; font-size:10px; line-height:13px; letter-spacing:2px; text-transform:uppercase; color:#6f7530;">The weekly focus</p>
+                          <h2 style="margin:0; font-family:Georgia,Times New Roman,serif; font-size:36px; line-height:38px; font-weight:400; color:#17130d;">The quiet metabolism reset.</h2>
+                          <p style="margin:18px 0 0; font-family:Trebuchet MS,Verdana,sans-serif; font-size:15px; line-height:25px; color:#514128;">Before changing another plan, start with a steadier morning: protein, light, hydration, and a ten-minute strength signal. Small inputs, repeated kindly, can change the tone of the whole day.</p>
+                        </td>
+                        <td width="42%" valign="top" style="width:42%; padding:34px 30px; background-color:#f3ead9; font-family:Trebuchet MS,Verdana,sans-serif; font-size:14px; line-height:23px; color:#514128;">
+                          <p style="margin:0; font-family:Georgia,Times New Roman,serif; font-size:54px; line-height:48px; color:#3f4a14;">03</p>
+                          <p style="margin:18px 0 0; font-family:Trebuchet MS,Verdana,sans-serif; font-size:12px; line-height:20px; letter-spacing:1.4px; text-transform:uppercase; color:#6f7530;">Inside this issue</p>
+                          <p style="margin:12px 0 0; font-family:Trebuchet MS,Verdana,sans-serif; font-size:14px; line-height:23px; color:#514128;">A meal cue, a strength cue, and an evening prompt for nervous system downshifting.</p>
+                        </td>
+                      </tr>
+                    </table>
+        -
+          align: top
+          customBlockId: null
+          dist: '12'
+          gutter: 0px
+          id: 9eb7c8f7-0188-4541-af8e-e2bd4f36804f
+          isCustomBlock: null
+          moduleName: try-this-first
+          sidebarSection: null
+          stylable: false
+          thumbnail: /assets/img/editor/grid_12.svg
+          title: Try this first
+          type: grid-row
+          layout:
+            320px:
+              display: rows
+              padding-left: 12px
+              padding-right: 12px
+              padding-top: 22px
+              width: 100%
+            default:
+              align: center
+              background-color: transparent
+              padding-bottom: 0px
+              padding-left: 0px
+              padding-right: 0px
+              padding-top: 22px
+              valign: top
+              width: 100%
+          content:
+            -
+              id: 7bd57e70-3981-4cd0-ad72-7758d618f025
+              type: grid-column
+              title: Try this column
+              layout:
+                320px: []
+                default:
+                  padding-left: 0px
+                  padding-right: 0px
+                  valign: top
+              content:
+                -
+                  id: 8447b362-52c3-4bbf-8f47-7d8a9e7ee419
+                  type: text
+                  title: Try this framed content
+                  stylable: false
+                  layout:
+                    320px:
+                      width: 100%
+                    default:
+                      align: left
+                      line-height: 25px
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 0px
+                      removePadding: true
+                      text-align: left
+                      width: 100%
+                  content: |
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:separate; border-spacing:0; background-color:#fbf4e9; border:7px solid #efe4d1; border-radius:30px; overflow:hidden;">
+                      <tr>
+                        <td style="padding:34px 38px; background-color:#fbf4e9; font-family:Trebuchet MS,Verdana,sans-serif; font-size:15px; line-height:25px; color:#514128;">
+                          <p style="margin:0 0 14px; font-family:Trebuchet MS,Verdana,sans-serif; font-size:10px; line-height:13px; letter-spacing:2px; text-transform:uppercase; color:#6f7530;">Try this first</p>
+                          <p style="margin:0; font-family:Georgia,Times New Roman,serif; font-size:27px; line-height:34px; color:#17130d;">Pair breakfast protein with a slow walk outside before you ask your body for more intensity.</p>
+                          <p style="margin:20px 0 0; font-family:Trebuchet MS,Verdana,sans-serif; font-size:15px; line-height:25px; color:#514128;">It sounds almost too simple, which is exactly why it works for real life. You are giving your body a safety cue, a blood sugar cue, and a movement cue before the day starts making demands.</p>
+                        </td>
+                      </tr>
+                    </table>
+        -
+          align: top
+          customBlockId: null
+          dist: '12'
+          gutter: 0px
+          id: bd608e3f-83b9-4bb3-89d7-477fb45369a9
+          isCustomBlock: null
+          moduleName: two-cards
+          sidebarSection: null
+          stylable: false
+          thumbnail: /assets/img/editor/grid_12.svg
+          title: Two cards
+          type: grid-row
+          layout:
+            320px:
+              display: rows
+              padding-left: 12px
+              padding-right: 12px
+              padding-top: 22px
+              width: 100%
+            default:
+              align: center
+              background-color: transparent
+              padding-bottom: 0px
+              padding-left: 0px
+              padding-right: 0px
+              padding-top: 22px
+              valign: top
+              width: 100%
+          content:
+            -
+              id: e0bc2d59-462b-4560-9895-76df44826624
+              type: grid-column
+              title: Two cards column
+              layout:
+                320px: []
+                default:
+                  padding-left: 0px
+                  padding-right: 0px
+                  valign: top
+              content:
+                -
+                  id: b8659d3d-65f1-4e29-9d26-eebc9986f2f6
+                  type: text
+                  title: Two cards framed content
+                  stylable: false
+                  layout:
+                    320px:
+                      width: 100%
+                    default:
+                      align: left
+                      line-height: 23px
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 0px
+                      removePadding: true
+                      text-align: left
+                      width: 100%
+                  content: |
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:separate; border-spacing:18px 0;">
+                      <tr>
+                        <td width="50%" valign="top" style="width:50%; padding:28px 26px; background-color:#fff9ef; border:7px solid #efe4d1; border-radius:28px; font-family:Trebuchet MS,Verdana,sans-serif; font-size:14px; line-height:23px; color:#514128;">
+                          <p style="margin:0; font-family:Georgia,Times New Roman,serif; font-size:46px; line-height:40px; color:#3f4a14;">01</p>
+                          <h3 style="margin:32px 0 0; font-family:Georgia,Times New Roman,serif; font-size:29px; line-height:31px; font-weight:400; color:#17130d;">One grounded idea.</h3>
+                          <p style="margin:14px 0 0; font-family:Trebuchet MS,Verdana,sans-serif; font-size:14px; line-height:23px; color:#514128;">Your body changes more willingly when it feels resourced, not cornered.</p>
+                        </td>
+                        <td width="50%" valign="top" style="width:50%; padding:28px 26px; background-color:#f3ead9; border:7px solid #efe4d1; border-radius:28px; font-family:Trebuchet MS,Verdana,sans-serif; font-size:14px; line-height:23px; color:#514128;">
+                          <p style="margin:0; font-family:Georgia,Times New Roman,serif; font-size:46px; line-height:40px; color:#3f4a14;">02</p>
+                          <h3 style="margin:32px 0 0; font-family:Georgia,Times New Roman,serif; font-size:29px; line-height:31px; font-weight:400; color:#17130d;">One practical shift.</h3>
+                          <p style="margin:14px 0 0; font-family:Trebuchet MS,Verdana,sans-serif; font-size:14px; line-height:23px; color:#514128;">Add one palm of protein before you subtract anything from your plate.</p>
+                        </td>
+                      </tr>
+                    </table>
+        -
+          align: top
+          customBlockId: null
+          dist: '12'
+          gutter: 0px
+          id: d3d6b82b-0d3b-4559-b073-2164d3f7d78c
+          isCustomBlock: null
+          moduleName: read-next
+          sidebarSection: null
+          stylable: false
+          thumbnail: /assets/img/editor/grid_12.svg
+          title: Read next
+          type: grid-row
+          layout:
+            320px:
+              display: rows
+              padding-left: 12px
+              padding-right: 12px
+              padding-top: 22px
+              width: 100%
+            default:
+              align: center
+              background-color: transparent
+              padding-bottom: 0px
+              padding-left: 0px
+              padding-right: 0px
+              padding-top: 22px
+              valign: top
+              width: 100%
+          content:
+            -
+              id: f70548c0-7bd7-44b3-a527-2424d1bfb0f7
+              type: grid-column
+              title: Read next column
+              layout:
+                320px: []
+                default:
+                  padding-left: 0px
+                  padding-right: 0px
+                  valign: top
+              content:
+                -
+                  id: f3b728d2-f348-4877-9045-0e20d08da0de
+                  type: text
+                  title: Read next framed content
+                  stylable: false
+                  layout:
+                    320px:
+                      width: 100%
+                    default:
+                      align: left
+                      line-height: 25px
+                      padding-bottom: 0px
+                      padding-left: 0px
+                      padding-right: 0px
+                      padding-top: 0px
+                      removePadding: true
+                      text-align: left
+                      width: 100%
+                  content: |
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:separate; border-spacing:0; background-color:#2f3a18; border:7px solid #efe4d1; border-radius:30px; overflow:hidden;">
+                      <tr>
+                        <td style="padding:32px 38px; background-color:#2f3a18; font-family:Trebuchet MS,Verdana,sans-serif; font-size:15px; line-height:25px; color:#e8d7bd;">
+                          <p style="margin:0 0 12px; font-family:Trebuchet MS,Verdana,sans-serif; font-size:10px; line-height:13px; letter-spacing:2px; text-transform:uppercase; color:#c3c76a;">Read next</p>
+                          <h2 style="margin:0; max-width:420px; font-family:Georgia,Times New Roman,serif; font-size:36px; line-height:38px; font-weight:400; color:#fff9ef;">How much protein do women over 35 really need?</h2>
+                          <p style="margin:16px 0 26px; max-width:496px; font-family:Trebuchet MS,Verdana,sans-serif; font-size:15px; line-height:25px; color:#e8d7bd;">A grounded guide to protein, energy, body composition, and why consistency matters more than perfection.</p>
+                          <p style="margin:0;"><a href="https://astroplate.netlify.app/journal/protein-for-women-over-35" target="_blank" style="display:inline-block; border-radius:999px; background-color:#fff9ef; padding:13px 22px; font-family:Trebuchet MS,Verdana,sans-serif; font-size:14px; line-height:20px; font-weight:bold; color:#17130d; text-decoration:none;">Read the journal</a></p>
+                        </td>
+                      </tr>
+                    </table>
+        -
+          align: top
+          customBlockId: null
+          dist: '12'
+          gutter: 0px
+          id: 7e88c448-26c7-4496-8540-8be25115f40b
+          isCustomBlock: null
+          moduleName: closing-note
+          sidebarSection: null
+          stylable: false
+          thumbnail: /assets/img/editor/grid_12.svg
+          title: Closing note
+          type: grid-row
+          layout:
+            320px:
+              display: rows
+              padding-left: 15px
+              padding-right: 15px
+              padding-top: 28px
+              width: 100%
+            default:
+              align: center
+              background-color: transparent
+              padding-bottom: 0px
+              padding-left: 14px
+              padding-right: 14px
+              padding-top: 30px
+              valign: top
+              width: 100%
+          content:
+            -
+              id: 34dcf428-f07c-4fea-b6dd-80b6ff4ff685
+              type: grid-column
+              title: Note
+              layout:
+                320px: []
+                default:
+                  padding-left: 0px
+                  padding-right: 0px
+                  valign: top
+              content:
+                -
+                  id: c7a2a9cf-3e6b-4d94-a213-33016be4d7d3
+                  type: text
+                  title: Quiet note
+                  stylable: false
+                  layout:
+                    320px:
+                      text-align: center
+                      width: 100%
+                    default:
+                      align: center
+                      text-align: center
+                      width: 100%
+                  content: '<p style="margin:0; font-family:Georgia,Times New Roman,serif; font-size:23px; line-height:31px; color:#17130d; text-align:center;">A quiet note to keep:</p><p style="margin:10px auto 0; max-width:470px; font-family:Trebuchet MS,Verdana,sans-serif; font-size:15px; line-height:25px; color:#514128; text-align:center;">The best wellness rhythm is not the one that looks impressive. It is the one you can return to with kindness.</p>'
+        -
+          align: top
+          customBlockId: null
+          dist: '12'
+          gutter: 0px
+          id: b013fb93-834d-4e3e-83c2-98eab0ad8d14
+          isCustomBlock: null
+          moduleName: footer
+          sidebarSection: null
+          stylable: false
+          thumbnail: /assets/img/editor/grid_12.svg
+          title: Footer
+          type: grid-row
+          layout:
+            320px:
+              display: rows
+              padding-left: 15px
+              padding-right: 15px
+              padding-top: 30px
+              width: 100%
+            default:
+              align: center
+              background-color: transparent
+              padding-bottom: 0px
+              padding-left: 14px
+              padding-right: 14px
+              padding-top: 30px
+              valign: top
+              width: 100%
+          content:
+            -
+              id: c20a17a0-76d6-4fa2-bddb-fcf35c240138
+              type: grid-column
+              title: Footer text
+              layout:
+                320px: []
+                default:
+                  border-color: '#d7cfbd'
+                  border-style: solid
+                  border-width: 1px 0px 0px 0px
+                  padding-left: 0px
+                  padding-right: 0px
+                  padding-top: 24px
+                  valign: top
+              content:
+                -
+                  id: e95dd498-7232-481f-b4f2-c35d109a9d7b
+                  type: text
+                  title: Legal and unsubscribe
+                  stylable: false
+                  layout:
+                    320px:
+                      text-align: center
+                      width: 100%
+                    default:
+                      align: center
+                      text-align: center
+                      width: 100%
+                  content: '<p style="margin:0; font-family:Trebuchet MS,Verdana,sans-serif; font-size:12px; line-height:21px; color:#7f704f; text-align:center;">You are receiving this because you joined the Becoming Elysian weekly wellness letter.<br><a href="{{ update_profile }}" target="_blank" style="color:#5c6328; text-decoration:underline;">Update preferences</a>&nbsp;&middot;&nbsp;<a href="{{ unsubscribe }}" target="_blank" style="color:#5c6328; text-decoration:underline;">Unsubscribe</a><br>&copy; 2026 Becoming Elysian. Educational wellness content, not medical advice.</p>'
+media:
+  320px:
+    max-width: 640
+    min-width: 0
+styles:
+  default:
+    properties:
+      color: '#514128'
+      font-family: 'Trebuchet MS'
+      font-size: 15px
+      line-height: '1.5'
+    title: Paragraph
+  default-button:
+    properties:
+      background-color: '#fff9ef'
+      border-color: '#fff9ef'
+      border-radius: 30px
+      border-width: 1px
+      color: '#17130d'
+      font-family: 'Trebuchet MS'
+      font-size: 14px
+      font-weight: bold
+      remove-vml-button: optional
+      width: 190px
+    title: Button
+  default-heading1:
+    properties:
+      color: '#17130d'
+      font-family: Georgia
+      font-size: 58px
+      font-weight: 400
+      line-height: '0.91'
+    title: 'Heading 1'
+  default-heading2:
+    properties:
+      color: '#17130d'
+      font-family: Georgia
+      font-size: 36px
+      font-weight: 400
+      line-height: '1.05'
+    title: 'Heading 2'
+  default-heading3:
+    properties:
+      color: '#17130d'
+      font-family: Georgia
+      font-size: 29px
+      font-weight: 400
+      line-height: '1.07'
+    title: 'Heading 3'
+  default-link:
+    properties:
+      color: '#5c6328'
+      text-decoration: underline
+    title: Link
