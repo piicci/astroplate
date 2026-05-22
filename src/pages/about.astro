@@ -58,6 +58,21 @@ const principles = [
 
 const heroImage = "/images/becoming-elysian-about-cover-q1oar.jpg";
 const articleImage = "/images/becoming-elysian-about-editorial.png";
+const heroTitle = "Health, without the harsh edges.";
+const revealQuote =
+  "We believe wellness should help women feel more supported, energized, resilient, and connected to themselves. Not more stressed. Not more overwhelmed. Not like they constantly need to fix themselves.";
+
+const revealWords = (text: string, step: number) =>
+  text
+    .trim()
+    .split(/\s+/)
+    .map((word, index) => ({
+      word,
+      delay: `${index * step}ms`,
+    }));
+
+const heroTitleWords = revealWords(heroTitle, 62);
+const revealQuoteWords = revealWords(revealQuote, 28);
 ---
 
 <Base
@@ -72,8 +87,20 @@ const articleImage = "/images/becoming-elysian-about-editorial.png";
         <div class="about-cover-grid">
           <div class="about-cover-copy">
             <p class="about-kicker">About Becoming Elysian</p>
-            <h1 class="about-reveal-title" id="about-cover-title">
-              Health, without the harsh edges.
+            <h1
+              class="about-reveal-title about-reveal-text"
+              id="about-cover-title"
+            >
+              {
+                heroTitleWords.map(({ word, delay }) => (
+                  <span
+                    class="about-reveal-word"
+                    style={`--about-word-delay: ${delay}`}
+                  >
+                    {word}{" "}
+                  </span>
+                ))
+              }
             </h1>
             <p class="about-deck">
               Becoming Elysian is a modern wellness platform for women who want
@@ -178,11 +205,17 @@ const articleImage = "/images/becoming-elysian-about-editorial.png";
               />
             </figure>
 
-            <blockquote class="about-reveal-quote">
-              We believe wellness should help women feel more supported,
-              energized, resilient, and connected to themselves. Not more
-              stressed. Not more overwhelmed. Not like they constantly need to
-              fix themselves.
+            <blockquote class="about-reveal-quote about-reveal-text">
+              {
+                revealQuoteWords.map(({ word, delay }) => (
+                  <span
+                    class="about-reveal-word"
+                    style={`--about-word-delay: ${delay}`}
+                  >
+                    {word}{" "}
+                  </span>
+                ))
+              }
             </blockquote>
 
             <div class="about-copy">
@@ -280,66 +313,40 @@ const articleImage = "/images/becoming-elysian-about-editorial.png";
 
 <script is:inline>
   const loadAboutTextReveal = () => {
-    const revealTargets = document.querySelectorAll(
-      ".about-reveal-title, .about-reveal-quote",
-    );
+    const revealTargets = document.querySelectorAll(".about-reveal-text");
     if (!revealTargets.length) return;
 
-    const prepareTargets = () => {
-      revealTargets.forEach((target) => {
-        if (target.dataset.split === "true") return;
-        target.dataset.split = "true";
-        const words = target.textContent.trim().split(/\s+/);
-        target.textContent = "";
-        words.forEach((word) => {
-          const span = document.createElement("span");
-          span.textContent = `${word} `;
-          span.style.opacity = "0.16";
-          target.appendChild(span);
-        });
-      });
+    const reveal = (target) => {
+      target.classList.add("is-revealed");
     };
 
-    const run = () => {
-      if (!window.gsap || !window.ScrollTrigger) return;
-      window.gsap.registerPlugin(window.ScrollTrigger);
-      prepareTargets();
-
-      revealTargets.forEach((target) => {
-        if (target.dataset.revealReady === "true") return;
-        target.dataset.revealReady = "true";
-        window.gsap.to(target.querySelectorAll("span"), {
-          opacity: 1,
-          stagger: target.classList.contains("about-reveal-quote")
-            ? 0.045
-            : 0.08,
-          ease: "none",
-          scrollTrigger: {
-            trigger: target,
-            start: "top 86%",
-            end: "bottom 42%",
-            scrub: true,
-          },
-        });
-      });
-    };
-
-    if (window.gsap && window.ScrollTrigger) {
-      run();
+    if (
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+      !("IntersectionObserver" in window)
+    ) {
+      revealTargets.forEach(reveal);
       return;
     }
 
-    const gsapScript = document.createElement("script");
-    gsapScript.src =
-      "https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js";
-    gsapScript.onload = () => {
-      const triggerScript = document.createElement("script");
-      triggerScript.src =
-        "https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js";
-      triggerScript.onload = run;
-      document.head.appendChild(triggerScript);
-    };
-    document.head.appendChild(gsapScript);
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          reveal(entry.target);
+          observer.unobserve(entry.target);
+        });
+      },
+      {
+        rootMargin: "0px 0px -12% 0px",
+        threshold: 0.15,
+      },
+    );
+
+    revealTargets.forEach((target) => {
+      if (target.dataset.revealObserved === "true") return;
+      target.dataset.revealObserved = "true";
+      observer.observe(target);
+    });
   };
 
   document.addEventListener("astro:page-load", loadAboutTextReveal);
@@ -676,12 +683,18 @@ const articleImage = "/images/becoming-elysian-about-editorial.png";
     line-height: 1.72;
   }
 
-  .about-reveal-title span {
-    will-change: opacity;
+  .about-reveal-word {
+    opacity: 0.16;
+    transition: opacity 520ms linear;
+    transition-delay: var(--about-word-delay, 0ms);
   }
 
-  .about-reveal-quote span {
-    will-change: opacity;
+  .about-reveal-text.is-revealed .about-reveal-word {
+    opacity: 1;
+  }
+
+  .about-reveal-quote .about-reveal-word {
+    transition-duration: 430ms;
   }
 
   .about-figure {
@@ -698,6 +711,15 @@ const articleImage = "/images/becoming-elysian-about-editorial.png";
     aspect-ratio: 16 / 8.8;
     object-fit: cover;
     filter: contrast(1.06) saturate(1.02);
+  }
+
+  .about-principles,
+  .about-figure,
+  .about-topic-spread,
+  .about-detail-grid,
+  .about-final-note {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 36rem;
   }
 
   .about-article blockquote {
@@ -990,6 +1012,11 @@ const articleImage = "/images/becoming-elysian-about-editorial.png";
   @media (prefers-reduced-motion: reduce) {
     .about-cover-figure {
       animation: none;
+    }
+
+    .about-reveal-word {
+      opacity: 1;
+      transition: none;
     }
   }
 </style>

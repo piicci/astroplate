@@ -39,8 +39,8 @@ body {
       rgba(255, 249, 239, 0.72) 48%,
       rgba(248, 241, 230, 0.98)
     );
-  background-attachment: fixed;
   min-height: 100vh;
+  position: relative;
 }
 
 @media (max-width: 767px) {
@@ -51,7 +51,7 @@ body {
 }
 
 body::after {
-  position: fixed;
+  position: absolute;
   inset: 0;
   pointer-events: none;
   background-image: radial-gradient(

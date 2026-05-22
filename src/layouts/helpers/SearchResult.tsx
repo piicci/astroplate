@@ -1,6 +1,29 @@
 import { plainify, titleify } from "@/lib/utils/textConverter";
 import React from "react";
 
+const assetImageUrls = import.meta.glob(
+  "/src/assets/images/**/*.{avif,gif,jpeg,jpg,png,svg,webp}",
+  {
+    eager: true,
+    import: "default",
+    query: "?url",
+  },
+) as Record<string, string>;
+
+const resolveSearchImage = (src?: string) => {
+  if (!src || /^(?:https?:)?\/\//.test(src) || src.startsWith("data:")) {
+    return src;
+  }
+
+  const assetKey = src.startsWith("/images/")
+    ? `/src/assets${src}`
+    : src.startsWith("/src/assets/")
+      ? src
+      : "";
+
+  return assetKey ? assetImageUrls[assetKey] || src : src;
+};
+
 export interface ISearchItem {
   group: string;
   slug: string;
@@ -146,7 +169,7 @@ const SearchResult = ({
                     {item.frontmatter.image && (
                       <div className="search-result-item-image">
                         <img
-                          src={item.frontmatter.image}
+                          src={resolveSearchImage(item.frontmatter.image)}
                           alt={item.frontmatter.title}
                         />
                       </div>

@@ -46,13 +46,13 @@ const showFaq = Boolean(faq_enable);
 const showPostCta = Boolean(post_cta_enable);
 ---
 
-<section class="section pt-7">
+<section class="be-post-single section pt-7">
   <div class="container">
     <div class="row justify-center">
-      <article class="lg:col-10">
+      <article class="be-post-article lg:col-9 xl:col-8">
         {
           image && (
-            <div class="mb-10">
+            <div class="be-post-hero-image mb-10">
               <ImageMod
                 src={image}
                 height={500}
@@ -60,19 +60,16 @@ const showPostCta = Boolean(post_cta_enable);
                 alt={title}
                 class="aspect-[16/9] w-full rounded-sm object-cover brightness-[1.06] contrast-[1.05] saturate-[1.03]"
                 format="webp"
+                loading="eager"
+                decoding="async"
+                fetchpriority="high"
               />
             </div>
           )
         }
-        <h1 set:html={markdownify(title)} class="h2 mb-4" />
-        {
-          subtitle && (
-            <p class="be-article-subtitle mb-7">
-              {subtitle}
-            </p>
-          )
-        }
-        <ul class="mb-4">
+        <h1 set:html={markdownify(title)} class="be-post-title mb-4" />
+        {subtitle && <p class="be-article-subtitle mb-7">{subtitle}</p>}
+        <ul class="be-post-meta mb-4">
           <li class="mr-4 inline-block">
             <a href={`/authors/${slugify(author)}`}>
               <FaRegUserCircle className={"mr-2 -mt-1 inline-block"} />
@@ -108,7 +105,7 @@ const showPostCta = Boolean(post_cta_enable);
             />
           )
         }
-        <div class="content mb-10">
+        <div class="content be-post-content mb-10">
           <Content />
         </div>
         {
@@ -131,7 +128,7 @@ const showPostCta = Boolean(post_cta_enable);
             />
           )
         }
-        <div class="row items-start justify-between">
+        <div class="be-post-actions row items-start justify-between">
           <div class="mb-10 flex items-center lg:col-5 lg:mb-0">
             <h5 class="mr-3">Tags :</h5>
             <ul>
@@ -164,7 +161,7 @@ const showPostCta = Boolean(post_cta_enable);
     </div>
 
     <!-- Related posts -->
-    <div class="section pb-0">
+    <div class="be-related-posts section pb-0">
       <h2 class="h3 mb-12 text-center">Related Posts</h2>
       <div class="row justify-center">
         {

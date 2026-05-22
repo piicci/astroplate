@@ -33,6 +33,24 @@ export interface Props {
 // destructure frontmatter
 const { title, meta_title, description, image, noindex, canonical } =
   Astro.props;
+
+const siteUrl = config.site.base_url.replace(/\/$/, "");
+const toAbsoluteUrl = (src?: string) => {
+  const value = src || config.metadata.meta_image;
+
+  if (!value) {
+    return "";
+  }
+
+  if (/^https?:\/\//.test(value)) {
+    return value;
+  }
+
+  return `${siteUrl}${value.startsWith("/") ? value : `/${value}`}`;
+};
+
+const pageUrl = new URL(Astro.url.pathname, siteUrl).toString();
+const metaImage = toAbsoluteUrl(image);
 ---
 
 <!doctype html>
@@ -131,10 +149,7 @@ const { title, meta_title, description, image, noindex, canonical } =
       )}
     />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content={`${config.site.base_url}/${Astro.url.pathname.replace("/", "")}`}
-    />
+    <meta property="og:url" content={pageUrl} />
 
     <!-- twitter-title -->
     <meta
@@ -155,17 +170,13 @@ const { title, meta_title, description, image, noindex, canonical } =
     <!-- og-image -->
     <meta
       property="og:image"
-      content={`${config.site.base_url}${
-        image ? image : config.metadata.meta_image
-      }`}
+      content={metaImage}
     />
 
     <!-- twitter-image -->
     <meta
       name="twitter:image"
-      content={`${config.site.base_url}${
-        image ? image : config.metadata.meta_image
-      }`}
+      content={metaImage}
     />
     <meta name="twitter:card" content="summary_large_image" />
   </head>

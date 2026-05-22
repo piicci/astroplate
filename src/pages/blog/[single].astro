@@ -2,6 +2,7 @@
 import Base from "@/layouts/Base.astro";
 import PostSingle from "@/layouts/PostSingle.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
+import { resolveOptimizedImageSrc } from "@/lib/utils/assetImages";
 
 export async function getStaticPaths() {
   const BLOG_FOLDER = "blog";
@@ -18,13 +19,19 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { title, meta_title, description, image } = post.data;
+const socialImage = await resolveOptimizedImageSrc(image, {
+  width: 1200,
+  height: 630,
+  format: "webp",
+  fit: "cover",
+});
 ---
 
 <Base
   title={title}
   meta_title={meta_title}
   description={description}
-  image={image}
+  image={socialImage}
 >
   <PostSingle post={post} />
 </Base>
