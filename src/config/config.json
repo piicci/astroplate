@@ -4,7 +4,7 @@
     "base_url": "https://becomingelysian.com",
     "base_path": "/",
     "trailing_slash": false,
-    "favicon": "/images/favicon.png",
+    "favicon": "/images/favicon.svg",
     "logo": "/images/be-logo-monogram.svg",
     "logo_darkmode": "/images/be-logo-monogram.svg",
     "logo_width": "36",
@@ -70,7 +70,7 @@
 
   "metadata": {
     "meta_author": "Becoming Elysian",
-    "meta_image": "/images/og-image.png",
+    "meta_image": "/images/becoming-elysian-about-cover.png",
     "meta_description": "Becoming Elysian is a modern wellness platform for women exploring fitness, nutrition, hormonal health, stress, recovery, and sustainable wellbeing through a grounded, evidence-informed lens."
   },
 

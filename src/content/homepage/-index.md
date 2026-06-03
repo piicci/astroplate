@@ -2,7 +2,7 @@
 title: Becoming Elysian | Wellness for Women
 meta_title: Becoming Elysian | Wellness for Women Over 35
 description: Becoming Elysian is a modern wellness platform for women over 35 exploring fitness, nutrition, hormonal health, stress, recovery, and sustainable wellbeing through a grounded, evidence-informed lens.
-image: /images/og-image.png
+image: /images/becoming-elysian-about-cover.png
 
 # Hero banner
 banner:

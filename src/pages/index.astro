@@ -47,7 +47,7 @@ const buttonClass = (button: HomepageButton, extra = "") =>
   title={home.title}
   meta_title={home.meta_title || home.title}
   description={home.description}
-  image={home.image || "/images/og-image.png"}
+  image={home.image || "/images/becoming-elysian-about-cover.png"}
 >
   <div class="be-home">
     <section class="be-hero relative overflow-hidden pt-14 pb-20 md:pt-20 lg:pb-28">
@@ -92,6 +92,7 @@ const buttonClass = (button: HomepageButton, extra = "") =>
                 format="webp"
                 fit="cover"
                 loading="eager"
+                fetchpriority="high"
               />
             </div>
             <div class="ml-auto mt-5 max-w-[21rem] border-l border-primary/45 pl-5 text-sm leading-6 text-text-light dark:border-darkmode-border dark:text-darkmode-text-light">
@@ -168,6 +169,7 @@ const buttonClass = (button: HomepageButton, extra = "") =>
                         class={`${index === 0 ? "aspect-[4/3]" : "aspect-[5/4]"} w-full object-cover brightness-[1.06] contrast-[1.05] saturate-[1.03] transition duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-[1.035]`}
                         format="webp"
                         fit="cover"
+                        loading="lazy"
                       />
                     </div>
                     <div class="p-5">
@@ -321,6 +323,7 @@ const buttonClass = (button: HomepageButton, extra = "") =>
               class="aspect-[4/3] w-full rounded-sm object-cover transition duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-[1.025]"
               format="webp"
               fit="cover"
+              loading="lazy"
             />
           </div>
           <div class="max-w-2xl">

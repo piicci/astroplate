@@ -22,9 +22,13 @@ const mountSearchModal = async () => {
         searchMount = mount;
       }
 
-      searchRoot.render(
-        React.createElement(SearchModal, { initialOpen: true }),
-      );
+      const root = searchRoot;
+
+      if (!root) {
+        return;
+      }
+
+      root.render(React.createElement(SearchModal, { initialOpen: true }));
     });
   }
 
