@@ -3,10 +3,11 @@ import Base from "@/layouts/Base.astro";
 import PostSingle from "@/layouts/PostSingle.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
 import { resolveOptimizedImageSrc } from "@/lib/utils/assetImages";
+import config from "@/config/config.json";
 
 export async function getStaticPaths() {
-  const BLOG_FOLDER = "blog";
-  const posts = await getSinglePage(BLOG_FOLDER);
+  const JOURNAL_COLLECTION = "journal";
+  const posts = await getSinglePage(JOURNAL_COLLECTION);
 
   return posts.map((post) => ({
     params: {
@@ -17,13 +18,103 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
-const { title, meta_title, description, image } = post.data;
+const {
+  title,
+  meta_title,
+  description,
+  image,
+  author,
+  date,
+  faq_enable,
+  faq_items,
+} = post.data;
+const siteUrl = config.site.base_url.replace(/\/$/, "");
+const postUrl = `${siteUrl}/journal/${post.id}`;
 const socialImage = await resolveOptimizedImageSrc(image, {
   width: 1200,
   height: 630,
   format: "webp",
   fit: "cover",
 });
+const absoluteImage = socialImage
+  ? socialImage.startsWith("http")
+    ? socialImage
+    : `${siteUrl}${socialImage.startsWith("/") ? socialImage : `/${socialImage}`}`
+  : undefined;
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: title,
+  description,
+  image: absoluteImage,
+  datePublished: date?.toISOString(),
+  dateModified: date?.toISOString(),
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": postUrl,
+  },
+  author: {
+    "@type": "Person",
+    name: author,
+  },
+  publisher: {
+    "@type": "Organization",
+    name: config.site.title,
+    logo: {
+      "@type": "ImageObject",
+      url: `${siteUrl}${config.site.logo}`,
+    },
+  },
+};
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: siteUrl,
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Journal",
+      item: `${siteUrl}/journal`,
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: title,
+      item: postUrl,
+    },
+  ],
+};
+const faqSchema =
+  faq_enable && faq_items?.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faq_items
+          .filter((item) => item.question && item.answer)
+          .map((item) => ({
+            "@type": "Question",
+            name: item.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: item.answer,
+            },
+          })),
+      }
+    : undefined;
+const isStructuredData = (item: unknown): item is Record<string, unknown> =>
+  Boolean(item);
+const maybeStructuredData: unknown[] = [
+  articleSchema,
+  breadcrumbSchema,
+  faqSchema,
+];
+const structuredData = maybeStructuredData.filter(isStructuredData);
 ---
 
 <Base
@@ -31,6 +122,9 @@ const socialImage = await resolveOptimizedImageSrc(image, {
   meta_title={meta_title}
   description={description}
   image={socialImage}
+  canonical={`/journal/${post.id}`}
+  ogType="article"
+  structuredData={structuredData}
 >
   <PostSingle post={post} />
 </Base>

@@ -1,5 +1,5 @@
 ---
-import BlogCard from "@/components/BlogCard.astro";
+import JournalCard from "@/components/JournalCard.astro";
 import ImageMod from "@/components/ImageMod.astro";
 import Social from "@/components/Social.astro";
 import Base from "@/layouts/Base.astro";
@@ -26,8 +26,8 @@ const { title, social, meta_title, description, image } = author.data;
 const { Content } = await render(author);
 
 // get all posts by author
-const BLOG_FOLDER = "blog";
-const posts = await getSinglePage(BLOG_FOLDER);
+const JOURNAL_COLLECTION = "journal";
+const posts = await getSinglePage(JOURNAL_COLLECTION);
 const postFilterByAuthor = posts.filter(
   (post) => slugify(post.data.author) === slugify(title)
 );
@@ -38,6 +38,7 @@ const postFilterByAuthor = posts.filter(
   meta_title={meta_title}
   description={description}
   image={image}
+  noindex={true}
 >
   <section class="section-sm pb-0">
     <div class="container">
@@ -69,7 +70,7 @@ const postFilterByAuthor = posts.filter(
         {
           postFilterByAuthor.map((post) => (
             <div class="mb-12 md:col-6 lg:col-4">
-              <BlogCard data={post} />
+              <JournalCard data={post} />
             </div>
           ))
         }

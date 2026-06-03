@@ -59,24 +59,24 @@ featured_articles:
       excerpt: A grounded guide to eating in a way that supports energy,
         strength, blood sugar, hormones, and long-term wellbeing after 35.
       link: /journal/nutrition-for-women-over-35
-      image: /images/becoming-elysian-about-editorial.png
-      image_alt: Editorial wellness setting with neutral tones and sage accents
+      image: /images/journal/nutrition-for-women-over-35/becoming-elysian-nutrition-over-35-hero.webp
+      image_alt: Editorial nutrition scene for women over 35 with nourishing foods and warm natural light
     - category: Nutrition & Metabolic Health
-      title: How Much Protein Do Women Over 35 Really Need?
+      title: Why Protein Matters More as You Age
       excerpt: Why protein becomes more important with age, how it supports
-        muscle and metabolism, and how to build it into your meals without
-        overcomplicating your diet.
-      link: /journal/protein-for-women-over-35
-      image: /images/og-image.png
-      image_alt: Calm neutral wellness editorial scene with soft natural light
+        muscle, metabolism, recovery, and steadier energy, and how to build it
+        into your meals without overcomplicating your diet.
+      link: /journal/why-protein-matters-more-as-you-age
+      image: /images/journal/why-protein-matters-more-as-you-age/becoming-elysian-protein-aging-hero.webp
+      image_alt: Serene Mediterranean wellness scene with fresh produce in warm natural light
     - category: Fitness & Strength
-      title: Strength Training for Women Over 35
-      subtitle: A Smarter Way to Build Muscle, Energy, and Confidence
-      excerpt: A clear introduction to strength training for women who want to
-        feel capable, support their metabolism, and age with more resilience.
-      link: /journal/strength-training-for-women-over-35
-      image: /images/becoming-elysian-about-editorial.png
-      image_alt: Woman enjoying a calm morning wellness routine in soft natural light
+      title: Simple Ways to Reduce Afternoon Energy Crashes
+      subtitle: Gentle Strategies for Steadier Energy
+      excerpt: Practical ways to support steadier afternoons with balanced meals,
+        hydration, light movement, sleep rhythms, and sustainable daily habits.
+      link: /journal/simple-ways-to-reduce-afternoon-energy-crashes
+      image: /images/journal/simple-ways-to-reduce-afternoon-energy-crashes/becoming-elysian-afternoon-energy-crash-clock-hero.webp
+      image_alt: Calm wellness scene for steadier afternoon energy in warm natural light
 
 # Newsletter section
 newsletter:

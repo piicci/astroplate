@@ -28,13 +28,29 @@ export interface Props {
   image?: string;
   noindex?: boolean;
   canonical?: string;
+  ogType?: "website" | "article";
+  structuredData?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 // destructure frontmatter
-const { title, meta_title, description, image, noindex, canonical } =
-  Astro.props;
+const {
+  title,
+  meta_title,
+  description,
+  image,
+  noindex,
+  canonical,
+  ogType = "website",
+  structuredData,
+} = Astro.props;
 
 const siteUrl = config.site.base_url.replace(/\/$/, "");
+const pageTitle = plainify(
+  meta_title ? meta_title : title ? title : config.site.title,
+);
+const pageDescription = plainify(
+  description ? description : config.metadata.meta_description,
+);
 const toAbsoluteUrl = (src?: string) => {
   const value = src || config.metadata.meta_image;
 
@@ -50,7 +66,36 @@ const toAbsoluteUrl = (src?: string) => {
 };
 
 const pageUrl = new URL(Astro.url.pathname, siteUrl).toString();
+const canonicalUrl = canonical ? toAbsoluteUrl(canonical) : pageUrl;
 const metaImage = toAbsoluteUrl(image);
+const globalStructuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: config.site.title,
+    url: siteUrl,
+    logo: toAbsoluteUrl(config.site.logo),
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: config.site.title,
+    url: siteUrl,
+    description: config.metadata.meta_description,
+    publisher: {
+      "@type": "Organization",
+      name: config.site.title,
+    },
+  },
+];
+const pageStructuredData = Array.isArray(structuredData)
+  ? structuredData
+  : structuredData
+    ? [structuredData]
+    : [];
+const jsonLd = [...globalStructuredData, ...pageStructuredData];
+const stringifyJsonLd = (value: Record<string, unknown>) =>
+  JSON.stringify(value).replace(/</g, "\\u003c");
 ---
 
 <!doctype html>
@@ -63,9 +108,13 @@ const metaImage = toAbsoluteUrl(image);
       )
     }
     <!-- favicon -->
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
     <link rel="shortcut icon" href={config.site.favicon} />
     <!-- theme meta -->
-    <meta name="theme-name" content="astroplate" />
+    <meta name="theme-name" content="becoming-elysian" />
     <meta name="msapplication-TileColor" content="#000000" />
     <meta
       name="theme-color"
@@ -95,12 +144,16 @@ const metaImage = toAbsoluteUrl(image);
     />
 
     <!-- title -->
-    <title>
-      {plainify(meta_title ? meta_title : title ? title : config.site.title)}
-    </title>
+    <title>{pageTitle}</title>
 
     <!-- canonical url -->
-    {canonical && <link rel="canonical" href={canonical} item-prop="url" />}
+    <link rel="canonical" href={canonicalUrl} item-prop="url" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title={`${config.site.title} RSS Feed`}
+      href={`${siteUrl}/rss.xml`}
+    />
 
     <!-- noindex robots -->
     {noindex && <meta name="robots" content="noindex,nofollow" />}
@@ -108,9 +161,7 @@ const metaImage = toAbsoluteUrl(image);
     <!-- meta-description -->
     <meta
       name="description"
-      content={plainify(
-        description ? description : config.metadata.meta_description,
-      )}
+      content={pageDescription}
     />
 
     <ClientRouter />
@@ -134,38 +185,19 @@ const metaImage = toAbsoluteUrl(image);
     <meta name="author" content={config.metadata.meta_author} />
 
     <!-- og-title -->
-    <meta
-      property="og:title"
-      content={plainify(
-        meta_title ? meta_title : title ? title : config.site.title,
-      )}
-    />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:site_name" content={config.site.title} />
 
     <!-- og-description -->
-    <meta
-      property="og:description"
-      content={plainify(
-        description ? description : config.metadata.meta_description,
-      )}
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={pageUrl} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonicalUrl} />
 
     <!-- twitter-title -->
-    <meta
-      name="twitter:title"
-      content={plainify(
-        meta_title ? meta_title : title ? title : config.site.title,
-      )}
-    />
+    <meta name="twitter:title" content={pageTitle} />
 
     <!-- twitter-description -->
-    <meta
-      name="twitter:description"
-      content={plainify(
-        description ? description : config.metadata.meta_description,
-      )}
-    />
+    <meta name="twitter:description" content={pageDescription} />
 
     <!-- og-image -->
     <meta
@@ -179,6 +211,15 @@ const metaImage = toAbsoluteUrl(image);
       content={metaImage}
     />
     <meta name="twitter:card" content="summary_large_image" />
+    {
+      jsonLd.map((item) => (
+        <script
+          is:inline
+          type="application/ld+json"
+          set:html={stringifyJsonLd(item)}
+        ></script>
+      ))
+    }
   </head>
   <body class="flex flex-col min-h-screen">
     {/* google tag manager noscript */}

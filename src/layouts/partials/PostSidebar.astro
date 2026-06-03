@@ -1,7 +1,16 @@
 ---
 import { humanize } from "@/lib/utils/textConverter";
 
-const { tags, categories, allCategories } = Astro.props;
+const { tags, categories, allCategories, allTags = [] } = Astro.props;
+
+const tagCounts = allTags.reduce((counts: Record<string, number>, tag: string) => {
+  counts[tag] = (counts[tag] || 0) + 1;
+  return counts;
+}, {});
+const sortedTags = [...tags].sort(
+  (a: string, b: string) =>
+    (tagCounts[b] || 0) - (tagCounts[a] || 0) || a.localeCompare(b),
+);
 ---
 
 <div class="lg:col-4">
@@ -36,7 +45,7 @@ const { tags, categories, allCategories } = Astro.props;
     <div class="rounded-sm border border-border/70 bg-body/70 p-6 shadow-[0_18px_60px_-52px_rgba(23,19,13,0.32)] dark:border-darkmode-border dark:bg-darkmode-light">
       <ul>
         {
-          tags.map((tag: any) => {
+          sortedTags.map((tag: any) => {
             return (
               <li class="inline-block">
                 <a
@@ -44,6 +53,9 @@ const { tags, categories, allCategories } = Astro.props;
                   href={`/tags/${tag}`}
                 >
                   {humanize(tag)}
+                  {tagCounts[tag] && (
+                    <span class="ml-1 text-xs opacity-70">({tagCounts[tag]})</span>
+                  )}
                 </a>
               </li>
             );

@@ -1,11 +1,9 @@
 ---
-import config from "@/config/config.json";
 import Base from "@/layouts/Base.astro";
 import { getListPage } from "@/lib/contentParser.astro";
 import PageHeader from "@/partials/PageHeader.astro";
 
 const contactIndex = await getListPage("contact", "-index");
-const { contact_form_action }: { contact_form_action: string } = config.params;
 const { title, description, meta_title, image } = contactIndex.data;
 
 if (contactIndex.data.draft) {
@@ -24,7 +22,21 @@ if (contactIndex.data.draft) {
     <div class="container">
       <div class="row">
         <div class="mx-auto md:col-10 lg:col-6">
-          <form action={contact_form_action} method="POST">
+          <form
+            class="contact-form"
+            name="contact"
+            action="/__forms.html"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            novalidate
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="source" value="contact-page" />
+            <input type="hidden" name="subject" value="New Becoming Elysian contact message" />
+            <p class="hidden" aria-hidden="true">
+              <label>Do not fill this out: <input name="bot-field" /></label>
+            </p>
             <div class="mb-6">
               <label for="name" class="form-label">
                 Full Name <span class="text-red-500">*</span>
@@ -33,40 +45,130 @@ if (contactIndex.data.draft) {
                 id="name"
                 name="name"
                 class="form-input"
-                placeholder="John Doe"
+                placeholder="Your name"
                 type="text"
+                autocomplete="name"
                 required
               />
+              <p class="mt-2 hidden text-sm text-[#9f3f32]" data-error-name>
+                Please enter your name.
+              </p>
             </div>
             <div class="mb-6">
               <label for="email" class="form-label">
-                Working Mail <span class="text-red-500">*</span>
+                Email Address <span class="text-red-500">*</span>
               </label>
               <input
                 id="email"
                 name="email"
                 class="form-input"
-                placeholder="john.doe@email.com"
+                placeholder="you@example.com"
                 type="email"
+                autocomplete="email"
                 required
               />
+              <p class="mt-2 hidden text-sm text-[#9f3f32]" data-error-email>
+                Please enter a valid email address.
+              </p>
             </div>
             <div class="mb-6">
               <label for="message" class="form-label">
-                Anything else? <span class="text-red-500">*</span>
+                Message <span class="text-red-500">*</span>
               </label>
               <textarea
                 id="message"
                 name="message"
                 class="form-input"
-                placeholder="Message goes here..."
+                placeholder="How can we help?"
                 required
                 rows="8"></textarea>
+              <p class="mt-2 hidden text-sm text-[#9f3f32]" data-error-message>
+                Please enter a message.
+              </p>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" data-submit-label="Send Message">
+              Send Message
+            </button>
+            <p class="mt-4 hidden rounded-sm border border-primary/40 bg-body/70 px-4 py-3 text-sm text-text-dark dark:text-darkmode-text-dark" data-success>
+              Thank you. Your message has been sent.
+            </p>
+            <p class="mt-4 hidden rounded-sm border border-[#9f3f32]/35 bg-[#9f3f32]/10 px-4 py-3 text-sm text-[#9f3f32]" data-error-submit>
+              Something went wrong. Please try again.
+            </p>
           </form>
         </div>
       </div>
     </div>
   </section>
+
+  <script is:inline>
+    const contactForms = document.querySelectorAll(".contact-form");
+
+    const submitNetlifyContactForm = async (form) => {
+      const isLocal = ["localhost", "127.0.0.1"].includes(window.location.hostname);
+
+      if (isLocal) {
+        await new Promise((resolve) => window.setTimeout(resolve, 350));
+        return;
+      }
+
+      const response = await fetch("/__forms.html", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(new FormData(form)).toString(),
+      });
+
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
+    };
+
+    contactForms.forEach((form) => {
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const botField = form.querySelector('[name="bot-field"]');
+        const name = form.querySelector('[name="name"]');
+        const email = form.querySelector('[name="email"]');
+        const message = form.querySelector('[name="message"]');
+        const nameError = form.querySelector("[data-error-name]");
+        const emailError = form.querySelector("[data-error-email]");
+        const messageError = form.querySelector("[data-error-message]");
+        const success = form.querySelector("[data-success]");
+        const submitError = form.querySelector("[data-error-submit]");
+        const button = form.querySelector("button[type='submit']");
+        const validName = name.value.trim().length > 0;
+        const validEmail = email.value.trim().includes("@") && email.value.trim().includes(".");
+        const validMessage = message.value.trim().length > 0;
+
+        if (botField?.value) {
+          return;
+        }
+
+        nameError.classList.toggle("hidden", validName);
+        emailError.classList.toggle("hidden", validEmail);
+        messageError.classList.toggle("hidden", validMessage);
+        success.classList.add("hidden");
+        submitError.classList.add("hidden");
+
+        if (!validName || !validEmail || !validMessage) {
+          return;
+        }
+
+        button.disabled = true;
+        button.textContent = "Sending...";
+
+        try {
+          await submitNetlifyContactForm(form);
+          form.reset();
+          success.classList.remove("hidden");
+        } catch (error) {
+          submitError.classList.remove("hidden");
+        } finally {
+          button.disabled = false;
+          button.textContent = button.dataset.submitLabel || "Send Message";
+        }
+      });
+    });
+  </script>
 </Base>

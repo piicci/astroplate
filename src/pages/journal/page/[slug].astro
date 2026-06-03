@@ -1,5 +1,5 @@
 ---
-import BlogCard from "@/components/BlogCard.astro";
+import JournalCard from "@/components/JournalCard.astro";
 import Pagination from "@/components/Pagination.astro";
 import config from "@/config/config.json";
 import Base from "@/layouts/Base.astro";
@@ -9,20 +9,21 @@ import { sortByDate } from "@/lib/utils/sortFunctions";
 import PageHeader from "@/partials/PageHeader.astro";
 import PostSidebar from "@/partials/PostSidebar.astro";
 
-const BLOG_FOLDER = "blog";
+const JOURNAL_COLLECTION = "journal";
 const JOURNAL_ROUTE = "journal";
 
 const { slug } = Astro.params;
-const postIndex = await getListPage(BLOG_FOLDER, "-index");
+const postIndex = await getListPage(JOURNAL_COLLECTION, "-index");
 
 if (postIndex.data.draft) {
   return Astro.redirect("/404");
 }
 
-const posts = await getSinglePage(BLOG_FOLDER);
-const allCategories = await getAllTaxonomy(BLOG_FOLDER, "categories");
-const categories = await getTaxonomy(BLOG_FOLDER, "categories");
-const tags = await getTaxonomy(BLOG_FOLDER, "tags");
+const posts = await getSinglePage(JOURNAL_COLLECTION);
+const allCategories = await getAllTaxonomy(JOURNAL_COLLECTION, "categories");
+const allTags = await getAllTaxonomy(JOURNAL_COLLECTION, "tags");
+const categories = await getTaxonomy(JOURNAL_COLLECTION, "categories");
+const tags = await getTaxonomy(JOURNAL_COLLECTION, "tags");
 const sortedPosts = sortByDate(posts);
 const totalPages = Math.ceil(posts.length / config.settings.pagination);
 const currentPage = slug && !isNaN(Number(slug)) ? Number(slug) : 1;
@@ -31,8 +32,8 @@ const indexOfFirstPost = indexOfLastPost - config.settings.pagination;
 const currentPosts = sortedPosts.slice(indexOfFirstPost, indexOfLastPost);
 
 export async function getStaticPaths() {
-  const BLOG_FOLDER = "blog";
-  const posts = await getSinglePage(BLOG_FOLDER);
+  const JOURNAL_COLLECTION = "journal";
+  const posts = await getSinglePage(JOURNAL_COLLECTION);
   const totalPages = Math.ceil(posts.length / config.settings.pagination);
   const paths = [];
 
@@ -52,6 +53,7 @@ export async function getStaticPaths() {
   meta_title={postIndex.data.meta_title}
   image={postIndex.data.image}
   description={postIndex.data.description}
+  noindex={true}
 >
   <PageHeader title={postIndex.data.title} />
   <section class="section">
@@ -62,7 +64,7 @@ export async function getStaticPaths() {
             {
               currentPosts.map((post) => (
                 <div class="mb-14 md:col-6">
-                  <BlogCard data={post} />
+                  <JournalCard data={post} />
                 </div>
               ))
             }
@@ -78,6 +80,7 @@ export async function getStaticPaths() {
           categories={categories}
           tags={tags}
           allCategories={allCategories}
+          allTags={allTags}
         />
       </div>
     </div>

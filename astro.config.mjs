@@ -56,7 +56,13 @@ export default defineConfig({
   fonts: fontsConfig,
   integrations: [
     react(),
-    sitemap(),
+    sitemap({
+      filter: (page) => {
+        const { pathname } = new URL(page);
+        return !/^\/(?:authors|categories|tags)(?:\/|$)/.test(pathname) &&
+          !/^\/journal\/page\//.test(pathname);
+      },
+    }),
     AutoImport({
       imports: [
         "@/shortcodes/Button",

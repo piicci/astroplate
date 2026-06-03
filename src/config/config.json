@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "Becoming Elysian",
-    "base_url": "https://astroplate.netlify.app",
+    "base_url": "https://becomingelysian.com",
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
@@ -18,8 +18,7 @@
     "theme_switcher": false,
     "default_theme": "system",
     "pagination": 2,
-    "summary_length": 200,
-    "blog_folder": "journal"
+    "summary_length": 200
   },
 
   "announcement": {
@@ -46,7 +45,7 @@
 
   "comments": {
     "enable": true,
-    "provider": "giscus",
+    "provider": "utterances",
     "title": "Join the conversation",
     "description": "Share a thoughtful note, question, or lived observation.",
     "giscus": {
@@ -65,7 +64,7 @@
     "utterances": {
       "repo": "piicci/becoming-elysian",
       "issue_term": "pathname",
-      "label": "comment"
+      "label": "journal-comment"
     }
   },
 
@@ -80,6 +79,13 @@
     "generate_llms_full_txt": true,
     "generate_individual_md": true,
     "include": [],
-    "exclude": []
+    "exclude": [
+      "brevo-*",
+      "elements",
+      "authors",
+      "categories",
+      "tags",
+      "journal/page"
+    ]
   }
 }

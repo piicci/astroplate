@@ -4,20 +4,28 @@ import { getAllTaxonomy, getTaxonomy } from "@/lib/taxonomyParser.astro";
 import { humanize } from "@/lib/utils/textConverter";
 import PageHeader from "@/partials/PageHeader.astro";
 
-const BLOG_FOLDER = "blog";
+const JOURNAL_COLLECTION = "journal";
 
-const tags = await getTaxonomy(BLOG_FOLDER, "tags");
-const allTags = await getAllTaxonomy(BLOG_FOLDER, "tags");
+const tags = await getTaxonomy(JOURNAL_COLLECTION, "tags");
+const allTags = await getAllTaxonomy(JOURNAL_COLLECTION, "tags");
+const tagCounts = allTags.reduce((counts: Record<string, number>, tag: string) => {
+  counts[tag] = (counts[tag] || 0) + 1;
+  return counts;
+}, {});
+const sortedTags = [...tags].sort(
+  (a: string, b: string) =>
+    (tagCounts[b] || 0) - (tagCounts[a] || 0) || a.localeCompare(b),
+);
 ---
 
-<Base title={"Tags"}>
+<Base title={"Tags"} noindex={true}>
   <PageHeader title={"Tags"} />
   <section class="section">
     <div class="container text-center">
       <ul>
         {
-          tags.map((tag: any) => {
-            const count = allTags.filter((c) => c === tag).length;
+          sortedTags.map((tag: any) => {
+            const count = tagCounts[tag] || 0;
             return (
               <li class="m-3 inline-block">
                 <a

@@ -12,11 +12,10 @@ type HomepageButton = {
 
 const homepage = await getListPage("homepage", "-index");
 const home = homepage.data;
-const posts = await getSinglePage("blog");
+const posts = await getSinglePage("journal");
 const postsByLink = new Map(
   posts.flatMap((post) => [
     [`/journal/${post.id}`, post],
-    [`/blog/${post.id}`, post],
   ]),
 );
 
@@ -154,16 +153,18 @@ const buttonClass = (button: HomepageButton, extra = "") =>
             home.featured_articles.articles.map((article, index) => {
               const linkedPost = postsByLink.get(article.link);
               const subtitle = linkedPost?.data.subtitle || article.subtitle;
+              const image = linkedPost?.data.image || article.image;
+              const imageAlt = article.image_alt || linkedPost?.data.title || article.title;
 
               return (
                 <article class={`group overflow-hidden rounded-sm border border-border/70 bg-white/28 p-3 shadow-[0_22px_70px_-58px_rgba(23,19,13,0.28)] transition duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-1 hover:border-primary dark:border-darkmode-border dark:bg-darkmode-light/40 ${index === 0 ? "lg:mt-0" : index === 1 ? "lg:mt-14" : "lg:mt-7"}`}>
                   <a href={article.link} class="block">
                     <div class="overflow-hidden rounded-sm">
                       <ImageMod
-                        src={article.image}
+                        src={image}
                         width={560}
                         height={360}
-                        alt={article.image_alt}
+                        alt={imageAlt}
                         class={`${index === 0 ? "aspect-[4/3]" : "aspect-[5/4]"} w-full object-cover brightness-[1.06] contrast-[1.05] saturate-[1.03] transition duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-[1.035]`}
                         format="webp"
                         fit="cover"

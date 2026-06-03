@@ -1,8 +1,8 @@
 {
-  "name": "astroplate",
+  "name": "becoming-elysian",
   "version": "6.1.0",
-  "description": "Astro and Tailwindcss boilerplate",
-  "author": "zeon.studio",
+  "description": "Becoming Elysian wellness website",
+  "author": "Becoming Elysian",
   "license": "MIT",
   "packageManager": "yarn@1.22.22",
   "type": "module",

@@ -1,5 +1,5 @@
 ---
-import BlogCard from "@/components/BlogCard.astro";
+import JournalCard from "@/components/JournalCard.astro";
 import Comments from "@/components/Comments.astro";
 import Share from "@/components/Share.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
@@ -13,7 +13,7 @@ import PostCta from "./components/PostCta.astro";
 import PostFaq from "./components/PostFaq.astro";
 import PostTldr from "./components/PostTldr.astro";
 
-const COLLECTION_FOLDER = "blog";
+const COLLECTION_FOLDER = "journal";
 const { post } = Astro.props;
 
 const posts = await getSinglePage(COLLECTION_FOLDER);
@@ -55,11 +55,13 @@ const showPostCta = Boolean(post_cta_enable);
             <div class="be-post-hero-image mb-10">
               <ImageMod
                 src={image}
-                height={500}
-                width={1200}
+                height={450}
+                width={800}
                 alt={title}
                 class="aspect-[16/9] w-full rounded-sm object-cover brightness-[1.06] contrast-[1.05] saturate-[1.03]"
                 format="webp"
+                fit="cover"
+                densities={[1, 2]}
                 loading="eager"
                 decoding="async"
                 fetchpriority="high"
@@ -152,7 +154,7 @@ const showPostCta = Boolean(post_cta_enable);
               className="social-icons"
               title={title}
               description={description}
-              slug={post.id}
+              slug={`journal/${post.id}`}
             />
           </div>
         </div>
@@ -167,7 +169,7 @@ const showPostCta = Boolean(post_cta_enable);
         {
           similarPosts.map((post) => (
             <div class="lg:col-4 md:col-6 mb-14">
-              <BlogCard data={post} />
+              <JournalCard data={post} />
             </div>
           ))
         }

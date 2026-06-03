@@ -48,8 +48,8 @@
 - 📞 Contact
 - 👥 Authors
 - 👤 Author Single
-- 📝 Blog
-- 📝 Blog Single
+- 📝 Journal
+- 📝 Journal Single
 - 🚫 Custom 404
 - 💡 Elements
 - 📄 Privacy Policy
@@ -116,8 +116,8 @@ Configuration is in `src/config/config.json` under `llms`:
 - `generate_llms_txt`: create `llms.txt`
 - `generate_llms_full_txt`: create `llms-full.txt`
 - `generate_individual_md`: create individual `.md` files
-- `include`: include only selected routes/globs (empty = all files). Examples: `/about`, `/blog/**` (all files in blog folder)
-- `exclude`: exclude routes/globs on top of defaults. Example: `/blog/index.html`
+- `include`: include only selected routes/globs (empty = all files). Examples: `/about`, `/journal/**` (all files in journal folder)
+- `exclude`: exclude routes/globs on top of defaults. Example: `/journal/index.html`
 
 ### 👉 Preview on Cloudflare Workers
 

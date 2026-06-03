@@ -1,4 +1,5 @@
-import { getImage, type ImageMetadata } from "astro:assets";
+import type { ImageMetadata } from "astro";
+import { getImage } from "astro:assets";
 
 type ImageModule = () => Promise<{ default: ImageMetadata }>;
 type ImageTransformOptions = {
