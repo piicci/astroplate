@@ -1,21 +1,32 @@
 import searchData from ".json/search.json";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import SearchResult, { type ISearchItem } from "./SearchResult";
 
-const SearchModal = () => {
+interface Props {
+  initialOpen?: boolean;
+}
+
+const escapeRegExp = (value: string) =>
+  value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+const SearchModal = ({ initialOpen = false }: Props) => {
+  const modalRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
   const [searchString, setSearchString] = useState("");
+  const [isOpen, setIsOpen] = useState(initialOpen);
+  const [selectedIndex, setSelectedIndex] = useState(-1);
 
   // handle input change
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchString(e.currentTarget.value.replace("\\", "").toLowerCase());
+    setSearchString(e.currentTarget.value.toLowerCase());
   };
 
   // generate search result
   const doSearch = (searchData: ISearchItem[]) => {
-    const regex = new RegExp(`${searchString}`, "gi");
     if (searchString === "") {
       return [];
     } else {
+      const regex = new RegExp(escapeRegExp(searchString), "gi");
       const searchResult = searchData.filter((item) => {
         const title = item.frontmatter.title.toLowerCase().match(regex);
         const description = item.frontmatter.description
@@ -40,91 +51,104 @@ const SearchModal = () => {
   };
 
   // get search result
-  const startTime = performance.now();
-  const searchResult = doSearch(searchData);
-  const endTime = performance.now();
-  const totalTime = ((endTime - startTime) / 1000).toFixed(3);
+  const { searchResult, totalTime } = useMemo(() => {
+    const startTime = performance.now();
+    const searchResult = doSearch(searchData);
+    const endTime = performance.now();
 
-  // search dom manipulation
-  useEffect(() => {
-    const searchModal = document.getElementById("searchModal");
-    const searchInput = document.getElementById("searchInput");
-    const searchModalOverlay = document.getElementById("searchModalOverlay");
-    const searchResultItems = document.querySelectorAll("#searchItem");
-    const searchModalTriggers = document.querySelectorAll(
-      "[data-search-trigger]",
-    );
-
-    // search modal open
-    searchModalTriggers.forEach((button) => {
-      button.addEventListener("click", function () {
-        const searchModal = document.getElementById("searchModal");
-        searchModal!.classList.add("show");
-        searchInput!.focus();
-      });
-    });
-
-    // search modal close
-    searchModalOverlay!.addEventListener("click", function () {
-      searchModal!.classList.remove("show");
-    });
-
-    // keyboard navigation
-    let selectedIndex = -1;
-
-    const updateSelection = () => {
-      searchResultItems.forEach((item, index) => {
-        if (index === selectedIndex) {
-          item.classList.add("search-result-item-active");
-        } else {
-          item.classList.remove("search-result-item-active");
-        }
-      });
-
-      searchResultItems[selectedIndex]?.scrollIntoView({
-        behavior: "smooth",
-        block: "nearest",
-      });
+    return {
+      searchResult,
+      totalTime: ((endTime - startTime) / 1000).toFixed(3),
     };
+  }, [searchString]);
 
-    document.addEventListener("keydown", function (event) {
-      if ((event.metaKey || event.ctrlKey) && event.key === "k") {
-        searchModal!.classList.add("show");
-        searchInput!.focus();
-        updateSelection();
+  useEffect(() => {
+    setSelectedIndex(-1);
+  }, [searchString]);
+
+  useEffect(() => {
+    if (isOpen) {
+      requestAnimationFrame(() => inputRef.current?.focus());
+    }
+  }, [isOpen]);
+
+  useEffect(() => {
+    const openSearch = () => setIsOpen(true);
+
+    window.addEventListener("be:open-search", openSearch);
+
+    return () => window.removeEventListener("be:open-search", openSearch);
+  }, []);
+
+  useEffect(() => {
+    const searchResultItems =
+      modalRef.current?.querySelectorAll("#searchItem") ?? [];
+
+    searchResultItems.forEach((item, index) => {
+      if (index === selectedIndex) {
+        item.classList.add("search-result-item-active");
+        item.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+        });
+      } else {
+        item.classList.remove("search-result-item-active");
       }
+    });
+  }, [selectedIndex, searchResult]);
 
-      if (event.key === "ArrowUp" || event.key === "ArrowDown") {
+  useEffect(() => {
+    const handleKeydown = (event: KeyboardEvent) => {
+      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
         event.preventDefault();
+        setIsOpen(true);
+        return;
       }
+
+      if (!isOpen) {
+        return;
+      }
+
+      const searchResultItems =
+        modalRef.current?.querySelectorAll("#searchItem") ?? [];
 
       if (event.key === "Escape") {
-        searchModal!.classList.remove("show");
-      }
-
-      if (event.key === "ArrowUp" && selectedIndex > 0) {
-        selectedIndex--;
-      } else if (
-        event.key === "ArrowDown" &&
-        selectedIndex < searchResultItems.length - 1
-      ) {
-        selectedIndex++;
+        setIsOpen(false);
+      } else if (event.key === "ArrowUp") {
+        event.preventDefault();
+        setSelectedIndex((index) => Math.max(index - 1, 0));
+      } else if (event.key === "ArrowDown") {
+        event.preventDefault();
+        setSelectedIndex((index) =>
+          Math.min(index + 1, searchResultItems.length - 1),
+        );
       } else if (event.key === "Enter") {
         const activeLink = document.querySelector(
           ".search-result-item-active a",
         ) as HTMLAnchorElement;
+
         if (activeLink) {
           activeLink?.click();
         }
       }
+    };
 
-      updateSelection();
-    });
-  }, [searchString]);
+    document.addEventListener("keydown", handleKeydown);
+
+    return () => document.removeEventListener("keydown", handleKeydown);
+  }, [isOpen]);
 
   return (
-    <div id="searchModal" className="search-modal">
-      <div id="searchModalOverlay" className="search-modal-overlay" />
+    <div
+      id="searchModal"
+      className={`search-modal ${isOpen ? "show" : ""}`}
+      ref={modalRef}
+    >
+      <div
+        id="searchModalOverlay"
+        className="search-modal-overlay"
+        onClick={() => setIsOpen(false)}
+      />
       <div className="search-wrapper">
         <div className="search-wrapper-header">
           <label
@@ -163,9 +187,10 @@ const SearchModal = () => {
           </label>
           <input
             id="searchInput"
+            ref={inputRef}
             placeholder="Search..."
             className="search-wrapper-header-input"
-            type="input"
+            type="search"
             name="search"
             value={searchString}
             onChange={handleSearch}

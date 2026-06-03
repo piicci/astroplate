@@ -24,6 +24,9 @@ const resolveSearchImage = (src?: string) => {
   return assetKey ? assetImageUrls[assetKey] || src : src;
 };
 
+const escapeRegExp = (value: string) =>
+  value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
 export interface ISearchItem {
   group: string;
   slug: string;
@@ -96,7 +99,7 @@ const SearchResult = ({
 
   // match marker
   const matchMarker = (text: string, substring: string) => {
-    const parts = text.split(new RegExp(`(${substring})`, "gi"));
+    const parts = text.split(new RegExp(`(${escapeRegExp(substring)})`, "gi"));
     return parts.map((part, index) =>
       part.toLowerCase() === substring.toLowerCase() ? (
         <mark key={index}>{part}</mark>
@@ -108,7 +111,7 @@ const SearchResult = ({
 
   // match underline
   const matchUnderline = (text: string, substring: string) => {
-    const parts = text?.split(new RegExp(`(${substring})`, "gi"));
+    const parts = text?.split(new RegExp(`(${escapeRegExp(substring)})`, "gi"));
     return parts?.map((part, index) =>
       part.toLowerCase() === substring.toLowerCase() ? (
         <span key={index} className="underline">
@@ -126,6 +129,10 @@ const SearchResult = ({
     const position = plainContent
       .toLowerCase()
       .indexOf(substring.toLowerCase());
+
+    if (position < 0) {
+      return plainContent.substring(0, 80);
+    }
 
     // Find the start of the word containing the substring
     let wordStart = position;

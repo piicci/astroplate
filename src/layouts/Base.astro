@@ -13,7 +13,6 @@ import {
 import { Font } from "astro:assets";
 import { ClientRouter } from "astro:transitions";
 import Announcement from "./helpers/Announcement";
-import SearchModal from "./helpers/SearchModal";
 
 // font families - extract font names for Font component (filter out type keys)
 const fontEntries = Object.entries(theme.fonts.font_family).filter(
@@ -109,9 +108,23 @@ const stringifyJsonLd = (value: Record<string, unknown>) =>
     }
     <!-- favicon -->
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
     <link rel="shortcut icon" href={config.site.favicon} />
     <!-- theme meta -->
     <meta name="theme-name" content="becoming-elysian" />
@@ -159,10 +172,7 @@ const stringifyJsonLd = (value: Record<string, unknown>) =>
     {noindex && <meta name="robots" content="noindex,nofollow" />}
 
     <!-- meta-description -->
-    <meta
-      name="description"
-      content={pageDescription}
-    />
+    <meta name="description" content={pageDescription} />
 
     <ClientRouter />
 
@@ -200,16 +210,10 @@ const stringifyJsonLd = (value: Record<string, unknown>) =>
     <meta name="twitter:description" content={pageDescription} />
 
     <!-- og-image -->
-    <meta
-      property="og:image"
-      content={metaImage}
-    />
+    <meta property="og:image" content={metaImage} />
 
     <!-- twitter-image -->
-    <meta
-      name="twitter:image"
-      content={metaImage}
-    />
+    <meta name="twitter:image" content={metaImage} />
     <meta name="twitter:card" content="summary_large_image" />
     {
       jsonLd.map((item) => (
@@ -217,7 +221,7 @@ const stringifyJsonLd = (value: Record<string, unknown>) =>
           is:inline
           type="application/ld+json"
           set:html={stringifyJsonLd(item)}
-        ></script>
+        />
       ))
     }
   </head>
@@ -230,7 +234,11 @@ const stringifyJsonLd = (value: Record<string, unknown>) =>
     }
     <Announcement client:only="react" />
     <Header />
-    <SearchModal client:only="react" />
+    {
+      config.settings.search && (
+        <script>import "@/layouts/helpers/search-modal-loader";</script>
+      )
+    }
     <main class="grow overflow-x-hidden w-full max-w-full" id="main-content">
       <slot />
     </main>
