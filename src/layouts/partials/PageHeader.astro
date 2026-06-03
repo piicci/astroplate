@@ -2,7 +2,15 @@
 import Breadcrumbs from "@/components/Breadcrumbs.astro";
 import { humanize } from "@/lib/utils/textConverter";
 
-const { title = "" }: { title?: string } = Astro.props;
+type BreadcrumbItem = {
+  label: string;
+  href?: string;
+};
+
+const {
+  title = "",
+  breadcrumbs,
+}: { title?: string; breadcrumbs?: BreadcrumbItem[] } = Astro.props;
 ---
 
 <section class="border-b border-border/60 bg-[linear-gradient(135deg,rgba(248,241,230,0.96),rgba(255,249,239,0.82),rgba(232,215,189,0.18))] dark:border-darkmode-border dark:bg-darkmode-body/70">
@@ -13,6 +21,7 @@ const { title = "" }: { title?: string } = Astro.props;
         class="mb-5 text-left text-[2.65rem] leading-[1] md:text-[3.55rem]"
       />
       <Breadcrumbs
+        items={breadcrumbs}
         className="font-primary text-xs font-semibold uppercase tracking-[0.18em]"
       />
     </div>

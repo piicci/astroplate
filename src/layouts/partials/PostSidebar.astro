@@ -1,7 +1,13 @@
 ---
 import { humanize } from "@/lib/utils/textConverter";
 
-const { tags, categories, allCategories, allTags = [] } = Astro.props;
+const {
+  tags,
+  categories,
+  allCategories,
+  allTags = [],
+  categoryEntries = [],
+} = Astro.props;
 
 const tagCounts = allTags.reduce((counts: Record<string, number>, tag: string) => {
   counts[tag] = (counts[tag] || 0) + 1;
@@ -11,6 +17,17 @@ const sortedTags = [...tags].sort(
   (a: string, b: string) =>
     (tagCounts[b] || 0) - (tagCounts[a] || 0) || a.localeCompare(b),
 );
+const sortedCategories =
+  categoryEntries.length > 0
+    ? [...categoryEntries].sort(
+        (a: { label: string; count: number }, b: { label: string; count: number }) =>
+          b.count - a.count || a.label.localeCompare(b.label),
+      )
+    : categories.map((category: string) => ({
+        slug: category,
+        label: humanize(category),
+        count: allCategories.filter((c: string) => c === category).length,
+      }));
 ---
 
 <div class="lg:col-4">
@@ -20,17 +37,14 @@ const sortedTags = [...tags].sort(
     <div class="rounded-sm border border-border/70 bg-body/70 p-8 shadow-[0_18px_60px_-52px_rgba(23,19,13,0.32)] dark:border-darkmode-border dark:bg-darkmode-light">
       <ul class="space-y-4">
         {
-          categories.map((category: any) => {
-            const count = allCategories.filter(
-              (c: any) => c === category
-            ).length;
+          sortedCategories.map((category: any) => {
             return (
               <li>
                 <a
                   class="flex justify-between hover:text-primary dark:hover:text-darkmode-primary"
-                  href={`/categories/${category}`}
+                  href={`/journal/categories/${category.slug}`}
                 >
-                  {humanize(category)} <span>({count})</span>
+                  {category.label} <span>({category.count})</span>
                 </a>
               </li>
             );

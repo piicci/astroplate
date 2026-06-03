@@ -4,6 +4,7 @@ import PostSingle from "@/layouts/PostSingle.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
 import { resolveOptimizedImageSrc } from "@/lib/utils/assetImages";
 import config from "@/config/config.json";
+import { slugify } from "@/lib/utils/textConverter";
 
 export async function getStaticPaths() {
   const JOURNAL_COLLECTION = "journal";
@@ -24,6 +25,7 @@ const {
   description,
   image,
   author,
+  categories,
   date,
   faq_enable,
   faq_items,
@@ -41,6 +43,38 @@ const absoluteImage = socialImage
     ? socialImage
     : `${siteUrl}${socialImage.startsWith("/") ? socialImage : `/${socialImage}`}`
   : undefined;
+const primaryCategory = categories?.[0];
+const primaryCategorySlug = primaryCategory ? slugify(primaryCategory) : "";
+const breadcrumbItems = [
+  {
+    "@type": "ListItem",
+    position: 1,
+    name: "Home",
+    item: siteUrl,
+  },
+  {
+    "@type": "ListItem",
+    position: 2,
+    name: "Journal",
+    item: `${siteUrl}/journal`,
+  },
+  ...(primaryCategory
+    ? [
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: primaryCategory,
+          item: `${siteUrl}/journal/categories/${primaryCategorySlug}`,
+        },
+      ]
+    : []),
+  {
+    "@type": "ListItem",
+    position: primaryCategory ? 4 : 3,
+    name: title,
+    item: postUrl,
+  },
+];
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -69,26 +103,7 @@ const articleSchema = {
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
-  itemListElement: [
-    {
-      "@type": "ListItem",
-      position: 1,
-      name: "Home",
-      item: siteUrl,
-    },
-    {
-      "@type": "ListItem",
-      position: 2,
-      name: "Journal",
-      item: `${siteUrl}/journal`,
-    },
-    {
-      "@type": "ListItem",
-      position: 3,
-      name: title,
-      item: postUrl,
-    },
-  ],
+  itemListElement: breadcrumbItems,
 };
 const faqSchema =
   faq_enable && faq_items?.length

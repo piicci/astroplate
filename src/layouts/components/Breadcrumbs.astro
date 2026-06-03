@@ -1,40 +1,53 @@
 ---
 import { humanize } from "@/lib/utils/textConverter";
 
-const { className }: { className?: string } = Astro.props;
+type BreadcrumbItem = {
+  label: string;
+  href?: string;
+};
 
-const paths = Astro.url.pathname.split("/").filter((x) => x);
-let parts = [
-  {
-    label: "Home",
-    href: "/",
-    "aria-label": Astro.url.pathname === "/" ? "page" : undefined,
-  },
-];
+const {
+  className,
+  items,
+}: { className?: string; items?: BreadcrumbItem[] } = Astro.props;
 
-paths.forEach((label: string, i: number) => {
-  const href = `/${paths.slice(0, i + 1).join("/")}`;
-  label !== "page" &&
-    parts.push({
-      label: humanize(label.replace(".html", "").replace(/[-_]/g, " ")) || "",
-      href,
-      "aria-label": Astro.url.pathname === href ? "page" : undefined,
-    });
-});
+const getGeneratedParts = () => {
+  const paths = Astro.url.pathname.split("/").filter((x) => x);
+  const parts: BreadcrumbItem[] = [
+    {
+      label: "Home",
+      href: "/",
+    },
+  ];
+
+  paths.forEach((label: string, i: number) => {
+    const href = `/${paths.slice(0, i + 1).join("/")}`;
+    label !== "page" &&
+      parts.push({
+        label:
+          humanize(label.replace(".html", "").replace(/[-_]/g, " ")) || "",
+        href,
+      });
+  });
+
+  return parts;
+};
+
+const parts = items?.length ? items : getGeneratedParts();
 ---
 
 <nav aria-label="Breadcrumb" class={className}>
   <ol class="flex flex-wrap items-center gap-x-3 gap-y-2" role="list">
     {
-      parts.map(({ label, ...attrs }, index) => (
+      parts.map(({ label, href }, index) => (
         <li class="inline-flex items-center gap-3 capitalize" role="listitem">
           {index > 0 && <span class="text-text-light/70 dark:text-darkmode-text-light/70">&gt;</span>}
-          {index !== parts.length - 1 ? (
-            <a class="text-text-dark hover:text-primary dark:text-darkmode-text-dark dark:hover:text-darkmode-primary" {...attrs}>
+          {index !== parts.length - 1 && href ? (
+            <a class="text-text-dark hover:text-primary dark:text-darkmode-text-dark dark:hover:text-darkmode-primary" href={href}>
               {label}
             </a>
           ) : (
-            <span class="text-primary dark:text-darkmode-primary">
+            <span class="text-primary dark:text-darkmode-primary" aria-current="page">
               {label}
             </span>
           )}

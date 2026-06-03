@@ -19,7 +19,14 @@ const sortedTags = [...tags].sort(
 ---
 
 <Base title={"Tags"} noindex={true}>
-  <PageHeader title={"Tags"} />
+  <PageHeader
+    title={"Tags"}
+    breadcrumbs={[
+      { label: "Home", href: "/" },
+      { label: "Journal", href: "/journal" },
+      { label: "Tags", href: "/tags" },
+    ]}
+  />
   <section class="section">
     <div class="container text-center">
       <ul>

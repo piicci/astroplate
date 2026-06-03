@@ -5,6 +5,7 @@ import { getSinglePage } from "@/lib/contentParser.astro";
 import { getTaxonomy } from "@/lib/taxonomyParser.astro";
 import { sortByDate } from "@/lib/utils/sortFunctions";
 import taxonomyFilter from "@/lib/utils/taxonomyFilter";
+import { humanize } from "@/lib/utils/textConverter";
 import PageHeader from "@/partials/PageHeader.astro";
 
 export async function getStaticPaths() {
@@ -25,10 +26,19 @@ const JOURNAL_COLLECTION = "journal";
 const posts = await getSinglePage(JOURNAL_COLLECTION);
 const filterByTags = taxonomyFilter(posts, "tags", tag!);
 const sortedPosts = sortByDate(filterByTags);
+const tagTitle = humanize(tag || "");
 ---
 
-<Base title={tag} noindex={true}>
-  <PageHeader title={tag} />
+<Base title={tagTitle} noindex={true}>
+  <PageHeader
+    title={tagTitle}
+    breadcrumbs={[
+      { label: "Home", href: "/" },
+      { label: "Journal", href: "/journal" },
+      { label: "Tags", href: "/tags" },
+      { label: tagTitle, href: `/tags/${tag}` },
+    ]}
+  />
   <div class="section-sm pb-0">
     <div class="container">
       <div class="row">

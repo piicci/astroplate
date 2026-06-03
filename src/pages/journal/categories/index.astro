@@ -1,0 +1,97 @@
+---
+import Base from "@/layouts/Base.astro";
+import config from "@/config/config.json";
+import { getTaxonomyEntries } from "@/lib/taxonomyParser.astro";
+import PageHeader from "@/partials/PageHeader.astro";
+
+const JOURNAL_COLLECTION = "journal";
+const siteUrl = config.site.base_url.replace(/\/$/, "");
+const pageTitle = "Journal Categories";
+const description =
+  "Explore Becoming Elysian journal categories, from nutrition and metabolic health to fitness, hormones, recovery, stress, and sustainable wellbeing.";
+const categoryEntries = await getTaxonomyEntries(
+  JOURNAL_COLLECTION,
+  "categories",
+);
+const sortedCategories = [...categoryEntries].sort(
+  (a, b) => b.count - a.count || a.label.localeCompare(b.label),
+);
+const structuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Journal",
+        item: `${siteUrl}/journal`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Categories",
+        item: `${siteUrl}/journal/categories`,
+      },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: pageTitle,
+    description,
+    url: `${siteUrl}/journal/categories`,
+  },
+];
+---
+
+<Base
+  title={pageTitle}
+  meta_title={`${pageTitle} | ${config.site.title}`}
+  description={description}
+  canonical="/journal/categories"
+  structuredData={structuredData}
+>
+  <PageHeader
+    title="Categories"
+    breadcrumbs={[
+      { label: "Home", href: "/" },
+      { label: "Journal", href: "/journal" },
+      { label: "Categories", href: "/journal/categories" },
+    ]}
+  />
+  <section class="section">
+    <div class="container text-center">
+      <p class="mx-auto mb-10 max-w-3xl text-lg leading-8 text-text-light dark:text-darkmode-text-light">
+        Find Becoming Elysian journal articles by topic, with category hubs for
+        the main areas of nutrition, strength, hormones, stress, recovery, and
+        sustainable wellbeing.
+      </p>
+      <ul>
+        {
+          sortedCategories.map((category) => {
+            return (
+              <li class="m-3 inline-block">
+                <a
+                  href={`/journal/categories/${category.slug}`}
+                  class="block rounded bg-light px-4 py-2 text-xl text-text-dark dark:bg-darkmode-light dark:text-darkmode-text-dark"
+                >
+                  {category.label}{" "}
+                  <span class="ml-2 rounded bg-body px-2 dark:bg-darkmode-body">
+                    {category.count}
+                  </span>
+                </a>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </div>
+  </section>
+</Base>

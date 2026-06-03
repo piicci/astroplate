@@ -59,7 +59,7 @@ export default defineConfig({
     sitemap({
       filter: (page) => {
         const { pathname } = new URL(page);
-        return !/^\/(?:authors|categories|tags)(?:\/|$)/.test(pathname) &&
+        return !/^\/(?:authors|tags)(?:\/|$)/.test(pathname) &&
           !/^\/journal\/page\//.test(pathname);
       },
     }),

@@ -1,52 +1,54 @@
 ---
 title: Becoming Elysian | Wellness for Women
 meta_title: Becoming Elysian | Wellness for Women Over 35
-description: Becoming Elysian is a modern wellness platform for women exploring
-  fitness, nutrition, hormonal health, stress, recovery, and sustainable
-  wellbeing through a grounded, evidence-informed lens.
+description: Becoming Elysian is a modern wellness platform for women over 35 exploring fitness, nutrition, hormonal health, stress, recovery, and sustainable wellbeing through a grounded, evidence-informed lens.
 image: /images/og-image.png
 
 # Hero banner
 banner:
-  eyebrow: Wellness for women, reimagined with calm and clarity
-  title: Wellness that supports your life — never consumes it.
-  content: Becoming Elysian is a modern wellness platform for women who want to
-    feel stronger, calmer, more energized, and more connected to their bodies
-    through evidence-informed fitness, nutrition, hormonal health, recovery, and
-    sustainable habits.
+  eyebrow: Gentle wellness for women over 35
+  title: Wellness for women over 35 designed to support the life you already love
+  content: Evidence-informed guidance for strength, nourishment, hormones, recovery, and sustainable wellbeing. Without extremes, overwhelm, or asking wellness to become your whole life.
   image: /images/becoming-elysian-about-editorial-hero.jpg
   image_alt: Woman enjoying a calm morning wellness routine in soft natural light
-  image_note: Evidence-informed notes for strength, nourishment, recovery,
-    hormones, and the life around them.
+  image_note: Evidence-informed notes for strength, nourishment, recovery, hormones, and the life around them.
   buttons:
     - enable: true
       label: Explore the Journal
       link: /journal
       variant: primary
     - enable: true
-      label: Join Our Circle
+      label: Join the Weekly Letter
       link: /newsletter
       variant: outline
 
 # Intro section
 intro:
-  title: A gentler, more sustainable way to feel well
+  title: A steadier, more sustainable way to feel well
   content: |-
-    You have probably felt <i>that quiet exhaustion.</i>
-    The kind that comes from trying to do more, track more, restrict more, and push harder.
-    So much of modern wellness does not create freedom. It simply adds another layer of pressure.
+    You’ve probably felt that quiet exhaustion.
+    The kind that comes from trying to do more, track more, and push harder — only to feel more depleted.
 
-    Becoming Elysian offers a <b>different rhythm.</b>
-    Here, wellness is not about perfection or control.
-    It is about building <b>quiet strength</b>, supporting your energy, understanding your body with wisdom, recovering deeply, and creating habits that actually fit the life you are already living.
+    Becoming Elysian offers a different rhythm.
+    One rooted in quiet strength, generous nourishment, deep recovery, and a wiser relationship with your hormones and energy.
   closing: |-
-    This is not about making your world smaller around wellness.
-    It is about letting wellness <b>gently support</b> the full, beautiful life you want to live.
+    Here, wellness supports the full, beautiful life you want to live. Without asking you to shrink your world around it.
+
+# What you'll find here
+what_youll_find:
+  title: What you’ll find here
+  content: Clear, grounded support for the parts of your wellbeing that often start asking for more care after 35.
+  items:
+    - Strength for confidence, muscle, and long-term vitality
+    - Nutrition for steadier energy, metabolism, and satisfaction
+    - Hormonal health explained with calm and clarity
+    - Recovery, stress, and nervous system support
+    - Sustainable rituals that fit your real life
 
 # Journal section
 featured_articles:
   title: From the Journal
-  content: You’ll discover thoughtful, practical articles on the foundations of women’s wellness, from protein and strength training to hormones, stress, recovery, and sustainable routines that support the woman you are becoming.
+  content: Thoughtful, practical articles on the foundations of women’s wellness — protein, strength, hormones, stress, recovery, and sustainable routines that truly support you.
   button:
     enable: true
     label: Visit the Journal
@@ -56,77 +58,66 @@ featured_articles:
     - category: Nutrition & Metabolic Health
       title: Nutrition for Women Over 35
       subtitle: How to Support Energy, Metabolism, Hormones, and Long-Term Health
-      excerpt: A grounded guide to eating in a way that supports energy,
-        strength, blood sugar, hormones, and long-term wellbeing after 35.
+      excerpt: A grounded guide to eating in a way that supports your energy, strength, blood sugar, hormones, and long-term wellbeing after 35.
       link: /journal/nutrition-for-women-over-35
       image: /images/journal/nutrition-for-women-over-35/becoming-elysian-nutrition-over-35-hero.webp
       image_alt: Editorial nutrition scene for women over 35 with nourishing foods and warm natural light
     - category: Nutrition & Metabolic Health
       title: Why Protein Matters More as You Age
-      excerpt: Why protein becomes more important with age, how it supports
-        muscle, metabolism, recovery, and steadier energy, and how to build it
-        into your meals without overcomplicating your diet.
+      excerpt: Why protein becomes more important after 35 and how to include it easily in meals you already enjoy. Without complication or restriction.
       link: /journal/why-protein-matters-more-as-you-age
       image: /images/journal/why-protein-matters-more-as-you-age/becoming-elysian-protein-aging-hero.webp
       image_alt: Serene Mediterranean wellness scene with fresh produce in warm natural light
     - category: Fitness & Strength
       title: Simple Ways to Reduce Afternoon Energy Crashes
       subtitle: Gentle Strategies for Steadier Energy
-      excerpt: Practical ways to support steadier afternoons with balanced meals,
-        hydration, light movement, sleep rhythms, and sustainable daily habits.
+      excerpt: Practical, kind ways to support steadier energy through balanced meals, hydration, light movement, and sustainable daily rhythms.
       link: /journal/simple-ways-to-reduce-afternoon-energy-crashes
       image: /images/journal/simple-ways-to-reduce-afternoon-energy-crashes/becoming-elysian-afternoon-energy-crash-clock-hero.webp
       image_alt: Calm wellness scene for steadier afternoon energy in warm natural light
 
 # Newsletter section
 newsletter:
-  title: A calmer way to stay connected to your wellbeing
+  title: A weekly wellness letter for women over 35
   content: |-
-    Join the Becoming Elysian newsletter for thoughtful, evidence-informed notes on nutrition, strength, hormones, stress, recovery, and sustainable wellness for women.
-    No extremes. No overwhelm. Just grounded guidance to help you feel more supported in your body and your daily life.
-  submit_label: Join Our Circle
+    Thoughtful, evidence-informed notes on strength, nutrition, hormones, metabolism, stress, and recovery. Written to help you make one grounded shift at a time.
+    No extremes. No overwhelm. Just supportive guidance to help you feel more at home in your body and your daily life.
+  submit_label: Join the Weekly Letter
   helper_text: Weekly wellness notes. Thoughtful, practical, and easy to return to.
-  success_message: Thank you. Your weekly wellness letter is on its way.
+  success_message: Welcome. Your first note is on its way.
 
 # Approach section
 approach:
-  title: Our approach is simple, but not simplistic
-  content: Wellness is personal, but it should not feel confusing, extreme, or
-    impossible to maintain. At Becoming Elysian, we focus on the foundations
-    that help women build a steadier relationship with their health.
+  title: Our approach is simple, but never rigid
+  content: Wellness should feel supportive, not overwhelming. We focus on the foundations that help you build a steadier, more compassionate relationship with your health.
   pillars:
     - title: Evidence-informed
-      content: We explore wellness through a grounded, science-aware lens, yet we never turn your meals, movement, or daily habits into rigid protocols. Here, knowledge serves your intuition.
+      content: We blend science with soul. Knowledge here serves your intuition rather than becoming another set of rules.
     - title: Sustainable
-      content: Perfection is never the goal. What matters is gentle consistency, flexibility, and practices that can support you beautifully through every season of life.
+      content: Perfection is never the goal. What matters is steady consistency and practices that can beautifully support you through every season of life.
     - title: Body-aware
-      content: We help you understand your energy, appetite, stress, recovery, hormones, and strength with clarity and compassion, free from shame or fear-based messaging. This is awareness that empowers you to listen to your body with trust.
+      content: We help you understand your energy, hormones, and needs with clarity and compassion. Free from shame or fear.
     - title: Strength-centered
-      content: Strength supports so much more than appearance. It helps you feel more capable, resilient, independent, and deeply connected to your body over time, a quiet power that grows with you.
+      content: Strength is quiet power. It helps you feel more capable, resilient, and deeply connected to your body as the years unfold.
 
 # Start-here pathway cards
 pathways:
   title: New here? Start with what your body is asking for.
-  content: You do not need to change everything at once. Begin with the area that
-    feels most relevant to your life right now.
+  content: You do not need to change everything at once. Begin with the area that feels most relevant to your body and your life right now.
   items:
     - eyebrow: Start here
-      title: If you feel tired and overwhelmed
-      content: Start with stress, sleep, nervous system support, recovery, and
-        the daily rhythms that help your body feel safer and steadier.
+      title: When you feel tired and overwhelmed
+      content: Begin with stress, sleep, nervous system support, recovery, and the daily rhythms that help you feel safer and steadier.
       link: /start-here#stress-recovery
       label: Start with Stress & Recovery
     - eyebrow: Start here
-      title: If your body feels different after 35
-      content: Start with protein, strength training, metabolism, hormones,
-        perimenopause, and the foundations that support body composition and
-        energy.
+      title: When your body feels different after 35
+      content: Start with protein, strength training, metabolism, hormones, and the foundations that support your energy and body composition.
       link: /start-here#metabolism-hormones
       label: Start with Metabolism & Hormones
     - eyebrow: Start here
-      title: If you want a routine you can actually sustain
-      content: Start with walking, mobility, simple meals, habit-building, and
-        realistic wellness practices that do not require perfection.
+      title: When you want a routine you can actually sustain
+      content: Begin with walking, mobility, simple meals, and realistic practices that fit beautifully into the life you already lead.
       link: /start-here#sustainable-habits
       label: Start with Sustainable Habits
 
@@ -134,11 +125,11 @@ pathways:
 about_panel:
   title: Created for women who want wellness to feel supportive again
   content: |-
-    Becoming Elysian was created for you. For the woman who is tired of extremes. The restrictive plans. The pressure to optimize everything. The confusing advice. And that quiet sense that wellness has become just another thing to keep up with.
+    Becoming Elysian was created for you — the woman who is tired of extremes, restrictive plans, and the pressure to optimise everything.
 
-    Here, we focus on what actually supports your long-term wellbeing: quiet strength, generous nourishment, recovery that restores you, hormonal awareness that honors your rhythms, nervous system care that brings calm, and sustainable daily practices that fit beautifully into the life you already lead.
+    Here we focus on what truly matters: quiet strength, generous nourishment, recovery that restores you, hormonal awareness that honours your rhythms, and sustainable practices that fit your real life.
 
-    This is your space to feel informed, capable, and more at home in your body. Without needing to build your entire life around wellness.
+    This is your space to feel informed, capable, and more at home in your body.
   image: /images/becoming-elysian-about-editorial.png
   image_alt: Editorial wellness setting with neutral tones and sage accents
   button:
@@ -154,7 +145,7 @@ final_cta:
   content: Receive thoughtful, evidence-informed notes on fitness, nutrition, hormonal health, recovery, and sustainable rituals. Written for women who want to feel stronger, calmer, and more deeply connected to their bodies.
   button:
     enable: true
-    label: Join Our Circle
+    label: Join the Weekly Letter
     link: /newsletter
     variant: primary
   note: Evidence-informed wellness, written with calm and clarity.

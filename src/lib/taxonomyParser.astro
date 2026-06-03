@@ -30,4 +30,28 @@ export const getAllTaxonomy = async (collection: any, name: string) => {
   }
   return taxonomies;
 };
+
+// get taxonomy entries with original labels preserved
+export const getTaxonomyEntries = async (collection: any, name: string) => {
+  const singlePages = await getSinglePage(collection);
+  const taxonomyPages = singlePages.map((page: any) => page.data[name]);
+  const entries = new Map<string, { slug: string; label: string; count: number }>();
+
+  for (let i = 0; i < taxonomyPages.length; i++) {
+    const taxonomyArray = taxonomyPages[i];
+    for (let j = 0; j < taxonomyArray.length; j++) {
+      const label = taxonomyArray[j];
+      const taxonomySlug = slugify(label);
+      const current = entries.get(taxonomySlug);
+
+      entries.set(taxonomySlug, {
+        slug: taxonomySlug,
+        label: current?.label || label,
+        count: (current?.count || 0) + 1,
+      });
+    }
+  }
+
+  return [...entries.values()];
+};
 ---
