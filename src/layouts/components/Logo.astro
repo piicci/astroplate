@@ -59,6 +59,7 @@ const darkLogoClass = "hidden dark:inline-block";
             style={logoStyle}
             loading="eager"
             decoding="async"
+            fetchpriority="high"
           />
         ) : (
           <ImageMod
@@ -72,10 +73,12 @@ const darkLogoClass = "hidden dark:inline-block";
               width: displayWidth + "px",
             }}
             format={logoFormat}
+            loading="eager"
+            fetchpriority="high"
           />
         )}
-        {theme_switcher && (
-          isSvgDarkLogo ? (
+        {theme_switcher &&
+          (isSvgDarkLogo ? (
             <img
               src={logoDarkSource}
               class={darkLogoClass}
@@ -85,6 +88,7 @@ const darkLogoClass = "hidden dark:inline-block";
               style={logoStyle}
               loading="eager"
               decoding="async"
+              fetchpriority="high"
             />
           ) : (
             <ImageMod
@@ -98,9 +102,10 @@ const darkLogoClass = "hidden dark:inline-block";
                 width: displayWidth + "px",
               }}
               format={logoDarkFormat}
+              loading="eager"
+              fetchpriority="high"
             />
-          )
-        )}
+          ))}
       </>
     ) : logo_text ? (
       logo_text
