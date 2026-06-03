@@ -2,6 +2,11 @@
 publish = "dist"
 command = "yarn build"
 
+[[redirects]]
+from = "/sitemap.xml"
+to = "/sitemap-index.xml"
+status = 301
+
 [[headers]]
 for = "/_astro/*"
 

@@ -17,8 +17,8 @@
       "url": "/about"
     },
     {
-      "name": "Free Guide",
-      "url": "/start-here#free-guide",
+      "name": "Breakfast Guide",
+      "url": "/breakfast-guide",
       "isButton": true
     }
   ],

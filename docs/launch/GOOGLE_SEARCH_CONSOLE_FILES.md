@@ -10,6 +10,31 @@ Submit this URL in Google Search Console under **Sitemaps**:
 https://becomingelysian.com/sitemap-index.xml
 ```
 
+If Search Console shows **Couldn't fetch** immediately after submission, first confirm both URLs load in the browser:
+
+```text
+https://becomingelysian.com/sitemap-index.xml
+https://becomingelysian.com/sitemap-0.xml
+```
+
+If both return XML, the sitemap is reachable. Wait a few minutes, refresh the report, then try submitting the child sitemap directly:
+
+```text
+https://becomingelysian.com/sitemap-0.xml
+```
+
+For a URL-prefix property where Search Console already shows `https://becomingelysian.com/` before the input field, submit only:
+
+```text
+sitemap-index.xml
+```
+
+or:
+
+```text
+sitemap-0.xml
+```
+
 Generated source after `yarn build`:
 
 ```text
@@ -113,4 +138,3 @@ https://becomingelysian.com/journal/high-protein-breakfast-ideas-for-steady-ener
 - Google robots.txt guidance: https://developers.google.com/search/docs/crawling-indexing/robots/create-robots-txt
 - Google site ownership verification: https://support.google.com/webmasters/answer/9008080
 - Google URL Inspection tool: https://support.google.com/webmasters/answer/9012289
-

@@ -1,5 +1,97 @@
 ---
 import Base from "@/layouts/Base.astro";
+import BreakfastGuideForm from "@/layouts/components/BreakfastGuideForm.astro";
+
+const journeys = [
+  {
+    eyebrow: "Journey 01",
+    title: "If you feel tired and overwhelmed",
+    body: "Begin by supporting your energy before asking more of yourself. This path starts with blood sugar, meals, stress, and the small daily rhythms that help your body feel steadier.",
+    links: [
+      {
+        label: "Why You Feel Tired After Eating",
+        href: "/journal/why-you-feel-tired-after-eating-and-what-may-help",
+        note: "Notice what may be draining your energy after meals.",
+      },
+      {
+        label: "Simple Ways to Reduce Afternoon Energy Crashes",
+        href: "/journal/simple-ways-to-reduce-afternoon-energy-crashes",
+        note: "Build a softer afternoon rhythm with food, hydration, sleep, and movement.",
+      },
+      {
+        label: "Cravings, Blood Sugar, and Stress",
+        href: "/journal/cravings-blood-sugar-and-stress",
+        note: "Understand why cravings often ask for support, not more willpower.",
+      },
+    ],
+    cta: {
+      label: "Explore Blood Sugar & Energy",
+      href: "/journal/categories/blood-sugar--energy",
+    },
+  },
+  {
+    eyebrow: "Journey 02",
+    title: "If your body feels different after 35",
+    body: "Start here when your energy, appetite, strength, hormones, or body composition feel unfamiliar. This path helps you meet those changes with nourishment, muscle, and steadier metabolic support.",
+    links: [
+      {
+        label: "Metabolic Health for Women Over 35",
+        href: "/journal/metabolic-health-for-women-over-35",
+        note: "Get the wider map before changing everything at once.",
+      },
+      {
+        label: "Why Your Metabolism Changes in Your 30s and 40s",
+        href: "/journal/why-your-metabolism-changes-in-your-30s-and-40s",
+        note: "See what may be shifting, and what actually helps.",
+      },
+      {
+        label: "How Much Protein Do Women Over 35 Really Need?",
+        href: "/journal/how-much-protein-do-women-over-35-need",
+        note: "Anchor your meals with enough support for muscle, recovery, and fullness.",
+      },
+      {
+        label: "Why Eating Less Is Not Always Better for Your Metabolism",
+        href: "/journal/why-eating-less-is-not-always-better-for-your-metabolism",
+        note: "Move away from restriction and toward a body that feels better fed.",
+      },
+    ],
+    cta: {
+      label: "Explore Metabolic Health",
+      href: "/journal/categories/metabolic-health",
+    },
+  },
+  {
+    eyebrow: "Journey 03",
+    title: "If you want a routine you can actually sustain",
+    body: "Begin with practices you can return to on ordinary days. This path keeps wellness simple: balanced plates, easy protein, satisfying meals, and rhythm over perfection.",
+    links: [
+      {
+        label: "A Simple Balanced Plate Method",
+        href: "/journal/simple-balanced-plate-method-for-women",
+        note: "Use one calm formula when nutrition feels noisy.",
+      },
+      {
+        label: "Protein Timing: Does It Matter for Women?",
+        href: "/journal/protein-timing-does-it-matter-for-women",
+        note: "Spread support through the day without turning meals into a stopwatch.",
+      },
+      {
+        label: "High-Protein Breakfast Ideas for Steady Energy",
+        href: "/journal/high-protein-breakfast-ideas-for-steady-energy",
+        note: "Make the first meal feel more grounding and less accidental.",
+      },
+      {
+        label: "Mediterranean Diet for Women Over 40",
+        href: "/journal/mediterranean-diet-for-women-over-40",
+        note: "Let your longer-term rhythm be generous, colorful, and realistic.",
+      },
+    ],
+    cta: {
+      label: "Explore Foundational Nutrition",
+      href: "/journal/categories/foundational-nutrition",
+    },
+  },
+];
 ---
 
 <Base
@@ -23,158 +115,67 @@ import Base from "@/layouts/Base.astro";
   <section class="start-here-pathways">
     <div class="container start-here-breathe">
       <div class="start-here-list">
-        <article>
-          <h2>If you feel tired and overwhelmed</h2>
-          <p>
-            Start with stress, sleep, nervous system support, recovery, and the
-            daily rhythms that help your body feel safer and steadier.
-          </p>
-        </article>
-
-        <article>
-          <h2>If your body feels different after 35</h2>
-          <p>
-            Start with protein, strength training, metabolism, hormones,
-            perimenopause, and the foundations that support body composition and
-            energy.
-          </p>
-        </article>
-
-        <article>
-          <h2>If you want a routine you can actually sustain</h2>
-          <p>
-            Start with walking, mobility, simple meals, habit-building, and
-            realistic wellness practices that do not require perfection.
-          </p>
-        </article>
+        {
+          journeys.map((journey) => (
+            <article class="start-here-journey">
+              <div class="start-here-journey-copy">
+                <p class="start-here-eyebrow">{journey.eyebrow}</p>
+                <h2>{journey.title}</h2>
+                <p>{journey.body}</p>
+                <a class="start-here-category-link" href={journey.cta.href}>
+                  {journey.cta.label}
+                </a>
+              </div>
+              <ol class="start-here-steps" aria-label={`${journey.title} articles`}>
+                {journey.links.map((link, index) => (
+                  <li>
+                    <a href={link.href}>
+                      <span>{String(index + 1).padStart(2, "0")}</span>
+                      <strong>{link.label}</strong>
+                      <small>{link.note}</small>
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </article>
+          ))
+        }
       </div>
     </div>
   </section>
 
-  <section class="start-here-guide" id="free-guide" aria-labelledby="start-guide-title">
+  <section class="start-here-guide" id="breakfast-guide" aria-labelledby="start-guide-title">
     <div class="container start-here-breathe">
       <div class="start-here-guide-panel">
         <div>
-          <p class="start-here-eyebrow">Free guide</p>
-          <h2 id="start-guide-title">A calmer first week of sustainable wellness</h2>
+          <p class="start-here-eyebrow">Breakfast guide</p>
+          <h2 id="start-guide-title">7 high-protein breakfasts for steadier mornings</h2>
           <p>
-            Receive a simple guide with gentle prompts for nourishment,
-            movement, rest, and steadier daily rhythms. It is designed to help
-            you begin without pressure or overhauling your whole life.
+            If your mornings often begin with coffee, a rushed bite, or a meal
+            that does not quite hold you, start here. This PDF gives you seven
+            simple breakfast ideas built around protein, fiber, and satisfying
+            fats so the rest of the day can feel a little steadier.
           </p>
         </div>
 
-        <form class="start-here-guide-form" name="free-guide" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
-          <input type="hidden" name="form-name" value="free-guide" />
-          <input type="hidden" name="source" value="start-here-free-guide" />
-          <input type="hidden" name="subject" value="New free guide signup" />
-          <p class="hidden" aria-hidden="true">
-            <label>Do not fill this out: <input name="bot-field" /></label>
-          </p>
-          <div>
-            <label class="form-label" for="start-here-guide-email">
-              Email address
-            </label>
-            <input
-              class="form-input"
-              id="start-here-guide-email"
-              name="email"
-              type="email"
-              placeholder="Email address"
-              autocomplete="email"
-              required
-            />
-            <p class="mt-2 min-h-5 text-sm text-text-light">
-              The guide will arrive with the weekly wellness letter.
-            </p>
-            <p class="mt-2 hidden text-sm text-[#9f3f32]" data-error>
-              Please enter a valid email address.
-            </p>
-          </div>
-          <button
-            class="btn btn-primary mt-5 w-full active:translate-y-[1px] sm:w-auto"
-            type="submit"
-            data-submit-label="Send Me the Free Guide"
-          >
-            Send Me the Free Guide
-          </button>
-          <p class="mt-4 hidden rounded-md border border-primary/40 bg-body/70 px-4 py-3 text-sm text-text-dark dark:text-darkmode-text-dark" data-success>
-            Thank you. Your free guide is on its way.
-          </p>
-          <p class="mt-4 hidden rounded-md border border-[#9f3f32]/35 bg-[#9f3f32]/10 px-4 py-3 text-sm text-[#9f3f32]" data-error-submit>
-            Something went wrong. Please try again.
-          </p>
-        </form>
+        <BreakfastGuideForm
+          idPrefix="start-here-breakfast-guide"
+          source="start-here-breakfast-guide"
+          className="start-here-guide-form"
+        />
       </div>
     </div>
   </section>
-
-  <script is:inline>
-    const guideForms = document.querySelectorAll(".start-here-guide-form");
-    const submitNetlifyForm = async (form) => {
-      const isLocal = ["localhost", "127.0.0.1"].includes(window.location.hostname);
-
-      if (isLocal) {
-        await new Promise((resolve) => window.setTimeout(resolve, 350));
-        return;
-      }
-
-      const response = await fetch("/__forms.html", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(new FormData(form)).toString(),
-      });
-
-      if (!response.ok) {
-        throw new Error("Form submission failed");
-      }
-    };
-
-    guideForms.forEach((form) => {
-      form.addEventListener("submit", async (event) => {
-        event.preventDefault();
-
-        const botField = form.querySelector('[name="bot-field"]');
-        const email = form.querySelector('[name="email"]');
-        const error = form.querySelector("[data-error]");
-        const success = form.querySelector("[data-success]");
-        const submitError = form.querySelector("[data-error-submit]");
-        const button = form.querySelector("button[type='submit']");
-        const value = email.value.trim();
-        const validEmail = value.includes("@") && value.includes(".");
-
-        if (botField?.value) {
-          return;
-        }
-
-        error.classList.toggle("hidden", validEmail);
-        success.classList.add("hidden");
-        submitError.classList.add("hidden");
-
-        if (!validEmail) {
-          return;
-        }
-
-        button.disabled = true;
-        button.textContent = "Sending...";
-
-        try {
-          await submitNetlifyForm(form);
-          success.classList.remove("hidden");
-          form.reset();
-        } catch (error) {
-          submitError.classList.remove("hidden");
-        } finally {
-          button.disabled = false;
-          button.textContent = button.dataset.submitLabel;
-        }
-      });
-    });
-  </script>
 
   <style>
     .start-here-intro {
       padding: clamp(4.25rem, 8vw, 7rem) 0 clamp(2rem, 4vw, 3rem);
+      overflow-x: clip;
+    }
+
+    .start-here-breathe {
+      width: min(calc(100vw - 3rem), 70rem) !important;
+      max-width: 70rem;
     }
 
     .start-here-eyebrow {
@@ -208,17 +209,30 @@ import Base from "@/layouts/Base.astro";
 
     .start-here-pathways {
       padding: clamp(1.25rem, 3vw, 2rem) 0 clamp(4rem, 8vw, 7rem);
+      overflow-x: clip;
     }
 
     .start-here-list {
       display: grid;
       gap: clamp(2.75rem, 6vw, 5.5rem);
-      max-width: 58rem;
     }
 
-    .start-here-list article {
+    .start-here-journey {
+      display: grid;
+      gap: clamp(1.75rem, 5vw, 4.5rem);
+      padding: clamp(2rem, 4.5vw, 3.5rem) 0;
+      border-top: 1px solid rgba(220, 201, 167, 0.86);
+    }
+
+    .start-here-journey:last-child {
+      border-bottom: 1px solid rgba(220, 201, 167, 0.86);
+    }
+
+    .start-here-journey-copy {
       display: grid;
       gap: 1rem;
+      align-content: start;
+      min-width: 0;
     }
 
     .start-here-list h2 {
@@ -240,9 +254,86 @@ import Base from "@/layouts/Base.astro";
       color: #6f5b3b;
     }
 
+    .start-here-category-link {
+      width: fit-content;
+      margin-top: 0.35rem;
+      color: #3f4a14;
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      line-height: 1.3;
+      text-decoration: underline;
+      text-decoration-color: rgba(138, 114, 76, 0.38);
+      text-underline-offset: 0.45rem;
+      text-transform: uppercase;
+    }
+
+    .start-here-steps {
+      display: grid;
+      gap: 0;
+      width: 100%;
+      min-width: 0;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      border-top: 1px solid rgba(138, 114, 76, 0.26);
+    }
+
+    .start-here-steps li {
+      min-width: 0;
+      border-bottom: 1px solid rgba(138, 114, 76, 0.26);
+    }
+
+    .start-here-steps a {
+      display: grid;
+      grid-template-columns: 3rem minmax(0, 1fr);
+      gap: clamp(0.9rem, 2vw, 1.4rem);
+      padding: clamp(1.05rem, 2.5vw, 1.45rem) 0;
+      color: #2a251d;
+      transition:
+        color 220ms ease,
+        transform 220ms ease;
+    }
+
+    .start-here-steps a:hover {
+      color: #3f4a14;
+      transform: translateX(0.25rem);
+    }
+
+    .start-here-steps span {
+      padding-top: 0.2rem;
+      color: #8e9475;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      line-height: 1.2;
+    }
+
+    .start-here-steps strong {
+      display: block;
+      min-width: 0;
+      font-family: var(--font-secondary);
+      font-size: clamp(1.45rem, 2.5vw, 2.1rem);
+      font-weight: 500;
+      letter-spacing: 0;
+      line-height: 1.04;
+      overflow-wrap: break-word;
+    }
+
+    .start-here-steps small {
+      display: block;
+      grid-column: 2;
+      max-width: 36rem;
+      margin-top: 0.55rem;
+      color: #6f5b3b;
+      font-size: clamp(0.94rem, 1vw, 1rem);
+      line-height: 1.55;
+    }
+
     .start-here-guide {
       border-block: 1px solid rgba(220, 201, 167, 0.85);
       padding: clamp(4rem, 8vw, 7rem) 0;
+      overflow-x: clip;
       background:
         radial-gradient(circle at 88% 12%, rgba(142, 148, 117, 0.24), transparent 24rem),
         linear-gradient(135deg, rgba(237, 226, 204, 0.8), rgba(247, 243, 232, 0.96));
@@ -277,6 +368,10 @@ import Base from "@/layouts/Base.astro";
     }
 
     @media (min-width: 1024px) {
+      .start-here-journey {
+        grid-template-columns: minmax(16rem, 0.42fr) minmax(0, 1fr);
+      }
+
       .start-here-guide-panel {
         grid-template-columns: minmax(0, 1fr) minmax(24rem, 0.42fr);
       }
@@ -290,8 +385,14 @@ import Base from "@/layouts/Base.astro";
 
     .dark .start-here-lede,
     .dark .start-here-list p,
-    .dark .start-here-guide p {
+    .dark .start-here-guide p,
+    .dark .start-here-steps small {
       color: #ede2cc;
+    }
+
+    .dark .start-here-category-link,
+    .dark .start-here-steps a {
+      color: #f7f3e8;
     }
 
     @media (max-width: 767px) {
@@ -300,6 +401,25 @@ import Base from "@/layouts/Base.astro";
       .start-here-guide p {
         font-size: var(--be-mobile-copy-size);
         line-height: var(--be-mobile-copy-line-height);
+      }
+
+      .start-here-steps a {
+        grid-template-columns: 2.35rem minmax(0, 1fr);
+        transform: none;
+      }
+
+      .start-here-steps a:hover {
+        transform: none;
+      }
+
+      .start-here-steps strong {
+        font-size: clamp(1.22rem, 5.8vw, 1.45rem);
+        line-height: 1.1;
+        overflow-wrap: anywhere;
+      }
+
+      .start-here-breathe {
+        width: min(calc(100vw - 2rem), 70rem) !important;
       }
     }
   </style>

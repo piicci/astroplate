@@ -1,0 +1,153 @@
+---
+interface Props {
+  idPrefix: string;
+  source: string;
+  className?: string;
+}
+
+const { idPrefix, source, className = "" } = Astro.props;
+---
+
+<form
+  class={`breakfast-guide-form ${className}`}
+  name="breakfast-guide"
+  method="POST"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+  novalidate
+>
+  <input type="hidden" name="form-name" value="breakfast-guide" />
+  <input type="hidden" name="source" value={source} />
+  <input type="hidden" name="subject" value="New 7 High-Protein Breakfasts guide signup" />
+  <input type="hidden" name="leadMagnet" value="7 High-Protein Breakfasts" />
+  <input type="hidden" name="downloadUrl" value="/downloads/7-high-protein-breakfasts.pdf" />
+  <p class="hidden" aria-hidden="true">
+    <label>Do not fill this out: <input name="bot-field" /></label>
+  </p>
+
+  <div class="grid gap-5">
+    <div>
+      <label class="form-label" for={`${idPrefix}-first-name`}>
+        First name
+      </label>
+      <input
+        class="form-input"
+        id={`${idPrefix}-first-name`}
+        name="firstName"
+        type="text"
+        placeholder="First name"
+        autocomplete="given-name"
+        required
+      />
+      <p class="mt-2 hidden text-sm text-[#9f3f32]" data-error-name>
+        Please enter your first name.
+      </p>
+    </div>
+
+    <div>
+      <label class="form-label" for={`${idPrefix}-email`}>
+        Email address
+      </label>
+      <input
+        class="form-input"
+        id={`${idPrefix}-email`}
+        name="email"
+        type="email"
+        placeholder="Email address"
+        autocomplete="email"
+        required
+      />
+      <p class="mt-2 min-h-5 text-sm text-text-light">
+        The guide will arrive with the weekly wellness letter.
+      </p>
+      <p class="mt-2 hidden text-sm text-[#9f3f32]" data-error-email>
+        Please enter a valid email address.
+      </p>
+    </div>
+  </div>
+
+  <button
+    class="btn btn-primary mt-6 w-full active:translate-y-[1px] sm:w-auto"
+    type="submit"
+    data-submit-label="Send Me the Breakfast Guide"
+  >
+    Send Me the Breakfast Guide
+  </button>
+
+  <p class="mt-4 hidden rounded-sm border border-primary/40 bg-body/70 px-4 py-3 text-sm text-text-dark dark:text-darkmode-text-dark" data-success>
+    Thank you. Your breakfast guide is on its way.
+  </p>
+  <p class="mt-4 hidden rounded-sm border border-[#9f3f32]/35 bg-[#9f3f32]/10 px-4 py-3 text-sm text-[#9f3f32]" data-error-submit>
+    Something went wrong. Please try again.
+  </p>
+</form>
+
+<script is:inline>
+  (() => {
+    const breakfastGuideForms = document.querySelectorAll(".breakfast-guide-form");
+
+    const submitBreakfastGuideForm = async (form) => {
+      const isLocal = ["localhost", "127.0.0.1"].includes(window.location.hostname);
+
+      if (isLocal) {
+        await new Promise((resolve) => window.setTimeout(resolve, 350));
+        return;
+      }
+
+      const response = await fetch("/__forms.html", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(new FormData(form)).toString(),
+      });
+
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
+    };
+
+    breakfastGuideForms.forEach((form) => {
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const botField = form.querySelector('[name="bot-field"]');
+        const firstName = form.querySelector('[name="firstName"]');
+        const email = form.querySelector('[name="email"]');
+        const nameError = form.querySelector("[data-error-name]");
+        const emailError = form.querySelector("[data-error-email]");
+        const success = form.querySelector("[data-success]");
+        const submitError = form.querySelector("[data-error-submit]");
+        const button = form.querySelector("button[type='submit']");
+        const validName = firstName.value.trim().length > 0;
+        const emailValue = email.value.trim();
+        const validEmail = emailValue.includes("@") && emailValue.includes(".");
+
+        if (botField?.value) {
+          return;
+        }
+
+        nameError.classList.toggle("hidden", validName);
+        emailError.classList.toggle("hidden", validEmail);
+        success.classList.add("hidden");
+        submitError.classList.add("hidden");
+
+        if (!validName || !validEmail) {
+          return;
+        }
+
+        button.disabled = true;
+        button.textContent = "Sending...";
+
+        try {
+          await submitBreakfastGuideForm(form);
+          success.classList.remove("hidden");
+          form.reset();
+        } catch (error) {
+          submitError.classList.remove("hidden");
+        } finally {
+          button.disabled = false;
+          button.textContent = button.dataset.submitLabel;
+        }
+      });
+    });
+  })();
+</script>
