@@ -99,7 +99,7 @@ Sometimes it is stress catching up with your nervous system.
 And sometimes it is simply your body asking for a rhythm that feels less punishing.
 The goal is not to force yourself through the afternoon with more caffeine and willpower.
 The goal is to understand what your body may be responding to and build simple habits that help your energy feel more stable.
-If you are new to this topic, start with our guide to [blood sugar balance for women](/journal/blood-sugar-balance-for-women/), where we explain what blood sugar means, why it affects energy, and how small daily habits can make a meaningful difference.
+If you are new to this topic, start with our guide to [blood sugar balance for women](/journal/blood-sugar-balance-for-women), where we explain what blood sugar means, why it affects energy, and how small daily habits can make a meaningful difference.
 Gentle note: This article is for educational purposes only and does not replace medical advice. If your fatigue is severe, persistent, sudden, or comes with dizziness, fainting, shakiness, confusion, rapid heartbeat, excessive thirst, frequent urination, or unexplained weight changes, please speak with a qualified healthcare professional.
 
 ![Woman seated at the Department of Sudden Heaviness desk in warm editorial light, representing the afternoon energy slump | Becoming Elysian](../../assets/images/journal/simple-ways-to-reduce-afternoon-energy-crashes/becoming-elysian-department-of-sudden-heaviness.webp)
@@ -138,7 +138,7 @@ Common contributors include:
 * stress and nervous system fatigue
 * hormonal shifts
 * low movement during the day
-If your crash often happens after lunch, you may also want to read [why you feel tired after eating](/journal/why-you-feel-tired-after-eating-and-what-may-help/), which explores post-meal fatigue, blood sugar dips, large meals, and the difference between normal sleepiness and feeling completely wiped out.
+If your crash often happens after lunch, you may also want to read [why you feel tired after eating](/journal/why-you-feel-tired-after-eating-and-what-may-help), which explores post-meal fatigue, blood sugar dips, large meals, and the difference between normal sleepiness and feeling completely wiped out.
 For now, let’s look at the most useful places to begin.
 
 ![Woman surrounded by notes labeled browser with 47 tabs, representing cognitive overload and afternoon brain fog | Becoming Elysian](../../assets/images/journal/simple-ways-to-reduce-afternoon-energy-crashes/becoming-elysian-browser-tabs-brain-fog.webp)
@@ -155,7 +155,7 @@ A supportive breakfast usually includes:
 * healthy fats
 * fruit or vegetables
 * enough food to satisfy you
-For a full guide, read [how to build a blood-sugar-friendly breakfast](/journal/how-to-build-a-blood-sugar-friendly-breakfast/). It walks you through the simple formula of protein, fiber-rich carbs, healthy fat, and color.
+For a full guide, read [how to build a blood-sugar-friendly breakfast](/journal/how-to-build-a-blood-sugar-friendly-breakfast). It walks you through the simple formula of protein, fiber-rich carbs, healthy fat, and color.
 ### Better breakfast examples
 Try:
 * Greek yogurt with berries, chia seeds, and walnuts
@@ -176,7 +176,7 @@ If breakfast and lunch are both low in protein, afternoon cravings and fatigue c
 You may not need fewer carbs.
 
 You may need more protein beside your carbs.
-If this is an area you are working on, read [why protein matters more as you age](/journal/why-protein-matters-more-as-you-age/) and [how much protein women over 35 really need](/journal/how-much-protein-do-women-over-35-need/). These articles explain why protein becomes more important with age and how to approach it without obsessing over every gram.
+If this is an area you are working on, read [why protein matters more as you age](/journal/why-protein-matters-more-as-you-age) and [how much protein women over 35 really need](/journal/how-much-protein-do-women-over-35-need). These articles explain why protein becomes more important with age and how to approach it without obsessing over every gram.
 ### Easy ways to add more protein
 Add:
 * eggs to toast
@@ -259,7 +259,7 @@ It is about giving your energy more structure.
 If you regularly crash around 3 or 4 p.m., a snack may help.
 But the type of snack matters.
 A snack that is mostly sugar may give you a short lift and then leave you back where you started. A snack with protein, fiber, and fat is more likely to carry you.
-For more ideas, read [high-protein snacks that actually keep you full](/journal/high-protein-snacks-that-keep-you-full/). It is a natural companion to this article, especially if your afternoon crash comes with cravings or feeling snacky.
+For more ideas, read [high-protein snacks that actually keep you full](/journal/high-protein-snacks-that-keep-you-full). It is a natural companion to this article, especially if your afternoon crash comes with cravings or feeling snacky.
 ### Blood-sugar-friendly snack ideas
 Try:
 * Greek yogurt with berries
@@ -451,7 +451,7 @@ Here are a few simple meal combinations that may help support steadier energy.
 * oats with protein, flaxseed, and berries
 * tofu scramble with vegetables and potatoes
 * cottage cheese with fruit and nut butter
-For more options, explore [high-protein breakfast ideas for steady energy](/journal/high-protein-breakfast-ideas-for-steady-energy/) and [how to build a blood-sugar-friendly breakfast](/journal/how-to-build-a-blood-sugar-friendly-breakfast/).
+For more options, explore [high-protein breakfast ideas for steady energy](/journal/high-protein-breakfast-ideas-for-steady-energy) and [how to build a blood-sugar-friendly breakfast](/journal/how-to-build-a-blood-sugar-friendly-breakfast).
 ### Lunch ideas
 * salmon, potatoes, greens, and olive oil
 * chicken, quinoa, roasted vegetables, and tahini

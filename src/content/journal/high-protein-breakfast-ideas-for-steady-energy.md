@@ -146,7 +146,7 @@ These foods are not bad.
 They are just often incomplete.
 A breakfast can look healthy and still leave your body under-supported.
 That is the difference we want to pay attention to.
-Related reading: [Why Protein Matters More as You Age](/journal/why-protein-matters-more-as-you-age/)
+Related reading: [Why Protein Matters More as You Age](/journal/why-protein-matters-more-as-you-age)
 
 ## What Makes a Breakfast High-Protein?
 For many women, a helpful breakfast target is around:
@@ -158,7 +158,7 @@ It simply helps you understand what “enough” protein looks like.
 Because a breakfast with 8 grams of protein and a breakfast with 30 grams of protein can feel very different in your body.
 One may leave you searching for snacks two hours later.
 The other may help you move through your morning with more steadiness.
-Related reading: [How Much Protein Do Women Over 35 Really Need?](/journal/how-much-protein-do-women-over-35-need/)
+Related reading: [How Much Protein Do Women Over 35 Really Need?](/journal/how-much-protein-do-women-over-35-need)
 
 ## The Problem With “Light” Breakfasts
 Many women are not eating breakfast in a way that matches the demands of their life.
@@ -291,7 +291,7 @@ This breakfast gives your body a more complete start than toast alone. It feels 
 
 ![Eggs with sourdough toast, sliced avocado, tomatoes, coffee, and water in a red leather cafe booth](../../assets/images/journal/high-protein-breakfast-ideas-for-steady-energy/becoming-elysian-eggs-sourdough-avocado-breakfast.webp)
 
-Related reading: [A Simple Balanced Plate Method for Women Who Feel Overwhelmed by Nutrition](/journal/simple-balanced-plate-method-for-women/)
+Related reading: [A Simple Balanced Plate Method for Women Who Feel Overwhelmed by Nutrition](/journal/simple-balanced-plate-method-for-women)
 ### 3. Cottage Cheese With Fruit and Seeds
 Cottage cheese is underrated.
 It is high in protein, quick to prepare, and works beautifully with both sweet and savory flavors.
@@ -443,7 +443,7 @@ Easy combination
 * yogurt on the side
 How it supports steady energy
 This is a blood-sugar-friendly breakfast that can keep you full for hours. It is especially helpful if you enjoy savory, Mediterranean-style meals.
-Related reading: [Blood Sugar Balance for Women: What It Means and Why It Matters](/journal/blood-sugar-balance-for-women/)
+Related reading: [Blood Sugar Balance for Women: What It Means and Why It Matters](/journal/blood-sugar-balance-for-women)
 
 ## High-Protein Breakfast Ideas Without Eggs
 Eggs are useful, but not everyone likes them. Some women get bored of them. Some do not digest them well. Some simply do not want to eat eggs every morning, which is fair — there are only so many scrambled eggs a woman can emotionally tolerate.
@@ -619,4 +619,4 @@ The kind of care that does not demand your whole life, but helps you live it wit
 
 ![Woman by a bright window with coffee and a balanced breakfast plate of eggs, avocado, berries, cottage cheese, and toast](../../assets/images/journal/high-protein-breakfast-ideas-for-steady-energy/becoming-elysian-steady-energy-breakfast-window.webp)
 
-Related reading: [High-Protein Snacks That Actually Keep You Full](/journal/high-protein-snacks-that-keep-you-full/)
+Related reading: [High-Protein Snacks That Actually Keep You Full](/journal/high-protein-snacks-that-keep-you-full)

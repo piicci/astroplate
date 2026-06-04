@@ -238,6 +238,103 @@ const stringifyJsonLd = (value: Record<string, unknown>) =>
         <script>import "@/layouts/helpers/search-modal-loader";</script>
       )
     }
+    <script is:inline>
+      (() => {
+        if (window.__breakfastGuideFormHandlerAttached) {
+          return;
+        }
+
+        window.__breakfastGuideFormHandlerAttached = true;
+
+        const submitSiteForm = async (form) => {
+          const isLocal = ["localhost", "127.0.0.1"].includes(
+            window.location.hostname,
+          );
+
+          if (isLocal) {
+            await new Promise((resolve) => window.setTimeout(resolve, 350));
+            return;
+          }
+
+          const response = await fetch("/__forms.html", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(new FormData(form)).toString(),
+          });
+
+          if (!response.ok) {
+            throw new Error("Form submission failed");
+          }
+        };
+
+        document.addEventListener("submit", async (event) => {
+          const form = event.target;
+          const isManagedForm =
+            form instanceof HTMLFormElement &&
+            (form.classList.contains("breakfast-guide-form") ||
+              form.classList.contains("be-newsletter-form") ||
+              form.classList.contains("newsletter-page-form") ||
+              form.classList.contains("be-post-cta-form"));
+
+          if (!isManagedForm) {
+            return;
+          }
+
+          event.preventDefault();
+
+          const botField = form.querySelector('[name="bot-field"]');
+          const firstName = form.querySelector('[name="firstName"]');
+          const email = form.querySelector('[name="email"]');
+          const nameError = form.querySelector("[data-error-name]");
+          const emailError =
+            form.querySelector("[data-error-email]") ||
+            form.querySelector("[data-error]");
+          const success = form.querySelector("[data-success]");
+          const submitError = form.querySelector("[data-error-submit]");
+          const button = form.querySelector("button[type='submit']");
+
+          if (!email || !button) {
+            return;
+          }
+
+          const requiresName = Boolean(firstName);
+          const validName =
+            !requiresName || firstName.value.trim().length > 0;
+          const emailValue = email.value.trim();
+          const validEmail = emailValue.includes("@") && emailValue.includes(".");
+
+          if (botField?.value) {
+            return;
+          }
+
+          nameError?.classList.toggle("hidden", validName);
+          emailError?.classList.toggle("hidden", validEmail);
+          success?.classList.add("hidden");
+          submitError?.classList.add("hidden");
+
+          if (!validName || !validEmail) {
+            return;
+          }
+
+          button.disabled = true;
+          button.textContent = form.classList.contains("breakfast-guide-form")
+            ? "Sending..."
+            : "Joining...";
+
+          try {
+            await submitSiteForm(form);
+            success?.classList.remove("hidden");
+            form.reset();
+          } catch (error) {
+            submitError?.classList.remove("hidden");
+          } finally {
+            button.disabled = false;
+            button.textContent =
+              button.dataset.submitLabel ?? "Send Me the Breakfast Guide";
+          }
+        });
+      })();
+    </script>
     <main class="grow overflow-x-hidden w-full max-w-full" id="main-content">
       <slot />
     </main>

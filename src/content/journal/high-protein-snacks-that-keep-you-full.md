@@ -154,7 +154,7 @@ This does not mean every snack needs to be perfectly balanced.
 
 It means that if your snacks are not keeping you full, protein is one of the first things to check.
 
-Related reading: [Why Protein Matters More as You Age](/journal/why-protein-matters-more-as-you-age/)
+Related reading: [Why Protein Matters More as You Age](/journal/why-protein-matters-more-as-you-age)
 
 ## What Makes a Snack Actually Filling?
 
@@ -248,7 +248,7 @@ If not, the body will keep asking.
 
 And it will usually ask louder later.
 
-Related reading: [Protein Timing: Does It Matter for Women?](/journal/protein-timing-does-it-matter-for-women/)
+Related reading: [Protein Timing: Does It Matter for Women?](/journal/protein-timing-does-it-matter-for-women)
 
 ![A woman at a small café table with coffee and a snack card, gently illustrating why coffee alone is not a nourishing snack | Becoming Elysian quiet luxury wellness](../../assets/images/journal/high-protein-snacks-that-keep-you-full/becoming-elysian-coffee-is-not-a-snack.webp)
 
@@ -444,7 +444,7 @@ It’s satisfying, because
 
 It gives you protein, carbohydrates, fiber, and fluid. It is especially helpful after training or when you need something quick.
 
-Related reading: [High-Protein Breakfast Ideas for Steady Energy](/journal/high-protein-breakfast-ideas-for-steady-energy/)
+Related reading: [High-Protein Breakfast Ideas for Steady Energy](/journal/high-protein-breakfast-ideas-for-steady-energy)
 
 ![Elegant protein smoothie station with Greek yogurt, berries, banana, chia seeds, milk, spinach, and labeled ingredients | Becoming Elysian quiet luxury wellness](../../assets/images/journal/high-protein-snacks-that-keep-you-full/becoming-elysian-protein-smoothie-snack-station.webp)
 
@@ -590,7 +590,7 @@ A sweet snack can still be balanced.
 
 It does not need to send your blood sugar on a dramatic little holiday.
 
-Related reading: [Blood Sugar Balance for Women: What It Means and Why It Matters](/journal/blood-sugar-balance-for-women/)
+Related reading: [Blood Sugar Balance for Women: What It Means and Why It Matters](/journal/blood-sugar-balance-for-women)
 
 ## Savory High-Protein Snacks
 
@@ -855,6 +855,6 @@ And your body does not need another rule.
 
 It needs reliable support.
 
-Related reading: [High-Protein Breakfast Ideas for Steady Energy](/journal/high-protein-breakfast-ideas-for-steady-energy/)
+Related reading: [High-Protein Breakfast Ideas for Steady Energy](/journal/high-protein-breakfast-ideas-for-steady-energy)
 
 ![Woman reaching for a balanced protein snack from a calm Mediterranean table, showing snacks as reliable support instead of restriction | Becoming Elysian quiet luxury wellness](../../assets/images/journal/high-protein-snacks-that-keep-you-full/becoming-elysian-supportive-snack-ritual.webp)

@@ -283,7 +283,7 @@ It moves you away from punishment and toward strength.
 
 ![Overhead editorial flat lay showing a dumbbell as stimulus and a tray of protein foods as materials for muscle growth | Becoming Elysian strength training and protein](../../assets/images/journal/how-much-protein-do-women-over-35-need/becoming-elysian-stimulus-materials-protein-growth.webp)
 
-> Related reading: [Nutrition for Women Over 35: How to Support Energy, Metabolism, Hormones, and Long-Term Health](/journal/nutrition-for-women-over-35/)
+> Related reading: [Nutrition for Women Over 35: How to Support Energy, Metabolism, Hormones, and Long-Term Health](/journal/nutrition-for-women-over-35)
 
 ## Should You Eat Protein at Every Meal?
 
@@ -321,7 +321,7 @@ It just needs enough structure to support you.
 
 ![Luxury breakfast tray with eggs, cottage cheese, Greek yogurt, berries, toast, and a 25 to 35 gram breakfast card | Becoming Elysian protein at breakfast](../../assets/images/journal/how-much-protein-do-women-over-35-need/becoming-elysian-25-35-gram-protein-breakfast.webp)
 
-> Related reading: [Protein Timing: Does It Matter for Women?](/journal/protein-timing-does-it-matter-for-women/)
+> Related reading: [Protein Timing: Does It Matter for Women?](/journal/protein-timing-does-it-matter-for-women)
 
 ## What Does 25–35 Grams of Protein Look Like?
 
@@ -379,7 +379,7 @@ Once you see it, it becomes much easier to repeat.
 
 ![Woman seated at a formal table with a spotlight on a tiny lettuce plate, illustrating why eating too light can leave women under-supported | Becoming Elysian enough protein for women](../../assets/images/journal/how-much-protein-do-women-over-35-need/becoming-elysian-lettuce-diet-under-supported.webp)
 
-> Related reading: [High-Protein Breakfast Ideas for Steady Energy](/journal/high-protein-breakfast-ideas-for-steady-energy/)
+> Related reading: [High-Protein Breakfast Ideas for Steady Energy](/journal/high-protein-breakfast-ideas-for-steady-energy)
 
 ## Best Protein Sources for Women Over 35
 
@@ -451,7 +451,7 @@ There is no need to make protein boring.
 
 ![Elegant pantry labelled The Protein Anchor filled with eggs, tofu, Greek yogurt, lentils, edamame, and fish | Becoming Elysian best protein sources for women](../../assets/images/journal/how-much-protein-do-women-over-35-need/becoming-elysian-protein-anchor-pantry.webp)
 
-> Related reading: [High-Protein Snacks That Actually Keep You Full](/journal/high-protein-snacks-that-keep-you-full/)
+> Related reading: [High-Protein Snacks That Actually Keep You Full](/journal/high-protein-snacks-that-keep-you-full)
 
 ## Do Women Need Protein Powder?
 

@@ -279,9 +279,9 @@ Tofu scramble with avocado.
 Overnight oats with added protein.
 Smoked salmon with toast and cucumber.
 Simple food. Better structure. Less chaos later.
-*Internal link suggestion: [How Much Protein Do Women Over 35 Really Need?](/journal/how-much-protein-do-women-over-35-need/)*
-*Internal link suggestion: [High-Protein Breakfast Ideas for Steady Energy](/journal/high-protein-breakfast-ideas-for-steady-energy/)*
-*Internal link suggestion: [Why Protein Matters More as You Age](/journal/why-protein-matters-more-as-you-age/)*
+*Internal link suggestion: [How Much Protein Do Women Over 35 Really Need?](/journal/how-much-protein-do-women-over-35-need)*
+*Internal link suggestion: [High-Protein Breakfast Ideas for Steady Energy](/journal/high-protein-breakfast-ideas-for-steady-energy)*
+*Internal link suggestion: [Why Protein Matters More as You Age](/journal/why-protein-matters-more-as-you-age)*
 
 ## Blood Sugar Balance: Why Your Energy Feels So Up and Down
 
@@ -314,9 +314,9 @@ Your cravings feel less urgent.
 Your mood feels less fragile.
 Your hunger feels less like an emergency.
 Your body feels easier to live in.
-*Internal link suggestion: [Blood Sugar Balance for Women: What It Means and Why It Matters](/journal/blood-sugar-balance-for-women/)*
-*Internal link suggestion: [Why You Feel Tired After Eating — and What May Help](/journal/why-you-feel-tired-after-eating-and-what-may-help/)*
-*Internal link suggestion: [Simple Ways to Reduce Afternoon Energy Crashes](/journal/simple-ways-to-reduce-afternoon-energy-crashes/)*
+*Internal link suggestion: [Blood Sugar Balance for Women: What It Means and Why It Matters](/journal/blood-sugar-balance-for-women)*
+*Internal link suggestion: [Why You Feel Tired After Eating — and What May Help](/journal/why-you-feel-tired-after-eating-and-what-may-help)*
+*Internal link suggestion: [Simple Ways to Reduce Afternoon Energy Crashes](/journal/simple-ways-to-reduce-afternoon-energy-crashes)*
 
 ## Metabolism After 35: It Is Not Just About Eating Less
 
@@ -349,9 +349,9 @@ Strength training gives the body a reason to use them.
 You do not need to train like an athlete.
 You do not need to build your whole life around fitness.
 But you do deserve to feel strong in your body — not just smaller.
-*Internal link suggestion: [Metabolic Health for Women Over 35: A Simple Guide](/journal/metabolic-health-for-women-over-35/)*
-*Internal link suggestion: [Why Your Metabolism Changes in Your 30s and 40s](/journal/why-your-metabolism-changes-in-your-30s-and-40s/)*
-*Internal link suggestion: [Why Eating Less Is Not Always Better for Your Metabolism](/journal/why-eating-less-is-not-always-better-for-your-metabolism/)*
+*Internal link suggestion: [Metabolic Health for Women Over 35: A Simple Guide](/journal/metabolic-health-for-women-over-35)*
+*Internal link suggestion: [Why Your Metabolism Changes in Your 30s and 40s](/journal/why-your-metabolism-changes-in-your-30s-and-40s)*
+*Internal link suggestion: [Why Eating Less Is Not Always Better for Your Metabolism](/journal/why-eating-less-is-not-always-better-for-your-metabolism)*
 
 ## Carbohydrates Are Not the Problem
 
@@ -416,7 +416,7 @@ Think of fats as support.
 Not something to fear.
 Not something to over-glorify.
 Just part of a well-built plate.
-*Internal link suggestion: [Healthy Fats for Hormones, Skin, and Energy](/journal/healthy-fats-for-hormones-skin-and-energy/)*
+*Internal link suggestion: [Healthy Fats for Hormones, Skin, and Energy](/journal/healthy-fats-for-hormones-skin-and-energy)*
 
 ## Fiber: The Underrated Nutrient Women Need More Of
 
@@ -449,7 +449,7 @@ Add chia seeds to yogurt.
 Add chickpeas to a salad.
 Small changes count.
 Your digestion does not need shock therapy. It needs consistency.
-*Internal link suggestion: [Fiber for Women’s Health: Gut, Hormones, and Blood Sugar](/journal/fiber-for-womens-health-gut-hormones-blood-sugar/)*
+*Internal link suggestion: [Fiber for Women’s Health: Gut, Hormones, and Blood Sugar](/journal/fiber-for-womens-health-gut-hormones-blood-sugar)*
 
 ## Nutrition and Hormones After 35
 
@@ -526,7 +526,7 @@ A balanced plate could look like:
 * lentil soup with bread, yogurt, and a side salad
 It does not have to be aesthetic.
 It has to support you.
-*Internal link suggestion: [A Simple Balanced Plate Method for Women Who Feel Overwhelmed by Nutrition](/journal/simple-balanced-plate-method-for-women/)*
+*Internal link suggestion: [A Simple Balanced Plate Method for Women Who Feel Overwhelmed by Nutrition](/journal/simple-balanced-plate-method-for-women)*
 
 ## Anti-Inflammatory and Mediterranean-Style Eating
 
@@ -557,8 +557,8 @@ choosing more legumes,
 and reducing the frequency of meals that leave you feeling heavy, tired, or inflamed.
 You do not need a perfect anti-inflammatory diet.
 You need more meals that make your body feel well.
-*Internal link suggestion: [Anti-Inflammatory Eating for Women: A Practical Beginner’s Guide](/journal/anti-inflammatory-eating-for-women/)*
-*Internal link suggestion: [Mediterranean Diet for Women Over 40: What to Eat and Why It Works](/journal/mediterranean-diet-for-women-over-40/)*
+*Internal link suggestion: [Anti-Inflammatory Eating for Women: A Practical Beginner’s Guide](/journal/anti-inflammatory-eating-for-women)*
+*Internal link suggestion: [Mediterranean Diet for Women Over 40: What to Eat and Why It Works](/journal/mediterranean-diet-for-women-over-40)*
 
 ## What to Limit Without Becoming Restrictive
 

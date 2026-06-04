@@ -119,7 +119,7 @@ But through consistent, nourishing meals that help your body feel steady.
 
 If you are new to this topic, you may want to begin with [Metabolic Health for Women Over 35: A Simple Guide](/journal/metabolic-health-for-women-over-35) and [Why Your Metabolism Changes in Your 30s and 40s](/journal/why-your-metabolism-changes-in-your-30s-and-40s). This article builds on those foundations and focuses specifically on what to eat.
 
-![Elegant woman as the Metabolism Concierge standing behind a serene wellness hotel desk with labeled drawers for protein, fiber, hydration, healthy fats, sleep, strength, and stress, soft natural light and classical details | Becoming Elysian quiet luxury wellness editorial](/src/assets/images/journal/the-best-foods-to-support-a-healthy-metabolism/becoming-elysian-metabolism-concierge-hero.webp)
+![Elegant woman as the Metabolism Concierge standing behind a serene wellness hotel desk with labeled drawers for protein, fiber, hydration, healthy fats, sleep, strength, and stress, soft natural light and classical details | Becoming Elysian quiet luxury wellness editorial](../../assets/images/journal/the-best-foods-to-support-a-healthy-metabolism/becoming-elysian-metabolism-concierge-hero.webp)
 
 ## First: No Single Food "Boosts" Your Metabolism Overnight
 
@@ -137,7 +137,7 @@ What foods help my body feel nourished, strong, stable, and metabolically suppor
 
 That is where the real work begins.
 
-![Woman in white robe and towel turban beside a marble counter displaying lemon water, chili peppers, green tea, and apple cider vinegar under glass cloches with a sign "Not The Main Character" and a quote "No Magic Food Overnight. Consistency is the real alchemy." | Becoming Elysian quiet luxury wellness editorial](/src/assets/images/journal/the-best-foods-to-support-a-healthy-metabolism/becoming-elysian-no-magic-food-overnight.webp)
+![Woman in white robe and towel turban beside a marble counter displaying lemon water, chili peppers, green tea, and apple cider vinegar under glass cloches with a sign "Not The Main Character" and a quote "No Magic Food Overnight. Consistency is the real alchemy." | Becoming Elysian quiet luxury wellness editorial](../../assets/images/journal/the-best-foods-to-support-a-healthy-metabolism/becoming-elysian-no-magic-food-overnight.webp)
 
 ## What Makes a Food Good for Metabolic Health?
 
@@ -237,7 +237,7 @@ Protein at breakfast. Protein at lunch. Protein at dinner.
 
 Not perfect. Just consistent.
 
-![Woman in white robe and towel turban at a grand "The Protein Department" counter with labeled bowls of eggs, Greek yogurt, tofu, fish, lentils, beans, chicken, cottage cheese, and quinoa, elegant wellness hotel setting | Becoming Elysian quiet luxury wellness editorial](/src/assets/images/journal/the-best-foods-to-support-a-healthy-metabolism/becoming-elysian-protein-department-counter.webp)
+![Woman in white robe and towel turban at a grand "The Protein Department" counter with labeled bowls of eggs, Greek yogurt, tofu, fish, lentils, beans, chicken, cottage cheese, and quinoa, elegant wellness hotel setting | Becoming Elysian quiet luxury wellness editorial](../../assets/images/journal/the-best-foods-to-support-a-healthy-metabolism/becoming-elysian-protein-department-counter.webp)
 
 ## 2. High-Fiber Carbohydrates
 
@@ -289,7 +289,7 @@ The goal is to build meals that your body can use well.
 
 For more on this, read [Blood Sugar Balance for Women: What It Means and Why It Matters](/journal/blood-sugar-balance-for-women) and [How to Build a Blood-Sugar-Friendly Breakfast](/journal/how-to-build-a-blood-sugar-friendly-breakfast).
 
-![Woman in white lace slip dress and towel turban on a wooden ladder in a sunlit "The Fiber Library" pantry, reaching for a jar labeled "Steady Energy" surrounded by oats, beans, berries, potatoes, quinoa, chia seeds, apples, and pears | Becoming Elysian quiet luxury wellness editorial](/src/assets/images/journal/the-best-foods-to-support-a-healthy-metabolism/becoming-elysian-fiber-library-ladder.webp)
+![Woman in white lace slip dress and towel turban on a wooden ladder in a sunlit "The Fiber Library" pantry, reaching for a jar labeled "Steady Energy" surrounded by oats, beans, berries, potatoes, quinoa, chia seeds, apples, and pears | Becoming Elysian quiet luxury wellness editorial](../../assets/images/journal/the-best-foods-to-support-a-healthy-metabolism/becoming-elysian-fiber-library-ladder.webp)
 
 ## 3. Beans and Lentils
 
@@ -335,7 +335,7 @@ If beans make you feel bloated, start slowly. Use smaller portions, rinse canned
 
 Your gut may need time to adjust.
 
-![Woman in white lace camisole and towel turban seated at a velvet-draped round table with elegant bowls of chickpeas, lentils, black beans, kidney beans, cannellini beans, edamame, and split peas, classical painting and candlelight in background | Becoming Elysian quiet luxury wellness editorial](/src/assets/images/journal/the-best-foods-to-support-a-healthy-metabolism/becoming-elysian-beans-lentils-unsung-aristocrats.webp)
+![Woman in white lace camisole and towel turban seated at a velvet-draped round table with elegant bowls of chickpeas, lentils, black beans, kidney beans, cannellini beans, edamame, and split peas, classical painting and candlelight in background | Becoming Elysian quiet luxury wellness editorial](../../assets/images/journal/the-best-foods-to-support-a-healthy-metabolism/becoming-elysian-beans-lentils-unsung-aristocrats.webp)
 
 ## 4. Colorful Vegetables
 
@@ -401,7 +401,7 @@ Try:
 
 The best vegetable is the one you will actually eat.
 
-![Woman in white robe and towel turban standing before a theatrical "The Vegetable Choir" display of singing vegetables including broccoli, peppers, tomatoes, carrots, zucchini, cabbage, asparagus, and mushrooms in a grand arched hall | Becoming Elysian quiet luxury wellness editorial](/src/assets/images/journal/the-best-foods-to-support-a-healthy-metabolism/becoming-elysian-vegetable-choir-harmony.webp)
+![Woman in white robe and towel turban standing before a theatrical "The Vegetable Choir" display of singing vegetables including broccoli, peppers, tomatoes, carrots, zucchini, cabbage, asparagus, and mushrooms in a grand arched hall | Becoming Elysian quiet luxury wellness editorial](../../assets/images/journal/the-best-foods-to-support-a-healthy-metabolism/becoming-elysian-vegetable-choir-harmony.webp)
 
 ## 5. Berries and Whole Fruits
 
@@ -453,7 +453,7 @@ You do not need to fear fruit.
 
 You just may feel better when you pair it well.
 
-![Woman in white robe and towel turban at a pink marble "Fruit Without Fear" station with shelves of apples, pears, pomegranate, cherries, citrus, bananas, and kiwi, pairing apple slices with almond butter | Becoming Elysian quiet luxury wellness editorial](/src/assets/images/journal/the-best-foods-to-support-a-healthy-metabolism/becoming-elysian-fruit-without-fear-pink.webp)
+![Woman in white robe and towel turban at a pink marble "Fruit Without Fear" station with shelves of apples, pears, pomegranate, cherries, citrus, bananas, and kiwi, pairing apple slices with almond butter | Becoming Elysian quiet luxury wellness editorial](../../assets/images/journal/the-best-foods-to-support-a-healthy-metabolism/becoming-elysian-fruit-without-fear-pink.webp)
 
 ## 6. Healthy Fats
 
@@ -507,7 +507,7 @@ Examples:
 
 This is also where the Mediterranean style of eating becomes useful: simple whole foods, olive oil, herbs, fish, legumes, grains, vegetables, and meals that feel pleasurable rather than punishing.
 
-![Woman in white robe and towel turban pouring golden olive oil from a glass cruet over a tray of roasted vegetables at a marble counter with tahini, extra virgin olive oil bottle, chia seeds, and nuts | Becoming Elysian quiet luxury wellness editorial](/src/assets/images/journal/the-best-foods-to-support-a-healthy-metabolism/becoming-elysian-healthy-fat-oil-portrait.webp)
+![Woman in white robe and towel turban pouring golden olive oil from a glass cruet over a tray of roasted vegetables at a marble counter with tahini, extra virgin olive oil bottle, chia seeds, and nuts | Becoming Elysian quiet luxury wellness editorial](../../assets/images/journal/the-best-foods-to-support-a-healthy-metabolism/becoming-elysian-healthy-fat-oil-portrait.webp)
 
 ## 7. Fermented and Gut-Supportive Foods
 
@@ -561,7 +561,7 @@ A healthy metabolism is not separate from digestion. If your meals leave you blo
 
 Food should support you, not become another source of stress.
 
-![Woman in white camisole and towel turban opening a sage green "The Fermentation Cabinet" filled with jars of yogurt, kefir, sauerkraut, kimchi, miso, tempeh, fermented pickles, kombucha, and aged cheeses | Becoming Elysian quiet luxury wellness editorial](/src/assets/images/journal/the-best-foods-to-support-a-healthy-metabolism/becoming-elysian-fermentation-cabinet-gut-health.webp)
+![Woman in white camisole and towel turban opening a sage green "The Fermentation Cabinet" filled with jars of yogurt, kefir, sauerkraut, kimchi, miso, tempeh, fermented pickles, kombucha, and aged cheeses | Becoming Elysian quiet luxury wellness editorial](../../assets/images/journal/the-best-foods-to-support-a-healthy-metabolism/becoming-elysian-fermentation-cabinet-gut-health.webp)
 
 ## 8. Whole Grains
 
@@ -609,7 +609,7 @@ Metabolic health is not built by banning normal foods.
 
 It is built by learning how to compose meals well.
 
-![Woman in white robe and towel turban as station master at "The Whole Grain Train" counter, holding a departure schedule while a toy train carries labeled cars of oats, barley, quinoa, brown rice, farro, buckwheat, rye, sourdough, and bulgur across a marble counter | Becoming Elysian quiet luxury wellness editorial](/src/assets/images/journal/the-best-foods-to-support-a-healthy-metabolism/becoming-elysian-whole-grain-train.webp)
+![Woman in white robe and towel turban as station master at "The Whole Grain Train" counter, holding a departure schedule while a toy train carries labeled cars of oats, barley, quinoa, brown rice, farro, buckwheat, rye, sourdough, and bulgur across a marble counter | Becoming Elysian quiet luxury wellness editorial](../../assets/images/journal/the-best-foods-to-support-a-healthy-metabolism/becoming-elysian-whole-grain-train.webp)
 
 ## 9. Hydrating Foods and Fluids
 
@@ -655,7 +655,7 @@ You do not need to obsess over water intake, but you may feel better with a few 
 
 For women who train, walk often, sweat, or live in warm climates, hydration and electrolytes may become more noticeable.
 
-![Woman in white robe and towel turban standing before elegant "Hydration Anchors" dispensers labeled Morning Water, Water with Meals, Mineral Water After Exercise, Herbal Tea, and Evening Wind-Down, holding a glass of water with a yellow caution sign reminding that water is self-respect in a glass | Becoming Elysian quiet luxury wellness editorial](/src/assets/images/journal/the-best-foods-to-support-a-healthy-metabolism/becoming-elysian-hydration-anchors.webp)
+![Woman in white robe and towel turban standing before elegant "Hydration Anchors" dispensers labeled Morning Water, Water with Meals, Mineral Water After Exercise, Herbal Tea, and Evening Wind-Down, holding a glass of water with a yellow caution sign reminding that water is self-respect in a glass | Becoming Elysian quiet luxury wellness editorial](../../assets/images/journal/the-best-foods-to-support-a-healthy-metabolism/becoming-elysian-hydration-anchors.webp)
 
 ## 10. Herbs, Spices, and Flavor Builders
 
@@ -715,7 +715,7 @@ Your appetite deserves pleasure.
 
 Your meals deserve flavor.
 
-![Woman in white robe and towel turban at "The Flavor Builders Workshop" desk, sketching a lentil bowl blueprint surrounded by jars of parsley, mint, basil, dill, cinnamon, turmeric, cumin, paprika, lemon juice, apple cider vinegar, dijon mustard, capers, and garlic | Becoming Elysian quiet luxury wellness editorial](/src/assets/images/journal/the-best-foods-to-support-a-healthy-metabolism/becoming-elysian-flavor-builders-workshop.webp)
+![Woman in white robe and towel turban at "The Flavor Builders Workshop" desk, sketching a lentil bowl blueprint surrounded by jars of parsley, mint, basil, dill, cinnamon, turmeric, cumin, paprika, lemon juice, apple cider vinegar, dijon mustard, capers, and garlic | Becoming Elysian quiet luxury wellness editorial](../../assets/images/journal/the-best-foods-to-support-a-healthy-metabolism/becoming-elysian-flavor-builders-workshop.webp)
 
 ## How to Build a Metabolism-Supporting Plate
 
@@ -749,7 +749,7 @@ This is not about perfection. It is about building meals that hold you.
 
 If you often feel tired after meals, this structure can be especially useful. Read [Why You Feel Tired After Eating and What May Help](/journal/why-you-feel-tired-after-eating-and-what-may-help) for more guidance.
 
-![Woman in white robe and towel turban standing at "The Metabolism Department" chalkboard pointing to the plate formula (Protein + Fiber-Rich Carb + Healthy Fat + Colorful Plants) with a large divided serving bowl showing chicken, grains, roasted vegetables, avocado, walnuts, and olive oil | Becoming Elysian quiet luxury wellness editorial](/src/assets/images/journal/the-best-foods-to-support-a-healthy-metabolism/becoming-elysian-metabolism-department-plate.webp)
+![Woman in white robe and towel turban standing at "The Metabolism Department" chalkboard pointing to the plate formula (Protein + Fiber-Rich Carb + Healthy Fat + Colorful Plants) with a large divided serving bowl showing chicken, grains, roasted vegetables, avocado, walnuts, and olive oil | Becoming Elysian quiet luxury wellness editorial](../../assets/images/journal/the-best-foods-to-support-a-healthy-metabolism/becoming-elysian-metabolism-department-plate.webp)
 
 ## Best Breakfast Foods for Metabolism
 
@@ -799,7 +799,7 @@ Breakfast ideas
 
 For more ideas, read [High-Protein Breakfast Ideas for Steady Energy](/journal/high-protein-breakfast-ideas-for-steady-energy).
 
-![Top-down view of a serene Mediterranean breakfast table with soft-boiled egg, sliced avocado, tomatoes, smoked salmon with capers and lemon, cottage cheese, pear slices, sourdough bread, oats, coffee, and a newspaper | Becoming Elysian quiet luxury wellness editorial](/src/assets/images/journal/the-best-foods-to-support-a-healthy-metabolism/becoming-elysian-balanced-mediterranean-breakfast-spread.webp)
+![Top-down view of a serene Mediterranean breakfast table with soft-boiled egg, sliced avocado, tomatoes, smoked salmon with capers and lemon, cottage cheese, pear slices, sourdough bread, oats, coffee, and a newspaper | Becoming Elysian quiet luxury wellness editorial](../../assets/images/journal/the-best-foods-to-support-a-healthy-metabolism/becoming-elysian-balanced-mediterranean-breakfast-spread.webp)
 
 ## Best Lunch and Dinner Foods for Metabolism
 
@@ -979,7 +979,7 @@ This is not a rulebook. It is a template.
 
 You can adapt it to your preferences, culture, appetite, schedule, and budget.
 
-![Woman in white lace camisole and towel turban seated at the head of a long sunlit dining table beautifully set with labeled breakfast oats, lunch salad, dinner salmon and broccoli, snacks of apple with nut butter and olives, and herbal tea, with signs reminding "The Pattern Matters More Than One Meal" and "Consistency Is the New Restriction" | Becoming Elysian quiet luxury wellness editorial](/src/assets/images/journal/the-best-foods-to-support-a-healthy-metabolism/becoming-elysian-pattern-matters-dining-table.webp)
+![Woman in white lace camisole and towel turban seated at the head of a long sunlit dining table beautifully set with labeled breakfast oats, lunch salad, dinner salmon and broccoli, snacks of apple with nut butter and olives, and herbal tea, with signs reminding "The Pattern Matters More Than One Meal" and "Consistency Is the New Restriction" | Becoming Elysian quiet luxury wellness editorial](../../assets/images/journal/the-best-foods-to-support-a-healthy-metabolism/becoming-elysian-pattern-matters-dining-table.webp)
 
 
 ## Related Reading

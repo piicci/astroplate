@@ -190,7 +190,7 @@ This combination helps meals feel more satisfying and often supports steadier en
 ![Overhead Mediterranean food flat lay with sourdough, eggs, tomatoes, avocado, olive oil, lemons, herbs, and a sign about blood sugar | Becoming Elysian blood sugar balance](../../assets/images/journal/mediterranean-diet-for-women-over-40/becoming-elysian-blood-sugar-mediterranean-foods.webp)
 For women over 40, this can be especially helpful because blood sugar swings may become more noticeable with stress, poor sleep, lower muscle mass, hormonal changes, or inconsistent eating.
 The Mediterranean pattern has also been linked to a lower risk of type 2 diabetes and metabolic syndrome in Mayo Clinic’s Mediterranean diet overview. (mcforms.mayo.edu)
-If this is an area you want to understand more deeply, read [Blood Sugar Balance for Women: What It Means and Why It Matters](/journal/blood-sugar-balance-for-women/) and [Metabolic Health for Women Over 35: A Simple Guide](/journal/metabolic-health-for-women-over-35/).
+If this is an area you want to understand more deeply, read [Blood Sugar Balance for Women: What It Means and Why It Matters](/journal/blood-sugar-balance-for-women) and [Metabolic Health for Women Over 35: A Simple Guide](/journal/metabolic-health-for-women-over-35).
 
 ### 3. It Supports Healthy Inflammation Balance
 Anti-inflammatory eating and Mediterranean eating overlap beautifully.
@@ -205,7 +205,7 @@ Both emphasize:
 This does not mean inflammation is controlled by food alone. Stress, sleep, movement, medical conditions, alcohol, smoking, environmental exposures, and body composition can all play a role.
 But food is one of the most practical places to begin.
 A Mediterranean-style pattern is rich in fiber, antioxidants, polyphenols, and unsaturated fats — all part of a food environment that may support healthier inflammatory balance.
-For a full beginner’s guide, read [Anti-Inflammatory Eating for Women: A Practical Beginner’s Guide](/journal/anti-inflammatory-eating-for-women/).
+For a full beginner’s guide, read [Anti-Inflammatory Eating for Women: A Practical Beginner’s Guide](/journal/anti-inflammatory-eating-for-women).
 
 ### 4. It Supports Hormonal Transitions
 The Mediterranean diet does not “balance hormones” in a magical way.
@@ -228,7 +228,7 @@ That does not mean food replaces medical care. If symptoms are disruptive, medic
 But food can become a daily form of support — steady, quiet, and deeply practical.
 
 ![Woman holding a grocery bag in front of a vintage Mediterranean billboard with olive oil, lentils, and lemon for steady energy | Becoming Elysian energy after 40](../../assets/images/journal/mediterranean-diet-for-women-over-40/becoming-elysian-steady-energy-olive-oil-lentils-lemon.webp)
-For more on fats and hormonal support, read [Healthy Fats for Hormones, Skin, and Energy](/journal/healthy-fats-for-hormones-skin-and-energy/).
+For more on fats and hormonal support, read [Healthy Fats for Hormones, Skin, and Energy](/journal/healthy-fats-for-hormones-skin-and-energy).
 
 ### 5. It Supports Muscle, Strength, and Healthy Aging
 One common misconception is that the Mediterranean diet is only about vegetables and olive oil.
@@ -250,7 +250,7 @@ This is why Mediterranean eating should not become a low-protein salad diet.
 
 ![Woman beside a Mediterranean protein plate counter with fish, lentils, eggs, sardines, and Greek yogurt | Becoming Elysian protein for women over 40](../../assets/images/journal/mediterranean-diet-for-women-over-40/becoming-elysian-protein-plate-factory.webp)
 A beautiful plate of vegetables is lovely. But if it does not include enough protein, you may feel hungry, tired, and less supported.
-For body composition and strength goals, read [Body Recomposition for Women: Nutrition Basics](/journal/body-recomposition-for-women-nutrition-basics/) and [Why Protein Matters More as You Age](/journal/why-protein-matters-more-as-you-age/).
+For body composition and strength goals, read [Body Recomposition for Women: Nutrition Basics](/journal/body-recomposition-for-women-nutrition-basics) and [Why Protein Matters More as You Age](/journal/why-protein-matters-more-as-you-age).
 
 ### 6. It Supports Steadier Energy
 Many women over 40 do not just want to “eat healthy.”
@@ -270,7 +270,7 @@ For example:
 * chicken with quinoa, roasted vegetables, and tahini
 These meals include protein, fiber, carbohydrates, healthy fats, and flavor.
 That combination is often much better for energy than coffee alone, a low-protein breakfast, or a very light lunch that leads to evening cravings.
-For more practical guidance, read [How to Build a Blood-Sugar-Friendly Breakfast](/journal/how-to-build-a-blood-sugar-friendly-breakfast/) and [Why You Feel Tired After Eating — and What May Help](/journal/why-you-feel-tired-after-eating-and-what-may-help/).
+For more practical guidance, read [How to Build a Blood-Sugar-Friendly Breakfast](/journal/how-to-build-a-blood-sugar-friendly-breakfast) and [Why You Feel Tired After Eating — and What May Help](/journal/why-you-feel-tired-after-eating-and-what-may-help).
 
 ## What to Eat on a Mediterranean Diet
 Let’s make this simple.
@@ -541,7 +541,7 @@ Try:
 * smoked salmon with rye bread, cucumber, lemon, and dill
 * tofu scramble with vegetables, olive oil, and potatoes
 * kefir smoothie with berries, chia seeds, and oats
-For more ideas, read [High-Protein Breakfast Ideas for Steady Energy](/journal/high-protein-breakfast-ideas-for-steady-energy/).
+For more ideas, read [High-Protein Breakfast Ideas for Steady Energy](/journal/high-protein-breakfast-ideas-for-steady-energy).
 
 ![Close-up of woman in orange sunglasses with a Greek yogurt bowl topped with berries, walnuts, chia, and cinnamon | Becoming Elysian Mediterranean breakfast](../../assets/images/journal/mediterranean-diet-for-women-over-40/becoming-elysian-yogurt-bowl-screen-test.webp)
 
@@ -574,7 +574,7 @@ Try:
 * kefir with cinnamon
 * olives with cucumber and cheese
 * chia pudding with berries
-For more ideas, read [High-Protein Snacks That Actually Keep You Full](/journal/high-protein-snacks-that-keep-you-full/).
+For more ideas, read [High-Protein Snacks That Actually Keep You Full](/journal/high-protein-snacks-that-keep-you-full).
 
 ## A Simple 3-Day Mediterranean Meal Rhythm
 This is not a strict meal plan. It is a simple example to show how Mediterranean eating can look in real life.

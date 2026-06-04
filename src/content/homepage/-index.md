@@ -6,9 +6,9 @@ image: /images/becoming-elysian-about-cover.png
 
 # Hero banner
 banner:
-  eyebrow: For the season when your body asks for a wiser kind of care
-  title: Wellness for women over 35, designed for real life
-  content: A softer, wiser approach to fitness, nutrition, hormones, recovery, and sustainable wellbeing. Without overwhelm. Without making wellness your whole life.
+  eyebrow: For the season when your body asks for support, not pressure
+  title: Wellness for women over 35, shaped around real life
+  content: A softer, more thoughtful approach to fitness, nutrition, hormones, recovery, and sustainable wellbeing. Without overwhelm. Without making wellness your whole life.
   image: /images/becoming-elysian-about-editorial-hero.jpg
   image_alt: Woman enjoying a calm morning wellness routine in soft natural light
   image_note: Here, you’ll find clear guidance to help you feel strong, nourished, steady, and supported in your body again.

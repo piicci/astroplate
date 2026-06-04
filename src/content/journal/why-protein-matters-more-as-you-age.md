@@ -167,7 +167,7 @@ Protein gives your body the raw materials it needs to repair and maintain muscle
 Strength training gives your body the signal to keep it.
 Together, they are one of the most powerful combinations for women who want to age with strength, not fragility.
 
-Related reading: [How Much Protein Do Women Over 35 Really Need?](/journal/how-much-protein-do-women-over-35-need/)
+Related reading: [How Much Protein Do Women Over 35 Really Need?](/journal/how-much-protein-do-women-over-35-need)
 
 ## Protein and Metabolism: Why Muscle Changes the Conversation
 
@@ -190,7 +190,7 @@ How can I nourish my body in a way that helps me stay strong?
 That question is more useful than:
 How little can I eat?
 
-Related reading: [Nutrition for Women Over 35: How to Support Energy, Metabolism, Hormones, and Long-Term Health](/journal/nutrition-for-women-over-35/)
+Related reading: [Nutrition for Women Over 35: How to Support Energy, Metabolism, Hormones, and Long-Term Health](/journal/nutrition-for-women-over-35)
 
 ## Protein and Fullness: Why You Feel Snacky All Day
 
@@ -215,7 +215,7 @@ And honestly, we support fewer of those.
 Protein does not remove pleasure from food.
 It often makes eating feel more peaceful because your body is no longer trying to make up for what it did not receive earlier.
 
-Related reading: [High-Protein Breakfast Ideas for Steady Energy](/journal/high-protein-breakfast-ideas-for-steady-energy/)
+Related reading: [High-Protein Breakfast Ideas for Steady Energy](/journal/high-protein-breakfast-ideas-for-steady-energy)
 
 ## Protein and Recovery: Why Your Body May Need More Than Before
 
@@ -260,7 +260,7 @@ For many women, this is one of the simplest ways to reduce afternoon crashes and
 Not by cutting everything out.
 By building meals better.
 
-Related reading: [Blood Sugar Balance for Women: What It Means and Why It Matters](/journal/blood-sugar-balance-for-women/)
+Related reading: [Blood Sugar Balance for Women: What It Means and Why It Matters](/journal/blood-sugar-balance-for-women)
 
 ## Protein During Perimenopause and Menopause
 
@@ -308,7 +308,7 @@ Dinner.
 Optional snack.
 Calm. Simple. Repeatable.
 
-Related reading: [How Much Protein Do Women Over 35 Really Need?](/journal/how-much-protein-do-women-over-35-need/)
+Related reading: [How Much Protein Do Women Over 35 Really Need?](/journal/how-much-protein-do-women-over-35-need)
 
 ## Best Protein Sources for Women as They Age
 
@@ -368,7 +368,7 @@ Try:
 * kefir smoothie
 A better breakfast often changes the whole day.
 
-Related reading: [High-Protein Breakfast Ideas for Steady Energy](/journal/high-protein-breakfast-ideas-for-steady-energy/)
+Related reading: [High-Protein Breakfast Ideas for Steady Energy](/journal/high-protein-breakfast-ideas-for-steady-energy)
 
 ### 2. Build Lunch Around Protein First
 Instead of starting with leaves and hoping for the best, begin with the protein.
@@ -415,7 +415,7 @@ Try:
 * hummus with toast or vegetables
 This helps snacks feel less like a temporary distraction and more like actual nourishment.
 
-Related reading: [High-Protein Snacks That Actually Keep You Full](/journal/high-protein-snacks-that-keep-you-full/)
+Related reading: [High-Protein Snacks That Actually Keep You Full](/journal/high-protein-snacks-that-keep-you-full)
 
 ### 5. Stop Making Dinner Carry the Whole Day
 Many women eat very little protein until dinner.

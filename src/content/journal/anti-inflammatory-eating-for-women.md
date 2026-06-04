@@ -168,7 +168,7 @@ Anti-inflammatory eating is not a diagnosis or a cure. But it can be a supportiv
 * body composition
 * mood and mental clarity
 A 2024 review describes anti-inflammatory diets as patterns rich in fruits, vegetables, whole grains, nuts, seeds, legumes, healthy fats, herbs, spices, and other nutrient-dense foods, while limiting foods that may promote inflammation when consumed frequently. (PMC)
-For women over 35, this becomes especially relevant because the body may become more sensitive to poor sleep, chronic stress, under-eating, low protein, alcohol, and blood sugar swings. If you are already exploring metabolic health, you may also want to read [Metabolic Health for Women Over 35: A Simple Guide](/journal/metabolic-health-for-women-over-35/) and [Why Your Metabolism Changes in Your 30s and 40s](/journal/why-your-metabolism-changes-in-your-30s-and-40s/).
+For women over 35, this becomes especially relevant because the body may become more sensitive to poor sleep, chronic stress, under-eating, low protein, alcohol, and blood sugar swings. If you are already exploring metabolic health, you may also want to read [Metabolic Health for Women Over 35: A Simple Guide](/journal/metabolic-health-for-women-over-35) and [Why Your Metabolism Changes in Your 30s and 40s](/journal/why-your-metabolism-changes-in-your-30s-and-40s).
 Anti-inflammatory eating is not a separate wellness project.
 It is part of the same foundation: steady meals, enough protein, colorful plants, healthy fats, fiber, movement, and recovery.
 
@@ -243,7 +243,7 @@ Examples:
 * pear with cottage cheese
 * cherries with walnuts
 This helps support blood sugar stability and keeps the snack more satisfying.
-For more on meal structure and energy, read [Blood Sugar Balance for Women: What It Means and Why It Matters](/journal/blood-sugar-balance-for-women/).
+For more on meal structure and energy, read [Blood Sugar Balance for Women: What It Means and Why It Matters](/journal/blood-sugar-balance-for-women).
 
 ### 3. Extra Virgin Olive Oil
 
@@ -339,7 +339,7 @@ Whole grains are part of the Mediterranean pattern and can support digestion, fu
 If you often feel tired after meals, the issue may not be carbohydrates themselves. It may be the way the meal is built.
 A bowl of plain pasta feels different from pasta with tuna, tomato, olive oil, herbs, and greens.
 A slice of toast alone feels different from toast with eggs, avocado, and tomatoes.
-For more on this, read [Why You Feel Tired After Eating — and What May Help](/journal/why-you-feel-tired-after-eating-and-what-may-help/) and [How to Build a Blood-Sugar-Friendly Breakfast](/journal/how-to-build-a-blood-sugar-friendly-breakfast/).
+For more on this, read [Why You Feel Tired After Eating — and What May Help](/journal/why-you-feel-tired-after-eating-and-what-may-help) and [How to Build a Blood-Sugar-Friendly Breakfast](/journal/how-to-build-a-blood-sugar-friendly-breakfast).
 
 ### 7. Nuts and Seeds
 Nuts and seeds provide healthy fats, minerals, fiber, and some protein.
@@ -442,7 +442,7 @@ Example Plate
 * Healthy fat: olive oil, avocado, nuts, seeds, tahini
 * Flavor: lemon, garlic, herbs, spices, vinegar, mustard
 This structure supports blood sugar, fullness, nutrient intake, and meal satisfaction.
-It also connects beautifully with metabolic health. For more on this foundation, read [The Best Foods to Support a Healthy Metabolism](/journal/the-best-foods-to-support-a-healthy-metabolism/) and [Body Recomposition for Women: Nutrition Basics](/journal/body-recomposition-for-women-nutrition-basics/).
+It also connects beautifully with metabolic health. For more on this foundation, read [The Best Foods to Support a Healthy Metabolism](/journal/the-best-foods-to-support-a-healthy-metabolism) and [Body Recomposition for Women: Nutrition Basics](/journal/body-recomposition-for-women-nutrition-basics).
 
 ## Anti-Inflammatory Breakfast Ideas
 
@@ -458,7 +458,7 @@ Try:
 * cottage cheese with fruit, pistachios, and cinnamon
 * chia pudding with berries and Greek yogurt
 If your mornings are rushed, prepare one repeatable breakfast you can rely on. Anti-inflammatory eating becomes easier when you do not have to make every meal from scratch in your head.
-For more ideas, read [High-Protein Breakfast Ideas for Steady Energy](/journal/high-protein-breakfast-ideas-for-steady-energy/).
+For more ideas, read [High-Protein Breakfast Ideas for Steady Energy](/journal/high-protein-breakfast-ideas-for-steady-energy).
 
 ## Anti-Inflammatory Lunch and Dinner Ideas
 
@@ -495,7 +495,7 @@ Try:
 * roasted chickpeas
 * dark chocolate with nuts, if you enjoy it
 If you often snack because lunch was too light, the solution may not be better snacks. It may be a more satisfying lunch.
-Read [High-Protein Snacks That Actually Keep You Full](/journal/high-protein-snacks-that-keep-you-full/) if this is a pattern for you.
+Read [High-Protein Snacks That Actually Keep You Full](/journal/high-protein-snacks-that-keep-you-full) if this is a pattern for you.
 
 ## A Simple 3-Day Beginner Plan
 

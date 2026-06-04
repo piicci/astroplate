@@ -109,7 +109,7 @@ No drama required.
 
 ![Woman resting by a Mediterranean pool club with berries, oats, seeds, lentils, and water arranged beside her as an elegant visual introduction to fiber for women’s health](../../assets/images/journal/fiber-for-womens-health-gut-hormones-blood-sugar/becoming-elysian-high-fiber-womens-health-hero.webp)
 
-If you are following the anti-inflammatory and Mediterranean cluster, this article pairs closely with [Anti-Inflammatory Eating for Women: A Practical Beginner’s Guide](/journal/anti-inflammatory-eating-for-women/) and [Mediterranean Diet for Women Over 40: What to Eat and Why It Works](/journal/mediterranean-diet-for-women-over-40/).
+If you are following the anti-inflammatory and Mediterranean cluster, this article pairs closely with [Anti-Inflammatory Eating for Women: A Practical Beginner’s Guide](/journal/anti-inflammatory-eating-for-women) and [Mediterranean Diet for Women Over 40: What to Eat and Why It Works](/journal/mediterranean-diet-for-women-over-40).
 
 ## What Is Fiber?
 
@@ -337,7 +337,7 @@ This does not mean fiber alone will fix PMS, perimenopause symptoms, estrogen co
 
 It means fiber is part of a supportive daily environment.
 
-For a broader nutrition foundation, read [Healthy Fats for Hormones, Skin, and Energy](/journal/healthy-fats-for-hormones-skin-and-energy/) and [Metabolic Health for Women Over 35: A Simple Guide](/journal/metabolic-health-for-women-over-35/).
+For a broader nutrition foundation, read [Healthy Fats for Hormones, Skin, and Energy](/journal/healthy-fats-for-hormones-skin-and-energy) and [Metabolic Health for Women Over 35: A Simple Guide](/journal/metabolic-health-for-women-over-35).
 
 ## Fiber and Blood Sugar Balance
 
@@ -371,7 +371,7 @@ Fiber works especially well when combined with protein and healthy fats.
 
 ![Woman choosing between low-fiber cereal and a bowl of oats with berries and walnuts for steadier blood sugar support](../../assets/images/journal/fiber-for-womens-health-gut-hormones-blood-sugar/becoming-elysian-oats-blood-sugar-breakfast.webp)
 
-For more on this, read [Blood Sugar Balance for Women: What It Means and Why It Matters](/journal/blood-sugar-balance-for-women/) and [How to Build a Blood-Sugar-Friendly Breakfast](/journal/how-to-build-a-blood-sugar-friendly-breakfast/).
+For more on this, read [Blood Sugar Balance for Women: What It Means and Why It Matters](/journal/blood-sugar-balance-for-women) and [How to Build a Blood-Sugar-Friendly Breakfast](/journal/how-to-build-a-blood-sugar-friendly-breakfast).
 
 ## Fiber and Cholesterol, Heart Health, and Metabolism
 
@@ -849,7 +849,7 @@ This structure supports gut health, blood sugar, fullness, and energy.
 
 It also fits beautifully with Mediterranean eating.
 
-For more on plate-building, read [Mediterranean Diet for Women Over 40: What to Eat and Why It Works](/journal/mediterranean-diet-for-women-over-40/) and [How to Build a Blood-Sugar-Friendly Breakfast](/journal/how-to-build-a-blood-sugar-friendly-breakfast/).
+For more on plate-building, read [Mediterranean Diet for Women Over 40: What to Eat and Why It Works](/journal/mediterranean-diet-for-women-over-40) and [How to Build a Blood-Sugar-Friendly Breakfast](/journal/how-to-build-a-blood-sugar-friendly-breakfast).
 
 ## High-Fiber Breakfast Ideas
 
@@ -873,7 +873,7 @@ Try:
 
 If you often feel snacky soon after breakfast, check whether your meal includes both protein and fiber.
 
-For more ideas, read [High-Protein Breakfast Ideas for Steady Energy](/journal/high-protein-breakfast-ideas-for-steady-energy/).
+For more ideas, read [High-Protein Breakfast Ideas for Steady Energy](/journal/high-protein-breakfast-ideas-for-steady-energy).
 
 ## High-Fiber Lunch and Dinner Ideas
 
@@ -935,7 +935,7 @@ Try:
 
 * dates with walnuts, if they suit your blood sugar and appetite
 
-For more snack inspiration, read [High-Protein Snacks That Actually Keep You Full](/journal/high-protein-snacks-that-keep-you-full/).
+For more snack inspiration, read [High-Protein Snacks That Actually Keep You Full](/journal/high-protein-snacks-that-keep-you-full).
 
 ![Open drawer with high-fiber snack ideas including berries with yogurt, carrots and hummus, apple with almond butter, roasted chickpeas, and orange with walnuts](../../assets/images/journal/fiber-for-womens-health-gut-hormones-blood-sugar/becoming-elysian-high-fiber-snack-drawer.webp)
 
