@@ -13,7 +13,7 @@ image: >-
   /images/journal/protein-timing-does-it-matter-for-women/becoming-elysian-protein-timing-hero.webp
 categories:
   - Protein & Meals
-author: Becoming Elysian
+author: Mahtab Namvar
 tags:
   - Nutrition and Metabolic Health
   - Protein

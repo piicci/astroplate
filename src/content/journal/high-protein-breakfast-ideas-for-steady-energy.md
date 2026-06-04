@@ -12,13 +12,18 @@ image: >-
   /images/journal/high-protein-breakfast-ideas-for-steady-energy/becoming-elysian-high-protein-breakfast-hero.webp
 categories:
   - Protein & Meals
-author: Becoming Elysian
+author: Mahtab Namvar
 tags:
   - Nutrition and Metabolic Health
   - Protein
   - Blood Sugar Balance
   - Steady Energy
   - Meal Ideas
+post_cta_eyebrow: Breakfast guide
+post_cta_title: Want a steadier breakfast waiting for you?
+post_cta_body: >-
+  Join the Becoming Elysian list and keep breakfast simpler with calm,
+  practical notes for protein, energy, and meals that support your real life.
 tldr_enable: true
 tldr_title: Why This Matters for You
 tldr_key_points:
@@ -107,6 +112,13 @@ Your breakfast may not be giving your body enough support.
 A high-protein breakfast can be one of the most effective ways to create steadier energy, better fullness, fewer cravings, and a calmer relationship with food throughout the day.
 Not because breakfast is magical.
 Because your body responds differently when it is nourished early, instead of being asked to run on caffeine, stress hormones, and hope.
+
+<aside class="be-article-lead-cta be-article-lead-cta--intro" aria-label="Breakfast guide">
+  <p class="be-article-lead-cta-eyebrow">Breakfast guide</p>
+  <h2>Want the breakfast ideas in one calm place?</h2>
+  <p>Get the 7 High-Protein Breakfasts PDF so you have a few steady options ready for the mornings when deciding feels like too much.</p>
+  <a href="/breakfast-guide">Get the breakfast guide</a>
+</aside>
 
 ![Woman in a red leather cafe booth with coffee, toast, banana, and inbox receipts for a high-protein breakfast article](../../assets/images/journal/high-protein-breakfast-ideas-for-steady-energy/becoming-elysian-high-protein-breakfast-hero.webp)
 
@@ -237,6 +249,13 @@ That is the foundation.
 ![Four-part breakfast table showing eggs, avocado, oats, and yogurt as a balanced high-protein breakfast formula](../../assets/images/journal/high-protein-breakfast-ideas-for-steady-energy/becoming-elysian-balanced-breakfast-formula.webp)
 
 Now let’s make our breakfast.
+
+<aside class="be-article-lead-cta be-article-lead-cta--mid" aria-label="High-protein breakfast guide">
+  <p class="be-article-lead-cta-eyebrow">Keep it simple</p>
+  <h2>Take the list with you.</h2>
+  <p>If you already know breakfast is the place to begin, the guide gives you seven protein-rich ideas you can return to without scrolling back through the whole article.</p>
+  <a href="/breakfast-guide">Send me the PDF</a>
+</aside>
 
 ## High-Protein Breakfast Ideas for Steady Energy
 ### 1. Greek Yogurt Bowl With Berries, Chia, and Nuts
@@ -590,6 +609,13 @@ Because nutrition after 35 does not need to become another thing you are failing
 It can become one of the ways you care for yourself.
 Quietly. Practically. Consistently.
 The kind of care that does not demand your whole life, but helps you live it with more energy.
+
+<aside class="be-article-lead-cta be-article-lead-cta--end" aria-label="Get the breakfast guide">
+  <p class="be-article-lead-cta-eyebrow">Start tomorrow softer</p>
+  <h2>Choose one breakfast before the morning asks too much of you.</h2>
+  <p>Download the 7 High-Protein Breakfasts guide and keep a few steadier options close for real mornings, not perfect ones.</p>
+  <a href="/breakfast-guide">Get the breakfast guide</a>
+</aside>
 
 ![Woman by a bright window with coffee and a balanced breakfast plate of eggs, avocado, berries, cottage cheese, and toast](../../assets/images/journal/high-protein-breakfast-ideas-for-steady-energy/becoming-elysian-steady-energy-breakfast-window.webp)
 

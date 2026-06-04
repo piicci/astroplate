@@ -12,7 +12,7 @@ image: >-
   /images/journal/simple-ways-to-reduce-afternoon-energy-crashes/becoming-elysian-department-of-sudden-heaviness.webp
 categories:
   - Blood Sugar & Energy
-author: Becoming Elysian
+author: Mahtab Namvar
 tags:
   - Nutrition and Metabolic Health
   - Steady Energy

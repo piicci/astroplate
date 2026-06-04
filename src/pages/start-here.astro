@@ -1,6 +1,8 @@
 ---
 import Base from "@/layouts/Base.astro";
 import BreakfastGuideForm from "@/layouts/components/BreakfastGuideForm.astro";
+import ImageMod from "@/layouts/components/ImageMod.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
 
 const journeys = [
   {
@@ -92,6 +94,19 @@ const journeys = [
     },
   },
 ];
+
+const posts = await getSinglePage("journal");
+const postsByHref = new Map(
+  posts.map((post) => [`/journal/${post.id}`, post.data]),
+);
+
+const journeysWithImages = journeys.map((journey) => ({
+  ...journey,
+  links: journey.links.map((link) => ({
+    ...link,
+    post: postsByHref.get(link.href),
+  })),
+}));
 ---
 
 <Base
@@ -116,7 +131,7 @@ const journeys = [
     <div class="container start-here-breathe">
       <div class="start-here-list">
         {
-          journeys.map((journey) => (
+          journeysWithImages.map((journey) => (
             <article class="start-here-journey">
               <div class="start-here-journey-copy">
                 <p class="start-here-eyebrow">{journey.eyebrow}</p>
@@ -131,8 +146,25 @@ const journeys = [
                   <li>
                     <a href={link.href}>
                       <span>{String(index + 1).padStart(2, "0")}</span>
-                      <strong>{link.label}</strong>
-                      <small>{link.note}</small>
+                      {
+                        link.post?.image && (
+                          <ImageMod
+                            class="start-here-step-thumb"
+                            src={link.post.image}
+                            alt=""
+                            width={112}
+                            height={84}
+                            format="webp"
+                            fit="cover"
+                            loading="lazy"
+                            densities={[1, 2]}
+                          />
+                        )
+                      }
+                      <div class="start-here-step-copy">
+                        <strong>{link.label}</strong>
+                        <small>{link.note}</small>
+                      </div>
                     </a>
                   </li>
                 ))}
@@ -286,7 +318,8 @@ const journeys = [
 
     .start-here-steps a {
       display: grid;
-      grid-template-columns: 3rem minmax(0, 1fr);
+      grid-template-columns: 3rem clamp(4.75rem, 8vw, 6.5rem) minmax(0, 1fr);
+      align-items: center;
       gap: clamp(0.9rem, 2vw, 1.4rem);
       padding: clamp(1.05rem, 2.5vw, 1.45rem) 0;
       color: #2a251d;
@@ -301,12 +334,26 @@ const journeys = [
     }
 
     .start-here-steps span {
-      padding-top: 0.2rem;
       color: #8e9475;
       font-size: 0.74rem;
       font-weight: 700;
       letter-spacing: 0.16em;
       line-height: 1.2;
+    }
+
+    .start-here-step-thumb {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      border: 1px solid rgba(138, 114, 76, 0.22);
+      border-radius: 4px;
+      object-fit: cover;
+      background-color: rgba(237, 226, 204, 0.54);
+      box-shadow: 0 12px 30px -24px rgba(42, 37, 29, 0.55);
+    }
+
+    .start-here-step-copy {
+      min-width: 0;
     }
 
     .start-here-steps strong {
@@ -322,7 +369,6 @@ const journeys = [
 
     .start-here-steps small {
       display: block;
-      grid-column: 2;
       max-width: 36rem;
       margin-top: 0.55rem;
       color: #6f5b3b;
@@ -404,7 +450,8 @@ const journeys = [
       }
 
       .start-here-steps a {
-        grid-template-columns: 2.35rem minmax(0, 1fr);
+        grid-template-columns: 2.35rem 4.4rem minmax(0, 1fr);
+        gap: 0.8rem;
         transform: none;
       }
 

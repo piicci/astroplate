@@ -55,7 +55,7 @@ const buttonClass = (button: HomepageButton, extra = "") =>
       <div class="container">
         <div class="grid items-center gap-12 xl:grid-cols-[0.92fr_1.08fr] xl:gap-20">
           <div class="be-hero-copy max-w-[600px] animate-[elysian-rise_700ms_cubic-bezier(0.16,1,0.3,1)_both]">
-            <h1 class="mb-6 max-w-[12.5ch] text-[3.05rem] leading-[0.96] md:max-w-[11.8ch] md:text-[4.25rem] xl:text-[4.7rem]">
+            <h1 class="mb-6 max-w-[12.5ch] text-[2.85rem] leading-[0.98] md:max-w-[11.8ch] md:text-[3.95rem] xl:text-[4.35rem]">
               {home.banner.title}
             </h1>
             <div class="mb-7 flex max-w-[32rem] items-center gap-4">
@@ -232,11 +232,11 @@ const buttonClass = (button: HomepageButton, extra = "") =>
               {home.newsletter.submit_label}
             </button>
             <p class="mt-5 text-sm text-text-light">{home.newsletter.helper_text}</p>
-            <p class="mt-4 hidden rounded-sm border border-primary/30 bg-primary/10 px-4 py-3 text-sm text-text-dark dark:text-darkmode-text-dark" data-success>
+            <p class="be-form-message be-form-message--success mt-4 hidden" data-success>
               {home.newsletter.success_message}
             </p>
-            <p class="mt-4 hidden rounded-sm border border-[#9f3f32]/35 bg-[#9f3f32]/10 px-4 py-3 text-sm text-[#9f3f32]" data-error-submit>
-              Something went wrong. Please try again.
+            <p class="be-form-message be-form-message--error mt-4 hidden" data-error-submit>
+              We couldn't send this just yet. Please try again.
             </p>
           </form>
         </div>

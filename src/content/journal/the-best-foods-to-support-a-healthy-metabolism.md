@@ -12,7 +12,7 @@ image: >-
   /src/assets/images/journal/the-best-foods-to-support-a-healthy-metabolism/becoming-elysian-metabolism-concierge-hero.webp
 categories:
   - Metabolic Health
-author: Becoming Elysian
+author: Mahtab Namvar
 tags:
   - Nutrition and Metabolic Health
   - Metabolism

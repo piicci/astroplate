@@ -12,7 +12,7 @@ image: >-
   /images/journal/why-your-metabolism-changes-in-your-30s-and-40s/becoming-elysian-metabolism-before-after-hero.webp
 categories:
   - Metabolic Health
-author: Becoming Elysian
+author: Mahtab Namvar
 tags:
   - Nutrition and Metabolic Health
   - Metabolism

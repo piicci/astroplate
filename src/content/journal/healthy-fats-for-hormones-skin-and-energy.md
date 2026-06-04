@@ -12,7 +12,7 @@ image: >-
   /images/journal/healthy-fats-for-hormones-skin-and-energy/becoming-elysian-healthy-fats-hero.webp
 categories:
   - Foundational Nutrition
-author: Becoming Elysian
+author: Mahtab Namvar
 tags:
   - Nutrition and Metabolic Health
   - Healthy Fats

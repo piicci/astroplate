@@ -12,7 +12,7 @@ image: >-
   /images/journal/why-protein-matters-more-as-you-age/becoming-elysian-protein-aging-hero.webp
 categories:
   - Protein & Meals
-author: Becoming Elysian
+author: Mahtab Namvar
 tags:
   - Nutrition and Metabolic Health
   - Protein

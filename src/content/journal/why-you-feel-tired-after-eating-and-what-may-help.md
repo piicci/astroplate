@@ -12,7 +12,7 @@ image: >-
   /images/journal/why-you-feel-tired-after-eating-and-what-may-help/becoming-elysian-tired-after-eating-desk.webp
 categories:
   - Blood Sugar & Energy
-author: Becoming Elysian
+author: Mahtab Namvar
 tags:
   - Nutrition and Metabolic Health
   - Blood Sugar Balance

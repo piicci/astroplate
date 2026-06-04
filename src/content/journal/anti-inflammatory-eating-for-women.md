@@ -13,7 +13,7 @@ image: >-
   /images/journal/anti-inflammatory-eating-for-women/becoming-elysian-anti-inflammatory-eating-hero.webp
 categories:
   - Foundational Nutrition
-author: Becoming Elysian
+author: Mahtab Namvar
 tags:
   - Nutrition and Metabolic Health
   - Anti-Inflammatory Eating

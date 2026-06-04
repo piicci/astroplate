@@ -12,7 +12,7 @@ image: >-
   /images/journal/how-to-build-a-blood-sugar-friendly-breakfast/becoming-elysian-blood-sugar-breakfast-hero.webp
 categories:
   - Blood Sugar & Energy
-author: Becoming Elysian
+author: Mahtab Namvar
 tags:
   - Nutrition and Metabolic Health
   - Blood Sugar Balance

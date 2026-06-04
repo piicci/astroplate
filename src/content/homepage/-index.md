@@ -1,25 +1,25 @@
 ---
 title: Becoming Elysian | Wellness for Women
 meta_title: Becoming Elysian | Wellness for Women Over 35
-description: Becoming Elysian is a modern wellness platform for women over 35 exploring fitness, nutrition, hormonal health, stress, recovery, and sustainable wellbeing through a grounded, evidence-informed lens.
+description: Becoming Elysian offers grounded wellness for women over 35, with guidance on fitness, nutrition, hormones, stress, recovery, and sustainable wellbeing.
 image: /images/becoming-elysian-about-cover.png
 
 # Hero banner
 banner:
-  eyebrow: Gentle wellness for women over 35
-  title: Wellness for women over 35 designed to support the life you already love
-  content: Evidence-informed guidance for strength, nourishment, hormones, recovery, and sustainable wellbeing. Without extremes, overwhelm, or asking wellness to become your whole life.
+  eyebrow: For the season when your body asks for a wiser kind of care
+  title: Wellness for women over 35, designed for real life
+  content: A softer, wiser approach to fitness, nutrition, hormones, recovery, and sustainable wellbeing. Without overwhelm. Without making wellness your whole life.
   image: /images/becoming-elysian-about-editorial-hero.jpg
   image_alt: Woman enjoying a calm morning wellness routine in soft natural light
-  image_note: Evidence-informed notes for strength, nourishment, recovery, hormones, and the life around them.
+  image_note: Here, you’ll find clear guidance to help you feel strong, nourished, steady, and supported in your body again.
   buttons:
     - enable: true
       label: Explore the Journal
       link: /journal
       variant: primary
     - enable: true
-      label: Join the Weekly Letter
-      link: /newsletter
+      label: Receive the Free Breakfast Guide
+      link: /breakfast-guide
       variant: outline
 
 # Intro section
@@ -84,7 +84,7 @@ newsletter:
     No extremes. No overwhelm. Just supportive guidance to help you feel more at home in your body and your daily life.
   submit_label: Join the Weekly Letter
   helper_text: Weekly wellness notes. Thoughtful, practical, and easy to return to.
-  success_message: Welcome. Your first note is on its way.
+  success_message: You're in. Your first weekly letter is on its way.
 
 # Approach section
 approach:

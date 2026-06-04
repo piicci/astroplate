@@ -12,7 +12,7 @@ image: >-
   /images/journal/fiber-for-womens-health-gut-hormones-blood-sugar/becoming-elysian-high-fiber-womens-health-hero.webp
 categories:
   - Foundational Nutrition
-author: Becoming Elysian
+author: Mahtab Namvar
 tags:
   - Nutrition and Metabolic Health
   - Fiber

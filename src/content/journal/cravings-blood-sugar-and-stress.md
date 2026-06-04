@@ -12,7 +12,7 @@ image: >-
   /images/journal/cravings-blood-sugar-and-stress/becoming-elysian-cravings-blood-sugar-stress-hero.webp
 categories:
   - Blood Sugar & Energy
-author: Becoming Elysian
+author: Mahtab Namvar
 tags:
   - Nutrition and Metabolic Health
   - Cravings

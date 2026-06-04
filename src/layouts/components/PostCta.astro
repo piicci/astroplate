@@ -30,71 +30,73 @@ const formId = `post-cta-email-${source.replace(/[^a-z0-9-]/gi, "-")}`;
       aria-labelledby={cleanTitle ? "post-cta-title" : undefined}
       aria-label={cleanTitle ? undefined : "Journal newsletter signup"}
     >
-      <div class="be-post-cta-copy">
-        {cleanEyebrow && (
-          <p class="be-post-cta-eyebrow" set:html={markdownify(cleanEyebrow)} />
-        )}
+      <div class="be-post-cta-inner">
+        <div class="be-post-cta-copy">
+          {cleanEyebrow && (
+            <p class="be-post-cta-eyebrow" set:html={markdownify(cleanEyebrow)} />
+          )}
 
-        {cleanTitle && (
-          <h2 id="post-cta-title" set:html={markdownify(cleanTitle)} />
-        )}
+          {cleanTitle && (
+            <h2 id="post-cta-title" set:html={markdownify(cleanTitle)} />
+          )}
 
-        {cleanBody && (
-          <div class="be-post-cta-body" set:html={markdownify(cleanBody, true)} />
-        )}
-      </div>
-
-      <form
-        class="be-post-cta-form"
-        name="newsletter"
-        method="POST"
-        data-netlify="true"
-        netlify-honeypot="bot-field"
-        novalidate
-      >
-        <input type="hidden" name="form-name" value="newsletter" />
-        <input type="hidden" name="source" value={`journal-post:${source}`} />
-        <input type="hidden" name="subject" value="New newsletter signup" />
-        <p class="hidden" aria-hidden="true">
-          <label>Do not fill this out: <input name="bot-field" /></label>
-        </p>
-
-        <div class="be-post-cta-control">
-          <div class="be-post-cta-field">
-            <label class="form-label" for={formId}>Email address</label>
-            <input
-              class="form-input"
-              id={formId}
-              name="email"
-              type="email"
-              placeholder="Your email address"
-              autocomplete="email"
-              required
-            />
-            <p class="be-post-cta-error hidden" data-error>
-              Please enter a valid email address.
-            </p>
-          </div>
-
-          <button
-            class="be-post-cta-button"
-            type="submit"
-            data-submit-label="Join Our Circle"
-          >
-            Join Our Circle
-          </button>
+          {cleanBody && (
+            <div class="be-post-cta-body" set:html={markdownify(cleanBody, true)} />
+          )}
         </div>
 
-        <p class="be-post-cta-note">
-          Evidence-informed wellness, written with calm and clarity.
-        </p>
-        <p class="be-post-cta-success hidden" data-success>
-          Thank you. Your next note is on its way.
-        </p>
-        <p class="be-post-cta-submit-error hidden" data-error-submit>
-          Something went wrong. Please try again.
-        </p>
-      </form>
+        <form
+          class="be-post-cta-form"
+          name="newsletter"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          novalidate
+        >
+          <input type="hidden" name="form-name" value="newsletter" />
+          <input type="hidden" name="source" value={`journal-post:${source}`} />
+          <input type="hidden" name="subject" value="New newsletter signup" />
+          <p class="hidden" aria-hidden="true">
+            <label>Do not fill this out: <input name="bot-field" /></label>
+          </p>
+
+          <div class="be-post-cta-control">
+            <div class="be-post-cta-field">
+              <label class="form-label" for={formId}>Email address</label>
+              <input
+                class="form-input"
+                id={formId}
+                name="email"
+                type="email"
+                placeholder="Your email address"
+                autocomplete="email"
+                required
+              />
+              <p class="be-post-cta-error hidden" data-error>
+                Please enter a valid email address.
+              </p>
+            </div>
+
+            <button
+              class="be-post-cta-button"
+              type="submit"
+              data-submit-label="Join the Letter"
+            >
+              Join the Letter
+            </button>
+          </div>
+
+          <p class="be-post-cta-note">
+            Weekly notes to help you feel steady, supported, and gently back in touch with yourself.
+          </p>
+          <p class="be-post-cta-success be-form-message be-form-message--success hidden" data-success>
+            You're in. Your next weekly letter is on its way.
+          </p>
+          <p class="be-post-cta-submit-error be-form-message be-form-message--error hidden" data-error-submit>
+            We couldn't send this just yet. Please try again.
+          </p>
+        </form>
+      </div>
     </section>
   )
 }

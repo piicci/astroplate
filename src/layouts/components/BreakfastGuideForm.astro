@@ -74,11 +74,11 @@ const { idPrefix, source, className = "" } = Astro.props;
     Send Me the Breakfast Guide
   </button>
 
-  <p class="mt-4 hidden rounded-sm border border-primary/40 bg-body/70 px-4 py-3 text-sm text-text-dark dark:text-darkmode-text-dark" data-success>
-    Thank you. Your breakfast guide is on its way.
+  <p class="be-form-message be-form-message--success mt-4 hidden" data-success>
+    Thank you. Your breakfast guide is on its way, with weekly notes to help keep mornings steady.
   </p>
-  <p class="mt-4 hidden rounded-sm border border-[#9f3f32]/35 bg-[#9f3f32]/10 px-4 py-3 text-sm text-[#9f3f32]" data-error-submit>
-    Something went wrong. Please try again.
+  <p class="be-form-message be-form-message--error mt-4 hidden" data-error-submit>
+    We couldn't send this just yet. Please try again.
   </p>
 </form>
 

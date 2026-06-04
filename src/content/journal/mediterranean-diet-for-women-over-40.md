@@ -12,7 +12,7 @@ image: >-
   /images/journal/mediterranean-diet-for-women-over-40/becoming-elysian-mediterranean-diet-superstar-hero.webp
 categories:
   - Foundational Nutrition
-author: Becoming Elysian
+author: Mahtab Namvar
 tags:
   - Nutrition and Metabolic Health
   - Mediterranean Diet

@@ -12,7 +12,7 @@ image: >-
   /images/journal/how-much-protein-do-women-over-35-need/becoming-elysian-protein-for-women-over-35-hero.webp
 categories:
   - Protein & Meals
-author: Becoming Elysian
+author: Mahtab Namvar
 tags:
   - Nutrition and Metabolic Health
   - Protein

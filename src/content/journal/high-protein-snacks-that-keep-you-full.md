@@ -12,7 +12,7 @@ image: >-
   /images/journal/high-protein-snacks-that-keep-you-full/becoming-elysian-high-protein-snacks-hero-table.webp
 categories:
   - Protein & Meals
-author: Becoming Elysian
+author: Mahtab Namvar
 tags:
   - Nutrition and Metabolic Health
   - Protein

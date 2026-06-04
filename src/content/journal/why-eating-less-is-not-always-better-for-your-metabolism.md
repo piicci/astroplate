@@ -12,7 +12,7 @@ image: >-
   /images/journal/why-eating-less-is-not-always-better-for-your-metabolism/becoming-elysian-serene-coffee-morning-hero.webp
 categories:
   - Metabolic Health
-author: Becoming Elysian
+author: Mahtab Namvar
 tags:
   - Nutrition and Metabolic Health
   - Metabolism

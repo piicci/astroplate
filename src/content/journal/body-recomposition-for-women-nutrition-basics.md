@@ -12,7 +12,7 @@ image: >-
   /images/journal/body-recomposition-for-women-nutrition-basics/becoming-elysian-body-recomposition-hero.webp
 categories:
   - Body Recomposition
-author: Becoming Elysian
+author: Mahtab Namvar
 tags:
   - Nutrition and Metabolic Health
   - Strength Training

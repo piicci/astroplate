@@ -47,12 +47,12 @@ const journalCollection = defineCollection({
     post_cta_title: z
       .string()
       .optional()
-      .default("A few thoughtful notes, sent gently"),
+      .default("A softer way to care for yourself."),
     post_cta_body: z
       .string()
       .optional()
       .default(
-        "Join the Becoming Elysian email list for nourishing notes on strength, energy, wellbeing, and softer ways to care for yourself, delivered with intention, never overwhelm.",
+        "Join the Becoming Elysian weekly letter for thoughtful notes on strength, nourishment, energy, hormones, and wellbeing, created for women who want to feel steady, strong, and beautifully supported in real life.",
       ),
     draft: z.boolean().optional(),
   }),

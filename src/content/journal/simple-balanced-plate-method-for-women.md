@@ -12,7 +12,7 @@ image: >-
   /images/journal/simple-balanced-plate-method-for-women/becoming-elysian-balanced-plate-nutrition-noise-hero.webp
 categories:
   - Foundational Nutrition
-author: Becoming Elysian
+author: Mahtab Namvar
 tags:
   - Nutrition and Metabolic Health
   - Balanced Plate

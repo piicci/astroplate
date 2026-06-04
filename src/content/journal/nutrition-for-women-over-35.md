@@ -14,7 +14,7 @@ image: >-
   /images/journal/nutrition-for-women-over-35/becoming-elysian-nutrition-over-35-hero.webp
 categories:
   - Foundational Nutrition
-author: Becoming Elysian
+author: Mahtab Namvar
 tags:
   - Nutrition and Metabolic Health
   - Protein

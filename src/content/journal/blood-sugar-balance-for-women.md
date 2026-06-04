@@ -12,7 +12,7 @@ image: >-
   /images/journal/blood-sugar-balance-for-women/becoming-elysian-blood-sugar-balance-hero.webp
 categories:
   - Blood Sugar & Energy
-author: Becoming Elysian
+author: Mahtab Namvar
 tags:
   - Nutrition and Metabolic Health
   - Blood Sugar Balance

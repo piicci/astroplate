@@ -12,7 +12,7 @@ image: >-
   /images/journal/metabolic-health-for-women-over-35/becoming-elysian-metabolic-health-hero.webp
 categories:
   - Metabolic Health
-author: Becoming Elysian
+author: Mahtab Namvar
 tags:
   - Nutrition and Metabolic Health
   - Metabolism
